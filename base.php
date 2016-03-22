@@ -5,8 +5,14 @@ use Roots\Sage\Wrapper;
 
 ?>
 
-<!doctype html>
-<html <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html <?php language_attributes(); ?> class="no-js ie6 lt-ie9"> <![endif]-->
+<!--[if IE 7]>    <html <?php language_attributes(); ?> class="no-js ie7 lt-ie9"> <![endif]-->
+<!--[if IE 8]>    <html <?php language_attributes(); ?> class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9]>    <html <?php language_attributes(); ?> class="no-js ie9"> <![endif]-->
+
+<!--[if gt IE 9]><!-->
+<html class="no-js" <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
     <!--[if IE]>
@@ -18,22 +24,15 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div class="wrap container" role="document">
-      <div class="content row">
-        <main class="main">
-          <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
-        <?php if (Setup\display_sidebar()) : ?>
-          <aside class="sidebar">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
-      </div><!-- /.content -->
-    </div><!-- /.wrap -->
+    
+    <?php include Wrapper\template_path(); ?>
+        
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();
     ?>
   </body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="<?php echo get_template_directory(); ?>/assets/scripts/uswds.min.js"></script>
 </html>

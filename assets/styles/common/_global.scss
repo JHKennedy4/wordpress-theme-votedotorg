@@ -1,1 +1,36 @@
 
+///*Fonts*//
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@font-face{ 
+ font-family: 'ClearSans';
+ src: url('../fonts/clear-sans-fontfacekit/fonts/clearsans_regular_macroman/ClearSans-Regular-webfont.eot');
+}
+@font-face{ 
+ font-family: 'SourceSansPro';
+ src: url('../fonts/sourcesanspro-regular-webfont.eot');
+}
+
+//*ICONS*//
+.plus-icon {
+  background: url('../img/plus.png') no-repeat center;
+}
+
+.minus-icon {
+  background: url('../img/minus.png') no-repeat center;
+}
+
+.sr-only {
+  display: none;
+  visibility: hidden;
+}
+
+.collapsed {
+  display: none !important;
+}
+.clear-fix {
+  clear: both;
+  float: none;
+}
+strong {
+  font-weight: 800;
+}
