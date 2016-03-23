@@ -17,54 +17,77 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     </section><!--.register-tool-->
 
+
+<?php 
+
+//looping through States to find one with the matching state slug
+$state_loop = new WP_Query( array( 
+  'post_type' => 'state',
+  'name'      => $state,
+  'posts_per_page' => 50
+) ); 
+    if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); ?>
+   
+
     <section class="voter-registration-guide">
       <div class="container">
-        <h1><?php echo $state_name; ?> Voter Registration Guide</h1>
-        <div class="updated">Last updated January 16, 2016</div>
+        <h1><?php the_title(); ?> Absentee Ballot Guide</h1>
+        
+        <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
 
-        <h3>Voter Registration Deadlines</h3>
+        <h3><?php the_title(); ?> Absentee Ballot Deadlines</h3>
 
         <div class="table">
-          <div class="header">Registration Deadline</div>
-          <div class="cell">{Registration Deadlines}</div>
+          <div class="header">VBM Application Deadline</div>
+          <div class="cell"><?php echo types_render_field("absentee-ballot-application-deadline");?></div>
+          <div class="clear-fix tablet"></div>
+        </div>
+        <div class="table">
+          <div class="header">Voted Absentee Ballot Deadline</div>
+          <div class="cell"><?php echo types_render_field("voted-absentee-ballot-deadline");?></div>
+          <div class="clear-fix tablet"></div>
         </div>
 
-        <div class="table">
-          <div class="header">Election Day Registration</div>
-          <div class="cell">{Election Day Registration Information} </div>
-          <div class="clear-fix tablet"></div>
-        </div><!--.table-->
         
-        <h3>Voter Registration Rules</h3>
+        <h3>How to get your absentee ballot</h3>
 
-        <p>Donec sed odio dui vestibulum id ligula porta felis euismod semper:</p>
-
-        <ul>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
-          <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-
-        </ul>
-        <h3>How to Register to Vote</h3>
-        <p>Donec sed odio dui vestibulum id ligula porta felis euismod semper:</p>
-
-        <ul>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
-          <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-
-        </ul>
+        <p>To get your absentee ballot in <?php the_title(); ?> you must:</p>
+        <?php echo types_render_field("how-to-get-your-absentee-ballot");?>
+        
+        <?php 
+        $instructions = types_render_field("voted-absentee-ballot-instructions");
+        if ($instructions !== "") { ?>
+        <h3>Once you receive your ballot...</h3>
+          <?php echo $instructions;?>
+        <?php } ?>
+        
+        
 
         <h3>Additional Information</h3>
         <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <?php 
+        $vbm_warnings = types_render_field("absentee-ballot-warnings");
+        if ($vbm_warnings !== "") { ?>
+        <h3>VBM Warnings</h3>
+        <?php echo $vbm_warnings; ?>
+        <?php } ?>
+        
+
+
+        
+        <div class="table">
+          <div class="header">Permanent VBM Eligibility</div>
+          <div class="cell"><?php echo types_render_field("permanent-absentee-ballot-instructions");?></div>
+        </div><!--.table-->
 
         <div class="table">
+          <div class="header">Emergency VBM Eligibility</div>
+          <div class="cell"><?php echo types_render_field("emergency-vbm-eligibilty");?></p>
+          </div><!--.cell-->
+        </div><!--.table-->
+        <div class="table">
           <div class="header">State Election Website</div>
-          <div class="cell"><a href="http://www.sos.state.al.us/Elections/Default.aspx" alt="Alabama State Election Website">Alabama State Election Website</a></div>
+          <div class="cell"><a href="<?php echo types_render_field('state-election-website', array('raw' => true));?>" alt="<?php the_title();?> State Election Website"><?php the_title(); ?> State Election Website</a></div>
         </div><!--.table-->
 
         <div class="table">
@@ -76,6 +99,9 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
 
     </section><!--.voter-registration-guide -->
+<?php endwhile; 
+    wp_reset_postdata();
+  endif; ?>
 
     <section class="faqs">
       <div class="container">
