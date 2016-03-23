@@ -1385,8 +1385,8 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color: #ffffff;
-  background-image: url("../img/arrow-down.png");
-  background-image: url("../img/arrow-down.svg");
+  background-image: url("../images/arrow-down.png");
+  background-image: url("../images/arrow-down.svg");
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
   background-size: 1.3rem;
@@ -1472,8 +1472,8 @@ input[type="radio"]:focus + label::before {
 }
 
 input[type="checkbox"]:checked + label::before {
-  background-image: url("../img/correct8.png");
-  background-image: url("../img/correct8.svg");
+  background-image: url("../images/correct8.png");
+  background-image: url("../images/correct8.svg");
   background-position: 50%;
   background-repeat: no-repeat;
 }
@@ -1948,8 +1948,8 @@ p a,
 
 .usa-accordion button[aria-expanded=false],
 .usa-accordion-bordered button[aria-expanded=false] {
-  background-image: url("../img/plus.png");
-  background-image: url("../img/plus.svg");
+  background-image: url("../images/plus.png");
+  background-image: url("../images/plus.svg");
   background-repeat: no-repeat;
   background-size: 1.3rem;
 }
@@ -1957,8 +1957,8 @@ p a,
 .usa-accordion button,
 .usa-accordion-bordered button {
   background-color: #f1f1f1;
-  background-image: url("../img/minus.png");
-  background-image: url("../img/minus.svg");
+  background-image: url("../images/minus.png");
+  background-image: url("../images/minus.svg");
   background-position: right 3rem center;
   background-repeat: no-repeat;
   background-size: 13px;
@@ -2069,26 +2069,26 @@ p a,
 
 .usa-alert-success {
   background-color: #e7f4e4;
-  background-image: url("../img/alerts/success.png");
-  background-image: url("../img/alerts/success.svg");
+  background-image: url("../images/alerts/success.png");
+  background-image: url("../images/alerts/success.svg");
 }
 
 .usa-alert-warning {
   background-color: #fff1d2;
-  background-image: url("../img/alerts/warning.png");
-  background-image: url("../img/alerts/warning.svg");
+  background-image: url("../images/alerts/warning.png");
+  background-image: url("../images/alerts/warning.svg");
 }
 
 .usa-alert-error {
   background-color: #f9dede;
-  background-image: url("../img/alerts/error.png");
-  background-image: url("../img/alerts/error.svg");
+  background-image: url("../images/alerts/error.png");
+  background-image: url("../images/alerts/error.svg");
 }
 
 .usa-alert-info {
   background-color: #e1f3f8;
-  background-image: url("../img/alerts/info.png");
-  background-image: url("../img/alerts/info.svg");
+  background-image: url("../images/alerts/info.png");
+  background-image: url("../images/alerts/info.svg");
 }
 
 .usa-alert-no_icon {
@@ -2330,8 +2330,8 @@ li.usa-footer-primary-content:last-child {
 }
 
 .usa-footer-big ul .usa-footer-primary-link {
-  background-image: url("../img/arrow-down.png");
-  background-image: url("../img/arrow-down.svg");
+  background-image: url("../images/arrow-down.png");
+  background-image: url("../images/arrow-down.svg");
   background-position: 1.5rem center;
   background-repeat: no-repeat;
   background-size: 1.3rem;
@@ -2351,8 +2351,8 @@ li.usa-footer-primary-content:last-child {
 }
 
 .usa-footer-big ul.hidden .usa-footer-primary-link {
-  background-image: url("../img/arrow-right.png");
-  background-image: url("../img/arrow-right.svg");
+  background-image: url("../images/arrow-right.png");
+  background-image: url("../images/arrow-right.svg");
   cursor: pointer;
   margin: 0;
 }
@@ -2579,8 +2579,8 @@ fieldset {
 }
 
 .usa-checklist-checked:before {
-  background-image: url("../img/correct9.png");
-  background-image: url("../img/correct9.svg");
+  background-image: url("../images/correct9.png");
+  background-image: url("../images/correct9.svg");
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -2620,8 +2620,8 @@ fieldset {
 
 .usa-search [type="submit"],
 .usa-search .usa-search-submit {
-  background-image: url("../img/search.png");
-  background-image: url("../img/search.svg");
+  background-image: url("../images/search.png");
+  background-image: url("../images/search.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   border-bottom-left-radius: 0;
@@ -2671,8 +2671,8 @@ fieldset {
   }
   .usa-search.usa-search-small [type="submit"],
   .usa-search.usa-search-small .usa-search-submit {
-    background-image: url("../img/search.png");
-    background-image: url("../img/search.svg");
+    background-image: url("../images/search.png");
+    background-image: url("../images/search.svg");
     background-position: 50%;
     background-repeat: no-repeat;
     width: 4.5rem;

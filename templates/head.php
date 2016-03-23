@@ -5,9 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" href="<?php echo get_template_directory(); ?>/dist/images/favicon/favicon.ico">
 
-   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory(); ?>/dist/styles/uswds.css">
+   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/styles/uswds.css">
 
-   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory(); ?>/dist/stylesheets/main.css">
    <!--[if lt IE 9]>    
    <script src="./js/html5shiv.js"></script>
    <![endif]-->

@@ -1,12 +1,14 @@
-<?php the_content(); 
-
-
+<?php
 global $wp_query;
-$state = $wp_query->query_vars['state'];
-echo $state.' Absentee Ballot';
-echo get_helpScout_category($state);
-?>
+if (isset($wp_query->query_vars['state_name'])) {
+  $state = $wp_query->query_vars['state_name'];
+  $state_name = ucwords($state);
+} else {
+  $state = "";
+  $state_name = "";
+}
 
+?>
 <section class="register-tool">
 
       <div class="container">
@@ -17,7 +19,7 @@ echo get_helpScout_category($state);
 
     <section class="voter-registration-guide">
       <div class="container">
-        <h1><?php echo get_helpScout_category($state);?> Voter Registration Guide</h1>
+        <h1><?php echo $state_name; ?> Voter Registration Guide</h1>
         <div class="updated">Last updated January 16, 2016</div>
 
         <h3>Voter Registration Deadlines</h3>

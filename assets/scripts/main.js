@@ -76,30 +76,32 @@
 
 })(jQuery); // Fully reference jQuery after this point.
 
+
 function resizeIframe(width) {
- if (width > 768) {
-  $("section.register-tool iframe").attr('height','1000');
+  //adjust the height for the rock the vote registration tool once it hits the breakpoint from mobile to tablet, this is set by rock the vote.
+ if (width > 512) {
+  jQuery("section.register-tool iframe").attr('height','1000');
  } else {
-  $("section.register-tool iframe").attr('height','600');
+  jQuery("section.register-tool iframe").attr('height','600');
  }
 }
-$(window).resize(function() {
-  var width = $(window).width(); // New width
+jQuery(window).resize(function() {
+  var width = jQuery(window).width(); // New width
   resizeIframe(width);
 });
 
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
  //on browser size tablet change the iframe height to 1000//
  var width = $(window).width(); // New width
  resizeIframe(width);
 
- $('.menu-btn.mobile-only').click(function(){
+ jQuery('.menu-btn.mobile-only').click(function(){
   var menuCollapsed = $('.nav-menu.mobile-only').hasClass('collapsed');
   if (!menuCollapsed){
-   $('.nav-menu.mobile-only').addClass('collapsed');
+   jQuery('.nav-menu.mobile-only').addClass('collapsed');
   } else {
-   $('.nav-menu.mobile-only').removeClass('collapsed');
+   $jQuery('.nav-menu.mobile-only').removeClass('collapsed');
   }
    
  });

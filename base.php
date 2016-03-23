@@ -3,6 +3,7 @@
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
+
 ?>
 
 <!DOCTYPE html>
@@ -34,5 +35,5 @@ use Roots\Sage\Wrapper;
     ?>
   </body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="<?php echo get_template_directory(); ?>/assets/scripts/uswds.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/uswds.min.js"></script>
 </html>
