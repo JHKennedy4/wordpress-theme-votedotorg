@@ -41,16 +41,16 @@ function add_category($url){
  
 }
 
-
 //figure out the right category ID that matches the slug we are looking for
 
-function get_helpScout_category($slug) {
-  $data = get_web_page('https://docsapi.helpscout.net/v1/collections/56a903cfc697914361562efb/categories');
+function get_helpScout_category($state_name) {
+  $collections_ID = "56e35a51c697911471461343";
+  $data = get_web_page('https://docsapi.helpscout.net/v1/collections/'.$collections_ID.'/categories');
   $categories = $data["categories"];
   $items = $categories["items"];
  foreach ($items as $item) {
-  $category_slug = $item["slug"];
-  if ($category_slug == $slug) {
+  $category_name = $item["name"];
+  if ($category_name == $state_name) {
    return $item["id"];
    // echo var_export($item)."category id: ".$item["id"]."collectionID: ".$item["collectionId"]."publicURL: ".$item["publicUrl"];
   }
@@ -58,10 +58,9 @@ function get_helpScout_category($slug) {
  }
 }
 
-function get_helpScout_articles_by_category($slug) {
- $id = get_helpScout_category($slug);
+function get_helpScout_articles_by_category($slug, $state_name) {
+ $id = get_helpScout_category($state_name);
  $category_articles = get_web_page('https://docsapi.helpscout.net/v1/categories/'.$id.'/articles');
-
  $items = $category_articles["articles"]["items"];
  $count = count($items);
 
@@ -69,10 +68,11 @@ function get_helpScout_articles_by_category($slug) {
   $article_num = $items[$x]["number"];
   $article_url = 'https://docsapi.helpscout.net/v1/articles/'.$article_num;
   $full_articles = get_web_page($article_url);
+  $button_num = $x + 1;
   foreach ($full_articles as $full_article) {
 
    //outputs title and text. can format this for HTML
-   echo "<h3>".$full_article["name"]."</h3><p>".$full_article["text"]."</p>"; 
+   echo "<li><button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-".$button_num."'>".$full_article["name"]."</button><div id='collapsible-".$button_num."' aria-hidden='true' class='answer usa-accordion-content'>".$full_article["text"]."</div></li>"; 
   }
  }
 }
@@ -88,9 +88,9 @@ function get_helpScout_articles_by_category($slug) {
  //add_rewrite_rule The first argument is our regular expression, what we want to match exactly. 
  //index.php?p=11 is our reidrect URL, it tells Wordprss to load the post with ID = 11
 function custom_rewrite_rule(){
-  add_rewrite_rule('^register-to-vote/([a-z]+)/?$','index.php?page_id=11&state_name=$matches[1]','top');
-  add_rewrite_rule('^absentee-ballot/([a-z]+)/?$','index.php?page_id=2&state_name=$matches[1]','top');
-  add_rewrite_rule('^state/([a-z]+)/?$','index.php?page_id=2224&state=$matches[1]','top');
+  add_rewrite_rule('^register-to-vote/([a-z-]+)/?$','index.php?page_id=11&state_name=$matches[1]','top');
+  add_rewrite_rule('^absentee-ballot/([a-z-]+)/?$','index.php?page_id=2&state_name=$matches[1]','top');
+  add_rewrite_rule('^/([a-z-]+)/?$','index.php?page_id=2224&state=$matches[1]','top');
   // Call flush_rules() as a method of the $wp_rewrite object
   flush_rewrite_rules();
 }
