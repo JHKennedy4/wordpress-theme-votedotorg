@@ -31,6 +31,10 @@
   clear: both;
   float: none;
 }
+.warning {
+ color: $red;
+ font-weight: 800;
+}
 strong {
   font-weight: 800;
 }

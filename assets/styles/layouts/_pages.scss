@@ -117,7 +117,18 @@ th {
 td {
   background-color: #fff;
 }
-
+.breadcrumbs {
+  background: #000;
+  padding: 2px 0px;
+  h1 {
+    font-size: 15px;
+    font-family: 'ClearSans' sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $grey;
+    margin-bottom: 0;
+  }
+}
 
 .register-tool {
   padding: 10px 0;
@@ -321,7 +332,7 @@ section.call-to-action {
     }
   }
   .register-tool {
-    background: url('../images/bkg-blue-large.png') no-repeat center;
+    background: url('../images/bkg-blue-large.png') no-repeat 50% 49%;
     background-size: cover;
     .container {
       width: 700px; 
