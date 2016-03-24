@@ -2,7 +2,7 @@
 global $wp_query;
 if (isset($wp_query->query_vars['state_name'])) {
   $state = $wp_query->query_vars['state_name'];
-  $state_name = ucwords($state);
+  
 } else {
   $state = "";
   $state_name = "";
@@ -26,7 +26,9 @@ $state_loop = new WP_Query( array(
   'name'      => $state,
   'posts_per_page' => 50
 ) ); 
-    if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); ?>
+    if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
+
+    $state_name = $post->post_title; ?>
    
 
     <section class="voter-registration-guide">
@@ -34,6 +36,14 @@ $state_loop = new WP_Query( array(
         <h1><?php the_title(); ?> Absentee Ballot Guide</h1>
         
         <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
+        
+        <?php $vbm_warnings = types_render_field("absentee-ballot-warnings");
+          if ($vbm_warnings !== "") { ?>
+
+        <h3 class="warning">Warnings</h3>
+        <div class="warning"><?php echo $vbm_warnings; ?>
+        </div>
+          <?php } ?>
 
         <h3><?php the_title(); ?> Absentee Ballot Deadlines</h3>
 
@@ -48,12 +58,24 @@ $state_loop = new WP_Query( array(
           <div class="clear-fix tablet"></div>
         </div>
 
-        
-        <h3>How to get your absentee ballot</h3>
+        <h3><?php the_title(); ?> Absentee Ballot Rules</h3>
 
+        <?php echo types_render_field("vbm-eligibilty");?>
+
+
+        <h3><?php the_title(); ?> Absentee Ballot Directions</h3>
+        <?php echo types_render_field("test")."test";?>
         <p>To get your absentee ballot in <?php the_title(); ?> you must:</p>
-        <?php echo types_render_field("how-to-get-your-absentee-ballot");?>
-        
+        <ol>
+          <li>Use our Absentee Ballot Tool to prepare your application.</li>
+          <li>Sign and date the form. This is very important!</li>
+          <li>Return your completed application to your Local Election Official as soon as possible.  We'll provide the mailing address for you.</li>
+          <li>All Local Election Officials will accept mailed or hand-delivered forms. If it's close to the deadline, call and see if your Local Election Official will let you fax or email the application.</li>
+          <li>Make sure your application is received by the deadline.  Your application must actually arrive by this time -- simply being postmarked by the deadline is insufficient.</li>
+          <li>Please contact your Local Election Official if you have any further questions about the exact process.</li>
+        </ol>
+
+
         <?php 
         $instructions = types_render_field("voted-absentee-ballot-instructions");
         if ($instructions !== "") { ?>
@@ -61,30 +83,33 @@ $state_loop = new WP_Query( array(
           <?php echo $instructions;?>
         <?php } ?>
         
+        <?php $permanent_vbm_instructions = types_render_field("permanent-absentee-ballot-instructions"); ?>
         
+        <?php if ($permanent_vbm_instructions !== "") { ?>
+        <h3>Permanent Absentee Ballots</h3>
 
-        <h3>Additional Information</h3>
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <?php 
-        $vbm_warnings = types_render_field("absentee-ballot-warnings");
-        if ($vbm_warnings !== "") { ?>
-        <h3>VBM Warnings</h3>
-        <?php echo $vbm_warnings; ?>
+        <?php echo $permanent_vbm_instructions;?>
         <?php } ?>
+
+        <?php $emergency_vbm_instructions = types_render_field("emergency-vbm-eligibilty");
+        if ($emergency_vbm_instructions !=="") { ?>
+        <h3>Emergency Absentee Ballots</h3>
+
+        <?php echo $emergency_vbm_instructions;?>
+        <?php } ?>
+
+        <ul>
+          <li>Helpful Voting Links -- <?php $state_name; ?></li>
+          <li>State Elections Website</li>
+          <li>Local Election Officials - these are the best people to contact if you hae any questions at all about voting in your state.</li>
+          <li>Learn more about absentee voting</li>
+          <li>Learn more about early voting</li>
+          <li>Learn more about voter ID</li>
+          <li>Check your registration status</li>
+          <li>Find your polling place</li>
+          <li>Track your absentee ballot</li>
+        </ul>
         
-
-
-        
-        <div class="table">
-          <div class="header">Permanent VBM Eligibility</div>
-          <div class="cell"><?php echo types_render_field("permanent-absentee-ballot-instructions");?></div>
-        </div><!--.table-->
-
-        <div class="table">
-          <div class="header">Emergency VBM Eligibility</div>
-          <div class="cell"><?php echo types_render_field("emergency-vbm-eligibilty");?></p>
-          </div><!--.cell-->
-        </div><!--.table-->
         <div class="table">
           <div class="header">State Election Website</div>
           <div class="cell"><a href="<?php echo types_render_field('state-election-website', array('raw' => true));?>" alt="<?php the_title();?> State Election Website"><?php the_title(); ?> State Election Website</a></div>
@@ -107,40 +132,11 @@ $state_loop = new WP_Query( array(
       <div class="container">
         <h2>Frequently Asked Questions</h2>
 
+
         <div class="faq-box usa-accordion">
           <ul class="usa-unstyled-list">
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-4">
-                Do I need to provide ID when I register to vote in Alabama?
-              </button>
-              <div id="collapsible-4" aria-hidden="true" class="answer usa-accordion-content">
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              </div>
-            </li>
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-5">
-                Do I need to provide ID when I vote by absentee ballot in Alabama?
-              </button>
-              <div id="collapsible-5" aria-hidden="true" class="answer usa-accordion-content">
-                <p>All absentee voters must include a copy of their ID with their absentee ballot.  Acceptable forms of voter ID include: Government-issued photo ID; Employee photo ID; Alabama college, university photo ID technical or professional school photo ID; utility bill, bank statement, government paycheck, or paycheck with voter's name and address; Valid ID card (authorized by law) issued by the State of or by any of the other 49 states or issued by the US government; US passport; Alabama hunting or fishing license; Alabama pistol/revolver permit; Valid pilot's license; Valid US military ID; Birth certificate; Social Security card; Naturalization document; Court record of adoption; Court record of name change; Valid Medicaid or Medicare cvard; Valid electronic benefits transfer card; Government document that shows the name and address of the voter.</p>
-              </div>
-            </li>
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-2">
-                Do I need to provide ID when I register to vote in Alabama?
-              </button>
-              <div id="collapsible-2" aria-hidden="true" class="answer usa-accordion-content">
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              </div>
-            </li>
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-3">
-                Do I need to provide ID when I register to vote in Alabama?
-              </button>
-              <div id="collapsible-3" aria-hidden="true" class="usa-accordion-content">
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              </div>
-            </li>
+            <?php get_helpScout_articles_by_category($state, $state_name); ?>
+            
           </ul><!--.usa-unstyled-list-->
         </div><!--.faq-box- .usa-accordion-->
 
