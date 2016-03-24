@@ -9,6 +9,19 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
+// function for resizing iframe for each tool
+function autoResize(id){
+    var newheight;
+    var newwidth;
+
+    if(document.getElementById){
+        newheight=document.getElementById(id).contentWindow.document.body.scrollHeight;
+        newwidth=document.getElementById(id).contentWindow.document.body.scrollWidth;
+    }
+
+    document.getElementById(id).height= (newheight) + "px";
+    document.getElementById(id).width= (newwidth) + "px";
+}
 
 (function($) {
 
@@ -19,6 +32,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -80,9 +94,9 @@
 function resizeIframe(width) {
   //adjust the height for the rock the vote registration tool once it hits the breakpoint from mobile to tablet, this is set by rock the vote.
  if (width > 512) {
-  jQuery("section.register-tool iframe").attr('height','1000');
+  jQuery("section.register-tool iframe.register").attr('height','1000');
  } else {
-  jQuery("section.register-tool iframe").attr('height','600');
+  jQuery("section.register-tool iframe.register").attr('height','600');
  }
 }
 jQuery(window).resize(function() {
