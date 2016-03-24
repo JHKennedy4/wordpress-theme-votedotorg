@@ -126,7 +126,9 @@
 
     <div class="tablet about">
       <h3>About Vote.org</h3>
-      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur.</p>
+      <p>Long Distance Voter operates at the intersection of technology and democracy. We work aggressively to build and leverage technology to remove barriers to voting. Long Distance Voter launched in 2008 as an information-based site for absentee voters. The site now covers all aspects of voting, from registering to vote, to voting-by-mail, to voting early, to answering questions about what ID to bring to the polls. LongDistanceVoter.org is the most-visited site for accurate voting information.</p>
+
+      <p>With the gutting of the Voting Rights Act, attacks on early voting hours and Election Day registration, and the passage of restrictive voter ID laws, Long Distance Voter's services are more essential than ever. We're building a small team of technology experts to deliver best-in-class solutions to mounting democratic problems. We won't rest until every who wants to vote can easily cast a ballot.</p>
 
     </div><!--.about.mobile-only-->
     <div class="partners">

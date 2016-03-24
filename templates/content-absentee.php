@@ -9,10 +9,10 @@ if (isset($wp_query->query_vars['state_name'])) {
 }
 
 ?>
-<section class="register-tool">
+    <section class="register-tool">
 
       <div class="container">
-        <iframe src="https://register2.rockthevote.com/registrants/map/?source=iframe&partner=32936" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
+        <iframe class="register" src="https://register2.rockthevote.com/registrants/map/?source=iframe&partner=32936" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
       </div><!--.container-->
 
     </section><!--.register-tool-->

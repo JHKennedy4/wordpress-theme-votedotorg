@@ -9,25 +9,28 @@ if (isset($wp_query->query_vars['state_name'])) {
 }
 
 ?>
+<section class="breadcrumbs">
+  <div class="container">
+<?php //looping through States to find one with the matching state slug
+  $state_loop = new WP_Query( array( 
+    'post_type' => 'state',
+    'name'      => $state,
+    'posts_per_page' => 50
+  ) ); 
+      if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
+      $state_name = $post->post_title; ?>
+    <h1>Register to Vote > <?php echo $state_name; ?></h1>
+  </div><!--.container-->
+</section><!--.breadcrumbs-->
+
 <section class="register-tool">
 
       <div class="container">
-        <iframe src="https://register2.rockthevote.com/registrants/map/?source=iframe&partner=32936" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
+        <iframe class="register" src="https://register2.rockthevote.com/registrants/map/?source=iframe&partner=32936" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
       </div><!--.container-->
 
     </section><!--.register-tool-->
 
-
-<?php 
-
-//looping through States to find one with the matching state slug
-$state_loop = new WP_Query( array( 
-  'post_type' => 'state',
-  'name'      => $state,
-  'posts_per_page' => 50
-) ); 
-    if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
-    $state_name = $post->post_title; ?>
    
 
     <section class="voter-registration-guide">
