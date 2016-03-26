@@ -1,4 +1,4 @@
-
+    <section>
       <div class="container">
        <h1>Early Voting Calendar</h1>
        <?php the_content();?>

@@ -1,4 +1,4 @@
- <section>
+     <section>
       <div class="container">
        <h1>Absentee Ballot Deadlines</h1>
        <?php the_content();?>
@@ -36,8 +36,8 @@
         </table>
         
       </div><!--.container-->
-</section>
-    </section>
+     </section>
+
 
 
 

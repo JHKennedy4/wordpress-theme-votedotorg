@@ -68,7 +68,7 @@ function get_helpScout_articles_by_category($slug, $state_name) {
   $article_num = $items[$x]["number"];
   $article_url = 'https://docsapi.helpscout.net/v1/articles/'.$article_num;
   $full_articles = get_web_page($article_url);
-  $button_num = $x + 1;
+  $button_num = $x + 5;
   foreach ($full_articles as $full_article) {
 
    //outputs title and text. can format this for HTML
