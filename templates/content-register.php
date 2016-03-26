@@ -19,14 +19,14 @@ if (isset($wp_query->query_vars['state_name'])) {
   ) ); 
       if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
       $state_name = $post->post_title; ?>
-    <h1>Register to Vote > <?php echo $state_name; ?></h1>
+    <h1>Register to Vote in <?php echo $state_name; ?></h1>
   </div><!--.container-->
 </section><!--.breadcrumbs-->
 
 <section class="register-tool">
 
       <div class="container">
-        <iframe class="register" src="https://register2.rockthevote.com/registrants/map/?source=iframe&partner=32936" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
+        <iframe class="register" src="https://ldv-apollo-staging.herokuapp.com/" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
       </div><!--.container-->
 
     </section><!--.register-tool-->
@@ -35,7 +35,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <section class="voter-registration-guide">
       <div class="container">
-        <h1><?php the_title(); ?> Voter Registration Guide</h1>
+        <h2><?php the_title(); ?> Voter Registration Guide</h2>
         
         <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
 
@@ -56,25 +56,35 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="cell"><?php echo types_render_field("voter-registration-deadline-online");?></div>
           <div class="clear-fix tablet"></div>
         </div>
+
+        OPTIONAL if statement
         <div class="table">
           <div class="header">Election Day Registration Instructions</div>
-          <div class="cell"></div>
+          <div class="cell"><?php echo types_render_field("election-day-registration-instructions");?></div>
           <div class="clear-fix tablet"></div>
         </div><!--.table-->
         
-        <h3>Voter Registration Rules</h3>
+        <h3><?php the_title(); ?> Voter Registration Rules</h3>
 
-        <p>To register to vote in <?php the_title(); ?> you must:</p>
         <?php echo types_render_field("voter-registration-rules");?>
         
 
-        
         <h3>How to Register to Vote</h3>
         <?php echo types_render_field("how-to-register-to-vote");?>
 
-        <h3>Additional Information</h3>
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
+        <h3>Helpful Voting Links -- <?php $state_name; ?></h3>
+        OFFSITE URLS
+        <ul>
+          <li>State Elections Website</li>
+          <li>Local Election Officials - these are the best people to contact if you have any questions at all about voting in your state.</li>
+          <li>Learn more about absentee voting</li>  http://
+          <li>Learn more about early voting</li>
+          <li>Learn more about voter ID</li>
+          <li>Check your registration status</li>
+          <li>Find your polling place</li>
+          <li>Track your absentee ballot</li>
+        </ul>
+        
         <div class="table">
           <div class="header">State Election Website</div>
           <div class="cell"><a href="<?php echo types_render_field('state-election-website', array('raw' => true));?>" alt="<?php the_title();?> State Election Website"><?php the_title(); ?> State Election Website</a></div>

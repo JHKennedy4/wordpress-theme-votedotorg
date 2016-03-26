@@ -9,18 +9,32 @@ if (isset($wp_query->query_vars['state_name'])) {
 }
 
 ?>
+    <section class="breadcrumbs">
+      <div class="container">
+    <?php //looping through States to find one with the matching state slug
+      $state_loop = new WP_Query( array( 
+        'post_type' => 'state',
+        'name'      => $state,
+        'posts_per_page' => 50
+      ) ); 
+          if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
+          $state_name = $post->post_title; ?>
+        <h1><?php echo $state_name; ?> Election Center</h1>
+      </div><!--.container-->
+    </section><!--.breadcrumbs-->
 
-<section class="register-tool">
+
+    <section class="register-tool">
 
       <div class="container">
-        <iframe src="https://register2.rockthevote.com/registrants/map/?source=iframe&partner=32936" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
+        <iframe src="https://ldv-apollo-staging.herokuapp.com/" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
       </div><!--.container-->
 
     </section><!--.register-tool-->
 
     <section class="voter-registration-guide">
       <div class="container">
-        <h1><?php echo $state_name;?> Voter Registration Guide</h1>
+        <h2><?php echo $state_name;?> Voter Registration Guide</h2>
         <div class="updated">Last updated January 16, 2016</div>
 
         <h3>Voter Registration Deadlines</h3>
@@ -77,45 +91,17 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
 
     </section><!--.voter-registration-guide -->
-
+<?php endwhile; 
+    wp_reset_postdata();
+  endif; ?>
     <section class="faqs">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
 
         <div class="faq-box usa-accordion">
           <ul class="usa-unstyled-list">
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-4">
-                Do I need to provide ID when I register to vote in Alabama?
-              </button>
-              <div id="collapsible-4" aria-hidden="true" class="answer usa-accordion-content">
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              </div>
-            </li>
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-5">
-                Do I need to provide ID when I vote by absentee ballot in Alabama?
-              </button>
-              <div id="collapsible-5" aria-hidden="true" class="answer usa-accordion-content">
-                <p>All absentee voters must include a copy of their ID with their absentee ballot.  Acceptable forms of voter ID include: Government-issued photo ID; Employee photo ID; Alabama college, university photo ID technical or professional school photo ID; utility bill, bank statement, government paycheck, or paycheck with voter's name and address; Valid ID card (authorized by law) issued by the State of or by any of the other 49 states or issued by the US government; US passport; Alabama hunting or fishing license; Alabama pistol/revolver permit; Valid pilot's license; Valid US military ID; Birth certificate; Social Security card; Naturalization document; Court record of adoption; Court record of name change; Valid Medicaid or Medicare cvard; Valid electronic benefits transfer card; Government document that shows the name and address of the voter.</p>
-              </div>
-            </li>
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-2">
-                Do I need to provide ID when I register to vote in Alabama?
-              </button>
-              <div id="collapsible-2" aria-hidden="true" class="answer usa-accordion-content">
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              </div>
-            </li>
-            <li>
-              <button class="question usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-3">
-                Do I need to provide ID when I register to vote in Alabama?
-              </button>
-              <div id="collapsible-3" aria-hidden="true" class="usa-accordion-content">
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              </div>
-            </li>
+            <?php get_helpScout_articles_by_category($state, $state_name); ?>
+            
           </ul><!--.usa-unstyled-list-->
         </div><!--.faq-box- .usa-accordion-->
 
