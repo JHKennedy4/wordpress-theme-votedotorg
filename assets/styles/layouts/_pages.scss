@@ -98,16 +98,89 @@ footer {
   margin: 0 auto;
 }
 //*Table Styling*/
-table {
+table.responsive-chart {
   font-size: 17px;
   line-height: 25px;
-  border: 1px solid #5b616b;
   padding: 10px;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: 0 solid transparent;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 100%; 
+  thead tr {
+    display: none;
+  }
+  th {
+    background: #003b5c;
+    color: #fff;
+    font-weight: 500;
+    border: 2px solid #fff;
+    text-align: left;
+    font-weight: 500;
+    display: none;
+  }
+
+  td, th {
+    padding: 10px;
+    transition: .3s;
+  }
+  tr {
+    transition: .3s;
+    border-bottom: 2px solid #c0c1c0;
+
+  }
+
+  tbody {
+    display: table-row-group;
+    >tr {
+      display: block;
+      background-color: #ebebeb;
+      border-radius: 2px;
+      margin-bottom: 1em;
+      padding: 4%;
+    }
+    td {
+      vertical-align: middle;
+      padding: 5px 10px;
+      border: none;
+      background-color: #ebebeb;
+      line-height: 1.2em;
+    }
+    td[data-title]:before {
+      content: attr(data-title);
+      font-size: inherit;
+      font-weight: 700;
+      color: #003b5c;
+      display: block;
+      margin-bottom: 5px;
+    }
+    td.state-name {
+      font-size: 2em;
+      font-weight: 700;
+      color: $darkbluegrey;
+      display: block;
+      padding: 0;
+      margin-bottom: 15px;
+      a {
+        color: #003b5c;
+        border-bottom: 4px solid #003b5c;
+        transition: .2s;
+        &:hover {
+          color: $lightblue;
+          border-color: $lightblue;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 th, td {
   padding-top: 15px;
   padding-left: 10px;
   height: 50px;
+  transition: .3s
 }
 th {
   background-color: $darkbluegrey;
@@ -117,6 +190,8 @@ th {
 td {
   background-color: #fff;
 }
+
+
 .breadcrumbs {
   background: #000;
   padding: 2px 0px;
@@ -148,23 +223,6 @@ section.voter-registration-guide {
     line-height: 20px;
     margin-bottom: 30px;
   }
-  /*Faux Table*/
-  .table {
-    font-size: 17px;
-    line-height: 25px;
-    border: 1px solid #5b616b;
-    margin-bottom: 0;
-    .header, .cell {
-      padding: 16px;
-    }
-    .header {
-      background-color: $darkbluegrey;
-      color: #fff;
-    }
-    .cell {
-      background-color: #fff;
-    }
-  }
 }
 
 section.faqs {
@@ -179,11 +237,18 @@ section.faqs {
     button.question {
       height: auto;
       background-color: #fff;
-      background-position: 14em 2rem;
+      background-position: 12.5em 2rem;
     }
   }
   .usa-accordion-content {
     padding: 2rem 3rem;
+    line-height: 1.5em;
+    ul, li {
+      list-style: initial;
+    }
+    ol li {
+      list-style-type: decimal;
+    }
   }
 }
 section.sharing {
@@ -276,6 +341,25 @@ section.call-to-action {
   }
 }
 
+
+/*Faux Table*/
+.table {
+  font-size: 17px;
+  line-height: 25px;
+  border: 1px solid #5b616b;
+  margin-bottom: 0;
+  .header, .cell {
+    padding: 16px;
+  }
+  .header {
+    background-color: $darkbluegrey;
+    color: #fff;
+  }
+  .cell {
+    background-color: #fff;
+  }
+}
+
 //*Tablet*/
 
 @media only screen and (min-width: 768px) {
@@ -293,6 +377,77 @@ section.call-to-action {
     padding: 75px 0;
     .container {
       width: 700px;
+    }
+  }
+
+  //Table Tablet //
+  table.responsive-chart {
+    border: none;
+    border-bottom: 0 solid transparent;
+    thead {
+      display: table-row-group;
+      tr {
+        display: table-row;
+      }
+      th {
+        display: table-cell;
+      }
+    }
+    tbody {
+      display: table-row-group;
+      tr {
+        display: table-row;
+        background-color: #ebebeb;
+        border-radius: 2px;
+        margin-bottom: 1em;
+        padding: 4%;
+        td {
+          display: table-cell;
+          vertical-align: middle;
+          padding: 5px 10px;
+          border-left: 1px solid #c0c1c0;
+          border-right: 1px solid #c0c1c0;
+        }
+        td[data-title]:before {
+          content: attr(data-title);
+          font-size: inherit;
+          font-weight: 700;
+          color: #003b5c;
+          display: block;
+        }
+        td.state-name {
+          font-size: 1em;
+          font-weight: 500;
+          color: #003b5c;
+          display: table-cell;
+          margin-bottom: 0;
+          padding: 5px 10px;
+          &:before {
+            display: none;
+          }
+          a {
+            border-bottom: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }  
+  }
+  table.three-columns {
+    th, td {
+      width: 33%;
+    }
+  }
+  table.four-columns {
+    th, td {
+      width: 25%;
+    }
+  }
+  table.five-columns {
+    th, td {
+      width: 20%;
     }
   }
 
@@ -543,3 +698,9 @@ section.call-to-action {
 }
 
 //* IE 9 and 8 Stylings *//
+
+
+
+
+
+

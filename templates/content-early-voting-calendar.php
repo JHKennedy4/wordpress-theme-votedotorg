@@ -3,12 +3,12 @@
        <h1>Early Voting Calendar</h1>
        <?php the_content();?>
 
-        <table class="deadlines sticky-enabled sticky-table">
+        <table class="states-chart responsive-chart four-columns">
          <thead>
           <tr>
-           <th style="width: 100px;">State</th>
-           <th style="width: 225px;">Early in-person voting begins</th>
-           <th style="width: 225px;">Early in-person voting ends</th>
+           <th class="state">State</th>
+           <th>Early in-person voting begins</th>
+           <th>Early in-person voting ends</th>
            <th>More Information</th>
           </tr>
          </thead>
@@ -24,11 +24,11 @@
            if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
             $state_name = $post->post_title; 
             $state_slug = $post->post_name;?>
-            <tr valign="top">
-            <td><a href="/<?php echo $state_slug; ?>"><?php echo $state_name; ?></a></td>
-            <td><?php echo types_render_field('early-voting-begins');?></td>
-            <td><?php echo types_render_field('early-voting-ends');?></td>
-            <td>Contact your <a href="https://www.overseasvotefoundation.org/overseas/eod.htm">Local Election Official</a> to learn more about early voting in your area.</td>
+            <tr class="state-row" valign="top">
+            <td class="state-name"><a href="/<?php echo $state_slug; ?>"><?php echo $state_name; ?></a></td>
+            <td data-title="Early Voting Begins"><?php echo types_render_field('early-voting-begins');?></td>
+            <td data-title="Early Voting Ends"><?php echo types_render_field('early-voting-ends');?></td>
+            <td data-title="More Information">Contact your <a href="https://www.overseasvotefoundation.org/overseas/eod.htm">Local Election Official</a> to learn more about early voting in your area.</td>
             </tr>
             <?php endwhile; 
               wp_reset_postdata();
