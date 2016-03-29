@@ -11,7 +11,7 @@
       <li><a href="http://register.vote.org/">Register to Vote</a></li>
       <li class="active"><a href="http://verify.vote.org/">Are You Registered?</a></li>
       <li><a href="#">Absentee Ballots</a></li>
-      <a class="usa-button usa-button-outline" href="/donate">
+      <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">
         Donate
       </a>
     </ul><!--.nav-menu.desktop-->
@@ -26,11 +26,11 @@
   <ul class="no-dropdown">
     <li><a href="http://register.vote.org/">Register to Vote</a></li>
     <li class="active"><a href="http://verify.vote.org/">Are You Registered?</a></li>
-    <li><a href="#">Absentee Ballots</a></li>
+    <li><a href="http://absentee.vote.org">Absentee Ballots</a></li>
     <li>
-      <button class="usa-button usa-button-outline" href="/donate">
+      <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg">
         Donate
-      </button>
+      </a>
     </li>
   </ul><!--.no-dropdown-->
   <div class="usa-accordion">

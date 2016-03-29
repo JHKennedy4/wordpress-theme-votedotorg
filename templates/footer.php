@@ -53,7 +53,7 @@
     <div class="donate tablet">
       <h2>Donate</h2>
       <!--ToDo: insert Mozilla donation widget-->
-      {insert widget from Mozilla}
+      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_button">Donate Now</a>
 
     </div><!--.donate.tablet-->
     <div class="join">
