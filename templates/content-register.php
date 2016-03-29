@@ -71,6 +71,9 @@ if (isset($wp_query->query_vars['state_name'])) {
         <h3><?php the_title(); ?> Voter Registration Rules</h3>
 
         <?php echo types_render_field("voter-registration-rules");?>
+        <h3><?php the_title(); ?> Voter Registration Directions</h3>
+
+        <?php echo types_render_field("how-to-register-to-vote");?>
         
 
         <?php get_template_part('templates/content-links'); ?>
