@@ -1,4 +1,14 @@
-
+body.webkit.wp-editor {
+  ol, ul {
+    list-style: initial;
+    margin-left: 21px;
+  }
+}
+body.wp-admin {
+  #poststuff h2 {
+    font-size: 20px;
+  }
+}
 ///*Fonts*//
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @font-face{ 
