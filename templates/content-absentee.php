@@ -66,16 +66,10 @@ if (isset($wp_query->query_vars['state_name'])) {
 
 
         <h3><?php the_title(); ?> Absentee Ballot Directions</h3>
-        <?php echo types_render_field("test")."test";?>
-        <p>To get your absentee ballot in <?php the_title(); ?> you must:</p>
-        <ol>
-          <li>Use our Absentee Ballot Tool to prepare your application.</li>
-          <li>Sign and date the form. This is very important!</li>
-          <li>Return your completed application to your Local Election Official as soon as possible.  We'll provide the mailing address for you.</li>
-          <li>All Local Election Officials will accept mailed or hand-delivered forms. If it's close to the deadline, call and see if your Local Election Official will let you fax or email the application.</li>
-          <li>Make sure your application is received by the deadline.  Your application must actually arrive by this time -- simply being postmarked by the deadline is insufficient.</li>
-          <li>Please contact your Local Election Official if you have any further questions about the exact process.</li>
-        </ol>
+
+        <?php echo types_render_field("absentee-ballot-directions");?>
+
+        {Need to save states }
 
 
         <?php 
@@ -99,30 +93,38 @@ if (isset($wp_query->query_vars['state_name'])) {
 
         <?php echo $emergency_vbm_instructions;?>
         <?php } ?>
-
-        <ul>
-          <li>Helpful Voting Links -- <?php $state_name; ?></li>
-          <li>State Elections Website</li>
-          <li>Local Election Officials - these are the best people to contact if you hae any questions at all about voting in your state.</li>
-          <li>Learn more about absentee voting</li>
-          <li>Learn more about early voting</li>
-          <li>Learn more about voter ID</li>
-          <li>Check your registration status</li>
-          <li>Find your polling place</li>
-          <li>Track your absentee ballot</li>
-        </ul>
         
-        <div class="table">
-          <div class="header">State Election Website</div>
-          <div class="cell"><a href="<?php echo types_render_field('state-election-website', array('raw' => true));?>" alt="<?php the_title();?> State Election Website"><?php the_title(); ?> State Election Website</a></div>
-        </div><!--.table-->
+        <h3>How to Register to Vote</h3>
+        <?php echo types_render_field("how-to-register-to-vote");?>
+        
+        <h3><?php $state_name; ?> Online Voting Tools</h3>
+        
+        <ul>
+          
+          <li><a href="/register-to-vote">Register to Vote</a></li>
 
-        <div class="table">
-          <div class="header">Local Election Officials</div>
-          <div class="cell">
-              <p>Your Local Election is the best person to contact if you have voting-related questions. They'll be able to provide up to date information on rules and deadlines.</p>
-          </div><!--.cell-->
-        </div><!--.table-->
+          <li><a href="http://absentee.vote.org/">Get your Absentee Ballot</a></li>
+          <li><a href="/am-i-registered-to-vote">Check your registration status</a></li>
+
+        </ul>
+
+        <h3><?php $state_name; ?> Helpful Voting Links</h3>
+        
+        <ul>
+          <li><a href="<?php echo types_render_field('state-election-website', array('raw' => true));?>">State Election Website</a></li>
+  
+          <li><a href="<?php echo types_render_field('local-election-official', array('raw' => true));?>">Local Election Officials</a>: These are the best people to contact if you have any questions at all about voting in your state.</li>
+          <li><a href="<?php echo types_render_field('polling-place-locator', array('raw' => true));?>">Find your polling place</a></li>
+          <li><a href="<?php echo types_render_field('online-ballot-tracker-url', array('raw' => true));?>">Absentee ballot tracker tool</a></li>
+          <li><a href="<?php echo types_render_field('absentee-ballot-info-url', array('raw' => true));?>">Learn more about absentee voting</a></li>
+
+          <li><a href="<?php echo types_render_field('early-voting-info-url', array('raw' => true));?>">Learn more about early voting - More Information</a></li>
+          <li><a href="<?php echo types_render_field('voter-id-more-information', array('raw' => true));?>">Learn more about voter ID </a></li>
+
+
+        </ul>
+
+
       </div><!--.container-->
 
     </section><!--.voter-registration-guide -->
@@ -135,7 +137,7 @@ if (isset($wp_query->query_vars['state_name'])) {
         <h2>Frequently Asked Questions</h2>
 
 
-        <div class="faq-box usa-accordion">
+        <div class="usa-accordion">
           <ul class="usa-unstyled-list">
             <?php get_helpScout_articles_by_category($state, $state_name); ?>
             

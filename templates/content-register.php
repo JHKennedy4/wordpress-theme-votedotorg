@@ -57,45 +57,27 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="clear-fix tablet"></div>
         </div>
 
-        OPTIONAL if statement
+        <?php $election_day_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
+
+         if ($election_day_instructions !== "" && $election_day_instructions !== "NA") { ?>
+        
         <div class="table">
           <div class="header">Election Day Registration Instructions</div>
-          <div class="cell"><?php echo types_render_field("election-day-registration-instructions");?></div>
+          <div class="cell"><?php echo $election_day_instructions;?></div>
           <div class="clear-fix tablet"></div>
         </div><!--.table-->
-        
+        <?php }  ?>
+
         <h3><?php the_title(); ?> Voter Registration Rules</h3>
 
         <?php echo types_render_field("voter-registration-rules");?>
         
 
-        <h3>How to Register to Vote</h3>
-        <?php echo types_render_field("how-to-register-to-vote");?>
+        <?php get_template_part('templates/content-links'); ?>
 
-        <h3>Helpful Voting Links -- <?php $state_name; ?></h3>
-        OFFSITE URLS
-        <ul>
-          <li>State Elections Website</li>
-          <li>Local Election Officials - these are the best people to contact if you have any questions at all about voting in your state.</li>
-          <li>Learn more about absentee voting</li>  http://
-          <li>Learn more about early voting</li>
-          <li>Learn more about voter ID</li>
-          <li>Check your registration status</li>
-          <li>Find your polling place</li>
-          <li>Track your absentee ballot</li>
+
         </ul>
-        
-        <div class="table">
-          <div class="header">State Election Website</div>
-          <div class="cell"><a href="<?php echo types_render_field('state-election-website', array('raw' => true));?>" alt="<?php the_title();?> State Election Website"><?php the_title(); ?> State Election Website</a></div>
-        </div><!--.table-->
-
-        <div class="table">
-          <div class="header">Local Election Officials</div>
-          <div class="cell">
-              <p>Your Local Election is the best person to contact if you have voting-related questions. They'll be able to provide up to date information on rules and deadlines.</p>
-          </div><!--.cell-->
-        </div><!--.table-->
+      
       </div><!--.container-->
 
     </section><!--.voter-registration-guide -->
@@ -107,7 +89,7 @@ if (isset($wp_query->query_vars['state_name'])) {
       <div class="container">
         <h2>Frequently Asked Questions</h2>
 
-        <div class="faq-box usa-accordion">
+        <div class="usa-accordion">
           <ul class="usa-unstyled-list">
             <?php get_helpScout_articles_by_category($state, $state_name); ?>
             

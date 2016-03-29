@@ -23,88 +23,87 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
     </section><!--.breadcrumbs-->
 
+    <section class="action-blocks">
+      <div class="box">
+        Make your voice heard in this election.
+        <a class="button" href="/register-to-vote/<?php echo $state;?>">Register to Vote for <?php echo $state_name; ?></a>
+      </div><!--.box-->
+      
+      <div class="box">
+        Find out if you are registered to vote.
+        <a class="button" href="http://verify.vote.org" target="_blank">Check your registration status</a>
+      </div><!--.box-->
+      <div class="box">
+        Get your Absentee Ballot.
+        <a href="/absentee-ballot/<?php echo $state;?>">Get your Absentee Ballot for <?php echo $state_name; ?></a>
+      </div><!--.box-->
 
-    <section class="register-tool">
-
-      <div class="container">
-        <iframe src="https://ldv-apollo-staging.herokuapp.com/" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
-      </div><!--.container-->
-
-    </section><!--.register-tool-->
+    </section>
 
     <section class="voter-registration-guide">
       <div class="container">
-        <h2><?php echo $state_name;?> Voter Registration Guide</h2>
-        <div class="updated">Last updated January 16, 2016</div>
-
-        <h3>Voter Registration Deadlines</h3>
-
-        <div class="table">
-          <div class="header">Registration Deadline</div>
-          <div class="cell">{Registration Deadlines}</div>
-        </div>
-
-        <div class="table">
-          <div class="header">Election Day Registration</div>
-          <div class="cell">{Election Day Registration Information} </div>
-          <div class="clear-fix tablet"></div>
-        </div><!--.table-->
         
-        <h3>Voter Registration Rules</h3>
-
-        <p>Donec sed odio dui vestibulum id ligula porta felis euismod semper:</p>
-
-        <ul>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
-          <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-
-        </ul>
-        <h3>How to Register to Vote</h3>
-        <p>Donec sed odio dui vestibulum id ligula porta felis euismod semper:</p>
-
-        <ul>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
-          <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-
-        </ul>
-
-        <h3>Additional Information</h3>
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-        <div class="table">
-          <div class="header">State Election Website</div>
-          <div class="cell"><a href="http://www.sos.state.al.us/Elections/Default.aspx" alt="Alabama State Election Website">Alabama State Election Website</a></div>
-        </div><!--.table-->
-
-        <div class="table">
-          <div class="header">Local Election Officials</div>
-          <div class="cell">
-              <p>Your Local Election is the best person to contact if you have voting-related questions. They'll be able to provide up to date information on rules and deadlines.</p>
-          </div><!--.cell-->
-        </div><!--.table-->
+        
       </div><!--.container-->
 
     </section><!--.voter-registration-guide -->
-<?php endwhile; 
-    wp_reset_postdata();
-  endif; ?>
+
     <section class="faqs">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
 
-        <div class="faq-box usa-accordion">
+        <div class="usa-accordion">
           <ul class="usa-unstyled-list">
-            <?php get_helpScout_articles_by_category($state, $state_name); ?>
+            <li>
+              <button class='usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><?php echo $state_name; ?> Election Day Registration Instructions</button>
+              <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('election-day-registration-instructions');?></div>
+            </li>
+            <li>
+              <button class='usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-6'><?php echo $state_name; ?> Voter Registration - How To</button>
+              <div id='collapsible-6' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('how-to-register-to-vote');?></div>
+            </li>
+            <li>
+              <button class='usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-7'><?php echo $state_name; ?> Absentee Ballots - How To</button>
+              <div id='collapsible-7' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('how-to-get-your-absentee-ballot');?></div>
+            </li>
+            <li>
+              <button class='usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'><?php echo $state_name; ?> Absentee Ballots - How To</button>
+              <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('early-voting-begins');?>
+                <?php echo types_render_field('early-voting-ends');?></div>
+            </li>
+            <li>
+              <button class='usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'><?php echo $state_name; ?> Voter ID Requirements</button>
+              <div id='collapsible-9' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-in-person');?></div>
+            </li>
+            <li>
+              <button class='usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'><?php echo $state_name; ?> Election Official Contact Info</button>
+              <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('local-election-official');?></div>
+            </li>
             
-          </ul><!--.usa-unstyled-list-->
-        </div><!--.faq-box- .usa-accordion-->
+            <?php $form_posts = types_child_posts("form");
+            if ( $form_posts !== null && $form_posts !== "undefined") { ?>
+            <li>
+              
+              <button class='usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><?php echo $state_name; ?> Election Forms</button>
+              <div id='collapsible-11' aria-hidden='true' class='answer usa-accordion-content'>
+                <ul>
+                  <?php 
+                  foreach ($form_posts as $form_post) {
+                    $form_title = $form_post->post_title;
+                    $form_url = $form_post->fields['form-file'];
+                    
+                    echo '<li><a href="'.$form_url.'">'.$form_title.'</a></li>';
+                  } ?>
+                </ul>
+              </div>
+            </li>
+            <?php }; ?>
+          </ul>
+        </div><!--.usa-accordion-->
 
       </div><!--.container-->
 
     </section><!--.faqs-->
+    <?php endwhile; 
+    wp_reset_postdata();
+  endif; ?>
