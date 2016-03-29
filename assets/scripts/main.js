@@ -115,7 +115,7 @@ jQuery(document).ready(function(){
   if (!menuCollapsed){
    jQuery('.nav-menu.mobile-only').addClass('collapsed');
   } else {
-   $jQuery('.nav-menu.mobile-only').removeClass('collapsed');
+   jQuery('.nav-menu.mobile-only').removeClass('collapsed');
   }
    
  });
