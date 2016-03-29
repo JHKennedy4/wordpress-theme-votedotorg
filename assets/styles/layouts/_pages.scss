@@ -155,6 +155,7 @@ table.responsive-chart {
       color: #003b5c;
       display: block;
       margin-bottom: 5px;
+      margin-top: 10px;
     }
     td.state-name {
       font-size: 2em;
@@ -397,13 +398,14 @@ section.call-to-action {
       display: table-row-group;
       tr {
         display: table-row;
-        background-color: #ebebeb;
+        background-color: #fff;
         border-radius: 2px;
         margin-bottom: 1em;
         padding: 4%;
         td {
           display: table-cell;
-          vertical-align: middle;
+          background-color: #fff;
+          vertical-align: top;
           padding: 5px 10px;
           border-left: 1px solid #c0c1c0;
           border-right: 1px solid #c0c1c0;
