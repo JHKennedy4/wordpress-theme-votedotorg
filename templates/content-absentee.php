@@ -7,25 +7,27 @@ if (isset($wp_query->query_vars['state_name'])) {
   $state = "";
   $state_name = "";
 }
-//looping through States to find one with the matching state slug
-      $state_loop = new WP_Query( array( 
-        'post_type' => 'state',
-        'name'      => $state,
-        'posts_per_page' => 1
-      ) ); 
-          if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
-          if ($state_name !== "") {
-              $state_name = $post->post_title;
 ?>
 
     <section class="breadcrumbs">
       <div class="container">
-    <?php if ($state_name !== "") { ?>
+
+<?php //looping through States to find one with the matching state slug
+
+  $state_loop = new WP_Query( array( 
+    'post_type' => 'state',
+    'name'      => $state,
+    'posts_per_page' => 1
+
+  ) ); 
+      if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
+      if ($state_name !== "") {
+        $state_name = $post->post_title; ?>
         <h1><?php echo $state_name; ?> Absentee Ballot</h1>
-        <?php } else {  ?> 
+      <?php } else {  ?> 
         <h1>Absentee Ballot</h1>
-          <?php }
-           ?>
+    <?php }
+     ?>
       </div><!--.container-->
     </section><!--.breadcrumbs-->
 
