@@ -3,6 +3,9 @@ body.webkit.wp-editor {
     list-style: initial;
     margin-left: 21px;
   }
+  ol {
+    list-style-type: decimal;
+  }
 }
 body.wp-admin {
   #poststuff h2 {
