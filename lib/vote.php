@@ -32,8 +32,9 @@ function get_web_page( $url )
     $header['content'] = $content;
 
     $result = json_decode($content, true);
-    
+    echo $errmsg;
     return $result;
+
 }
 
 function add_category($url){
@@ -43,19 +44,20 @@ function add_category($url){
 
 //figure out the right category ID that matches the slug we are looking for
 
+
 function get_helpScout_category($state_name) {
-  $collections_ID = "56e35a51c697911471461343";
-  $data = get_web_page('https://docsapi.helpscout.net/v1/collections/'.$collections_ID.'/categories');
-  $categories = $data["categories"];
-  $items = $categories["items"];
- foreach ($items as $item) {
-  $category_name = $item["name"];
-  if ($category_name == $state_name) {
-   return $item["id"];
-   // echo var_export($item)."category id: ".$item["id"]."collectionID: ".$item["collectionId"]."publicURL: ".$item["publicUrl"];
-  }
-   
- }
+  //$collections_ID = "56e35a51c697911471461343";
+  //$data = get_web_page('https://docsapi.helpscout.net/v1/collections/'.$collections_ID.'/categories');
+  $uri = get_template_directory_uri();
+  $json = wp_remote_fopen($uri.'/lib/state_categories.json');
+                                      
+  $states = json_decode($json, true); 
+  foreach ($states as $state) {
+    $category_name = $state["name"];
+    if ($category_name == $state_name) {
+      return $state["id"];
+    }
+  }    
 }
 
 function get_helpScout_articles_by_category($slug, $state_name) {
