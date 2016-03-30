@@ -16,11 +16,16 @@ if (isset($wp_query->query_vars['state_name'])) {
       $state_loop = new WP_Query( array( 
         'post_type' => 'state',
         'name'      => $state,
-        'posts_per_page' => 50
+        'posts_per_page' => 1
       ) ); 
           if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
-          $state_name = $post->post_title; ?>
-        <h1><?php echo $state_name; ?> Absentee Ballot</h1>
+          if ($state_name !== "") {
+              $state_name = $post->post_title; ?>
+              <h1><?php echo $state_name; ?> Absentee Ballot</h1>
+            <?php } else {  ?> 
+              <h1>Absentee Ballot</h1>
+          <?php }
+           ?>
       </div><!--.container-->
     </section><!--.breadcrumbs-->
 
@@ -33,7 +38,7 @@ if (isset($wp_query->query_vars['state_name'])) {
     </section><!--.register-tool-->
    
 
-    <section class="voter-registration-guide">
+    <section class="voter-registration-guide <?php if($state_name == "") {echo 'hidden';}?>">
       <div class="container">
         <h2><?php the_title(); ?> Absentee Ballot Guide</h2>
         
@@ -105,7 +110,7 @@ if (isset($wp_query->query_vars['state_name'])) {
     wp_reset_postdata();
   endif; ?>
 
-    <section class="faqs">
+    <section class="faqs <?php if($state_name == "") {echo 'hidden';}?>">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
 
