@@ -12,12 +12,8 @@ if (isset($wp_query->query_vars['state_name'])) {
     while ( $state_loop->have_posts() ) {
       $state_loop->the_post();
       $state_name = $post->post_title;
-
-    }
-    
+    }    
   }
-
-  
 
  }
   else {
@@ -29,8 +25,15 @@ if (isset($wp_query->query_vars['state_name'])) {
 <section class="hero">
   <div class="container">
     <h2 class="logo">Vote.org</h2>
-    <?php if ($state_name !== ""): echo '<h1>'.$state_name.' Election Center</h1>'; endif; ?>
+    <?php if ($state_name !== "") { ?>
+
+    <h1><?php echo $state_name;?> Election Center</h1>
     <div class="tagline">Everything you need to vote</div>
+    <?php }  else { ?> 
+    <h1>Everything you need to vote</h1>
+
+    <?php } ?>
+    
     <div class="boxes">
       <div class="box">
         <div class="register-line"></div>
