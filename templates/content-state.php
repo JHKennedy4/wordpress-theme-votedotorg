@@ -23,22 +23,7 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
     </section><!--.breadcrumbs-->
 
-    <section class="action-blocks">
-      <div class="box">
-        Make your voice heard in this election.
-        <a class="button" href="/register-to-vote/<?php echo $state;?>">Register to Vote for <?php echo $state_name; ?></a>
-      </div><!--.box-->
-      
-      <div class="box">
-        Find out if you are registered to vote.
-        <a class="button" href="http://verify.vote.org" target="_blank">Check your registration status</a>
-      </div><!--.box-->
-      <div class="box">
-        Get your Absentee Ballot.
-        <a href="/absentee-ballot/<?php echo $state;?>">Get your Absentee Ballot for <?php echo $state_name; ?></a>
-      </div><!--.box-->
-
-    </section>
+    <?php get_template_part('templates/content-hero'); ?>
 
     <section class="voter-registration-guide">
       <div class="container">

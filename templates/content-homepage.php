@@ -10,28 +10,27 @@ if (isset($wp_query->query_vars['state_name'])) {
 
 ?>
 
-    <section class="action-blocks">
-      <div class="box">
-        Make your voice heard in this election.
-        <a class="button" href="/register-to-vote/<?php echo $state;?>">Register to Vote for <?php echo $state_name; ?></a>
-      </div><!--.box-->
-      
-      <div class="box">
-        Find out if you are registered to vote.
-        <a class="button" href="http://verify.vote.org" target="_blank">Check your registration status</a>
-      </div><!--.box-->
-      <div class="box">
-        Get your Absentee Ballot.
-        <a href="/absentee-ballot/<?php echo $state;?>">Get your Absentee Ballot for <?php echo $state_name; ?></a>
-      </div><!--.box-->
 
-    </section>
-
-    <section class="voter-registration-guide">
+    <section class="quote">
       <div class="container">
-        <?php the_content(); ?>
+        <blockquote>
+        We've got to make it easier to vote, not harder. We need to modernize it for the way we live now.<?php the_content(); ?></blockquote>
+        
+        <div class='attribution'>Barack Obama, 44th President of the United States</div>
         
         
       </div><!--.container-->
 
-    </section><!--.voter-registration-guide -->
+    </section><!--.quote -->
+
+    <section class="sharing">
+      <div class="container">
+        <h2>Americans want to vote.</h2>
+        <p>Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.</p>
+        <a href="/about">Learn more about Vote.org</a>
+        
+        <h3>Every person who shares helps us reach three more voters.</h3>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_jumbo_share"></div>
+      </div>
+    </section>

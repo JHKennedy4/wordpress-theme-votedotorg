@@ -213,9 +213,53 @@ td {
     width: 100%;
   }
 }
-/*States & Homepage */
-section.action-blocks {
-  background-color: $primary;
+/*States & Homepage Mobile */
+section.hero {
+  background-color: $primarydarker;
+  color: #fff;
+  font-family: 'Merriweather' sans-serif;
+  h2 {
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  .tagline {
+    font-size: 52px;
+    line-height: 62px;
+    font-family: 'Merriweather' sans-serif;
+    margin-bottom: 40px;
+  }
+  .box {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,.2);
+    padding: 20px;
+    h2 {
+      margin-bottom: 35px;
+    }
+    .register-line, .check-registration-line, .mail-line {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .register-line {
+      background: url('../images/register.png') no-repeat center;
+      background-size: 100%;
+    }
+    .check-registration-line {
+      background: url('../images/check-registration.png') no-repeat center;
+      background-size: 100%;
+    }
+    .mail-line {
+      background: url('../images/mail-divider.png') no-repeat center;
+      background-size: 100%;
+    }
+    .usa-button {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+  }
 }
 section.voter-registration-guide {
   h1, h3, h4 {
@@ -498,6 +542,38 @@ section.call-to-action {
       width: 700px; 
     }
   }
+  //*Homepage and State Hero Tablet*//
+  section.hero {
+    .container {
+      width: 768px;
+    }
+    .box {
+      width: 32%;
+      float: left;
+      margin-left: 1.5%;
+      padding: 60px 30px;
+      flex: 1;
+      text-align: center;
+      h2 {
+        font-size: 26px;
+        line-height: 36px;
+        height: 115px;
+      }
+      .usa-button {
+        padding: 10px;
+        width: 100%;
+      }
+      .register-line, .check-registration-line, .mail-line {
+        margin-bottom: 20px;
+      }
+    }
+    .boxes {
+      display: flex;
+      div:nth-of-type(1) {
+        margin-left: 0;
+      }
+    }
+  }
   section.voter-registration-guide .table {
     border: none;
     display: flex;
@@ -620,6 +696,16 @@ section.call-to-action {
       }
     } 
   }
+  section.hero {
+    .container {
+      width: 900px;
+    }
+    .box {
+      h2 {
+        height: auto;
+      }
+    }
+  }
   //*Quick Links Desktop*//
   section.quick-links {
     h3 {
@@ -682,7 +768,11 @@ section.call-to-action {
 }
 //* Larger Desktops *//
 @media only screen and (min-width: 1280px) {
-
+  section.hero {
+    .container {
+      width: 1160px;
+    }
+  }
   section.quick-links, section.site-map, section.call-to-action, footer, nav.usa-site-navbar {
     .container {
       width: 1132px;
