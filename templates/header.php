@@ -41,11 +41,10 @@
         </button>
         <div id="collapsible-0" aria-hidden="true" class="usa-accordion-content">
           <ul>
-            <li><a href="#">Register to Vote</a></li>
-            <li><a href="#">Check Voter Registration Status</a></li>
-            <li><a href="#">Get Your Absentee Ballot</a></li>
-            <li><a href="#">Helpdesk</a></li>
-            <li><a href="#">Just the Forms</a></li>
+            <li><a href="http://register.vote.org">Register to Vote</a></li>
+            <li><a href="http://verify.vote.org">Check Voter Registration Status</a></li>
+            <li><a href="http://absentee.vote.org">Get Your Absentee Ballot</a></li>
+            <li><a href="http://help.vote.org">Helpdesk</a></li>
           </ul>
         </div>
       </li>
@@ -55,9 +54,9 @@
         </button>
         <div id="collapsible-1" aria-hidden="true" class="usa-accordion-content">
           <ul>
-            <li><a href="#">Early Voting Calendar</a></li>
-            <li><a href="#">Voter Registration Deadlines</a></li>
-            <li><a href="#">Absentee Ballot Deadlines</a></li>
+            <li><a href="/early-voting-calendar">Early Voting Calendar</a></li>
+            <li><a href="/voter-registration-deadlines">Voter Registration Deadlines</a></li>
+            <li><a href="/absentee-ballot-deadlines">Absentee Ballot Deadlines</a></li>
           </ul>
         </div>
       </li>
@@ -67,9 +66,9 @@
         </button>
         <div id="collapsible-2" aria-hidden="true" class="usa-accordion-content">
           <ul>
-            <li><a href="#">Voter Registration Rules</a></li>
-            <li><a href="#">Absentee Voting Rules</a></li>
-            <li><a href="#">2015 Voter ID Laws</a></li>
+            <li><a href="/voter-registration-rules">Voter Registration Rules</a></li>
+            <li><a href="/absentee-voting-rules">Absentee Voting Rules</a></li>
+            <li><a href="/voter-id-laws">Voter ID Laws</a></li>
           </ul>
         </div>
       </li>
@@ -79,11 +78,8 @@
         </button>
         <div id="collapsible-3" aria-hidden="true" class="usa-accordion-content">
           <ul>
-            <li><a href="#">Mission + Team</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Our Partners</a></li>
-            <li><a href="#">Brand Assets</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="/team">Mission + Team</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
           </ul>
         </div>
       </li>

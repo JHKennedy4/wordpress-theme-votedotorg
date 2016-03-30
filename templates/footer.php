@@ -5,7 +5,7 @@
       <ul>
         <li><a href="http://register.vote.org">Register to Vote</a></li>
         <li><a href="http://verify.vote.org">Check Voter Registration Status</a></li>
-        <li><a href="http://verify.vote.org">Get Your Absentee Ballot</a></li>
+        <li><a href="http://absentee.vote.org">Get Your Absentee Ballot</a></li>
         <li><a href="http://help.vote.org">Helpdesk</a></li>
       </ul>
     </div><!--.nav-links-->
@@ -20,9 +20,9 @@
     <div class="tablet nav-links">
       <h3>Voting Rules</h3>
       <ul>
-        <li><a href="#">Voter Registration Rules</a></li>
-        <li><a href="#">Absentee Voting Rules</a></li>
-        <li><a href="#">Voter ID Laws</a></li>
+        <li><a href="/voter-registration-rules">Voter Registration Rules</a></li>
+        <li><a href="/absentee-voting-rules">Absentee Voting Rules</a></li>
+        <li><a href="/voter-id-laws">Voter ID Laws</a></li>
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
