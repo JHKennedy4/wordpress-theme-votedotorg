@@ -213,7 +213,10 @@ td {
     width: 100%;
   }
 }
-
+/*States & Homepage */
+section.action-blocks {
+  background-color: $primary;
+}
 section.voter-registration-guide {
   h1, h3, h4 {
     color: $mediumblue;
