@@ -26,7 +26,7 @@
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>About</h3>
+      <h3>Company</h3>
       <ul>
         <li><a href="/team">Team</a></li>
         <li><a href="http://www.facebook.com/longdistancevoter">Facebook</a></li>
