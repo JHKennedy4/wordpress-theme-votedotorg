@@ -65,28 +65,10 @@ if (isset($wp_query->query_vars['state_name'])) {
             </li>
             <li>
               <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'><?php echo $state_name; ?> election official contact info</button>
-              <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('local-election-official');?></div>
+              <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'><?php $leo = types_render_field('local-election-official', array('raw' => true));  echo '<a target="_blank" href="'.$leo.'">'.$leo.'</a>';?></div>
             </li>
             
-            <?php $form_posts = types_child_posts("forms", array('raw' => true));
-            echo $form_posts;
-            if ( $form_posts !== null && $form_posts !== "undefined") { ?>
-            <li>
-              
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><?php echo $state_name; ?> Election Forms</button>
-              <div id='collapsible-11' aria-hidden='true' class='answer usa-accordion-content'>
-                <ul>
-                  <?php 
-                  foreach ($form_posts as $form_post) {
-                    $form_title = $form_post->post_title;
-                    $form_url = $form_post->fields['form-file'];
-                    
-                    echo '<li><a href="'.$form_url.'">'.$form_title.'</a></li>';
-                  } ?>
-                </ul>
-              </div>
-            </li>
-            <?php }; ?>
+
           </ul>
         </div><!--.usa-accordion-->
 
