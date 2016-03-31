@@ -9,19 +9,6 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
-// function for resizing iframe for each tool
-function autoResize(id){
-    var newheight;
-    var newwidth;
-
-    if(document.getElementById){
-        newheight=document.getElementById(id).contentWindow.document.body.scrollHeight;
-        newwidth=document.getElementById(id).contentWindow.document.body.scrollWidth;
-    }
-
-    document.getElementById(id).height= (newheight) + "px";
-    document.getElementById(id).width= (newwidth) + "px";
-}
 
 (function($) {
 
@@ -107,8 +94,9 @@ jQuery(window).resize(function() {
 
 jQuery(document).ready(function(){
  //on browser size tablet change the iframe height to 1000//
+jQuery('iframe').iFrameResize({log:true,  minHeight: 1000});
  var width = $(window).width(); // New width
- resizeIframe(width);
+ // resizeIframe(width);
 
  jQuery('.menu-btn.mobile-only').click(function(){
   var menuCollapsed = $('.nav-menu.mobile-only').hasClass('collapsed');

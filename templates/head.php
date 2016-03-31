@@ -11,4 +11,7 @@
    <script src="./js/html5shiv.js"></script>
    <![endif]-->
   <?php wp_head(); ?>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/uswds.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" ></script>
 </head>
