@@ -2,7 +2,7 @@
 <section class="quick-links desktop">
 
   <div class="container">
-    <h3>Election Center links</h3>
+    <h3>Election Center Links</h3>
     <div class="links-column">   
       <ul>
         <li><a href="/alabama">Alabama Election Center</a></li>

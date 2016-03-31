@@ -34,7 +34,7 @@ if (isset($wp_query->query_vars['state_name'])) {
     <section class="register-tool">
 
       <div class="container">
-        <iframe class="register" src="https://ldv-apollo-staging.herokuapp.com/" width="100%" height="600" marginheight="0" frameborder="0"></iframe>
+        <iframe id="absentee" class="register" src="https://absentee.vote.org" width="100%" height="600" marginheight="0" frameborder="0" onLoad="autoResize('absentee');"></iframe>
       </div><!--.container-->
 
     </section><!--.register-tool-->

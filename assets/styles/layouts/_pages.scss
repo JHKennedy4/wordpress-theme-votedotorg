@@ -15,14 +15,13 @@ body {
 h1, h2, h3, h4 {
   font-weight: 800;
 }
-h1, h2 {
- font-family: 'Merriweather', serif;
-}
+
 h1, h2 {
   font-size: 30px;
   line-height: 39px;
-  color: $mediumblue;
+  color: $primarydarker;  
   margin-bottom: 40px;
+  font-family: 'Merriweather', serif;
 }
 
 h3 {
@@ -66,7 +65,11 @@ a {
   color: $lightblue;
 }
 footer {
-  padding: 40px 0;
+  padding: 10px 0;
+  p, a {
+    font-size: 11px;
+    line-height: 20px;
+  }
   div.links {
     text-align: center;
     ul {
@@ -341,6 +344,8 @@ section.faqs {
       height: auto;
       background-color: #fff;
       background-position: 12.5em 2rem;
+      font-weight: 800;
+
     }
   }
   .usa-accordion-content {
@@ -360,8 +365,17 @@ section.sharing {
   h2,h3,p,a {
     text-align: center;
   }
-  a {
+  h2 {
+    margin-bottom: 15px;
+  }
+  .container > a {
     display: block;
+    margin-bottom: 50px;
+  }
+  p {
+    color: $gray-dark;
+    width: 600px;
+    margin: 0 auto 15px;
   }
   div {
     &.facebook {
@@ -412,6 +426,15 @@ section.site-map {
   button {
     width: auto;
   }
+  .about {
+    text-align: center;
+    p, h2 {
+      text-align: center;
+    }
+    h2 {
+      color: #fff;
+    }
+  }
 }
 
 //* Call to Action *//
@@ -442,7 +465,7 @@ section.call-to-action {
   }
   input[type="submit"] {
     background: $red;
-    width: 133px;
+    width: 103px;
     border: 0px;
     padding: 0;
     float: left;
@@ -690,12 +713,15 @@ section.call-to-action {
     }
   }
   section.call-to-action {
-    .donate, .join {
+    .about, .join {
       width: 48%;
       float: left;
     }
-    .donate {
+    .about {
       margin-right: 2%;
+      p {
+        margin-bottom: 2px;
+      }
     }
     .join {
       border-left: 1px solid #888;
@@ -720,26 +746,24 @@ section.call-to-action {
   }
   footer {
     div.links {
-      width: 43%;
-      float: left;
-      margin-right: 7%;
+      margin: 0 auto;
+      width: 54%;
       li {
+        width: 33%;
         float: left;
-        margin-right: 20px;
         margin-top: 0;
-        &:last-of-type {
-          margin-right: 0px;
-        }
       }
       div.copyright {
-        text-align: left;
+        text-align: center;
       }
     }
     div.legalese {
-      width: 50%;
-      float: left;
+      margin: 0 auto;
       font-size: 13px;
       line-height: 20px;
+      p {
+        text-align: center;
+      }
     }
   }
 }
@@ -811,8 +835,8 @@ section.call-to-action {
           margin: 0;
           display: block;
           a {
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 11px;
+            line-height: 16px;
           }
         }
       }
@@ -828,6 +852,7 @@ section.call-to-action {
   section.site-map {
     .nav-links {
       width: 25%;
+      min-height: initial;
       li a {
         font-size: 13px;
       }
@@ -840,18 +865,9 @@ section.call-to-action {
       width: 50%;
     }
   }
-  footer {
-
-    div.links {
-      width: 35%;
-      margin-right: 2%;
-      li {
-        margin-right: 13px;
-      }
-
-    }
-    div.legalese {
-      width: 63%;
+  section.call-to-action {
+    .about p {
+      margin-bottom: 23px;
     }
   }
 }
@@ -872,14 +888,7 @@ section.call-to-action {
       width: 1132px;
     }
   }
-  footer {
 
-    div.links {
-      li {
-        margin-right: 38px;
-      }
-    }
-  }
 }
 @media only screen and (min-width: 1440px) {
 

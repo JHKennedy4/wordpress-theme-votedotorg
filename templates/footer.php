@@ -4,7 +4,7 @@
       <h3>Tools</h3>
       <ul>
         <li><a href="http://register.vote.org">Register to Vote</a></li>
-        <li><a href="http://verify.vote.org">Check Voter Registration Status</a></li>
+        <li><a href="http://verify.vote.org">Check Registration Status</a></li>
         <li><a href="http://absentee.vote.org">Get Your Absentee Ballot</a></li>
         <li><a href="http://help.vote.org">Helpdesk</a></li>
       </ul>
@@ -29,35 +29,32 @@
       <h3>About</h3>
       <ul>
         <li><a href="/team">Team</a></li>
-        <li><a href="/history">History</a></li>
-        <li><a href="/brand-assets">Brand Assets</a></li>
+        <li><a href="http://www.facebook.com/longdistancevoter">Facebook</a></li>
+        <li><a href="http://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=absenteeballots">Twitter</a></li>
+        <li><a href="http://longdistancevoter.tumblr.com/">Tumblr</a></li>
       </ul>
     </div><!--.nav-links-->
-
-
-    <div class="tablet about">
-      <h3>About Vote.org</h3>
-      <p>Vote.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.</p>
-
-    </div><!--.about.mobile-only-->
-    <div class="partners">
-      <h3>Partners</h3>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.s</p>
-      <button class="usa-button-outline-inverse">Sign Up for Free</button>
-    </div><!--.partners-->
+    
     <div class="clear-fix"></div>
+    <div class="about mobile">
+      <h2>About Vote.org</h2>
+      <p>Vote.org builds technology that increases voter turnout. </p>
+      <!--ToDo: insert Mozilla donation widget-->
+      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_button">Support Our Work</a>
+    </div><!--.about-->
   </div><!--.container-->
 </section>
 
 <section class="call-to-action">
   <div class="container">
-    <div class="donate tablet">
-      <h2>Donate</h2>
+    <div class="about donate tablet">
+      <h2>About Vote.org</h2>
+      <p>Vote.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_button">Donate Now</a>
+      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_button">Support Our Work</a>
 
     </div><!--.donate.tablet-->
-    <div class="join">
+    <div class="join partners">
       <h2>Join Vote.org</h2>
       <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">
@@ -81,27 +78,29 @@
         <!--End mc_embed_signup-->
 
       </div><!--.join-->
+
       <div class="clear-fix"></div>
   </div><!--.container-->
 </section><!--.call-to-action-->
 
 <footer>
-      <div class="container">
-        <div class="links">
-          <ul>
-            <li><a href="/terms">Terms of Use</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-          
-          <div class="copyright">&copy; Copyright 2016. Vote.org</div>
-        </div><!--.links-->
-        <div class="legalese tablet">
-          <p>Vote.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party. </p>
-        </div><!--.legalese-->
-        <div class="clear-fix"></div>
-      </div><!--.container-->
+  <div class="container">
+    
+    <div class="legalese tablet">
+      <p>Vote.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party. </p>
+    </div><!--.legalese-->
+    <div class="links">
+      <ul>
+        <li><a href="/terms">Terms of Use</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+      
+      <div class="copyright hidden">&copy; Copyright 2016. Vote.org</div>
+    </div><!--.links-->
+    <div class="clear-fix"></div>
+  </div><!--.container-->
 
-    </footer>
+</footer>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
  <!--   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56bd6f489abb811d" async="async"></script>-->
