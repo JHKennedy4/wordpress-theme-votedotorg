@@ -20,7 +20,7 @@ h1, h2 {
   font-size: 30px;
   line-height: 39px;
   color: $primarydarker;  
-  margin-bottom: 40px;
+  margin-bottom: 1em;
   font-family: 'Merriweather', serif;
 }
 
@@ -34,8 +34,8 @@ h4 {
   font-size: 15px;
   line-height: 30px;
 }
-ul {
-  margin-top: 20px;
+ul, ol {
+  margin: 20px 0 20px 20px;
 }
 p, li {
   font-size: 17px;
@@ -408,6 +408,10 @@ section.site-map {
   h3 {
     color: #fff;
     margin-top: 0;
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 20px;
   }
   ul {
     list-style: none;
@@ -596,7 +600,8 @@ section.call-to-action {
     }
     ul.tablet.nav-menu {
       float: right;
-      margin-top: 17px;
+      margin: 17px 0 0 0;
+
       .usa-button.usa-button-outline {
         box-shadow: inset 0 0 0 2px $darkblue;
         color: $darkblue;
