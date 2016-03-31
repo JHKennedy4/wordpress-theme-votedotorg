@@ -28,6 +28,7 @@
     <div class="tablet nav-links">
       <h3>Company</h3>
       <ul>
+        <li><a href="/about">About</a></li>
         <li><a href="/team">Team</a></li>
         <li><a href="http://www.facebook.com/longdistancevoter">Facebook</a></li>
         <li><a href="http://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=absenteeballots">Twitter</a></li>
