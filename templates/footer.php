@@ -3,9 +3,9 @@
     <div class="tablet nav-links">
       <h3>Tools</h3>
       <ul>
-        <li><a href="http://register.vote.org">Register to Vote</a></li>
-        <li><a href="http://verify.vote.org">Check Registration Status</a></li>
-        <li><a href="http://absentee.vote.org">Get Your Absentee Ballot</a></li>
+        <li><a href="/register-to-vote">Register to Vote</a></li>
+        <li><a href="/am-i-registered-to-vote">Check Registration Status</a></li>
+        <li><a href="/absentee-ballot">Get Your Absentee Ballot</a></li>
         <li><a href="http://help.vote.org">Helpdesk</a></li>
       </ul>
     </div><!--.nav-links-->
@@ -64,7 +64,7 @@
             <label for="mce-EMAIL" class="sr-only">Email Address * </label>
             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
             <label for="mce-ZIPCODE" class="sr-only">Zip Code </label>
-            <input type="number" value="" name="ZIPCODE" class="required zip" id="mce-ZIPCODE" placeholder="Zip">
+            <input type="text" value = "" pattern="\d{5}-?(\d{4})?" name="ZIPCODE" class="required zip" id="mce-ZIPCODE" placeholder="Zip">
             <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="usa-button-secondary"></div>
             <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display:none"></div>
