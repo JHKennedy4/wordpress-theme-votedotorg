@@ -14,9 +14,12 @@ if (isset($wp_query->query_vars['state_name'])) {
     <section class="quote">
       <div class="container">
         <blockquote>
-        <h2>We've got to make it easier to vote, not harder. We need to modernize it for the way we live now.<?php the_content(); ?></h2></blockquote>
+        <h2>We've got to make it easier to vote, not harder. We need to modernize it for the way we live now.</h2></blockquote>
+        <div class="clear-fix"></div>
         
-        <div class='attribution'>Barack Obama, 44th President of the United States</div>
+        <div class='attribution'>
+          <strong>Barack Obama</strong>, 44th President of the United States
+        </div>
         
         
       </div><!--.container-->

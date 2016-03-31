@@ -221,12 +221,20 @@ section.hero {
   h2 {
     color: #fff;
     margin-bottom: 40px;
+    text-align: center;
   }
-  .tagline {
+  h1 {
     font-size: 52px;
     line-height: 62px;
+    color: #fff;
+    text-align: center;
+  }
+  .tagline {
+    font-size: 36px;
+    line-height: 42px;
     font-family: 'Merriweather' sans-serif;
     margin-bottom: 40px;
+    text-align: center;
   }
   .box {
     width: 100%;
@@ -237,6 +245,7 @@ section.hero {
     padding: 20px;
     h2 {
       margin-bottom: 35px;
+      text-align: left;
     }
     .register-line, .check-registration-line, .mail-line {
       height: 40px;
@@ -261,12 +270,58 @@ section.hero {
 
   }
 }
+/*Homepage Quote Mobile */
+section.quote {
+  .container {
+    width: 320px;
+  }
+  blockquote {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    &:before {
+      background: url('../images/left-quote.jpg') no-repeat 50%;
+      background-size: 100%;
+      height: 30px;
+      width: 30px;
+      position: relative;
+      top: 32px;
+      left: -66%;
+      display: inline-block;
+    }
+    &::after {
+      background: url('../images/right-quote.jpg') no-repeat 50%;
+      background-size: 100%;
+      height: 30px;
+      width: 30px;
+      position: relative;
+      top: -269px;
+      right: -63px;
+      display: inline-block;
+      float: right;
+    }
+  }
+  .attribution {
+    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
+    color: $gray-dark;
+    
+    h2 {
+      text-align: center;
+    }
+  }
+}
 section.voter-registration-guide {
   h1, h3, h4 {
     color: $mediumblue;
   }
   .updated {
-    color: $darkbluegrey;
+    color: $gray-dark;
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 30px;
@@ -302,6 +357,12 @@ section.faqs {
 section.sharing {
   background-color: #d6d7d9;
   color: $mediumblue;
+  h2,h3,p,a {
+    text-align: center;
+  }
+  a {
+    display: block;
+  }
   div {
     &.facebook {
       background-color: $blue;
@@ -574,6 +635,22 @@ section.call-to-action {
       }
     }
   }
+  section.quote {
+    .container {
+      width: 617px;
+    }
+    blockquote {
+      width: 83%;
+      &:before {
+        left: -58%;
+        top: 36px;
+      }
+      &:after {
+        top: -149px;
+        right: -48px;
+      }
+    }
+  }
   section.voter-registration-guide .table {
     border: none;
     display: flex;
@@ -702,7 +779,19 @@ section.call-to-action {
     }
     .box {
       h2 {
-        height: auto;
+        height: 100px;
+      }
+    }
+  }
+  section.quote {
+
+    blockquote {
+      &:before {
+        left: -56%;
+      }
+      &:after {
+        top: -150px;
+        right: -44px;
       }
     }
   }
@@ -771,6 +860,11 @@ section.call-to-action {
   section.hero {
     .container {
       width: 1160px;
+    }
+    .box {
+      h2 {
+        height: auto;
+      }
     }
   }
   section.quick-links, section.site-map, section.call-to-action, footer, nav.usa-site-navbar {

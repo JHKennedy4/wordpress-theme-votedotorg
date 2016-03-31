@@ -1,7 +1,7 @@
 <section class="site-map">
   <div class="container">
     <div class="tablet nav-links">
-      <h3>Election Tools</h3>
+      <h3>Tools</h3>
       <ul>
         <li><a href="http://register.vote.org">Register to Vote</a></li>
         <li><a href="http://verify.vote.org">Check Voter Registration Status</a></li>
@@ -10,7 +10,7 @@
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>Dates &amp; Deadlines</h3>
+      <h3>Deadlines</h3>
       <ul>
         <li><a href="/early-voting-calendar">Early Voting Calendar</a></li>
         <li><a href="/voter-registration-deadlines">Voter Registration Deadlines</a></li>
@@ -18,7 +18,7 @@
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>Voting Rules</h3>
+      <h3>Rules</h3>
       <ul>
         <li><a href="/voter-registration-rules">Voter Registration Rules</a></li>
         <li><a href="/absentee-voting-rules">Absentee Voting Rules</a></li>
@@ -26,10 +26,11 @@
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>About Us</h3>
+      <h3>About</h3>
       <ul>
-        <li><a href="/team">Mission + Team</a></li>
-        <li><a href="/contact-us">Contact Us</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a href="/history">History</a></li>
+        <li><a href="/brand-assets">Brand Assets</a></li>
       </ul>
     </div><!--.nav-links-->
 
