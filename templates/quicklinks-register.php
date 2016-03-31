@@ -2,7 +2,7 @@
 <section class="quick-links desktop">
 
   <div class="container">
-    <h3>Voter Registration Links</h3>
+    <h3>Voter registration links</h3>
     <div class="links-column">   
       <ul>
         <li><a href="/register-to-vote/alabama">Alabama Voter Registration</a></li>
@@ -69,7 +69,7 @@
         <li><a href="/register-to-vote/west-virginia">West Virginia Voter Registration</a></li>
         <li><a href="/register-to-vote/wisconsin">Wisconsin Voter Registration</a></li>
         <li><a href="/register-to-vote/wyoming">Wyoming Voter Registration</a></li>
-        <li><a href="/register-to-vote/district-of-columbia">District of Columbia Voter Registration</a></li>
+        <li><a href="/register-to-vote/district-of-columbia">D.C. Voter Registration</a></li>
       </ul>
     </div><!--.links-column-->
 

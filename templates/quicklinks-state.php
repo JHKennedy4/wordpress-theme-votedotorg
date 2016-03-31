@@ -2,7 +2,7 @@
 <section class="quick-links desktop">
 
   <div class="container">
-    <h3>Election Center Links</h3>
+    <h3>Election center links</h3>
     <div class="links-column">   
       <ul>
         <li><a href="/alabama">Alabama Election Center</a></li>
@@ -69,7 +69,7 @@
         <li><a href="/west-virginia">West Virginia Election Center</a></li>
         <li><a href="/wisconsin">Wisconsin Election Center</a></li>
         <li><a href="/wyoming">Wyoming Election Center</a></li>
-        <li><a href="/district-of-columbia">District of Columbia Election Center</a></li>
+        <li><a href="/district-of-columbia">D.C. Election Center</a></li>
       </ul>
     </div><!--.links-column-->
 

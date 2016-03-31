@@ -2,7 +2,7 @@
 <section class="quick-links desktop">
 
   <div class="container">
-    <h3>Absentee Ballot Links</h3>
+    <h3>Absentee ballot links</h3>
     <div class="links-column">   
       <ul>
         <li><a href="/absentee-ballot/alabama">Alabama Absentee Ballot</a></li>
@@ -69,7 +69,7 @@
         <li><a href="/absentee-ballot/west-virginia">West Virginia Absentee Ballot</a></li>
         <li><a href="/absentee-ballot/wisconsin">Wisconsin Absentee Ballot</a></li>
         <li><a href="/absentee-ballot/wyoming">Wyoming Absentee Ballot</a></li>
-        <li><a href="/absentee-ballot/district-of-columbia">District of Columbia Absentee Ballot</a></li>
+        <li><a href="/absentee-ballot/district-of-columbia">D.C. Absentee Ballot</a></li>
       </ul>
     </div><!--.links-column-->
 
