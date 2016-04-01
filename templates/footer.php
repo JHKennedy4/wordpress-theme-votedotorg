@@ -3,10 +3,10 @@
     <div class="tablet nav-links">
       <h3>Tools</h3>
       <ul>
-        <li><a href="/register-to-vote">Register to Vote</a></li>
-        <li><a href="/am-i-registered-to-vote">Check Registration Status</a></li>
-        <li><a href="/absentee-ballot">Get Your Absentee Ballot</a></li>
-        <li><a href="http://help.vote.org">Helpdesk</a></li>
+        <li><a href="//register.vote.org">Register to Vote</a></li>
+        <li><a href="//verify.vote.org">Check Registration Status</a></li>
+        <li><a href="//absentee.vote.org">Get Your Absentee Ballot</a></li>
+        <li><a href="//help.vote.org">Helpdesk</a></li>
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
@@ -17,7 +17,7 @@
         <li><a href="/absentee-ballot-deadlines">Absentee Ballot Deadlines</a></li>
       </ul>
     </div><!--.nav-links-->
-    <div class="tablet nav-links">
+    <div class="tablet nav-links hidden">
       <h3>Rules</h3>
       <ul>
         <li><a href="/voter-registration-rules">Voter Registration Rules</a></li>
@@ -41,7 +41,7 @@
       <h2>About Vote.org</h2>
       <p>Vote.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_button">Support Our Work</a>
+      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</a>
     </div><!--.about-->
   </div><!--.container-->
 </section>
@@ -52,7 +52,7 @@
       <h2>About Vote.org</h2>
       <p>Vote.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_button">Support Our Work</a>
+      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</a>
 
     </div><!--.donate.tablet-->
     <div class="join partners">
