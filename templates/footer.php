@@ -31,7 +31,7 @@
         <li><a href="/about">About</a></li>
         <li><a href="/team">Team</a></li>
         <li><a href="http://www.facebook.com/longdistancevoter">Facebook</a></li>
-        <li><a href="http://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=absenteeballots">Twitter</a></li>
+        <li><a href="http://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=votedotorg">Twitter</a></li>
         <li><a href="http://votedotorg.tumblr.com">Tumblr</a></li>
       </ul>
     </div><!--.nav-links-->
