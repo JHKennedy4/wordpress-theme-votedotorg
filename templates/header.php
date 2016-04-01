@@ -49,7 +49,7 @@
           </ul>
         </div>
       </li>
-      <li class="hidden">
+      <li>
         <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-2">
           Voting Rules
         </button>

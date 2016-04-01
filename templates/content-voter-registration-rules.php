@@ -31,7 +31,7 @@
           <h2><?php echo $state_name; ?></h2>
             <div class="text"><?php echo types_render_field('voter-registration-rules');?>
             </div>
-            <a class="usa-button usa-button-secondary" href="//register.vote.org/<?php echo '?state='.urlencode($state_name); ?>">Register to vote</a>
+            <a class="usa-button usa-button-outline" href="//register.vote.org/<?php echo '?state='.urlencode($state_name); ?>">Register to vote</a>
         </div><!--.state-->
 
         <?php endwhile; 
