@@ -27,6 +27,7 @@
     <li><a href="//register.vote.org">Register to Vote</a></li>
     <li class="active"><a href="//verify.vote.org">Are You Registered?</a></li>
     <li><a href="//absentee.vote.org">Absentee Ballots</a></li>
+    <li><a href="http://help.vote.org">Helpdesk</a></li>
     <li>
       <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg">
         Donate
@@ -35,19 +36,7 @@
   </ul><!--.no-dropdown-->
   <div class="usa-accordion">
     <ul class="usa-unstyled-list">
-      <li>
-        <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-0">
-          Election Tools
-        </button>
-        <div id="collapsible-0" aria-hidden="true" class="usa-accordion-content">
-          <ul>
-            <li><a href="/register-to-vote">Register to Vote</a></li>
-            <li><a href="/am-i-registered-to-vote">Check Voter Registration Status</a></li>
-            <li><a href="/absentee-ballot">Get Your Absentee Ballot</a></li>
-            <li><a href="http://help.vote.org">Helpdesk</a></li>
-          </ul>
-        </div>
-      </li>
+
       <li>
         <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-1">
           Election Dates &amp; Deadlines
@@ -60,7 +49,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li class="hidden">
         <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-2">
           Voting Rules
         </button>
@@ -78,8 +67,8 @@
         </button>
         <div id="collapsible-3" aria-hidden="true" class="usa-accordion-content">
           <ul>
-            <li><a href="/team">Mission + Team</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/team">Team</a></li>
           </ul>
         </div>
       </li>
