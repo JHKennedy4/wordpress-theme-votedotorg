@@ -87,7 +87,7 @@ if (isset($wp_query->query_vars['state_name'])) {
     <?php get_template_part('templates/content-links'); ?>
 
 
-    </ul>
+    
   
   </div><!--.container-->
 

@@ -1,13 +1,3 @@
-<h3><?php $state_name; ?> Online Voting Tools</h3>
-
-<ul>
-  
-  <li><a href="/register-to-vote">Register to Vote</a></li>
-
-  <li><a href="http://absentee.vote.org/">Get your Absentee Ballot</a></li>
-  <li><a href="/am-i-registered-to-vote">Check your registration status</a></li>
-
-</ul>
 
 <h3><?php $state_name; ?> Helpful Voting Links</h3>
 

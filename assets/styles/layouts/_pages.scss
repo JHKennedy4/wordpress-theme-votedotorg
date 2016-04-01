@@ -214,6 +214,7 @@ td {
   background-color: $darkblue;
   .container {
     width: 100%;
+    padding: 0;
   }
 }
 /*States & Homepage Mobile */
@@ -591,10 +592,6 @@ section.call-to-action {
   //*Navigation Tablet*//
   nav.usa-site-navbar {
     height: 70px;
-    .container {
-      width: 768px;
-      margin: 0 auto;
-    }
     div.logo {
       margin-top: 10px;
     }
@@ -622,6 +619,12 @@ section.call-to-action {
       a.usa-button {
         margin: 0;
       }
+    }
+  }
+  nav.usa-site-navbar, section.breadcrumbs {
+    .container {
+      width: 768px;
+      margin: 0 auto;
     }
   }
   .register-tool {
@@ -788,7 +791,7 @@ section.call-to-action {
   } 
 
   //*Navigation Desktop*//
-  nav.usa-site-navbar {
+  nav.usa-site-navbar, section.breadcrumbs {
     .container {
       width: 980px;
       margin: 0 auto;
@@ -888,7 +891,7 @@ section.call-to-action {
       }
     }
   }
-  section.quick-links, section.site-map, section.call-to-action, footer, nav.usa-site-navbar {
+  section.quick-links, section.site-map, section.call-to-action, footer, nav.usa-site-navbar, section.breadcrumbs {
     .container {
       width: 1132px;
     }

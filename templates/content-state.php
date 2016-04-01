@@ -9,9 +9,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 }
 
 ?>
-    <section class="breadcrumbs">
-      <div class="container">
-    <?php //looping through States to find one with the matching state slug
+<?php //looping through States to find one with the matching state slug
       $state_loop = new WP_Query( array( 
         'post_type' => 'state',
         'name'      => $state,
@@ -19,14 +17,10 @@ if (isset($wp_query->query_vars['state_name'])) {
       ) ); 
           if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
             if ($state_name !== "") {
-              $state_name = $post->post_title; ?>
-              <h1><?php echo $state_name; ?> Election Center</h1>
-            <?php } else {  ?> 
-              <h1>Election Center</h1>
-          <?php }
-           ?>
-      </div><!--.container-->
-    </section><!--.breadcrumbs-->
+              $state_name = $post->post_title; 
+               } else {  
+              $state_name = ""; }
+?>
 
     <?php get_template_part('templates/content-hero'); ?>
 

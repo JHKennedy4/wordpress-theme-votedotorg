@@ -4,7 +4,7 @@
     <div class="logo" id="logo">
       <h1>
         <a href="/" accesskey="1" title="Home" aria-label="Home" class="logo">
-        Vote.org logo</a>
+        Vote.org</a>
       </h1>
     </div><!--.logo-->
     <ul class="tablet nav-menu">
