@@ -43,11 +43,11 @@ if (isset($wp_query->query_vars['state_name'])) {
 <!--hide section when there isn't a state selected-->
 <section class="voter-registration-guide <?php if($state_name == "") {echo 'hidden';}?>">
   <div class="container">
-    <h2><?php the_title(); ?> Voter Registration Guide</h2>
+    <h2><?php the_title(); ?> voter registration guide</h2>
     
     <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
 
-    <h3><?php the_title(); ?> Voter Registration Deadlines</h3>
+    <h3><?php the_title(); ?> voter registration deadlines</h3>
 
     <div class="table">
       <div class="header">Voter Registration Deadline - In Person</div>
@@ -76,10 +76,10 @@ if (isset($wp_query->query_vars['state_name'])) {
     </div><!--.table-->
     <?php }  ?>
 
-    <h3><?php the_title(); ?> Voter Registration Rules</h3>
+    <h3><?php the_title(); ?> voter registration rules</h3>
 
     <?php echo types_render_field("voter-registration-rules");?>
-    <h3><?php the_title(); ?> Voter Registration Directions</h3>
+    <h3><?php the_title(); ?> voter registration directions</h3>
 
     <?php echo types_render_field("how-to-register-to-vote");?>
     
@@ -98,7 +98,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <section class="faqs <?php if($state_name == "") {echo 'hidden';}?>">
       <div class="container">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Frequently asked questions</h2>
 
         <div class="usa-accordion">
           <ul class="usa-unstyled-list">

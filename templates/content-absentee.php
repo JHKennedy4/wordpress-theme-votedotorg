@@ -2,10 +2,15 @@
 global $wp_query;
 if (isset($wp_query->query_vars['state_name'])) {
   $state = $wp_query->query_vars['state_name'];
+  $meta_description = "It takes 2 minutes to get your".$state_name."absentee ballot. Get started now";
+  $meta_title = $state_name." Absentee Ballots | Vote.org - The Absentee Ballot Experts";
+  $meta_url = site_url().'/absentee-ballot/'.$state;
+  $og_image = get_template_directory_uri().'/dist/images/og-absentee.jpg';
   
 } else {
   $state = "";
   $state_name = "";
+
 }
 ?>
 
@@ -42,7 +47,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <section class="voter-registration-guide <?php if($state_name == "") {echo 'hidden';}?>">
       <div class="container">
-        <h2><?php the_title(); ?> Absentee Ballot Guide</h2>
+        <h2><?php the_title(); ?> absentee ballot guide</h2>
         
         <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
         
@@ -54,7 +59,7 @@ if (isset($wp_query->query_vars['state_name'])) {
         </div>
           <?php } ?>
 
-        <h3><?php the_title(); ?> Absentee Ballot Deadlines</h3>
+        <h3><?php the_title(); ?> absentee ballot deadlines</h3>
 
         <div class="table">
           <div class="header">VBM Application Deadline</div>
@@ -67,12 +72,12 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="clear-fix tablet"></div>
         </div>
 
-        <h3><?php the_title(); ?> Absentee Ballot Rules</h3>
+        <h3><?php the_title(); ?> absentee ballot rules</h3>
 
         <?php echo types_render_field("vbm-eligibilty");?>
 
 
-        <h3><?php the_title(); ?> Absentee Ballot Directions</h3>
+        <h3><?php the_title(); ?> absentee ballot directions</h3>
 
         <?php echo types_render_field("how-to-get-your-absentee-ballot");?>
 
@@ -87,19 +92,19 @@ if (isset($wp_query->query_vars['state_name'])) {
         <?php $permanent_vbm_instructions = types_render_field("permanent-absentee-ballot-instructions"); ?>
         
         <?php if ($permanent_vbm_instructions !== "") { ?>
-        <h3>Permanent Absentee Ballots</h3>
+        <h3>Permanent absentee ballots</h3>
 
         <?php echo $permanent_vbm_instructions;?>
         <?php } ?>
 
         <?php $emergency_vbm_instructions = types_render_field("emergency-vbm-eligibilty");
         if ($emergency_vbm_instructions !=="") { ?>
-        <h3>Emergency Absentee Ballots</h3>
+        <h3>Emergency absentee ballots</h3>
 
         <?php echo $emergency_vbm_instructions;?>
         <?php } ?>
         
-        <h3>How to Register to Vote</h3>
+        <h3>How to register to vote</h3>
         <?php echo types_render_field("how-to-register-to-vote");?>
         
         <?php get_template_part('templates/content-links'); ?>
@@ -114,7 +119,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <section class="faqs <?php if($state_name == "") {echo 'hidden';}?>">
       <div class="container">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Frequently asked questions</h2>
 
 
         <div class="usa-accordion">

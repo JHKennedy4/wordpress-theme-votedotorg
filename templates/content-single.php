@@ -4,8 +4,7 @@
       <?php get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-content">
-      <?php the_content(); echo get_helpScout_category($state); 
-echo 'content single';?>
+      <?php the_content();?>
 
     </div>
     <footer>

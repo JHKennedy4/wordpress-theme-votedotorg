@@ -13,9 +13,6 @@
             <p><a id="top" name="top"></a><strong></p>
         </div><!--.warning-->
  
-
-    
-    
     
     <?php the_content(); ?>
 

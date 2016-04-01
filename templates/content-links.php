@@ -1,5 +1,5 @@
 
-<h3><?php $state_name; ?> Helpful Voting Links</h3>
+<h3><?php $state_name; ?> Helpful voting links</h3>
 
 <ul>
   <li><a href="<?php echo types_render_field('state-election-website', array('raw' => true));?>">State Election Website</a></li>

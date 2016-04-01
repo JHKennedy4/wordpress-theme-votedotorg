@@ -14,7 +14,7 @@ echo gettype($child_posts);
 if ( !empty($child_posts)) { echo 'not empty'.!empty($child_posts).' isset '.isset($child_posts);?>
 <li>
 
-  <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><?php echo $state_name; ?> Election Forms</button>
+  <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><?php echo $state_name; ?> Election forms</button>
   <div id='collapsible-11' aria-hidden='true' class='answer usa-accordion-content'>
     <ul>
       <?php 
