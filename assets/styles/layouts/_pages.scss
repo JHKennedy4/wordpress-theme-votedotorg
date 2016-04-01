@@ -501,6 +501,20 @@ section.call-to-action {
   }
 }
 
+//* Voter Registration Rules & Absentee Ballot Rules Pages *//
+.page-template-template-voter-registration-rules, .page-template-template-absentee-voting-rules {
+  .usa-alert, .intro {
+    margin-bottom: 20px;
+  }
+  .state {
+    margin-bottom: 40px;
+    .text {
+      margin-bottom: 20px;
+    }
+  }
+  
+}
+
 //*Tablet*/
 
 @media only screen and (min-width: 768px) {

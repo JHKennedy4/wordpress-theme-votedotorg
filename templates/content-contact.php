@@ -8,10 +8,6 @@
               <p class="usa-alert-text">Your <a href="https://www.overseasvotefoundation.org/overseas/eod.htm">Local Election Official</a> is the best person to contact if you have any questions about voting.&nbsp; </strong>They'll be able to provide up-to-date information on rules, deadlines and voter ID requirements.&nbsp;</p>
             </div>
           </div>
-      
-        <div class="warning">
-            <p><a id="top" name="top"></a><strong></p>
-        </div><!--.warning-->
  
     
     <?php the_content(); ?>

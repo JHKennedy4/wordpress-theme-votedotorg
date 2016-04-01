@@ -17,7 +17,7 @@
         <li><a href="/absentee-ballot-deadlines">Absentee Ballot Deadlines</a></li>
       </ul>
     </div><!--.nav-links-->
-    <div class="tablet nav-links hidden">
+    <div class="tablet nav-links">
       <h3>Rules</h3>
       <ul>
         <li><a href="/voter-registration-rules">Voter Registration Rules</a></li>
