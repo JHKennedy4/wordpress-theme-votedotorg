@@ -38,7 +38,7 @@ if (isset($wp_query->query_vars['state_name'])) {
       <div class="box">
         <div class="register-line"></div>
         <h2>Make your voice heard in this election.</h2>
-        <a class="usa-button usa-button-secondary" href="/register-to-vote/<?php echo $state;?>">Register to Vote</a>
+        <a class="usa-button usa-button-secondary" href="//register.vote.org/?state-name=<?php echo $state;?>">Register to vote</a>
       </div><!--.box-->
 
       <div class="box">
@@ -49,7 +49,7 @@ if (isset($wp_query->query_vars['state_name'])) {
       <div class="box">
         <div class="mail-line"></div>
         <h2>Get your Absentee Ballot.</h2>
-        <a class="usa-button usa-button-secondary" href="/absentee-ballot/<?php echo $state;?>">Get your Absentee Ballot</a>
+        <a class="usa-button usa-button-secondary" href="//absentee.vote.org/?state-name=<?php echo $state;?>">Get your absentee ballot</a>
       </div><!--.box-->
 
     </div><!--.boxes-->
