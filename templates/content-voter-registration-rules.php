@@ -28,7 +28,7 @@
           $state_slug = $post->post_name;?>
 
         <div class="state">
-          <h2><?php echo $state_name; ?></h2>
+          <h2><?php echo $state_name; ?> voter registration rules</h2>
             <div class="text"><?php echo types_render_field('voter-registration-rules');?>
             </div>
             <a class="usa-button usa-button-outline" href="//register.vote.org/<?php echo '?state='.urlencode($state_name); ?>">Register to vote</a>

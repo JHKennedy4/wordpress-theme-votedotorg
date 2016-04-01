@@ -9,7 +9,7 @@
   <li><a href="<?php echo types_render_field('online-ballot-tracker-url', array('raw' => true));?>">Absentee ballot tracker tool</a></li>
   <li><a href="<?php echo types_render_field('absentee-ballot-info-url', array('raw' => true));?>">Learn more about absentee voting</a></li>
 
-  <li><a href="<?php echo types_render_field('early-voting-info-url', array('raw' => true));?>">Learn more about early voting - More Information</a></li>
+  <li><a href="<?php echo types_render_field('early-voting-info-url', array('raw' => true));?>">Learn more about early voting</a></li>
   <li><a href="<?php echo types_render_field('voter-id-more-information', array('raw' => true));?>">Learn more about voter ID </a></li>
 
 

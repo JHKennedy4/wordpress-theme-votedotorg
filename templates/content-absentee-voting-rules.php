@@ -27,7 +27,7 @@
             $state_name = $post->post_title; 
             $state_slug = $post->post_name;?>
         <div class="state">
-          <h2><?php echo $state_name; ?></h2>
+          <h2><?php echo $state_name; ?> absentee ballot rules</h2>
             <div class="text"><?php echo types_render_field('vbm-eligibilty');?>
             </div>
             <?php $warning = types_render_field('absentee-ballot-warnings', array('raw'=> true)); ?>

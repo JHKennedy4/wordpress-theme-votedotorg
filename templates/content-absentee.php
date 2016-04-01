@@ -53,21 +53,26 @@ if (isset($wp_query->query_vars['state_name'])) {
         
         <?php $vbm_warnings = types_render_field("absentee-ballot-warnings");
           if ($vbm_warnings !== "") { ?>
+        <div class="usa-alert usa-alert-warning">
+          <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Warnings</h3>
+            <p class="usa-alert-text">
+              <?php echo $vbm_warnings; ?>
+           </p>
+          </div>
+        </div><!--.usa-alert-warning-->
 
-        <h3 class="warning">Warnings</h3>
-        <div class="warning"><?php echo $vbm_warnings; ?>
-        </div>
           <?php } ?>
 
         <h3><?php the_title(); ?> absentee ballot deadlines</h3>
 
         <div class="table">
-          <div class="header">VBM Application Deadline</div>
+          <div class="header">Absentee ballot application deadline</div>
           <div class="cell"><?php echo types_render_field("absentee-ballot-application-deadline");?></div>
           <div class="clear-fix tablet"></div>
         </div>
         <div class="table">
-          <div class="header">Voted Absentee Ballot Deadline</div>
+          <div class="header">Voted ballots are due</div>
           <div class="cell"><?php echo types_render_field("voted-absentee-ballot-deadline");?></div>
           <div class="clear-fix tablet"></div>
         </div>
@@ -104,8 +109,6 @@ if (isset($wp_query->query_vars['state_name'])) {
         <?php echo $emergency_vbm_instructions;?>
         <?php } ?>
         
-        <h3>How to register to vote</h3>
-        <?php echo types_render_field("how-to-register-to-vote");?>
         
         <?php get_template_part('templates/content-links'); ?>
 
