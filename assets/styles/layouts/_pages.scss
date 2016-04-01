@@ -173,7 +173,6 @@ table.responsive-chart {
       margin-bottom: 15px;
       a {
         color: #003b5c;
-        border-bottom: 4px solid #003b5c;
         transition: .2s;
         &:hover {
           color: $lightblue;
@@ -839,14 +838,13 @@ section.call-to-action {
   section.quick-links {
     .container {
       padding: 0;
-      width: 900px;
     }
     h3 {
       margin-top: 0;
       margin-bottom: 10px;
     }
     .links-column {
-      width: 19.25%;
+      width: 24.25%;
       float: left;
       margin-right: 1%;
       ul {
