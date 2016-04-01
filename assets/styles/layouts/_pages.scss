@@ -63,12 +63,16 @@ section {
 }
 a {
   color: $lightblue;
+  text-decoration: underline;
 }
 footer {
   padding: 10px 0;
   p, a {
     font-size: 11px;
     line-height: 20px;
+  }
+  a {
+    text-decoration: none;
   }
   div.links {
     text-align: center;
@@ -375,7 +379,7 @@ section.sharing {
   }
   p {
     color: $gray-dark;
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto 15px;
   }
   div {
@@ -559,12 +563,13 @@ section.call-to-action {
           color: #003b5c;
           display: table-cell;
           margin-bottom: 0;
-          padding: 5px 10px;
+          padding: 15px 10px;
           &:before {
             display: none;
           }
           a {
             border-bottom: none;
+
             &:hover {
               text-decoration: underline;
             }
@@ -592,6 +597,9 @@ section.call-to-action {
   //*Navigation Tablet*//
   nav.usa-site-navbar {
     height: 70px;
+    a {
+      text-decoration: none;
+    }
     div.logo {
       margin-top: 10px;
     }
@@ -829,12 +837,16 @@ section.call-to-action {
   }
   //*Quick Links Desktop*//
   section.quick-links {
+    .container {
+      padding: 0;
+      width: 900px;
+    }
     h3 {
       margin-top: 0;
       margin-bottom: 10px;
     }
     .links-column {
-      width: 24.25%;
+      width: 19.25%;
       float: left;
       margin-right: 1%;
       ul {
@@ -863,6 +875,7 @@ section.call-to-action {
       min-height: initial;
       li a {
         font-size: 13px;
+        text-decoration: none;
       }
     }
     .about {
