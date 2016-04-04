@@ -17,7 +17,7 @@ h1, h2, h3, h4, a.logo {
   font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 }
 
-h1, h2, a.logo {
+h1, h2 {
   font-size: 30px;
   line-height: 39px;
   color: $primarydarker;  
@@ -66,9 +66,7 @@ a {
   color: $lightblue;
   text-decoration: underline;
 }
-a.logo {
-  display: block;
-}
+
 footer {
   padding: 10px 0;
   p, a {
@@ -84,6 +82,7 @@ footer {
       list-style: none;
       width: 100%;
       margin-top: 0;
+      margin-left: 0;
     }
     li {
       text-align: center;
@@ -229,6 +228,7 @@ section.hero {
   background-color: $primarydarker;
   color: #fff;
   font-family: 'Merriweather' sans-serif;
+  padding: 50px 0;
   h2 {
     color: #fff;
     margin-bottom: 40px;
@@ -613,43 +613,7 @@ section.call-to-action {
       width: 20%;
     }
   }
-
-  //*Navigation Tablet*//
-  nav.usa-site-navbar {
-    height: 70px;
-    a {
-      text-decoration: none;
-    }
-    div.logo {
-      margin-top: 10px;
-    }
-    ul.tablet.nav-menu {
-      float: right;
-      margin: 17px 0 0 0;
-
-      .usa-button.usa-button-outline {
-        box-shadow: inset 0 0 0 2px $darkblue;
-        color: $darkblue;
-      }
-      > li {
-        float: left;
-        padding: 0 11px;
-        margin-top: 5px;
-        a {
-          color: $darkblue;
-          font-weight: 800;
-        }
-      }
-      li::before {
-        content: "";
-        padding-right: 0;
-      }
-      a.usa-button {
-        margin: 0;
-      }
-    }
-  }
-  nav.usa-site-navbar, section.breadcrumbs {
+  section.breadcrumbs {
     .container {
       width: 768px;
       margin: 0 auto;
@@ -836,21 +800,6 @@ section.call-to-action {
     }
   } 
 
-  //*Navigation Desktop*//
-  nav.usa-site-navbar, section.breadcrumbs {
-    .container {
-      width: 980px;
-      margin: 0 auto;
-    }
-    ul.tablet.nav-menu {
-      li {
-        padding: 0 30px;
-      }
-      a.usa-button {
-        margin-left: 11px;
-      }
-    } 
-  }
   section.hero {
     .container {
       width: 900px;
