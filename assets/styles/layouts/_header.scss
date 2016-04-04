@@ -61,10 +61,10 @@ div.mobile-only.nav-menu {
   }
   li a {
     color: $darkbluegrey;
-    font-size: 17px;
     line-height: 30px;
     text-decoration: none;
     font-weight: 800;
+    
   }
   .usa-accordion-content {
     padding: 0 0 15px;
@@ -73,10 +73,11 @@ div.mobile-only.nav-menu {
     }
     ul a {
       color: $lightblue;
-      font-size: 15px;
+      font-size: 14px;
       line-height: 20px;
       font-weight: 500;
       padding-left: .4em;
+      text-transform: uppercase;
     }
   }
 }
