@@ -23,6 +23,90 @@ if (isset($wp_query->query_vars['state_name'])) {
 ?>
 
     <?php get_template_part('templates/content-hero'); ?>
+    <section class="voter-registration-guide <?php if($state_name == "") {echo 'hidden';}?>">
+      <div class="state-info">
+        <div class="container">
+          <h2><?php echo $state_name; ?> voter registration</h2>
+
+          <div class="usa-accordion">
+            <ul class="usa-unstyled-list">
+
+            <!--TODO: if statement-->
+            <?php $registration_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
+              if ( $registration_instructions !== null && $registration_instructions !== "undefined" && $registration_instructions !=="?????") { ?>
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><h4><?php echo $state_name; ?> Election day registration instructions</h4></button>
+                <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('election-day-registration-instructions');?></div>
+              </li>
+              <?php }  ?>
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-1'><h4><?php echo $state_name; ?> voter registration deadlines</h4></button>
+                <div id='collapsible-1' aria-hidden='true' class='answer usa-accordion-content'>
+                  If you register by mail: <?php echo types_render_field('voter-registration-deadline-by-mail');?><br />
+                  If you register in-person: <?php echo types_render_field('voter-registration-deadline-in-person');?>
+                </div>
+              </li>
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-2'><h4><?php echo $state_name; ?> voter registration rules</h4></button>
+                <div id='collapsible-2' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-registration-rules');?></div>
+              </li>
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-3'><h4>How to register to vote in <?php echo $state_name; ?></h4></button>
+                <div id='collapsible-3' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('how-to-register-to-vote');?></div>
+              </li>
+            </ul>
+          </div><!--.usa-accordion-->
+        </div>
+      </div><!--.state-info-->
+
+      <div class="state-info">
+        <div class="container">
+
+          <h2><?php echo $state_name; ?> absentee ballots</h2>
+
+          <div class="usa-accordion">
+            <ul class="usa-unstyled-list">
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4><?php echo $state_name; ?> absentee ballot deadlines</h4></button>
+                <div id='collapsible-16' aria-hidden='true' class='answer usa-accordion-content'>
+                  Absentee ballot application deadline: <?php echo types_render_field('absentee-ballot-application-deadline');?>
+                  Voted ballots are due: <?php echo types_render_field('voted-absentee-ballot-deadline');?>
+                </div>
+              </li>
+              <li> 
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'><h4><?php echo $state_name; ?> absentee ballot rules</h4></button>
+                <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('vbm-eligibilty');?></div>
+              </li>
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'><h4>How to get an absentee ballot in <?php echo $state_name; ?></h4></button>
+                <div id='collapsible-9' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('how-to-get-your-absentee-ballot');?></div>
+              </li>
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'><h4>Once you get your absentee ballot in <?php echo $state_name; ?></h4></button>
+                <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voted-absentee-ballot-instructions');?></div>
+              </li>
+            </ul>
+          </div><!--.usa-accordion-->
+        </div>
+      </div><!--.state-info-->
+      <div class="state-info">
+        <div class="container">
+          <h2><?php echo $state_name; ?> early voting</h2>
+
+          <div class="usa-accordion">
+            <ul class="usa-unstyled-list">
+
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><h4>Early voting in <?php echo $state_name; ?></h4></button>
+                <div id='collapsible-11' aria-hidden='true' class='answer usa-accordion-content'>
+                  Early voting starts: <?php echo types_render_field('early-voting-begins');?>
+                  Early voting ends: <?php echo types_render_field('early-voting-ends');?></div>
+              </li>
+            </ul>
+          </div><!--.usa-accordion-->
+        </div><!--.container-->
+      </div><!--.state-info-->
+    </section> <!--.voter-registration-guide-->
 
     
     <section class="faqs <?php if ($state == "") {echo 'hidden';} ?>">
@@ -36,29 +120,29 @@ if (isset($wp_query->query_vars['state_name'])) {
           <?php $registration_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
             if ( $registration_instructions !== null && $registration_instructions !== "undefined" && $registration_instructions !=="?????") { ?>
             <li>
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><?php echo $state_name; ?> Election day registration instructions</button>
+              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><h4><?php echo $state_name; ?> Election day registration instructions</h4></button>
               <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('election-day-registration-instructions');?></div>
             </li>
             <?php }  ?>
             <li>
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-6'>How to register to vote in <?php echo $state_name; ?></button>
+              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-6'><h4>How to register to vote in <?php echo $state_name; ?></h4></button>
               <div id='collapsible-6' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('how-to-register-to-vote');?></div>
             </li>
             <li>
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-7'>How to get an absentee ballot in <?php echo $state_name; ?></button>
+              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-7'><h4>How to get an absentee ballot in <?php echo $state_name; ?></h4></button>
               <div id='collapsible-7' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('how-to-get-your-absentee-ballot');?></div>
             </li>
             <li>
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'>How to to register for early voting in <?php echo $state_name; ?></button>
+              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'><h4>How to to register for early voting in <?php echo $state_name; ?></h4></button>
               <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('early-voting-begins');?>
                 <?php echo types_render_field('early-voting-ends');?></div>
             </li>
             <li>
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'>What are the voter ID requirements in <?php echo $state_name; ?></button>
+              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'><h4>What are the voter ID requirements in <?php echo $state_name; ?></h4></button>
               <div id='collapsible-9' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-in-person');?></div>
             </li>
             <li>
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'><?php echo $state_name; ?> election official contact info</button>
+              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'><h4><?php echo $state_name; ?> election official contact info</h4></button>
               <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'><?php $leo = types_render_field('local-election-official', array('raw' => true));  echo '<a target="_blank" href="'.$leo.'">'.$leo.'</a>';?></div>
             </li>
             
