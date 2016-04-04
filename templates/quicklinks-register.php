@@ -19,7 +19,7 @@
         <li><a href="/register-to-vote/idaho">Idaho voter registration</a></li>
         <li><a href="/register-to-vote/illinois">Illinois voter registration</a></li>  
       </ul>
-    </div><!--.col-md-2-->
+    </div><!--.links-column-->
     <div class="links-column">
       <ul>
         <li><a href="/register-to-vote/indiana">Indiana voter registration</a></li>
@@ -37,7 +37,7 @@
         <li><a href="/register-to-vote/montana">Montana voter registration</a></li>
         
       </ul>
-    </div><!--.col-md-2-->
+    </div><!--.links-column-->
     <div class="links-column">
       <ul>
         <li><a href="/register-to-vote/nebraska">Nebraska voter registration</a></li>
