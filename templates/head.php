@@ -1,4 +1,27 @@
+<?php
+global $wp_query;
+if (isset($wp_query->query_vars['state_name'])) {
 
+  $state = $wp_query->query_vars['state_name'];
+  $state_loop = new WP_Query( array( 
+    'post_type' => 'state',
+    'name'      => $state,
+    'posts_per_page' => 1
+  ) ); 
+  if ( $state_loop->have_posts() )  {
+    while ( $state_loop->have_posts() ) {
+      $state_loop->the_post();
+      $state_name = $post->post_title;
+    }    
+  }
+
+ }
+  else {
+    $state = ""; $state_name = "";
+
+  } 
+
+?>
 
 <head>
 
@@ -11,10 +34,10 @@
    <!--All the Meta Tags -->
    <title> <?php $title = get_the_title(); if (!empty($title)) { echo $title." | "; }  ?>Vote.org - Everything you need to vote</title>
 
-   <meta property="og:title" content="<?php wp_title(); ?> | Vote.org - Everything you need to vote">
+   <meta property="og:title" content="<?php echo $title; ?> | Vote.org - Everything you need to vote">
    <meta name="description" content="<?php if(get_post_meta($post->ID, "metadesc", true) !='' ) echo get_post_meta($post->ID, "metadesc", true); else bloginfo('description');?>" />
 
-   <meta name="description" content="Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient."/>
+   <meta name="description" content="<?php echo $meta_description; ?>"/>
    <meta property="og:url" content="<?php echo home_url();?>">
    <meta property="og:type" content="article">
    <meta property="og:site_name" content="Vote.org">
@@ -31,7 +54,5 @@
    <script src="./js/html5shiv.js"></script>
    <![endif]-->
   <?php wp_head(); ?>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/uswds.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" ></script>
+  
 </head>
