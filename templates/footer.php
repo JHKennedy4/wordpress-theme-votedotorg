@@ -3,10 +3,10 @@
     <div class="tablet nav-links">
       <h3>Tools</h3>
       <ul>
-        <li><a href="//register.vote.org">Register to Vote</a></li>
-        <li><a href="//verify.vote.org">Check Registration Status</a></li>
-        <li><a href="//absentee.vote.org">Get Your Absentee Ballot</a></li>
-        <li><a href="//help.vote.org">Helpdesk</a></li>
+        <li><a href="/register-to-vote">Register to vote</a></li>
+        <li><a href="/am-i-registered-to-vote">Check registration status</a></li>
+        <li><a href="/absentee-ballot">Get your absentee ballot</a></li>
+        <li><a href="//help.vote.org">Help desk</a></li>
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
@@ -103,5 +103,4 @@
   </div><!--.container-->
 
 </footer>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
- <!--   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56bd6f489abb811d" async="async"></script>-->
+

@@ -55,9 +55,16 @@ use Roots\Sage\Wrapper;
       ui_offset_left: '20px'
     }
     </script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56bd6f489abb811d" async="async"></script>
-    
 
+    <!--Javascript-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/uswds.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" ></script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56bd6f489abb811d" async="async"></script>
+
+   <!--[if lt IE 9]> 
+   <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/html5shiv.js"></script>
+   <![endif]-->
 
     
   </body>
