@@ -36,6 +36,10 @@ h4 {
 }
 ul, ol {
   margin: 20px 0 20px 20px;
+  list-style: initial;
+}
+ul {
+  list-style-type: decimal;
 }
 p, li {
   font-size: 17px;
