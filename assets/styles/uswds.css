@@ -1660,7 +1660,7 @@ ul, ol {
   padding-left: 0;
   display: table;
 }
-
+/*
 ul li:after, ol li:after {
   content: "";
   display: block;
@@ -1676,18 +1676,18 @@ ul li:before {
   display: table-cell;
   padding-right: 0.4em;
 }
-
-ol li {
+*/
+/*ol li {
   counter-increment: table-ol;
   display: table-row;
-}
+}*/
 
-ol li:before {
+/*ol li:before {
   content: counter(table-ol) ".";
   display: table-cell;
   padding-right: 0.4em;
   text-align: right;
-}
+}*/
 
 li {
   margin-bottom: 0.5em;

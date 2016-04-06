@@ -37,14 +37,20 @@ h4 {
 ul, ol {
   margin: 20px 0 20px 20px;
   list-style: initial;
+  display: block;
+
+  li:before, li:after {
+    content: "";
+    display: none;
+  }
 }
 ol {
   list-style-type: decimal;
 }
-li:before, li:after {
-  content: "";
-  display: none;
+ul {
+  list-style-type: disc;
 }
+
 p, li {
   font-size: 17px;
   line-height: 25px;
