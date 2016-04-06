@@ -41,6 +41,10 @@ ul, ol {
 ol {
   list-style-type: decimal;
 }
+li:before, li:after {
+  content: "";
+  display: none;
+}
 p, li {
   font-size: 17px;
   line-height: 25px;
@@ -61,7 +65,7 @@ td{
 section {
   padding: 40px 0 40px;
   .container {
-    width: 275px;
+    width: 80%;
     margin: 0 auto;
     font-size: 17px;
   }
@@ -233,6 +237,9 @@ section.hero {
   color: #fff;
   font-family: 'Merriweather' sans-serif;
   padding: 50px 0;
+  .container {
+    width: 320px;
+  }
   h2 {
     color: #fff;
     margin-bottom: 40px;
@@ -294,6 +301,7 @@ section.quote {
     display: block;
     margin: 0 auto;
     text-align: center;
+    width: 90%;
     h2 {
       margin-bottom: 0;
       text-align: center;
@@ -305,7 +313,7 @@ section.quote {
       width: 30px;
       position: relative;
       top: 32px;
-      left: -66%;
+      left: -50%;
       display: inline-block;
     }
     &::after {
@@ -315,7 +323,7 @@ section.quote {
       width: 30px;
       position: relative;
       top: -269px;
-      right: -63px;
+      right: -6%;
       display: inline-block;
       float: right;
     }
