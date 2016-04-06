@@ -30,7 +30,6 @@ if (isset($wp_query->query_vars['state_name'])) {
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/dist/favicon.ico">
 
-   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/styles/uswds.css">
    <!--All the Meta Tags -->
    <title> <?php $title = get_the_title(); if (!empty($title)) { echo $title." | "; }  ?>Vote.org - Everything you need to vote</title>
 
