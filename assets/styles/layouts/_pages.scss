@@ -328,9 +328,10 @@ section.quote {
   }
 }
 section.voter-registration-guide {
-  h1, h3, h4 {
+  h1, h3 {
     color: $mediumblue;
   }
+
   .state-info {
     margin-bottom: 40px;
   }
@@ -356,7 +357,9 @@ section.faqs {
       background-color: #fff;
       background-position: 12.5em 2rem;
       font-weight: 800;
-
+      h4 {
+        color: #000;
+      }
     }
   }
   .usa-accordion-content {
