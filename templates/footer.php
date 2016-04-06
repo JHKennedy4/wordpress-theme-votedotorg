@@ -87,8 +87,8 @@
 <footer>
   <div class="container">
     
-    <div class="legalese tablet">
-      <p>Vote.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party. </p>
+    <div class="legalese">
+      <p>Vote.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.</p>
     </div><!--.legalese-->
     <div class="links">
       <ul>
@@ -97,7 +97,6 @@
         <li><a href="/contact">Contact Us</a></li>
       </ul>
       
-      <div class="copyright hidden">&copy; Copyright 2016. Vote.org</div>
     </div><!--.links-->
     <div class="clear-fix"></div>
   </div><!--.container-->

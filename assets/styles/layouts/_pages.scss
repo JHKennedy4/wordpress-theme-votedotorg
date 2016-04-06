@@ -103,6 +103,7 @@ footer {
 
       a {
         color: $lightblue;
+        font-size: 17px;
       }
       &::before {
         content: "";
@@ -110,10 +111,7 @@ footer {
       }
     }
   }
-  div.copyright {
-    font-size: 13px;
-    line-height: 20px;
-    width: 100%;
+  div.legalese p {
     text-align: center;
   }
 }
@@ -771,7 +769,7 @@ section.call-to-action {
   footer {
     div.links {
       margin: 0 auto;
-      width: 310px;
+      width: 369px;
       ul {
         margin: 0;
       }
