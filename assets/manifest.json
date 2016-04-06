@@ -8,9 +8,14 @@
     },
     "main.css": {
       "files": [
-        "styles/main.scss"
+        "styles/uswds.css", "styles/main.scss"
       ],
       "main": true
+    },
+    "uswds.js": {
+      "files": [
+        "scripts/uswds.js"
+      ]
     },
     "customizer.js": {
       "files": [
