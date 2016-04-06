@@ -7,9 +7,9 @@
     </div><!--.logo-->
     <ul class="tablet nav-menu">
 
-      <li><a href="/register-to-vote">Register to Vote</a></li>
-      <li class="active"><a href="/am-i-registered-to-vote">Are You Registered?</a></li>
-      <li><a href="/absentee-ballot">Absentee Ballots</a></li>
+      <li><a href="//register.vote.org">Register to Vote</a></li>
+      <li class="active"><a href="//verify.vote.org">Are You Registered?</a></li>
+      <li><a href="//absentee.vote.org">Absentee Ballots</a></li>
 
       <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">
         Donate
@@ -24,9 +24,9 @@
 
 <div class="mobile-only nav-menu collapsed">
   <ul class="no-dropdown">
-    <li><a href="/register-to-vote">Register to Vote</a></li>
+    <li><a href="//register.vote.org">Register to Vote</a></li>
     <li class="active"><a href="//verify.vote.org">Are You Registered?</a></li>
-    <li><a href="/absentee-ballot">Absentee Ballots</a></li>
+    <li><a href="//absentee.vote.org">Absentee Ballots</a></li>
     <li><a href="http://help.vote.org">Helpdesk</a></li>
     <li>
       <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg">
