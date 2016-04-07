@@ -132,13 +132,12 @@ if (isset($wp_query->query_vars['state_name'])) {
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4><?php echo $state_name; ?> in-person voter ID requirements</h4></button>
                 <div id='collapsible-16' aria-hidden='true' class='answer usa-accordion-content'>
-                  Absentee ballot application deadline: <?php echo types_render_field('voter-id-requirements-in-person');?>
-                  Voted ballots are due: <?php echo types_render_field('voted-absentee-ballot-deadline');?>
+                  <?php echo types_render_field('voter-id-requirements-in-person');?>
                 </div>
               </li>
               <li> 
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'><h4><?php echo $state_name; ?> absentee voter ID requirements</h4></button>
-                <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('vbm-eligibilty');?></div>
+                <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-absentee');?></div>
               </li>
             </ul>
           </div><!--.usa-accordion-->
