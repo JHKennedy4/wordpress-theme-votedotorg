@@ -10,17 +10,22 @@ nav.usa-site-navbar {
     width: 100%;
     padding: 0;
   }
+  a, a:hover {
+    cursor: pointer;
+  }
 }
 a.logo {
   text-decoration: none;
   font-size: 22px;
-  color: $primarydarker;
+  color: $primary-darkest;
 }
 
 div.logo {
   float: left;
   margin-left: 10px;
-  margin-top: 10px;
+  h2 {
+    margin:0;
+  }
 }
 div.menu-btn {
   float: right;
@@ -61,7 +66,6 @@ div.mobile-only.nav-menu {
     line-height: 30px;
     text-decoration: none;
     font-weight: 800;
-    
   }
   .usa-accordion-content {
     padding: 0 0 15px;
@@ -92,25 +96,32 @@ div.mobile-only.nav-menu {
       text-decoration: none;
     }
     div.logo {
-      margin-top: 20px;
+      margin-top: 0px;
+      margin-left: 0;
+      a.logo {
+        line-height: 70px;
+        height: 70px;
+      }
     }
     ul.tablet.nav-menu {
       float: right;
-      margin: 17px 0 0 0;
+      margin: 0;
       list-style: none;
       list-style-type: none;
 
       .usa-button.usa-button-outline {
-        box-shadow: inset 0 0 0 2px $darkblue;
-        color: $darkblue;
+        box-shadow: inset 0 0 0 2px $primary-darkest;
+        color: $primary-darkest;
       }
 
       > li {
         float: left;
         padding: 0 11px;
-        margin-top: 5px;
+        margin: 0; 
+        line-height: 70px;
+        height: 70px;
         a {
-          color: $darkblue;
+          color: $primary-darkest;
           font-weight: 800;
         }
       }
@@ -120,6 +131,7 @@ div.mobile-only.nav-menu {
       }
       a.usa-button {
         margin: 0;
+
       }
     }
   }
@@ -136,9 +148,20 @@ div.mobile-only.nav-menu {
       li {
         padding: 0 30px;
       }
-      a.usa-button {
-        margin-left: 11px;
-      }
     } 
   }
+}
+
+@media only screen and (min-width: 1280px) {
+
+  section.breadcrumbs, nav.usa-site-navbar {
+    .container {
+      width: 1160px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  
 }

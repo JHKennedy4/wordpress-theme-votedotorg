@@ -1,239 +1,8 @@
-//*Mobile *//
-.desktop, .tablet, .desktop-only {
-  display: none;
-}
-.mobile-only, .mobile {
-  display: inherit;
-}
 
-html {
-  font-family: "Clear Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 10px;
-}
-body {
- font-family: "Clear Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-}
-h1, h2, h3, h4, a.logo {
-  font-weight: 800;
-  font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
-}
-
-h1, h2 {
-  font-size: 30px;
-  line-height: 39px;
-  color: $primarydarker;  
-  margin-bottom: 1em;
-}
-
-h3 {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 35px;
-  margin-bottom: 20px;
-}
-h4 {
-  font-size: 15px;
-  line-height: 30px;
-}
-ul, ol {
-  margin: 20px 0 20px 20px;
-  list-style: initial;
-  display: block;
-
-  li:before, li:after {
-    content: "";
-    display: none;
-  }
-}
-ol {
-  list-style-type: decimal;
-}
-ul {
-  list-style-type: disc;
-}
-
-p, li {
-  font-size: 17px;
-  line-height: 25px;
-}
-p {
-  margin-bottom: 20px;
-}
-
-tr{
-  display:table;
-  width:100%;
-}
-td{
-  display:table-row;
-  background: #efefef;
-}
-section {
-  padding: 40px 0 40px;
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 17px;
-  }
-}
-a {
-  color: $lightblue;
-  text-decoration: underline;
-}
-
-footer {
-  padding: 10px 0;
-  p, a {
-    font-size: 11px;
-    line-height: 20px;
-  }
-  a {
-    text-decoration: none;
-  }
-  div.links {
-    text-align: center;
-    ul {
-      list-style: none;
-      width: 100%;
-      margin-top: 0;
-      margin-left: 0;
-    }
-    li {
-      text-align: center;
-
-      a {
-        color: $lightblue;
-        font-size: 17px;
-      }
-      &::before {
-        content: "";
-        padding: 0;
-      }
-    }
-  }
-  div.legalese p {
-    text-align: center;
-  }
-}
-strong {
-  font-family: "Clear Sans Bold", sans-serif;
-  font-weight: 800;
-}
-.wrapper {
-  width: 320px;
-  margin: 0 auto;
-}
-//*Table Styling*/
-table.responsive-chart {
-  font-size: 17px;
-  line-height: 25px;
-  padding: 10px;
-  background-color: transparent;
-  border-collapse: collapse;
-  border-spacing: 0;
-  border-bottom: 0 solid transparent;
-  margin: 30px auto;
-  width: 100%;
-  max-width: 100%; 
-  thead tr {
-    display: none;
-  }
-  th {
-    background: #003b5c;
-    color: #fff;
-    font-weight: 500;
-    border: 2px solid #fff;
-    text-align: left;
-    font-weight: 500;
-    display: none;
-  }
-
-  td, th {
-    padding: 10px;
-    transition: .3s;
-  }
-  tr {
-    transition: .3s;
-    border-bottom: 2px solid #c0c1c0;
-
-  }
-
-  tbody {
-    display: table-row-group;
-    >tr {
-      display: block;
-      background-color: #ebebeb;
-      border-radius: 2px;
-      margin-bottom: 1em;
-      padding: 4%;
-    }
-    td {
-      vertical-align: middle;
-      padding: 5px 10px;
-      border: none;
-      background-color: #ebebeb;
-      line-height: 1.2em;
-    }
-    td[data-title]:before {
-      content: attr(data-title);
-      font-size: inherit;
-      font-weight: 700;
-      color: #003b5c;
-      display: block;
-      margin-bottom: 5px;
-      margin-top: 10px;
-    }
-    td.state-name {
-      font-size: 2em;
-      font-weight: 700;
-      color: $darkbluegrey;
-      display: block;
-      padding: 0;
-      margin-bottom: 15px;
-      a {
-        color: #003b5c;
-        transition: .2s;
-        &:hover {
-          color: $lightblue;
-          border-color: $lightblue;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
-th, td {
-  padding-top: 15px;
-  padding-left: 10px;
-  height: 50px;
-  transition: .3s
-}
-th {
-  background-color: $darkbluegrey;
-  color: #fff;
-  height: 50px;
-}
-td {
-  background-color: #fff;
-}
-
-
-.breadcrumbs {
-  background: #000;
-  padding: 2px 0px;
-  h1 {
-    font-size: 15px;
-    font-family: 'ClearSans' sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: $grey;
-    margin-bottom: 0;
-  }
-}
-
+//*Online Tools Section Mobile*//
 .register-tool {
-  padding: 10px 0;
-  background-color: $darkblue;
+  padding: 0;
+  background-color: $primary-darkest;
   .container {
     width: 100%;
     padding: 0;
@@ -395,13 +164,13 @@ section.faqs {
 section.sharing {
   background-color: #d6d7d9;
   color: $mediumblue;
-  h2,h3,p,a {
+  h2,h4,p,a {
     text-align: center;
   }
   h2 {
     margin-bottom: 15px;
   }
-  h3 {
+  h4 {
     margin-top: 0px;
   }
   .container > a {
@@ -647,6 +416,7 @@ section.call-to-action {
   .register-tool {
     background: url('../images/bkg-blue-large.png') no-repeat 50% 49%;
     background-size: cover;
+    padding: 10px 0;
     .container {
       width: 700px; 
     }
@@ -769,46 +539,7 @@ section.call-to-action {
     display:table-cell;
     background:#efefef;
   }
-  footer {
-    div.links {
-      margin: 0 auto;
-      width: 369px;
-      ul {
-        margin: 0;
-      }
-      li {
-        float: left;
-        margin: 0 0 0 12px;
-        a {
-          padding-right: 15px;
-        }
-        &:after {
-          display: inline-block;
-          content: "|";
-        }
-        &:last-of-type {
-          a {
-            padding-right: 0;
-          }
-          &:after {
-            content: "";
-            padding-right: 0;
-            margin-right: 0;
-          }
-        }
-      }
-      div.copyright {
-        text-align: center;
-      }
-    }
-    div.legalese {
-      margin: 0 auto 5px;
-      p {
-        text-align: center;
-        margin-bottom: 0px;
-      }
-    }
-  }
+  
 }
 //* Desktop *//
 @media only screen and (min-width: 980px) {
@@ -905,19 +636,16 @@ section.call-to-action {
 }
 //* Larger Desktops *//
 @media only screen and (min-width: 1280px) {
-  section.hero {
-    .container {
-      width: 1160px;
-    }
+   section.hero {
     .box {
       h2 {
         height: auto;
       }
     }
   }
-  section.quick-links, section.site-map, section.call-to-action, footer, nav.usa-site-navbar, section.breadcrumbs {
+  section.quick-links, section.site-map, section.call-to-action, section.hero {
     .container {
-      width: 1132px;
+      width: 1160px;
     }
   }
 

@@ -863,7 +863,7 @@ button.usa-button-primary-alt,
 [type="reset"].usa-button-primary-alt,
 [type="image"].usa-button-primary-alt {
   background-color: #02bfe7;
-  color: #212121;
+  color: #323a45;
 }
 
 .usa-button.usa-button-primary-alt:hover, .usa-button.usa-button-primary-alt.usa-button-hover,
@@ -1008,7 +1008,7 @@ button.usa-button-gray.usa-button-active,
 [type="reset"].usa-button-gray.usa-button-active,
 [type="image"].usa-button-gray:active,
 [type="image"].usa-button-gray.usa-button-active {
-  background-color: #212121;
+  background-color: #323a45;
 }
 
 .usa-button.usa-button-outline,
@@ -1245,7 +1245,7 @@ select {
   border: 1px solid #5b616b;
   border-radius: 0;
   box-sizing: border-box;
-  color: #212121;
+  color: #323a45;
   display: block;
   font-size: 1.7rem;
   margin: 0.2em 0;
@@ -1903,7 +1903,7 @@ p a,
 
 .usa-accordion > ul,
 .usa-accordion-bordered > ul {
-  color: #212121;
+  color: #323a45;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -1934,7 +1934,7 @@ p a,
   background-position: right 3rem center;
   background-repeat: no-repeat;
   background-size: 13px;
-  color: #212121;
+  color: #323a45;
   cursor: pointer;
   display: inline-block;
   font-family: "Clear Sans", "Helvetica", "Arial", sans-serif;
@@ -1951,7 +1951,7 @@ p a,
 .usa-accordion button:hover,
 .usa-accordion-bordered button:hover {
   background-color: #d6d7d9;
-  color: #212121;
+  color: #323a45;
 }
 
 .usa-accordion button h1, .usa-accordion button h2, .usa-accordion button h3, .usa-accordion button h4, .usa-accordion button h5, .usa-accordion button h6,
@@ -2099,7 +2099,7 @@ p a,
 }
 
 .usa-footer .usa-footer-primary-link {
-  color: #212121;
+  color: #323a45;
   display: block;
   font-weight: 700;
   margin-top: 0;
@@ -2195,7 +2195,7 @@ p a,
 ul.usa-footer-primary-content,
 li.usa-footer-primary-content,
 li.usa-footer-primary-content {
-  border-top: 1px solid #212121;
+  border-top: 1px solid #323a45;
 }
 
 @media screen and (min-width: 600px) {
@@ -2209,7 +2209,7 @@ li.usa-footer-primary-content {
 ul.usa-footer-primary-content:last-child,
 li.usa-footer-primary-content:last-child,
 li.usa-footer-primary-content:last-child {
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #323a45;
 }
 
 @media screen and (min-width: 600px) {
@@ -2254,7 +2254,7 @@ li.usa-footer-primary-content:last-child {
 }
 
 .usa-footer-secondary_section a {
-  color: #212121;
+  color: #323a45;
 }
 
 @media screen and (min-width: 600px) {
@@ -2287,7 +2287,7 @@ li.usa-footer-primary-content:last-child {
 }
 
 .usa-footer-big ul:last-child {
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #323a45;
 }
 
 @media screen and (min-width: 600px) {
@@ -2681,7 +2681,7 @@ fieldset {
 
 .usa-sidenav-list a {
   border: none;
-  color: #212121;
+  color: #323a45;
   display: block;
   font-family: "Clear Sans", "Helvetica", "Arial", sans-serif;
   line-height: 1;
@@ -2743,7 +2743,7 @@ fieldset {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background: transparent;
-  color: #212121;
+  color: #323a45;
   left: 0;
   padding: 1rem 1.5rem;
   position: absolute;
