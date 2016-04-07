@@ -32,7 +32,7 @@ if (isset($wp_query->query_vars['state_name'])) {
         <p>Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.</p>
         <a href="/about">Learn more about Vote.org</a>
         
-        <h3>Every person who shares helps us reach three more voters.</h3>
+        <h4>Every person who shares helps us reach three more voters.</h4>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div class="addthis_jumbo_share"></div>
       </div>
