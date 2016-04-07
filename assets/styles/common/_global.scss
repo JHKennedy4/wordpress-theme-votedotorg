@@ -32,7 +32,7 @@ body.wp-admin {
   background: url('../images/minus.png') no-repeat center;
 }
 
-.sr-only {
+.sr-only, .hidden{
   display: none;
   visibility: hidden;
 }
