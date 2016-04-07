@@ -94,3 +94,12 @@ strong {
     content: " (" attr(href) ") ";
   }
 }
+//adding ClearSans font
+@font-face{ 
+ font-family: 'Clear Sans';
+ src: url('../fonts/ClearSans-Regular-webfont.eot');
+}
+@font-face{ 
+ font-family: 'Clear Sans Bold';
+ src: url('../fonts/ClearSans-Bold-webfont.eot');
+}

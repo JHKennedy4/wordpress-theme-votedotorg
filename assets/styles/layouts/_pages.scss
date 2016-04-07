@@ -5,12 +5,13 @@
 .mobile-only, .mobile {
   display: inherit;
 }
+
 html {
   font-family: "Clear Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 10px;
 }
 body {
- font-family: 'ClearSans', sans-serif;
+ font-family: "Clear Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 h1, h2, h3, h4, a.logo {
   font-weight: 800;
@@ -54,7 +55,6 @@ ul {
 p, li {
   font-size: 17px;
   line-height: 25px;
-  font-family: 'ClearSans', "Helvetica", "Arial", sans-serif;
 }
 p {
   margin-bottom: 20px;
@@ -114,6 +114,10 @@ footer {
   div.legalese p {
     text-align: center;
   }
+}
+strong {
+  font-family: "Clear Sans Bold", sans-serif;
+  font-weight: 800;
 }
 .wrapper {
   width: 320px;
@@ -371,7 +375,6 @@ section.faqs {
     button.question {
       height: auto;
       background-color: #fff;
-      background-position: 12.5em 2rem;
       font-weight: 800;
       h4 {
         color: #000;
