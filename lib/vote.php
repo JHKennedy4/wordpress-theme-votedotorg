@@ -98,3 +98,25 @@ function custom_rewrite_rule(){
   flush_rewrite_rules();
 }
 add_action('init', 'custom_rewrite_rule', 10, 0);
+
+
+//remove default jQuery with WordPress and load with CDN instead
+add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+function remove_jquery_migrate( &$scripts)
+{
+    if(!is_admin())
+    {
+        $scripts->remove( 'jquery');
+        $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.11.1' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'register_jquery' );
+function register_jquery() {
+    if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') {
+        // comment out the next two lines to load the local copy of jQuery
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js', false, '2.2.2');
+        wp_enqueue_script('jquery');
+    }
+}
