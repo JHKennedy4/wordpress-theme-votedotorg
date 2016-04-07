@@ -72,5 +72,6 @@
         <li><a href="/register-to-vote/district-of-columbia">D.C. voter registration</a></li>
       </ul>
     </div><!--.links-column-->
+    <div class="clear-fix"></div>
   </div><!--.container-->
 </section><!--.quick-links-->
