@@ -95,11 +95,11 @@ jQuery(window).resize(function() {
 jQuery(document).ready(function(){
  //on browser size tablet change the iframe height to 1000//
 jQuery('iframe').iFrameResize({log:true,  minHeight: 1000});
- var width = $(window).width(); // New width
+ var width = jQuery(window).width(); // New width
  // resizeIframe(width);
 
  jQuery('.menu-btn.mobile-only').click(function(){
-  var menuCollapsed = $('.nav-menu.mobile-only').hasClass('collapsed');
+  var menuCollapsed = jQuery('.nav-menu.mobile-only').hasClass('collapsed');
   if (!menuCollapsed){
    jQuery('.nav-menu.mobile-only').addClass('collapsed');
   } else {
