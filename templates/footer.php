@@ -6,7 +6,7 @@
         <li><a href="/register-to-vote">Register to vote</a></li>
         <li><a href="/am-i-registered-to-vote">Check registration status</a></li>
         <li><a href="/absentee-ballot">Get your absentee ballot</a></li>
-        <li><a href="//help.vote.org">Help desk</a></li>
+        <li><a href="http://help.vote.org">Help desk</a></li>
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
