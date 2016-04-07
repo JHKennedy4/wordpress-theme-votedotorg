@@ -2,18 +2,19 @@
   <div class="container">
     
     <div class="logo" id="logo">
-        <a href="/" accesskey="1" title="Home" aria-label="Home" class="logo">
-        Vote.org</a>
+      <h2><a href="/" accesskey="1" title="Home" aria-label="Home" class="logo">
+      Vote.org</a></h2>
     </div><!--.logo-->
     <ul class="tablet nav-menu">
 
       <li><a href="//register.vote.org">Register to Vote</a></li>
       <li class="active"><a href="//verify.vote.org">Are You Registered?</a></li>
       <li><a href="//absentee.vote.org">Absentee Ballots</a></li>
-
-      <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">
-        Donate
-      </a>
+      <li>
+        <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">
+          Donate
+        </a>
+      </li>s
     </ul><!--.nav-menu.desktop-->
     <div class="clear-fix tablet"></div>
     <div class="menu-btn mobile-only"></div>
