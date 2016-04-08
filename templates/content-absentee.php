@@ -65,17 +65,11 @@ if (isset($wp_query->query_vars['state_name'])) {
           <?php } ?>
 
         <h3><?php the_title(); ?> absentee ballot deadlines</h3>
-
-        <div class="table">
-          <div class="header">Absentee ballot application deadline</div>
-          <div class="cell"><?php echo types_render_field("absentee-ballot-application-deadline");?></div>
-          <div class="clear-fix tablet"></div>
-        </div>
-        <div class="table">
-          <div class="header">Voted ballots are due</div>
-          <div class="cell"><?php echo types_render_field("voted-absentee-ballot-deadline");?></div>
-          <div class="clear-fix tablet"></div>
-        </div>
+        <ul>
+          <li><strong>Absentee ballot application deadlines:</strong></br><?php echo types_render_field("absentee-ballot-application-deadline");?></li>
+          <li><strong>Voted ballots are due:</strong></br><?php echo types_render_field("voted-absentee-ballot-deadline");?></li>
+        </ul>
+      
 
         <h3><?php the_title(); ?> absentee ballot rules</h3>
 
