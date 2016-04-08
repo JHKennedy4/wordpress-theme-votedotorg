@@ -302,21 +302,3 @@ strong {
     content: " (" attr(href) ") ";
   }
 }
-//* FONTS*// 
-
-@font-face{ 
- font-family: 'Clear Sans';
- src: url('../fonts/ClearSans-Regular-webfont.eot');
-}
-@font-face{ 
- font-family: 'Clear Sans Bold';
- src: url('../fonts/ClearSans-Bold-webfont.eot');
-}
-@font-face{
-  font-family: "Merriweather";
-  src: url('../fonts/merriweather-regular-webfont.eot');
-}
-@font-face{
-  font-family: "Merriweather Bold";
-  src: url('../fonts/merriweather-bold-webfont.eot');
-}

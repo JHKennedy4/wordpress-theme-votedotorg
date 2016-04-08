@@ -12,15 +12,19 @@
 section.hero {
   background-color: $primarydarker;
   color: #fff;
-  font-family: 'Merriweather' sans-serif;
+  font-family: "Merriweather Bold", "Georgia", "Times New Roman", serif;
   padding: 50px 0;
   .container {
     width: 320px;
   }
-  h2.logo {
+  h2 {
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
+    &.logo {
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
   }
   h1 {
     font-size: 52px;
@@ -31,14 +35,14 @@ section.hero {
   .tagline {
     font-size: 36px;
     line-height: 42px;
-    font-family: 'Merriweather' sans-serif;
+    font-family: "Merriweather Bold", "Georgia", "Times New Roman", serif;
     margin-bottom: 40px;
     text-align: center;
   }
   .box {
     width: 100%;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     color: #fff;
     background-color: rgba(0,0,0,.2);
     padding: 20px;
@@ -423,6 +427,7 @@ section.call-to-action {
   }
   //*Homepage and State Hero Tablet*//
   section.hero {
+    padding: 75px 0;
     .container {
       width: 768px;
     }
@@ -430,6 +435,7 @@ section.call-to-action {
       width: 32%;
       float: left;
       margin-left: 1.5%;
+      margin-bottom: 0px;
       padding: 60px 30px;
       flex: 1;
       text-align: center;
