@@ -48,26 +48,17 @@ if (isset($wp_query->query_vars['state_name'])) {
     <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
 
     <h3><?php the_title(); ?> voter registration deadlines</h3>
+    <ul>
+      <li><strong>In Person:</strong> <?php echo types_render_field("voter-registration-deadline-in-person");?></li>
+      <li><strong>By Mail:</strong> <?php echo types_render_field("voter-registration-deadline-by-mail");?></li>
+      <li><strong>Online:</strong> <?php echo types_render_field("voter-registration-deadline-online");?></li>
 
-    <div class="table">
-      <div class="header">Voter Registration Deadline - In Person</div>
-      <div class="cell"><?php echo types_render_field("voter-registration-deadline-in-person");?></div>
-      <div class="clear-fix tablet"></div>
-    </div>
-    <div class="table">
-      <div class="header">Voter Registration Deadline - By Mail</div>
-      <div class="cell"><?php echo types_render_field("voter-registration-deadline-by-mail");?></div>
-      <div class="clear-fix tablet"></div>
-    </div>
-    <div class="table">
-      <div class="header">Voter Registration Deadline - Online</div>
-      <div class="cell"><?php echo types_render_field("voter-registration-deadline-online");?></div>
-      <div class="clear-fix tablet"></div>
-    </div>
+    </ul>
+
 
     <?php $election_day_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
 
-     if ($election_day_instructions !== "" && $election_day_instructions !== "NA") { ?>
+     if ($election_day_instructions !== "" && $election_day_instructions !== "NA" && $election_day_instructions !== "?????") { ?>
     
     <div class="table">
       <div class="header">Election Day Registration Instructions</div>
