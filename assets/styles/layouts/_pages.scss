@@ -17,9 +17,9 @@ section.hero {
   .container {
     width: 320px;
   }
-  h2 {
+  h2.logo {
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
   }
   h1 {
@@ -162,7 +162,7 @@ section.faqs {
   }
 }
 section.sharing {
-  background-color: #d6d7d9;
+  background-color: #dce4ef;
   color: $mediumblue;
   h2,h4,p,a {
     text-align: center;
