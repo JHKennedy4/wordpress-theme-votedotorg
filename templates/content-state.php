@@ -36,21 +36,21 @@ if (isset($wp_query->query_vars['state_name'])) {
             <?php $registration_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
               if ( $registration_instructions !== null && $registration_instructions !== "undefined" && $registration_instructions !=="?????") { ?>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><h4><?php echo $state_name; ?> Election day registration instructions</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><h4>Election day registration instructions</h4></button>
                 <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('election-day-registration-instructions');?>
                 </div>
               </li>
               <?php }  ?>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-1'><h4><?php echo $state_name; ?> voter registration deadlines</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-1'><h4>Voter registration deadlines</h4></button>
                 <div id='collapsible-1' aria-hidden='true' class='answer usa-accordion-content'>
                   If you register by mail: <?php echo types_render_field('voter-registration-deadline-by-mail');?><br />
                   If you register in-person: <?php echo types_render_field('voter-registration-deadline-in-person');?>
                 </div>
               </li>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-2'><h4><?php echo $state_name; ?> voter registration rules</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-2'><h4>Voter registration rules</h4></button>
                 <div id='collapsible-2' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('voter-registration-rules');?>
                 </div>
@@ -73,7 +73,7 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4><?php echo $state_name; ?> absentee ballot deadlines</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4>Absentee ballot deadlines</h4></button>
                 <div id='collapsible-16' aria-hidden='true' class='answer usa-accordion-content'>
                   Absentee ballot application deadline: <?php echo types_render_field('absentee-ballot-application-deadline');?>
                   Voted ballots are due: <?php echo types_render_field('voted-absentee-ballot-deadline');?>
@@ -81,7 +81,7 @@ if (isset($wp_query->query_vars['state_name'])) {
               </li>
               <li> 
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'>
-                  <h4><?php echo $state_name; ?> absentee ballot rules</h4>
+                  <h4>Absentee ballot rules</h4>
                 </button><!--.question-->
                 <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('vbm-eligibilty');?>
@@ -130,13 +130,13 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4><?php echo $state_name; ?> in-person voter ID requirements</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4>In-person voter ID requirements</h4></button>
                 <div id='collapsible-16' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('voter-id-requirements-in-person');?>
                 </div>
               </li>
               <li> 
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'><h4><?php echo $state_name; ?> absentee voter ID requirements</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'><h4>Absentee voter ID requirements</h4></button>
                 <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-absentee');?></div>
               </li>
             </ul>
