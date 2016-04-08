@@ -38,18 +38,18 @@ if (isset($wp_query->query_vars['state_name'])) {
       <div class="box">
         <div class="register-line"></div>
         <h2>Make your voice heard in this election.</h2>
-        <a class="usa-button usa-button-secondary" href="//register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Register to vote</a>
+        <a class="usa-button usa-button-secondary" href="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Register to vote</a>
       </div><!--.box-->
 
       <div class="box">
         <div class="check-registration-line"></div>
         <h2>Find out if you are registered to vote.</h2>
-        <a class="usa-button usa-button-secondary" href="http://verify.vote.org" target="_blank">Check your registration status</a>
+        <a class="usa-button usa-button-secondary" href="https://verify.vote.org<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Check your registration status</a>
       </div><!--.box-->
       <div class="box">
         <div class="mail-line"></div>
         <h2>Get your absentee ballot.</h2>
-        <a class="usa-button usa-button-secondary" href="//absentee.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Get your absentee ballot</a>
+        <a class="usa-button usa-button-secondary" href="https://absentee.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Get your absentee ballot</a>
       </div><!--.box-->
 
     </div><!--.boxes-->
