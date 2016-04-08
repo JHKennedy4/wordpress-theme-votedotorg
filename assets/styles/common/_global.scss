@@ -103,6 +103,9 @@ section {
     width: 80%;
     margin: 0 auto;
     font-size: 17px;
+    >h1 {
+      margin-top: 0;
+    }
   }
 }
 a {
