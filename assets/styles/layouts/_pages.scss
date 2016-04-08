@@ -12,7 +12,7 @@
 section.hero {
   background-color: $primarydarker;
   color: #fff;
-  font-family: "Merriweather Bold", "Georgia", "Times New Roman", serif;
+  font-family: $font-serif;
   padding: 50px 0;
   .container {
     width: 320px;
@@ -38,7 +38,7 @@ section.hero {
   .tagline {
     font-size: 36px;
     line-height: 42px;
-    font-family: "Merriweather Bold", "Georgia", "Times New Roman", serif;
+    font-family: $font-serif;
     margin-bottom: 40px;
     text-align: center;
   }
@@ -204,7 +204,7 @@ section.sharing {
     }
   }
   span {
-    font-family: Helvetica;
+    font-family: $font-sans;
     &.large-number {
       font-size: 60px;
     }
