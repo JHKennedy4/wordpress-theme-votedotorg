@@ -342,63 +342,7 @@ section.call-to-action {
     }
   }
 
-  //Table Tablet //
-  table.responsive-chart {
-    border: none;
-    border-bottom: 0 solid transparent;
-    thead {
-      display: table-row-group;
-      tr {
-        display: table-row;
-      }
-      th {
-        display: table-cell;
-      }
-    }
-    tbody {
-      display: table-row-group;
-      tr {
-        display: table-row;
-        background-color: #fff;
-        border-radius: 2px;
-        margin-bottom: 1em;
-        padding: 4%;
-        td {
-          display: table-cell;
-          background-color: #fff;
-          vertical-align: top;
-          padding: 5px 10px;
-          border-left: 1px solid #c0c1c0;
-          border-right: 1px solid #c0c1c0;
-        }
-        td[data-title]:before {
-          content: attr(data-title);
-          font-size: inherit;
-          font-weight: 700;
-          color: #003b5c;
-          display: block;
-        }
-        td.state-name {
-          font-size: 1em;
-          font-weight: 500;
-          color: #003b5c;
-          display: table-cell;
-          margin-bottom: 0;
-          padding: 15px 10px;
-          &:before {
-            display: none;
-          }
-          a {
-            border-bottom: none;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }  
-  }
+  
   table.three-columns {
     th, td {
       width: 33%;

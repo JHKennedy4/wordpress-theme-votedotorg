@@ -122,7 +122,7 @@ strong {
   width: 320px;
   margin: 0 auto;
 }
-//*Table Styling*/
+//*Table Mobile Styling*/
 table.responsive-chart {
   font-size: 17px;
   line-height: 25px;
@@ -281,7 +281,69 @@ strong {
 .group {
   zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
+@media only screen and (min-width: 768px) {
 
+  //Table Tablet //
+  table.responsive-chart {
+    border: none;
+    border-bottom: 0 solid transparent;
+    thead {
+      display: table-row-group;
+      tr {
+        display: table-row;
+      }
+      th {
+        display: table-cell;
+      }
+    }
+    tbody {
+      display: table-row-group;
+      tr {
+        display: table-row;
+        background-color: #fff;
+        border-radius: 2px;
+        margin-bottom: 1em;
+        padding: 4%;
+        //zebra striping 
+        &:nth-of-type(2n){
+          >td {
+            background-color: #edeff0;
+          }
+        }
+        td {
+          display: table-cell;
+          background-color: #fff;
+          vertical-align: top;
+          padding: 5px 10px;
+          border-left: 1px solid #c0c1c0;
+          border-right: 1px solid #c0c1c0;
+        }
+        td[data-title]:before {
+          content: "";
+          display: none;
+        }
+        td.state-name {
+          font-size: 1em;
+          font-weight: 500;
+          color: #003b5c;
+          display: table-cell;
+          margin-bottom: 0;
+          padding: 15px 10px;
+          &:before {
+            display: none;
+          }
+          a {
+            border-bottom: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }  
+  }
+}
 //adding url after link in print versions.
 @media print {
   a[href]:after {
