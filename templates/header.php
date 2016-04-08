@@ -14,7 +14,7 @@
         <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">
           Donate
         </a>
-      </li>s
+      </li>
     </ul><!--.nav-menu.desktop-->
     <div class="clear-fix tablet"></div>
     <div class="menu-btn mobile-only"></div>
