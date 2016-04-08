@@ -31,6 +31,9 @@ section.hero {
     line-height: 62px;
     color: #fff;
     text-align: center;
+    &.state-election-center {
+      margin-bottom: 20px;
+    }
   }
   .tagline {
     font-size: 36px;
