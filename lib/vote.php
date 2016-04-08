@@ -74,7 +74,7 @@ function get_helpScout_articles_by_category($slug, $state_name) {
   foreach ($full_articles as $full_article) {
 
    //outputs title and text. can format this for HTML
-   echo "<li><button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-".$button_num."'>".$full_article["name"]."</button><div id='collapsible-".$button_num."' aria-hidden='true' class='answer usa-accordion-content'>".$full_article["text"]."</div></li>"; 
+   echo "<li><button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-".$button_num."'><h4>".$full_article["name"]."</h4></button><div id='collapsible-".$button_num."' aria-hidden='true' class='answer usa-accordion-content'>".$full_article["text"]."</div></li>"; 
   }
  }
 }
