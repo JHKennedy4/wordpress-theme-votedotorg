@@ -7,9 +7,7 @@
         <thead>
           <tr>
             <th class="state">State</th>
-            <th>Voter Registration Deadline - In Person</th>
-            <th>Voter Registration Deadline - By Mail</th>
-            <th>Voter Registration Deadline - Online</th>
+            <th>Voter Registration Deadlines</th>
             <th>Election Day Registration</th>
           </tr>
         </thead>
@@ -26,11 +24,21 @@
            $state_name = $post->post_title; 
            $state_slug = $post->post_name;?>
           <tr class="state-row" valign="top">
-            <td class="state-name"><a href="/<?php echo $state_slug; ?>"><?php echo $state_name; ?></a></td>
-            <td data-title="Voter Registration Deadline In-Person"><?php echo types_render_field('voter-registration-deadline-in-person');?></td>
-            <td data-title="Voter Registration Deadline By-Mail"><?php echo types_render_field('voter-registration-deadline-by-mail');?></td>
-            <td data-title="Voter Registration Deadline Online"><?php echo types_render_field('voter-registration-deadline-online');?></td>
-            <td data-title="Election Day Registration Instructions"><?php echo types_render_field('election-day-registration-instructions');?></td>
+            <td class="state-name"><p><a href="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>"><?php echo $state_name; ?></a></p></td>
+            <td data-title="Voter Registration Deadlines">
+              <ul>
+                <li><strong>In-Person:</strong> <?php echo types_render_field('voter-registration-deadline-in-person');?></li>
+                <li><strong>By Mail:</strong> <?php echo types_render_field('voter-registration-deadline-by-mail');?></li>
+                <li><strong>Online:</strong> <?php echo types_render_field('voter-registration-deadline-online');?></li>
+              </ul>
+            </td>
+            
+            <td data-title="Election Day Registration Instructions">
+              <p>
+                <?php echo types_render_field('election-day-registration-instructions');?>
+              </p>
+              <a class="usa-button usa-button-secondary" href="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Register to vote</a>
+            </td>
 
           </tr>
           <?php endwhile; 

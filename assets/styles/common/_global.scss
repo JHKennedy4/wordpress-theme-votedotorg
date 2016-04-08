@@ -182,13 +182,14 @@ table.responsive-chart {
       margin-bottom: 5px;
       margin-top: 10px;
     }
-    td.state-name {
-      font-size: 2em;
+    td.state-name{
       font-weight: 700;
       color: $darkbluegrey;
       display: block;
       padding: 0;
-      margin-bottom: 15px;
+      p {
+        font-size: 33px;
+      }
       a {
         color: #003b5c;
         transition: .2s;
@@ -323,12 +324,15 @@ strong {
           display: none;
         }
         td.state-name {
-          font-size: 1em;
+          
           font-weight: 500;
           color: #003b5c;
           display: table-cell;
           margin-bottom: 0;
           padding: 15px 10px;
+          p {
+            font-size: initial;
+          }
           &:before {
             display: none;
           }
