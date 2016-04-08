@@ -10,10 +10,6 @@ nav.usa-site-navbar {
     width: 100%;
     padding: 0;
   }
-  a:hover {
-    cursor: pointer;
-    color: $primary;
-  }
 }
 a.logo {
   text-decoration: none;
@@ -67,6 +63,10 @@ div.mobile-only.nav-menu {
     line-height: 30px;
     text-decoration: none;
     font-weight: 800;
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+    }
   }
   .usa-accordion-content {
     padding: 0 0 15px;
