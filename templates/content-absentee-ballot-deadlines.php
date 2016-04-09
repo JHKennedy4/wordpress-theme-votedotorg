@@ -3,8 +3,8 @@
        <h1>Absentee Ballot Deadlines</h1>
        <?php the_content();?>
 
-        <table class="states-chart responsive-chart three-columns">
-         <thead>
+        <table class="states-chart responsive-chart three-columns persist-area">
+         <thead class="persist-header">
           <tr>
            <th class="state">State</th>
            <th>Absentee Ballot Application Deadline</th>
@@ -24,9 +24,15 @@
             $state_name = $post->post_title; 
             $state_slug = $post->post_name;?>
             <tr class="state-row" valign="top">
-              <td class="state-name"><p><a href="https://absentee.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>"><?php echo $state_name; ?></a></p></td>
-              <td data-title="Absentee Ballot Application Deadline"><?php echo types_render_field('absentee-ballot-application-deadline');?></td>
-              <td data-title="Voted Absentee Ballot Is Due:"><?php echo types_render_field('voted-absentee-ballot-deadline');?></td>
+              <td class="state-name">
+                <p><a href="https://absentee.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>"><?php echo $state_name; ?></a></p>
+              </td>
+              <td data-title="Absentee Ballot Application Deadline">
+                <?php echo types_render_field('absentee-ballot-application-deadline');?>
+              </td>
+              <td data-title="Voted Absentee Ballot Is Due:">
+                <?php echo types_render_field('voted-absentee-ballot-deadline');?>
+              </td>
 
             </tr>
             <?php endwhile; 

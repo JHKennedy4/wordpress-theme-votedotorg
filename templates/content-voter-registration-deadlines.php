@@ -3,8 +3,8 @@
        <h1>Voter Registration Deadlines</h1>
        <?php the_content();?>
 
-      <table class="states-chart responsive-chart five-columns">
-        <thead>
+      <table class="states-chart responsive-chart three-columns persist-area">
+        <thead class="persist-header">
           <tr>
             <th class="state">State</th>
             <th>Voter Registration Deadlines</th>
@@ -24,7 +24,9 @@
            $state_name = $post->post_title; 
            $state_slug = $post->post_name;?>
           <tr class="state-row" valign="top">
-            <td class="state-name"><p><a href="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>"><?php echo $state_name; ?></a></p></td>
+            <td class="state-name">
+              <p><a href="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>"><?php echo $state_name; ?></a></p>
+            </td>
             <td data-title="Voter Registration Deadlines">
               <ul>
                 <li><strong>In-Person:</strong> <?php echo types_render_field('voter-registration-deadline-in-person');?></li>
@@ -37,7 +39,7 @@
               <p>
                 <?php echo types_render_field('election-day-registration-instructions');?>
               </p>
-              <a class="usa-button usa-button-secondary" href="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Register to vote</a>
+              
             </td>
 
           </tr>

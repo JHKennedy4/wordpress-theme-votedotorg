@@ -285,6 +285,26 @@ strong {
 @media only screen and (min-width: 768px) {
 
   //Table Tablet //
+  .floatingHeader {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+  }
+  table.three-columns {
+    th, td {
+      width: 33%;
+    }
+  }
+  table.four-columns {
+    th, td {
+      width: 25%;
+    }
+  }
+  table.five-columns {
+    th, td {
+      width: 20%;
+    }
+  }
   table.responsive-chart {
     border: none;
     border-bottom: 0 solid transparent;
