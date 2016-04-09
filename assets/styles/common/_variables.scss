@@ -33,9 +33,7 @@ $font-serif: 'Merriweather', 'Georgia', 'Times New Roman', serif;
     font-style: normal;
     font-weight: 300;
     src: url('../fonts/ClearSans-Light-webfont.eot');
-    src: url('../fonts/ClearSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ClearSans-Light-webfont.woff2') format('woff2'),
-         url('../fonts/ClearSans-Light-webfont.woff') format('woff'),
+    src: url('../fonts/ClearSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ClearSans-Light-webfont.woff') format('woff'),
          url('../fonts/ClearSans-Light-webfont.ttf') format('truetype'),
          url('../fonts/ClearSans-Light-webfont.svg#clear_sanslight') format('svg');
 }
@@ -44,9 +42,7 @@ $font-serif: 'Merriweather', 'Georgia', 'Times New Roman', serif;
     font-style: normal;
     font-weight: 400;
     src: url('../fonts//ClearSans-Regular-webfont.eot');
-    src: url('../fonts//ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts//ClearSans-Regular-webfont.woff2') format('woff2'),
-         url('../fonts//ClearSans-Regular-webfont.woff') format('woff'),
+    src: url('../fonts//ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts//ClearSans-Regular-webfont.woff') format('woff'),
          url('../fonts//ClearSans-Regular-webfont.ttf') format('truetype'),
          url('../fonts//ClearSans-Regular-webfont.svg#clear_sansregular') format('svg');
 }
@@ -55,9 +51,7 @@ $font-serif: 'Merriweather', 'Georgia', 'Times New Roman', serif;
     font-style: italic;          
     font-weight: 400;
     src: url('../fonts/ClearSans-Italic-webfont.eot');
-    src: url('../fonts/ClearSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ClearSans-Italic-webfont.woff2') format('woff2'),
-         url('../fonts/ClearSans-Italic-webfont.woff') format('woff'),
+    src: url('../fonts/ClearSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ClearSans-Italic-webfont.woff') format('woff'),
          url('../fonts/ClearSans-Italic-webfont.ttf') format('truetype'),
          url('../fonts/ClearSans-Italic-webfont.svg#clear_sansitalic') format('svg');
 }
@@ -66,9 +60,7 @@ $font-serif: 'Merriweather', 'Georgia', 'Times New Roman', serif;
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/ClearSans-Bold-webfont.eot');
-    src: url('../fonts/ClearSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ClearSans-Bold-webfont.woff2') format('woff2'),
-         url('../fonts/ClearSans-Bold-webfont.woff') format('woff'),
+    src: url('../fonts/ClearSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ClearSans-Bold-webfont.woff') format('woff'),
          url('../fonts/ClearSans-Bold-webfont.ttf') format('truetype'),
          url('../fonts/ClearSans-Bold-webfont.svg#clear_sansbold') format('svg');
 }
