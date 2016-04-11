@@ -286,11 +286,7 @@ strong {
 @media only screen and (min-width: 768px) {
 
   //Table Tablet //
-  .floatingHeader {
-    position: fixed;
-    top: 0;
-    visibility: hidden;
-  }
+  
   table.three-columns {
     th, td {
       width: 33%;
@@ -316,6 +312,12 @@ strong {
       }
       th {
         display: table-cell;
+      }
+      &.floatingHeader {
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        display: table;
       }
     }
     tbody {
