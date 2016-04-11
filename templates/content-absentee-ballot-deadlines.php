@@ -1,4 +1,4 @@
-     <section>
+     <section class="table">
       <div class="container">
        <h1>Absentee Ballot Deadlines</h1>
        <?php the_content();?>
