@@ -136,12 +136,13 @@ table.responsive-chart {
   max-width: 100%; 
   thead tr {
     display: none;
+    border-bottom: 1px solid #c0c1c0;
   }
   th {
     background: #003b5c;
     color: #fff;
     font-weight: 500;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     text-align: left;
     font-weight: 500;
     display: none;
@@ -325,6 +326,7 @@ strong {
         border-radius: 2px;
         margin-bottom: 1em;
         padding: 4%;
+        border-bottom: 1px solid #c0c1c0;
         //zebra striping 
         &:nth-of-type(2n){
           >td {
