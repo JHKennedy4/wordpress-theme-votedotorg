@@ -41,22 +41,7 @@ use Roots\Sage\Wrapper;
       wp_footer();
 
     ?>
-    <script type="text/javascript">
-    var addthis_config =
-    {
-      // enable social tracking
-      data_ga_social : true,
-      // enable clickback tracking
-      data_track_clickback: true,
-      // address bar tracking for homepage
-      data_track_addressbar_paths: '/*',
-      // address bar tracking
-      data_track_addressbar: true,
-      //make drop-down show up in correct place
-      ui_offset_top: '20px',
-      ui_offset_left: '20px'
-    }
-    </script>
+    
 
    
 
