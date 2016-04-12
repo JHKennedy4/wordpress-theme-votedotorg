@@ -161,6 +161,12 @@ section.voter-registration-guide {
   h1, h3 {
     color: $mediumblue;
   }
+  h2 {
+    margin-top: 0;
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
 
   .state-info {
     margin-bottom: 45px;
