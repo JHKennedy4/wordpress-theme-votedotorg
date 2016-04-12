@@ -55,7 +55,11 @@ div.mobile-only.nav-menu {
   width: 100%;
   ul {
     margin-top: 0;
+    margin-left: 0;
     list-style: none;
+    li {
+      list-style: none;
+    }
   }
   .usa-button-unstyled {
     padding-left: 0;
