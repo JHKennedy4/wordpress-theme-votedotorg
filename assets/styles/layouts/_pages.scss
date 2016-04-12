@@ -282,12 +282,16 @@ section.site-map {
   }
 }
 
-//* Call to Action *//
+//* Call to Action Mobile *//
 section.call-to-action {
   background-color: #ccc;
+  form {
+     margin: 0 auto;
+  }
   h2 {
     color: #000;
     margin-bottom: 10px;
+    text-align: center;
   }
   input {
     height: 42px;
@@ -304,13 +308,13 @@ section.call-to-action {
     width: 138px;
   }
   input.zip {
-    width: 132px;
+    width: 50%;
     float: left;
-    margin-right: 10px;
+    margin-right: 3%;
   }
   input[type="submit"] {
     background: $red;
-    width: 103px;
+    width: 47%;
     border: 0px;
     padding: 0;
     float: left;
@@ -468,6 +472,9 @@ section.call-to-action {
     }
   }
   section.call-to-action {
+    h2 {
+      text-align: left;
+    }
     .about, .join {
       width: 48%;
       float: left;
