@@ -281,10 +281,20 @@ section.site-map {
     }
   }
 }
-
+.about {
+  .usa-button {
+    margin: 0;
+  }
+}
 //* Call to Action Mobile *//
 section.call-to-action {
   background-color: #ccc;
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    margin-top: 0;
+  }
   form {
      margin: 0 auto;
   }
@@ -306,6 +316,9 @@ section.call-to-action {
   button.donate {
     background-color: #00ccff;
     width: 138px;
+  }
+  input.email {
+    max-width: 100%;
   }
   input.zip {
     width: 50%;
@@ -475,6 +488,10 @@ section.call-to-action {
     h2 {
       text-align: left;
     }
+    form {
+      margin: 0;
+      max-width: 100%;
+    }
     .about, .join {
       width: 48%;
       float: left;
@@ -482,12 +499,12 @@ section.call-to-action {
     .about {
       margin-right: 2%;
       p {
-        margin-bottom: 2px;
+        margin-bottom: 10px;
       }
     }
     .join {
       border-left: 1px solid #888;
-      padding: 0 30px;
+      padding-left: 30px;
     }
     input.zip {
       width: 46%;
@@ -603,11 +620,7 @@ section.call-to-action {
       width: 50%;
     }
   }
-  section.call-to-action {
-    .about p {
-      margin-bottom: 23px;
-    }
-  }
+
 }
 //* Larger Desktops *//
 @media only screen and (min-width: 1280px) {
@@ -621,6 +634,9 @@ section.call-to-action {
   section.quick-links, section.site-map, section.call-to-action, section.hero {
     .container {
       width: 1160px;
+    }
+    .about p {
+      margin-bottom: 30px;
     }
   }
 
