@@ -24,7 +24,7 @@
           </div>
         </div><!--.usa-alert-warning-->
 
-        <table class="states-chart responsive-chart four-columns persist-area">
+        <table class="states-chart responsive-chart persist-area">
          <thead class="persist-header">
           <tr>
            <th class="state">State</th>
