@@ -3,7 +3,7 @@
     
     <div class="logo" id="logo">
       <h2><a href="/" accesskey="1" title="Home" aria-label="Home" class="logo">
-      Vote.org</a></h2>
+      VOTE.org</a></h2>
     </div><!--.logo-->
     <ul class="tablet nav-menu">
 
