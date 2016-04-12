@@ -117,10 +117,9 @@ a {
   text-decoration: underline;
 }
 
-
 strong {
   font-family: $font-sans;
-  font-weight: 800;
+  font-weight: 700;
 }
 .wrapper {
   width: 320px;
@@ -188,16 +187,18 @@ table.responsive-chart {
       margin-top: 10px;
     }
     td.state-name{
-      font-weight: 700;
       color: $darkbluegrey;
       display: block;
       padding: 0;
+
       p {
         font-size: 33px;
       }
       a {
+        font-size: 20px;
         color: #003b5c;
         transition: .2s;
+        font-weight: 700;
         &:hover {
           color: $lightblue;
           border-color: $lightblue;
@@ -246,10 +247,7 @@ td {
 }
 .warning {
  color: $red;
- font-weight: 800;
-}
-strong {
-  font-weight: 800;
+ font-weight: 700;
 }
 
 .addthis_jumbo_share {
