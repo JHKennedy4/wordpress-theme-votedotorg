@@ -113,7 +113,6 @@ section {
   }
 }
 a {
-  color: $lightblue;
   text-decoration: underline;
 }
 
@@ -187,23 +186,15 @@ table.responsive-chart {
       margin-top: 10px;
     }
     td.state-name{
-      color: $darkbluegrey;
       display: block;
       padding: 0;
-
       p {
         font-size: 33px;
       }
       a {
         font-size: 20px;
-        color: #003b5c;
         transition: .2s;
         font-weight: 700;
-        &:hover {
-          color: $lightblue;
-          border-color: $lightblue;
-          text-decoration: none;
-        }
       }
     }
   }
@@ -350,9 +341,7 @@ td {
           display: none;
         }
         td.state-name {
-          
           font-weight: 500;
-          color: #003b5c;
           display: table-cell;
           margin-bottom: 0;
           padding: 15px 10px;
@@ -364,10 +353,8 @@ td {
           }
           a {
             border-bottom: none;
+            text-decoration: underline;
 
-            &:hover {
-              text-decoration: underline;
-            }
           }
         }
       }
