@@ -133,6 +133,7 @@ section.quote {
   }
 }
 .usa-accordion {
+
   > ul > li {
     margin-bottom: 12px;
   }
@@ -162,9 +163,11 @@ section.voter-registration-guide {
   }
 
   .state-info {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     h2 {
       margin-top: 80px;
+      margin-top: 0;
+      font-weight: 700;
     }
   }
   .updated {
