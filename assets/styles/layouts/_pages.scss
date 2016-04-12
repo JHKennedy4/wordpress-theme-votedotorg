@@ -96,6 +96,7 @@ section.quote {
     width: 90%;
     h2 {
       margin-bottom: 0;
+      margin-top: 0;
       text-align: center;
     }
     &:before {
@@ -191,6 +192,7 @@ section.sharing {
   }
   h2 {
     margin-bottom: 15px;
+    margin-top: 0;
   }
   h4 {
     margin-top: 0px;
@@ -399,18 +401,19 @@ section.call-to-action {
     }
   }
   section.quote {
+    padding: 50px 0 80px;
     .container {
       width: 617px;
     }
     blockquote {
-      width: 83%;
+      width: 89%;
       &:before {
         left: -58%;
-        top: 85px;
+        top: 35px;
       }
       &:after {
-        top: -149px;
-        right: -48px;
+        top: -112px;
+        right: -57px;
       }
     }
   }
@@ -518,7 +521,7 @@ section.call-to-action {
         left: -56%;
       }
       &:after {
-        top: -150px;
+        top: -113px;
         right: -44px;
       }
     }

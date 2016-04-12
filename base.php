@@ -42,9 +42,6 @@ use Roots\Sage\Wrapper;
 
     ?>
     
-
-   
-
     
   </body>
   
