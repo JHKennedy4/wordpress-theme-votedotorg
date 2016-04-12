@@ -539,6 +539,9 @@ section.call-to-action {
     h3 {
       margin-top: 0;
       margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 26px;
+      color: $primarydarker;
     }
     .links-column {
       width: 24.25%;
@@ -550,7 +553,7 @@ section.call-to-action {
           margin: 0;
           display: block;
           a {
-            font-size: 11px;
+            font-size: 13px;
             line-height: 16px;
           }
         }
