@@ -24,8 +24,8 @@
           </div>
         </div><!--.usa-alert-warning-->
 
-        <table class="states-chart responsive-chart">
-         <thead>
+        <table class="states-chart responsive-chart four-columns persist-area">
+         <thead class="persist-header">
           <tr>
            <th class="state">State</th>
            <th>In-Person Voter ID Laws</th>
@@ -46,7 +46,7 @@
             $state_name = $post->post_title; 
             $state_slug = $post->post_name;?>
             <tr class="state-row" valign="top">
-              <td class="state-name"><a href="/<?php echo $state_slug; ?>"><?php echo $state_name; ?></a></td>
+              <td class="state-name"><p><a href="/<?php echo $state_slug; ?>"><?php echo $state_name; ?></a></p></td>
               <td data-title="Voter ID Requirements - In Person"><?php echo types_render_field('voter-id-requirements-in-person');?></td>
               <td data-title="Voter ID Requirements - Absentee"><?php echo types_render_field('voter-id-requirements-absentee');?></td>
               <td>
