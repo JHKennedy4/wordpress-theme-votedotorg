@@ -48,7 +48,7 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.box-->
       <div class="box">
         <div class="mail-line"></div>
-        <h2>Get your absentee ballot.</h2>
+        <h2>Vote by mail and vote from anywhere.</h2>
         <a class="usa-button usa-button-secondary" href="https://absentee.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>">Get your absentee ballot</a>
       </div><!--.box-->
 
