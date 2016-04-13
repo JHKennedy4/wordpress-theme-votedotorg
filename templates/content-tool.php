@@ -16,7 +16,7 @@
      <div class="container">
       <?php the_content();?>
 
-       <table class="states-chart responsive-chart persist-area">
+       <table class="states-chart two-columns responsive-chart persist-area">
         <thead class="persist-header">
          <tr>
           <th class="state">State</th>

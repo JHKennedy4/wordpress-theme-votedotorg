@@ -135,7 +135,9 @@ table.responsive-chart {
   border-bottom: 0 solid transparent;
   margin: 30px auto;
   width: 100%;
-  max-width: 100%; 
+  max-width: 100%;
+  table-layout: fixed;
+
   thead tr {
     display: none;
     border-bottom: 1px solid #c0c1c0;
@@ -279,7 +281,11 @@ td {
 @media only screen and (min-width: 768px) {
 
   //Table Tablet //
-  
+  table.two-columns {
+    th, td {
+      width: 50%;
+    }
+  }
   table.three-columns {
     th, td {
       width: 33%;
