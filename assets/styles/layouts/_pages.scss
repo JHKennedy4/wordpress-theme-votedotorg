@@ -28,8 +28,6 @@ section.hero {
     }
   }
   h1 {
-    font-size: 52px;
-    line-height: 62px;
     color: #fff;
     text-align: center;
     margin-bottom: 20px;
@@ -243,97 +241,7 @@ section.sharing {
     }
   }
 }
-section.site-map {
-  background: $darkbluegrey;
-  color: #fff;
-  h3 {
-    color: #fff;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  h2 {
-    margin-bottom: 20px;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li::before {
-      content: "";
-      padding-right: 0;
-    }
-  }
-  li a, p {
-    color: #aeb0b5;
-    text-decoration: none;
-    list-style: none;
-  }
-  button {
-    width: auto;
-  }
-  .about {
-    text-align: center;
-    p, h2 {
-      text-align: center;
-    }
-    h2 {
-      color: #fff;
-    }
-  }
-}
-.about {
-  .usa-button {
-    margin: 0;
-  }
-}
-//* Call to Action Mobile *//
-section.call-to-action {
-  background-color: #ccc;
-  h2 {
-    margin-top: 0;
-  }
-  p {
-    margin-top: 0;
-  }
-  form {
-     margin: 0 auto;
-  }
-  h2 {
-    color: #000;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  input {
-    height: 42px;
-    font-size: 17px;
-    border: 1px solid #000;
-    border-radius: 2px;
-    padding-left: 16px;
-    margin-bottom: 10px;
-    width: 100%;
-  }
 
-  button.donate {
-    background-color: #00ccff;
-    width: 138px;
-  }
-  input.email {
-    max-width: 100%;
-  }
-  input.zip {
-    width: 50%;
-    float: left;
-    margin-right: 3%;
-  }
-  input[type="submit"] {
-    background: $red;
-    width: 47%;
-    border: 0px;
-    padding: 0;
-    float: left;
-    margin: 0.2em 0;
-  }
-}
 
 
 /*Faux Table*/
@@ -470,51 +378,6 @@ section.call-to-action {
     }
   }
   
-  section.site-map {
-    .nav-links {
-      width: 50%;
-      float: left;
-      min-height: 248px;
-    }
-    .about, .partners {
-      width: 48%;
-      float: left;
-    }
-    .about {
-      margin-right: 2%;
-    }
-  }
-  section.call-to-action {
-    h2 {
-      text-align: left;
-    }
-    form {
-      margin: 0;
-      max-width: 100%;
-    }
-    .about, .join {
-      width: 48%;
-      float: left;
-    }
-    .about {
-      margin-right: 2%;
-      p {
-        margin-bottom: 10px;
-      }
-    }
-    .join {
-      border-left: 1px solid #888;
-      padding-left: 30px;
-    }
-    input.zip {
-      width: 46%;
-      margin-right: 4%;
-    }
-    input[type="submit"] {
-      width: 50%;
-    }
-  }
-  
   tr{
     display:table-row;
     width:100%;
@@ -603,24 +466,7 @@ section.call-to-action {
       margin-right: 0;
     }
   }
-  section.site-map {
-    .nav-links {
-      width: 25%;
-      min-height: initial;
-      li a {
-        font-size: 13px;
-        text-decoration: none;
-      }
-    }
-    .about {
-      width: 46%;
-      margin-right: 4%;
-    }
-    .partners {
-      width: 50%;
-    }
-  }
-
+  
 }
 //* Larger Desktops *//
 @media only screen and (min-width: 1280px) {
@@ -631,15 +477,6 @@ section.call-to-action {
       }
     }
   }
-  section.quick-links, section.site-map, section.call-to-action, section.hero {
-    .container {
-      width: 1160px;
-    }
-    .about p {
-      margin-bottom: 30px;
-    }
-  }
-
 }
 @media only screen and (min-width: 1440px) {
 
