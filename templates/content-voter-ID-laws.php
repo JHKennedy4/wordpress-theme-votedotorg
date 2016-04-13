@@ -1,4 +1,4 @@
-    <section>
+    <section class="table">
       <div class="container">
         <h1><?php the_title();?></h1>
         
