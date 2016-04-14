@@ -74,13 +74,16 @@ function hook_meta() {
     //all other pages on site are using the defaul description and image. Adding post title to the title tag.
     $title = $post->post_title." | Vote.org - Everything you need to vote";
     //check to see if a custom meta description is set on the post, if so display that, if not display the default language
-        // $description2 = get_post_meta($post->ID, "meta-description", true);
-
-
-    $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
-     //check to see if a custom meta image is set on the post, if so display that, if not display the default image
-
-    $image = $theme_uri."/dist/images/og-default.jpg";
+    $description = get_post_meta($post->ID, "wpcf-meta-description", true);
+    if (empty($description)) {
+      $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+    } 
+    //check to see if a custom meta image is set on the post, if so display that, if not display the default image
+    if (has_post_thumbnail()) {
+     $image = implode(wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ));
+    } else {
+     $image = $theme_uri."/dist/images/og-default.jpg";
+    } 
   }
   //change this FB App_ID if you necessary, this one is connected to Justine & Debra's accounts.
   $app_id = 194944264230902;
@@ -92,13 +95,12 @@ function hook_meta() {
   $output .= "<meta property=\"og:url\" content=\"$url\">\r\n";
   $output .= "<meta property=\"og:type\" content=\"article\">\r\n";
   $output .= "<meta property=\"og:site_name\" content=\"Vote.org\">\r\n";
-  $output .= "<meta property=\"og:image\" content=\"$image\">\r\n";
+  $output .= "<meta property=\"og:image\" content=\"$image\">\r\n\r\n";
   $output .= "<meta name=\"twitter:site\" content=\"@votedotorg\">\r\n";
   $output .= "<meta name=\"twitter:url\" content=\"$url\">\r\n";
   $output .= "<meta name=\"twitter:image\" content=\"$image\">\r\n";
   $output .= "<meta name=\"twitter:card\" content=\"summary_large_image\">\r\n";    
-  $output .= "<meta name=\"twitter:description\" content=\"$description\">\r\n";
-  // $output .= "meta description custom field: $description2";
+  $output .= "<meta name=\"twitter:description\" content=\"$description\">\r\n\r\n";
   echo $output;
   return $title;
   
