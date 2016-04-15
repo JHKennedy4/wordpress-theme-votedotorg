@@ -78,11 +78,10 @@ function hook_meta() {
     if (empty($description)) {
       $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
     } 
-    //check to see if a custom meta image is set on the post, if so display that, if not display the default image
-    if (has_post_thumbnail()) {
-     $image = implode(wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ));
-    } else {
-     $image = $theme_uri."/dist/images/og-default.jpg";
+    //check to see if a custom field meta-image is set on the post, if so display that, if not display the default image
+    $image = get_post_meta($post->ID, "wpcf-meta-image", true);
+    if (empty($image)) {
+      $image = $theme_uri."/dist/images/og-default.jpg";
     } 
   }
   //change this FB App_ID if you necessary, this one is connected to Justine & Debra's accounts.
