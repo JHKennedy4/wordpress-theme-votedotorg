@@ -70,14 +70,26 @@ function hook_meta() {
     $title = "Vote.org - Everything you need to vote";
     $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
     $image = $theme_uri."/dist/images/og-default.jpg";
-  } else {
+  } 
+  else if ( is_404() ) {
+    $title = "Vote.org - Everything you need to vote";
+    $description = "404 Erro Page Not Found | Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+    $image = $theme_uri."/dist/images/og-default.jpg";
+
+  } else if ( is_search() ) {
+    $query = get_search_query();
+    $title = "Search Results for $query | Vote.org - Everything you need to vote";
+    $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+    $image = $theme_uri."/dist/images/og-default.jpg";
+  }
+  else {
     //all other pages on site are using the defaul description and image. Adding post title to the title tag.
     $title = $post->post_title." | Vote.org - Everything you need to vote";
     //check to see if a custom meta description is set on the post, if so display that, if not display the default language
     $description = get_post_meta($post->ID, "wpcf-meta-description", true);
     if (empty($description)) {
       $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
-    } 
+    }
     //check to see if a custom field meta-image is set on the post, if so display that, if not display the default image
     $image = get_post_meta($post->ID, "wpcf-meta-image", true);
     if (empty($image)) {
