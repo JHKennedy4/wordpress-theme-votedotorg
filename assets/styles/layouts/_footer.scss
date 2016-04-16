@@ -81,7 +81,16 @@ footer {
 @media only screen and (min-width: 980px) {
  footer {
   .container {
-   width: 1160px;
+   width: 980px;
   }
  }
+}
+
+@media only screen and (min-width: 1280px) {
+
+  footer {
+    .container {
+      width: 1280px;
+    }
+  }
 }

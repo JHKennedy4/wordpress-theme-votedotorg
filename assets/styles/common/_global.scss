@@ -532,9 +532,14 @@ section.call-to-action {
   }
 }
 @media only screen and (min-width: 1280px) {
-  section.quick-links, section.site-map, section.call-to-action, section.hero {
+  section.call-to-action {
     .container {
       width: 812px;
+    }
+  }
+  section.quick-links, section.site-map {
+    .container {
+      width: 1000px;
     }
     .about p {
       margin-bottom: 30px;

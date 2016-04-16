@@ -8,6 +8,11 @@
     padding: 0;
   }
 }
+.page-header {
+  h1 {
+    margin-top: 0px;
+  }
+}
 /*States & Homepage Mobile */
 section.hero {
   background-color: $primarydarker;
@@ -471,6 +476,9 @@ section.sharing {
 //* Larger Desktops *//
 @media only screen and (min-width: 1280px) {
    section.hero {
+    .container {
+      width: 1111px;
+    }
     .box {
       h2 {
         height: auto;
