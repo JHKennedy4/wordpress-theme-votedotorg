@@ -1,7 +1,15 @@
-<?php get_template_part('templates/page', 'header'); ?>
 
-<div class="alert alert-warning">
-  <?php _e('Sorry, but the page you were trying to view does not exist.', 'sage'); ?>
-</div>
+<section>
+ <div class="container">
+  <?php get_template_part('templates/page', 'header'); ?>
 
-<?php get_search_form(); ?>
+  <div class="alert alert-warning">
+    <?php _e('Try searching for it below or check out the links to each state\'s election center site.', 'sage'); ?>
+  </div>
+  <?php get_search_form(); ?>
+
+ </div><!--.container-->
+</section>
+
+<?php get_template_part('templates/quicklinks', 'state'); ?>
+
