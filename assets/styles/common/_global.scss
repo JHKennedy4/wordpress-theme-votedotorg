@@ -496,7 +496,8 @@ section.call-to-action {
     }
     .join {
       border-left: 1px solid #888;
-      padding-left: 30px;
+      margin-left: 15px;
+      padding-left: 42px;
     }
     input.zip {
       width: 46%;
@@ -508,6 +509,11 @@ section.call-to-action {
   }
 }
 @media only screen and (min-width: 980px) {
+  section.call-to-action, section.quick-links, section.site-map {
+    .container {
+      width: 980px;
+    }
+  }
   section.site-map {
     .nav-links {
       width: 25%;
@@ -527,25 +533,51 @@ section.call-to-action {
   }
   section.call-to-action {
     .join {
-      padding-left: 70px;
+      margin-left: 19px;
+      input.email, input.zip {
+        display: inline-block;
+        float: none;
+        margin-right: 9px;
+      }
+      input.email {
+        width: 100%;
+      }
+      input.zip {
+        width: 203px;
+      }
+      input[type='submit'] {
+        width: 210px;
+        float: none;
+        display: inline-block;
+      }
     }
   }
 }
 @media only screen and (min-width: 1280px) {
-  section.call-to-action {
+
+  section.call-to-action, section.quick-links, section.site-map {
     .container {
-      width: 812px;
-    }
-  }
-  section.quick-links, section.site-map {
-    .container {
-      width: 1000px;
+      width: 1100px;
     }
     .about p {
       margin-bottom: 30px;
     }
   }
+  section.call-to-action {
+    .join {
+      padding-left: 72px;
+      input.zip {
+        width: 48%;
+        margin-right: 3%;
+      }
+      input[type='submit'] {
+        width: 48%;
+      }
+    }
+  }
 }
+
+
 //adding url after link in print versions.
 @media print {
   a[href]:after {
