@@ -28,7 +28,7 @@
     <li><a href="//register.vote.org">Register to Vote</a></li>
     <li class="active"><a href="//verify.vote.org">Are You Registered?</a></li>
     <li><a href="//absentee.vote.org">Absentee Ballots</a></li>
-    <li><a href="http://help.vote.org">Helpdesk</a></li>
+    <li><a href="http://help.vote.org">Help Desk</a></li>
     <li>
       <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg">
         Donate
