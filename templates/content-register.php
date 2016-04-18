@@ -58,7 +58,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <?php $election_day_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
 
-     if ($election_day_instructions !== "" && $election_day_instructions !== "NA" && $election_day_instructions !== "?????") { ?>
+     if ($election_day_instructions !== "" && $election_day_instructions !== "NA" && $election_day_instructions !== "N/A" && $election_day_instructions !== "?????") { ?>
     
     <div class="table">
       <div class="header">Election Day Registration Instructions</div>
