@@ -38,8 +38,8 @@
     
     <div class="clear-fix"></div>
     <div class="about mobile">
-      <h2>About Vote.org</h2>
-      <p>Vote.org builds technology that increases voter turnout. </p>
+      <h2>About VOTE.org</h2>
+      <p>VOTE.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
       <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</a>
     </div><!--.about-->
@@ -49,14 +49,14 @@
 <section class="call-to-action">
   <div class="container">
     <div class="about donate tablet">
-      <h2>About Vote.org</h2>
-      <p>Vote.org builds technology that increases voter turnout. </p>
+      <h2>About VOTE.org</h2>
+      <p>VOTE.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
       <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</a>
 
     </div><!--.donate.tablet-->
     <div class="join partners">
-      <h2>Join Vote.org</h2>
+      <h2>Join VOTE.org</h2>
       <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">
         <form action="//longdistancevoter.us3.list-manage.com/subscribe/post?u=9ebd52ca2728bb1bb4764496b&amp;id=0ced8a9570" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
@@ -88,7 +88,7 @@
   <div class="container">
     
     <div class="legalese">
-      <p>Vote.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.</p>
+      <p>VOTE.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.</p>
     </div><!--.legalese-->
     <div class="links">
       <ul>
