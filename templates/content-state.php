@@ -17,9 +17,11 @@ if (isset($wp_query->query_vars['state_name'])) {
       ) ); 
           if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
             if ($state_name !== "") {
-              $state_name = $post->post_title; 
+              $state_name = $post->post_title;
+              $state_slug = $post->post_name;
                } else {  
-              $state_name = ""; }
+              $state_name = "";
+              $state_slug = ""; }
 ?>
 
     <?php get_template_part('templates/content-hero'); ?>
@@ -31,17 +33,6 @@ if (isset($wp_query->query_vars['state_name'])) {
 
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
-
-            <!--TODO: if statement-->
-            <?php $registration_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
-              if ( $registration_instructions !== null && $registration_instructions !== "undefined" && $registration_instructions !=="?????") { ?>
-              <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><h4>Election day registration instructions</h4></button>
-                <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'>
-                  <?php echo types_render_field('election-day-registration-instructions');?>
-                </div>
-              </li>
-              <?php }  ?>
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-1'><h4>Voter registration deadlines</h4></button>
                 <div id='collapsible-1' aria-hidden='true' class='answer usa-accordion-content'>
@@ -49,6 +40,17 @@ if (isset($wp_query->query_vars['state_name'])) {
                   If you register in-person: <?php echo types_render_field('voter-registration-deadline-in-person');?>
                 </div>
               </li>
+
+            <?php $registration_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
+              if ( $registration_instructions !== null && $registration_instructions !== "undefined" && $registration_instructions !=="?????" && $registration_instructions !=="NA" && $registration_instructions !=="N/A") { ?>
+              <li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><h4>Election day registration instructions</h4></button>
+                <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'>
+                  <?php echo types_render_field('election-day-registration-instructions');?>
+                </div>
+              </li>
+              <?php }  ?>
+              
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-2'><h4>Voter registration rules</h4></button>
                 <div id='collapsible-2' aria-hidden='true' class='answer usa-accordion-content'>
@@ -114,7 +116,7 @@ if (isset($wp_query->query_vars['state_name'])) {
             <ul class="usa-unstyled-list">
 
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><h4>Early voting in <?php echo $state_name; ?></h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><h4>Early voting calendar in <?php echo $state_name; ?></h4></button>
                 <div id='collapsible-11' aria-hidden='true' class='answer usa-accordion-content'>
                   Early voting starts: <?php echo types_render_field('early-voting-begins');?>
                   Early voting ends: <?php echo types_render_field('early-voting-ends');?></div>
@@ -143,6 +145,12 @@ if (isset($wp_query->query_vars['state_name'])) {
           </div><!--.usa-accordion-->
         </div><!--.state-info-->
         <?php get_template_part('templates/content-links'); ?>
+
+        <h2>Additional VOTE.org links</h2>
+        <ul>
+          <li><a href="/register-to-vote/<?php if ($state_slug !== "") { echo $state_slug; }?>">Register to vote in <?php echo $state_name;?></a></li>
+          <li><a href="/absentee-ballot/<?php if ($state_slug !== "") { echo $state_slug; }?>">Get your <?php echo $state_name;?> absentee ballot</a></li>
+        </ul>
       </div><!--.container-->
     </section> <!--.voter-registration-guide-->
     
