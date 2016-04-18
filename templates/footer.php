@@ -6,6 +6,7 @@
         <li><a href="/register-to-vote">Register to vote</a></li>
         <li><a href="/am-i-registered-to-vote">Check registration status</a></li>
         <li><a href="/absentee-ballot">Get your absentee ballot</a></li>
+        <li><a href="/where-do-i-vote">Where do I vote?</a></li>
         <li><a href="http://help.vote.org">Help desk</a></li>
       </ul>
     </div><!--.nav-links-->
@@ -41,7 +42,7 @@
       <h2>About VOTE.org</h2>
       <p>VOTE.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</a>
+      <button class="usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</button>
     </div><!--.about-->
   </div><!--.container-->
 </section>
@@ -52,7 +53,7 @@
       <h2>About VOTE.org</h2>
       <p>VOTE.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</a>
+      <button class="usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</button>
 
     </div><!--.donate.tablet-->
     <div class="join partners">
@@ -66,7 +67,7 @@
             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
             <label for="mce-ZIPCODE" class="sr-only">Zip Code </label>
             <input type="text" value = "" pattern="\d{5}-?(\d{4})?" name="ZIPCODE" class="required zip" id="mce-ZIPCODE" placeholder="Zip">
-            <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="usa-button-secondary"></div>
+            <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="usa-button"></div>
             <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display:none"></div>
               <div class="response" id="mce-success-response" style="display:none"></div>
