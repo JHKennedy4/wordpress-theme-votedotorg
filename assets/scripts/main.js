@@ -27,7 +27,7 @@
              floatingHeader.css({
               "visibility": "hidden"
              });      
-         };
+         }
      });
   }
 
@@ -53,11 +53,25 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
+
+  
   var Sage = {
     // All pages
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+      var client = new ZeroClipboard( document.getElementsByClassName("clip_button") );
+
+      client.on( "ready", function( readyEvent ) {
+        // alert( "ZeroClipboard SWF is ready!" );
+
+        client.on( "aftercopy", function( event ) {
+          // `this` === `client`
+          // `event.target` === the element that was clicked
+          event.target.style.display = "none";
+          alert("Copied code to clipboard: " + "\n\r" + event.data["text/plain"] );
+        } );
+      } );
 
       },
       finalize: function() {
