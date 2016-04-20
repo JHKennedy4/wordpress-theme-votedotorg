@@ -56,15 +56,12 @@ if (isset($wp_query->query_vars['state_name'])) {
     </ul>
 
 
-    <?php $election_day_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
+    <?php $election_day_instructions = types_render_field("election-day-registration-instructions");
 
      if ($election_day_instructions !== "" && $election_day_instructions !== "NA" && $election_day_instructions !== "N/A" && $election_day_instructions !== "?????") { ?>
-    
-    <div class="table">
-      <div class="header">Election Day Registration Instructions</div>
-      <div class="cell"><?php echo $election_day_instructions;?></div>
-      <div class="clear-fix tablet"></div>
-    </div><!--.table-->
+    <h3>Election day registration instructions</h3>
+      <?php echo $election_day_instructions;?>
+
     <?php }  ?>
 
     <h3><?php the_title(); ?> voter registration rules</h3>
