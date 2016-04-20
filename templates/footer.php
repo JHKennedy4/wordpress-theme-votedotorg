@@ -42,7 +42,7 @@
       <h2>About VOTE.org</h2>
       <p>VOTE.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
-      <button class="usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</button>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</a>
     </div><!--.about-->
   </div><!--.container-->
 </section>
@@ -53,7 +53,7 @@
       <h2>About VOTE.org</h2>
       <p>VOTE.org builds technology that increases voter turnout. </p>
       <!--ToDo: insert Mozilla donation widget-->
-      <button class="usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</button>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</a>
 
     </div><!--.donate.tablet-->
     <div class="join partners">
