@@ -10,19 +10,15 @@
       <h2>Our voter registration tool</h2>
       
       <textarea id="clipboard_textarea1">
-        <style type="text/css">
-          iframe#frame1 {
-            height: 1247px;
-            overflow: hidden;
-          }
-          @media only screen and (min-width: 768px) { 
-            iframe#frame1 {
-              height: 823px;
-              overflow: scroll;
-            }
-          }
-        </style>
+
         <iframe src="https://register.vote.org" width="100%" marginheight="0" frameborder="0" id="frame1" scrollable ="no"></iframe>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" >
+        </script>
+
+        <script type="text/javascript">
+          iFrameResize({ log:true, checkOrigin:false})
+        </script>
+
 
       </textarea><!--#clipboard_textarea1-->
       <button class="clip_button" variant="1" data-clipboard-target="clipboard_textarea1">Click to copy code</button>
@@ -31,19 +27,15 @@
       <h2>Our absentee ballot tool</h2>
       
       <textarea id="clipboard_textarea2">
-        <style type="text/css">
-          iframe#frame2 {
-            height: 2071px;
-            overflow: hidden;
-          }
-          @media only screen and (min-width: 768px) { 
-            iframe#frame2 {
-              height: 1145px;
-              overflow: scroll;
-            }
-          }
-        </style>
-        <iframe src="https://absentee.vote.org" width="100%" marginheight="0" frameborder="0" id="frame2" scrollable="no"></iframe>
+
+        <iframe src="https://absentee.vote.org" width="100%" marginheight="0" frameborder="0" id="frame2" scrollable="no">
+        </iframe>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" >
+        </script>
+
+        <script type="text/javascript">
+          iFrameResize({ log:true, checkOrigin:false})
+        </script>
       </textarea><!--#clipboard_textarea2-->
       <button class="clip_button"  variant="1" data-clipboard-target="clipboard_textarea2">Click to copy code</button>
       
@@ -51,19 +43,15 @@
       <h2>Our voter verification tool</h2>
       
       <textarea id="clipboard_textarea3">
-        <style type="text/css">
-          iframe#frame3 {
-            height: 1893px;
-            overflow: hidden;
-          }
-          @media only screen and (min-width: 768px) { 
-            iframe#frame3 {
-              height: 1146px;
-              overflow: scroll;
-            }
-          }
-        </style>
-        <iframe src="https://verify.vote.org" width="100%" marginheight="0" frameborder="0" id="frame3" scrollable="no"></iframe>
+
+        <iframe src="https://verify.vote.org" width="100%" marginheight="0" frameborder="0" id="frame3" scrollable="no">
+        </iframe>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" >
+        </script>
+
+        <script type="text/javascript">
+          iFrameResize({ log:true, checkOrigin:false})
+        </script>
 
       </textarea><!--#clipboard_textarea3-->
       <button class="clip_button"  variant="1"  data-clipboard-target="clipboard_textarea3">Click to copy code</button>
