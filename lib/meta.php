@@ -68,12 +68,19 @@ function hook_meta() {
   //homepage  meta tags
   else if ( is_home() || is_front_page() ) {
     $title = "Vote.org - Everything you need to vote";
-    $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
-    $image = $theme_uri."/dist/images/og-default.jpg";
+    $description = get_post_meta($post->ID, "wpcf-meta-description", true);
+    if (empty($description)) {
+      $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+    }
+
+    $image = get_post_meta($post->ID, "wpcf-meta-image", true);
+    if (empty($image)) {
+      $image = $theme_uri."/dist/images/og-default.jpg";
+    }
   } 
   else if ( is_404() ) {
-    $title = "Vote.org - Everything you need to vote";
-    $description = "404 Erro Page Not Found | Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+    $title = "404 Error Page Not Found | Vote.org - Everything you need to vote";
+    $description = "404 Error Page Not Found | Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
     $image = $theme_uri."/dist/images/og-default.jpg";
 
   } else if ( is_search() ) {
@@ -81,6 +88,7 @@ function hook_meta() {
     $title = "Search Results for $query | Vote.org - Everything you need to vote";
     $description = "Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
     $image = $theme_uri."/dist/images/og-default.jpg";
+     
   }
   else {
     //all other pages on site are using the defaul description and image. Adding post title to the title tag.
