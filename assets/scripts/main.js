@@ -60,18 +60,6 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-      var client = new ZeroClipboard( document.getElementsByClassName("clip_button") );
-
-      client.on( "ready", function( readyEvent ) {
-        // alert( "ZeroClipboard SWF is ready!" );
-
-        client.on( "aftercopy", function( event ) {
-          // `this` === `client`
-          // `event.target` === the element that was clicked
-          event.target.style.display = "none";
-          alert("Copied code to clipboard: " + "\n\r" + event.data["text/plain"] );
-        } );
-      } );
 
       },
       finalize: function() {
@@ -92,9 +80,27 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+    // Technology page -- the clip to copy feature
+    'technology': {
+      init: function() {
+        // JavaScript to be fired on the technology page
+        var client = new ZeroClipboard( document.getElementsByClassName("clip_button") );
+
+        client.on( "ready", function( readyEvent ) {
+          // alert( "ZeroClipboard SWF is ready!" );
+
+          client.on( "aftercopy", function( event ) {
+            // `this` === `client`
+            // `event.target` === the element that was clicked
+            event.target.style.display = "none";
+            alert("Copied code to clipboard: " + "\n\r" + event.data["text/plain"] );
+          } );
+        } );
+
+      }
     }
   };
-
   // The routing fires all common scripts, followed by the page specific scripts.
   // Add additional events for more control over timing e.g. a finalize event
   var UTIL = {
