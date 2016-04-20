@@ -1,5 +1,5 @@
 
-<section>
+<section class="not-found">
  <div class="container">
   <?php get_template_part('templates/page', 'header'); ?>
 
