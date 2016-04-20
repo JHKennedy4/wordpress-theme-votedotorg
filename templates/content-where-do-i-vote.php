@@ -27,7 +27,7 @@
               <p><?php echo $state_name; ?></p>
             </td>
             <td data-title="Polling place locator:">
-              <p><a href="<?php echo types_render_field('polling-place-locator', array('raw' => true)); ?>" target="_blank">Where Do I Vote In <?php echo $state_name; ?>?</a></p>
+              <p><a href="<?php echo types_render_field('polling-place-locator', array('raw' => true)); ?>" target="_blank">Where do I vote in <?php echo $state_name; ?>?</a></p>
             </td>
 
           </tr>
