@@ -504,6 +504,7 @@ section.call-to-action {
     input.zip {
       width: 46%;
       margin-right: 4%;
+      float: left;
     }
     input[type="submit"] {
       width: 50%;
@@ -538,19 +539,17 @@ section.call-to-action {
       margin-left: 19px;
       input.email, input.zip {
         display: inline-block;
-        float: none;
         margin-right: 9px;
       }
       input.email {
         width: 100%;
       }
       input.zip {
-        width: 203px;
+        width: 49%;
+        margin-right: 3%;
       }
       input[type='submit'] {
-        width: 210px;
-        float: none;
-        display: inline-block;
+        width: 48%;
       }
     }
   }
@@ -568,13 +567,6 @@ section.call-to-action {
   section.call-to-action {
     .join {
       padding-left: 72px;
-      input.zip {
-        width: 48%;
-        margin-right: 3%;
-      }
-      input[type='submit'] {
-        width: 48%;
-      }
     }
   }
 }
