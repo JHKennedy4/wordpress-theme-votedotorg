@@ -7,8 +7,8 @@
 
 
     
-      <h2>Register to vote tool embed code</h2>
-      <button class="clip_button" variant="1" data-clipboard-target="clipboard_textarea1">Click to copy code:</button>
+      <h2>Our voter registration tool</h2>
+      
       <textarea id="clipboard_textarea1">
         <style type="text/css">
           iframe#frame1 {
@@ -24,11 +24,12 @@
         </style>
         <iframe src="https://register.vote.org" width="100%" marginheight="0" frameborder="0" id="frame1" scrollable ="no"></iframe>
 
-      </textarea><!--#clipboard_textarea-->
+      </textarea><!--#clipboard_textarea1-->
+      <button class="clip_button" variant="1" data-clipboard-target="clipboard_textarea1">Click to copy code</button>
 
       
-      <h2>Absentee ballot embed code</h2>
-      <button class="clip_button"  variant="1" data-clipboard-target="clipboard_textarea2">Click to copy code:</button>
+      <h2>Our absentee ballot tool</h2>
+      
       <textarea id="clipboard_textarea2">
         <style type="text/css">
           iframe#frame2 {
@@ -43,11 +44,12 @@
           }
         </style>
         <iframe src="https://absentee.vote.org" width="100%" marginheight="0" frameborder="0" id="frame2" scrollable="no"></iframe>
-      </textarea>
+      </textarea><!--#clipboard_textarea2-->
+      <button class="clip_button"  variant="1" data-clipboard-target="clipboard_textarea2">Click to copy code</button>
       
       
-      <h2>Verify voter registration embed code</h2>
-      <button class="clip_button"  variant="1"  data-clipboard-target="clipboard_textarea3">Click to copy code:</button>
+      <h2>Our voter verification tool</h2>
+      
       <textarea id="clipboard_textarea3">
         <style type="text/css">
           iframe#frame3 {
@@ -63,7 +65,8 @@
         </style>
         <iframe src="https://verify.vote.org" width="100%" marginheight="0" frameborder="0" id="frame3" scrollable="no"></iframe>
 
-      </textarea>
+      </textarea><!--#clipboard_textarea3-->
+      <button class="clip_button"  variant="1"  data-clipboard-target="clipboard_textarea3">Click to copy code</button>
       
        
      </div><!--.container-->
