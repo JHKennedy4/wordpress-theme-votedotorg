@@ -107,9 +107,6 @@
 
  <!--Javascript-->
 
-  <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/uswds.js"></script>
-
-
    <!--[if lt IE 9]> 
    <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/html5shiv.js"></script>
    <![endif]-->

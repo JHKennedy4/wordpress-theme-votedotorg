@@ -2,7 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js"
+        "scripts/main.js",
+        "scripts/uswds.js"
       ],
       "main": true
     },
@@ -12,9 +13,9 @@
       ],
       "main": true
     },
-    "uswds.js": {
+    "html5shiv.js": {
       "files": [
-        "scripts/uswds.js"
+        "scripts/html5shiv.js"
       ]
     },
     "customizer.js": {
