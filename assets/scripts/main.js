@@ -11,50 +11,11 @@
  * ======================================================================== */
 
 (function($) {
-  function UpdateTableHeaders() {
-     $(".persist-area").each(function() {
-     
-         var el             = $(this),
-             offset         = el.offset(),
-             scrollTop      = $(window).scrollTop(),
-             floatingHeader = $(".floatingHeader", this)
-         
-         if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
-             floatingHeader.css({
-              "visibility": "visible"
-             });
-         } else {
-             floatingHeader.css({
-              "visibility": "hidden"
-             });      
-         }
-     });
-  }
-
-  // DOM Ready      
-  $(function() {
-
-     var clonedHeaderRow;
-
-     $(".persist-area").each(function() {
-         clonedHeaderRow = $(".persist-header", this);
-         clonedHeaderRow
-           .before(clonedHeaderRow.clone())
-           .css("width", clonedHeaderRow.width())
-           .addClass("floatingHeader");
-           
-     });
-     
-     $(window)
-      .scroll(UpdateTableHeaders)
-      .trigger("scroll");
-     
-  });
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
 
-  
+
   var Sage = {
     // All pages
     'common': {
@@ -79,6 +40,22 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        // hide .navbar first
+        $("nav.usa-site-navbar").hide();
+
+        // fade in .navbar
+        $(function () {
+            $(window).scroll(function () {
+
+                     // set distance user needs to scroll before we start fadeIn
+                if ($(this).scrollTop() > 100) {
+                    $('nav.usa-site-navbar').fadeIn();
+                } else {
+                    $('nav.usa-site-navbar').fadeOut();
+                }
+            });
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -97,6 +74,44 @@
         $('iframe').iFrameResize({minHeight: 1000});
 
 
+      }
+    },
+    'table': {
+      init: function(){
+        function UpdateTableHeaders() {
+           $(".persist-area").each(function() {
+
+               var el             = $(this),
+                   offset         = el.offset(),
+                   scrollTop      = $(window).scrollTop(),
+                   floatingHeader = $(".floatingHeader", this)
+
+               if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+                   floatingHeader.css({
+                    "visibility": "visible"
+                   });
+               } else {
+                   floatingHeader.css({
+                    "visibility": "hidden"
+                   });
+               }
+           });
+        }
+        // DOM Ready
+        var clonedHeaderRow;
+
+        $(".persist-area").each(function() {
+            clonedHeaderRow = $(".persist-header", this);
+            clonedHeaderRow
+              .before(clonedHeaderRow.clone())
+              .css("width", clonedHeaderRow.width())
+              .addClass("floatingHeader");
+
+        });
+
+        $(window)
+         .scroll(UpdateTableHeaders)
+         .trigger("scroll");
       }
     },
     // Technology page -- the clip to copy feature
@@ -156,5 +171,5 @@
 
 jQuery(document).ready(function(){
 
-  
+
 });

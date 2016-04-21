@@ -140,6 +140,19 @@ function iframe_class($classes) {
     return $classes;
   }
 }
+//add class 'table' to body element for templates that contain tables in order to add JS for persistent headers. 
+add_filter( 'body_class', 'table_class' );
+
+function table_class($classes) {
+  $template = array('template-absentee-ballot-deadlines.php', 'template-early-voting-calendar.php', 'template-voter-registration-deadlines.php', 'template-where-do-i-vote.php', 'template-voter-ID-laws.php');
+  if ( is_page_template( $template ) ) {
+    $classes[] = 'table';
+
+    return $classes;
+  } else {
+    return $classes;
+  }
+}
 //add iFrameResizer script if the page has a tool. Update $template with any pages that use an iFrame.
 
 add_action( 'wp_enqueue_scripts', 'iframe_resizer' );
