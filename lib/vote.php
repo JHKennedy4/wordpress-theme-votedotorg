@@ -111,6 +111,13 @@ function remove_jquery_migrate( &$scripts)
         $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.11.1' );
     }
 }
+
+add_action( 'wp_enqueue_scripts', 'addthis' );
+
+function addthis() {
+ wp_enqueue_script( 'addthis', 'https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56bd6f489abb811d', array(), '', true );
+
+}
 add_action( 'wp_enqueue_scripts', 'register_jquery' );
 function register_jquery() {
     if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') {

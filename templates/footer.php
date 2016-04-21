@@ -109,7 +109,6 @@
 
   <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/uswds.js"></script>
 
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56bd6f489abb811d" async="async"></script>
 
    <!--[if lt IE 9]> 
    <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/html5shiv.js"></script>
