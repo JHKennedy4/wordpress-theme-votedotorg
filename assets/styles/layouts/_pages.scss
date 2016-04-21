@@ -249,23 +249,23 @@ section.sharing {
 
 
 
-/*Faux Table*/
-.table {
-  font-size: 17px;
-  line-height: 25px;
-  border: 1px solid #5b616b;
-  margin-bottom: 0;
-  .header, .cell {
-    padding: 16px;
-  }
-  .header {
-    background-color: $darkbluegrey;
-    color: #fff;
-  }
-  .cell {
-    background-color: #fff;
-  }
-}
+// /*Faux Table*/
+// .table {
+//   font-size: 17px;
+//   line-height: 25px;
+//   border: 1px solid #5b616b;
+//   margin-bottom: 0;
+//   .header, .cell {
+//     padding: 16px;
+//   }
+//   .header {
+//     background-color: $darkbluegrey;
+//     color: #fff;
+//   }
+//   .cell {
+//     background-color: #fff;
+//   }
+// }
 
 //* Voter Registration Rules & Absentee Ballot Rules Pages *//
 .page-template-template-voter-registration-rules, .page-template-template-absentee-voting-rules {

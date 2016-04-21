@@ -21,16 +21,18 @@ use Roots\Sage\Wrapper;
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
       </div>
     <![endif]-->
-    <?php if( is_home() || is_front_page() || is_page( $page = "states") ) : 
-    do_action('get_header');
-     get_template_part('templates/header-home');
+    <?php 
+   //  if( is_home() || is_front_page() || is_page( $page = "states") ) : 
+   //  do_action('get_header');
+   //   get_template_part('templates/header-home');
    
-   else : 
+   // else : 
 
      do_action('get_header');
       get_template_part('templates/header');
 
-    endif; ?>
+    // endif; 
+    ?>
 
     
     <?php include Wrapper\template_path(); ?>

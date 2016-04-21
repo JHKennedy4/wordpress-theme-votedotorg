@@ -40,16 +40,39 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
-        // hide .navbar first
-        $("nav.usa-site-navbar").hide();
 
-        // fade in .navbar
+        // fade in navigation bar
         $(function () {
             $(window).scroll(function () {
 
-                     // set distance user needs to scroll before we start fadeIn
-                if ($(this).scrollTop() > 100) {
+                // set distance user needs to scroll before we start fadeIn
+                if ($(this).scrollTop() > 10) {
                     $('nav.usa-site-navbar').fadeIn();
+                    $('nav.usa-site-navbar').addClass('sticky');
+                } else {
+                    $('nav.usa-site-navbar').fadeOut();
+                }
+            });
+        });
+
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    // State pages
+    'state': {
+      init: function() {
+        // JavaScript to be fired on the home page
+
+        // fade in navigation bar
+        $(function () {
+            $(window).scroll(function () {
+
+                // set distance user needs to scroll before we start fadeIn
+                if ($(this).scrollTop() > 10) {
+                    $('nav.usa-site-navbar').fadeIn();
+                    $('nav.usa-site-navbar').addClass('sticky');
                 } else {
                     $('nav.usa-site-navbar').fadeOut();
                 }

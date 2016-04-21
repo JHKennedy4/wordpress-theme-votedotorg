@@ -162,7 +162,19 @@ function iframe_resizer() {
   if ( is_page_template( $template ) ) {
     wp_enqueue_script( 'iframeResizer', 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js', array(), '3.5.3', true );
   }
+}
+//add class 'state' to body element for any templates using template-state.php
+add_filter( 'body_class', 'state_class' );
 
+function state_class($classes) {
+  $template = array('template-state.php');
+  if ( is_page_template( $template ) ) {
+    $classes[] = 'state';
+
+    return $classes;
+  } else {
+    return $classes;
+  }
 }
 
 add_action( 'init', 'my_add_excerpts_to_pages' );

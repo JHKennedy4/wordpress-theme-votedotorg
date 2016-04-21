@@ -27,6 +27,11 @@ nav.usa-site-navbar {
     padding: 0;
   }
 }
+body.home, body.state {
+  nav.usa-site-navbar {
+    display: block;
+  }
+} 
 a.logo {
   text-decoration: none;
   font-size: 22px;
@@ -117,6 +122,12 @@ div.mobile-only.nav-menu {
   }
   nav.usa-site-navbar {
     height: 70px;
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      background-color: #fff;
+      z-index: 100;
+    }
     a {
       text-decoration: none;
     }
@@ -167,6 +178,11 @@ div.mobile-only.nav-menu {
       }
     }
   }
+  body.home, body.state {
+    nav.usa-site-navbar {
+      display: none;
+    }
+  } 
 }
 
 @media only screen and (min-width: 980px) {
