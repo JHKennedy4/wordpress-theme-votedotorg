@@ -60,6 +60,15 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        // mobile nav
+        $('.menu-btn.mobile-only').click(function(){
+          var menuCollapsed = $('.nav-menu.mobile-only').hasClass('collapsed');
+          if (!menuCollapsed){
+            $('.nav-menu.mobile-only').addClass('collapsed');
+          } else {
+           $('.nav-menu.mobile-only').removeClass('collapsed');
+          }
+         });
 
       },
       finalize: function() {
@@ -79,6 +88,15 @@
     'about_us': {
       init: function() {
         // JavaScript to be fired on the about us page
+      }
+    },
+    'iframe': {
+      init: function() {
+        // resize iFrame with inner content
+        iFrameResize({ log:true, checkOrigin:false});
+        $('iframe').iFrameResize({minHeight: 1000});
+
+
       }
     },
     // Technology page -- the clip to copy feature
@@ -137,16 +155,6 @@
 })(jQuery); // Fully reference jQuery after this point.
 
 jQuery(document).ready(function(){
-  // resize iFrame with inner content
-  jQuery('iframe').iFrameResize({minHeight: 1000});
 
-  // mobile nav
-  jQuery('.menu-btn.mobile-only').click(function(){
-    var menuCollapsed = jQuery('.nav-menu.mobile-only').hasClass('collapsed');
-    if (!menuCollapsed){
-      jQuery('.nav-menu.mobile-only').addClass('collapsed');
-    } else {
-     jQuery('.nav-menu.mobile-only').removeClass('collapsed');
-    }
-   });
+  
 });

@@ -120,6 +120,30 @@ function register_jquery() {
         wp_enqueue_script('jquery');
     }
 }
+//add class 'iframe' to body for the templates that have iframes, this will allow us to run init functions based on the 'iframe' class in main.js
+add_filter( 'body_class', 'iframe_class' );
+
+function iframe_class($classes) {
+  $template = array('template-register.php', 'template-absentee.php', 'template-verify.php');
+  if ( is_page_template( $template ) ) {
+    $classes[] = 'iframe';
+
+    return $classes;
+  } else {
+    return $classes;
+  }
+}
+//add iFrameResizer script if the page has a tool. Update $template with any pages that use an iFrame.
+
+add_action( 'wp_enqueue_scripts', 'iframe_resizer' );
+
+function iframe_resizer() {
+  $template = array('template-register.php', 'template-absentee.php', 'template-verify.php');
+  if ( is_page_template( $template ) ) {
+    wp_enqueue_script( 'iframeResizer', 'https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js', array(), '3.5.3', true );
+  }
+
+}
 
 add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
