@@ -17,8 +17,7 @@ section.breadcrumbs {
 //*Mobile Header Nav*//
 nav.usa-site-navbar {
   height: 50px;
-  border-bottom: 1px solid $darkbluegrey;
-  box-shadow: 0px 1px 9px #ccc;
+  box-shadow: 0px 1px 9px rgba(0,0,0,.2);
   h1 {
     margin-bottom: 0;
   }
