@@ -34,8 +34,8 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-1'><h4>Voter registration deadlines</h4></button>
-                <div id='collapsible-1' aria-hidden='true' class='answer usa-accordion-content'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-20'><h4>Voter registration deadlines</h4></button>
+                <div id='collapsible-20' aria-hidden='true' class='answer usa-accordion-content'>
                   If you register by mail: <?php echo types_render_field('voter-registration-deadline-by-mail');?><br />
                   If you register in-person: <?php echo types_render_field('voter-registration-deadline-in-person');?>
                 </div>
@@ -44,22 +44,22 @@ if (isset($wp_query->query_vars['state_name'])) {
             <?php $registration_instructions = types_render_field("election-day-registration-instructions", array('raw' => true));
               if ( $registration_instructions !== null && $registration_instructions !== "undefined" && $registration_instructions !=="?????" && $registration_instructions !=="NA" && $registration_instructions !=="N/A") { ?>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'><h4>Election day registration instructions</h4></button>
-                <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-21'><h4>Election day registration instructions</h4></button>
+                <div id='collapsible-21' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('election-day-registration-instructions');?>
                 </div>
               </li>
               <?php }  ?>
               
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-2'><h4>Voter registration rules</h4></button>
-                <div id='collapsible-2' aria-hidden='true' class='answer usa-accordion-content'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-22'><h4>Voter registration rules</h4></button>
+                <div id='collapsible-22' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('voter-registration-rules');?>
                 </div>
               </li>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-3'><h4>How to register to vote in <?php echo $state_name; ?></h4></button>
-                <div id='collapsible-3' aria-hidden='true' class='answer usa-accordion-content'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-23'><h4>How to register to vote in <?php echo $state_name; ?></h4></button>
+                <div id='collapsible-23' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('how-to-register-to-vote');?>
                 </div>
               </li>
