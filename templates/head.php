@@ -31,7 +31,8 @@ if (isset($wp_query->query_vars['state_name'])) {
    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/dist/favicon.ico">
 
    <!--[if lt IE 9]>    
-   <script src="./js/html5shiv.js"></script>
+   <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/html5shiv.js"></script>
+   <script src="<?php echo get_template_directory_uri(); ?>/dist/scripts/placeholders.min.js"></script>
    <![endif]-->
   <?php wp_head(); ?>
 

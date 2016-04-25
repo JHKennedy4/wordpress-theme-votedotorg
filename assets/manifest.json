@@ -23,6 +23,11 @@
         "scripts/customizer.js"
       ]
     },
+    "placeholders.min.js": {
+      "files": [
+        "scripts/placeholders.min.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }
