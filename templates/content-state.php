@@ -82,26 +82,26 @@ if (isset($wp_query->query_vars['state_name'])) {
                 </div><!--.answer-->
               </li>
               <li> 
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-17'>
                   <h4>Absentee ballot rules</h4>
                 </button><!--.question-->
-                <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'>
+                <div id='collapsible-17' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('vbm-eligibilty');?>
                 </div><!--.answer-->
               </li>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-18'>
                   <h4>How to get an absentee ballot in <?php echo $state_name; ?></h4>
                 </button><!--.question-->
-                <div id='collapsible-9' aria-hidden='true' class='answer usa-accordion-content'>
+                <div id='collapsible-18' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('how-to-get-your-absentee-ballot');?>
                 </div><!--.answer-->
               </li>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-19'>
                   <h4>Once you get your absentee ballot in <?php echo $state_name; ?></h4>
                 </button><!--.question-->
-                <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'>
+                <div id='collapsible-19' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('voted-absentee-ballot-instructions');?>
                 </div><!--.answer-->
               </li>
@@ -132,14 +132,14 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4>In-person voter ID requirements</h4></button>
-                <div id='collapsible-16' aria-hidden='true' class='answer usa-accordion-content'>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-12'><h4>In-person voter ID requirements</h4></button>
+                <div id='collapsible-12' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('voter-id-requirements-in-person');?>
                 </div>
               </li>
               <li> 
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'><h4>Absentee voter ID requirements</h4></button>
-                <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-absentee');?></div>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-13'><h4>Absentee voter ID requirements</h4></button>
+                <div id='collapsible-13' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-absentee');?></div>
               </li>
             </ul>
           </div><!--.usa-accordion-->
