@@ -7,12 +7,10 @@ use Roots\Sage\Wrapper;
 ?>
 
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html <?php language_attributes(); ?> class="no-js ie6 lt-ie9"> <![endif]-->
-<!--[if IE 7]>    <html <?php language_attributes(); ?> class="no-js ie7 lt-ie9"> <![endif]-->
-<!--[if IE 8]>    <html <?php language_attributes(); ?> class="no-js ie8 lt-ie9"> <![endif]-->
-<!--[if IE 9]>    <html <?php language_attributes(); ?> class="no-js ie9"> <![endif]-->
+<!--[if lt IE 9]><html <?php language_attributes(); ?> class="no-js lt-ie9">  <![endif]-->
+<!--[if IE 9]><html <?php language_attributes(); ?> class="no-js ie9"> <![endif]-->
 
-<!--[if gt IE 9]><!-->
+
 <html class="no-js" <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>

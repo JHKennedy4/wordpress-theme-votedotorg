@@ -284,12 +284,7 @@ section.sharing {
 //*Tablet*/
 
 @media only screen and (min-width: 768px) {
-  .mobile-only, .mobile {
-    display: none;
-  }
-  .tablet {
-    display: inherit;
-  }
+
   .container {
     width: 768px;
     margin: 0 auto;
@@ -297,7 +292,7 @@ section.sharing {
   section {
     padding: 75px 0;
     .container {
-      width: 740px;
+      width: 749px;
     }
   }
   .register-tool {
@@ -395,9 +390,7 @@ section.sharing {
 }
 //* Desktop *//
 @media only screen and (min-width: 980px) {
-  .desktop, .desktop-only {
-    display: inherit;
-  }
+
   .container {
     width: 900px;
   }
@@ -488,7 +481,7 @@ section.sharing {
   
 }
 
-//* IE 9 and 8 Stylings *//
+
 
 
 
