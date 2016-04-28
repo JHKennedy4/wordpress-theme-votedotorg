@@ -1,7 +1,7 @@
 
 <section class="quick-links desktop">
 
-  <div class="container" class="clear-fix">
+  <div class="container">
     <h3>Jump directly to your state</h3>
     <div class="links-column">   
       <ul>
