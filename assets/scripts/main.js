@@ -14,7 +14,17 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
+  function navOnScroll() {
+    // set distance user needs to scroll before we start fadeIn
+    console.log("fading in nav bar");
+    if ($(this).scrollTop() > 10) {
+        $('nav.usa-site-navbar').fadeIn();
+        $('nav.usa-site-navbar').addClass('sticky');
+    } else {
+        $('nav.usa-site-navbar').fadeOut();
+    }
 
+  }
 
   var Sage = {
     // All pages
@@ -40,48 +50,65 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        // fade in the navigation bar based on browser width, remove handler when browser width is below 768px
+        var browserWidth = window.innerWidth;
 
-        // fade in navigation bar
-        $(function () {
-            $(window).scroll(function () {
+        if (browserWidth >= 768) {
+          // fade in navigation bar
+          $(window).scroll( navOnScroll);
+        } else {
+          $(window).off('scroll',navOnScroll);
+          $('nav.usa-site-navbar').fadeIn();
 
-                // set distance user needs to scroll before we start fadeIn
-                if ($(this).scrollTop() > 10) {
-                    $('nav.usa-site-navbar').fadeIn();
-                    $('nav.usa-site-navbar').addClass('sticky');
-                } else {
-                    $('nav.usa-site-navbar').fadeOut();
-                }
-            });
-        });
-
+        }
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        // on window resize, fade in the navigation bar based on browser width, remove handler when browser width is below 768px
+
+        $( window ).resize(function() { 
+          var browserWidth = window.innerWidth;
+          if (browserWidth >= 768) {
+            // fade in navigation bar
+            $(window).scroll( navOnScroll);
+          } else {
+            $(window).off('scroll',navOnScroll);
+            $('nav.usa-site-navbar').fadeIn();
+          }
+        })
       }
     },
     // State pages
     'state': {
       init: function() {
         // JavaScript to be fired on the home page
+        // fade in the navigation bar based on browser width, remove handler when browser width is below 768px
+        var browserWidth = window.innerWidth;
 
-        // fade in navigation bar
-        $(function () {
-            $(window).scroll(function () {
-
-                // set distance user needs to scroll before we start fadeIn
-                if ($(this).scrollTop() > 10) {
-                    $('nav.usa-site-navbar').fadeIn();
-                    $('nav.usa-site-navbar').addClass('sticky');
-                } else {
-                    $('nav.usa-site-navbar').fadeOut();
-                }
-            });
-        });
-
+        if (browserWidth >= 768) {
+          // fade in navigation bar
+          $(window).scroll( navOnScroll);
+        } else {
+          $(window).off('scroll',navOnScroll);
+          $('nav.usa-site-navbar').fadeIn();
+          console.log("remove fading in nav bar");
+        }
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        // on window resize, fade in the navigation bar based on browser width, remove handler when browser width is below 768px
+
+        $( window ).resize(function() { 
+          var browserWidth = window.innerWidth;
+          if (browserWidth >= 768) {
+            // fade in navigation bar
+            $(window).scroll( navOnScroll);
+          } else {
+            $(window).off('scroll',navOnScroll);
+            $('nav.usa-site-navbar').fadeIn();
+            console.log("remove fading in nav bar");
+          }
+        });
       }
     },
     // About us page, note the change from about-us to about_us.
@@ -94,7 +121,7 @@
       init: function() {
         // resize iFrame with inner content
         iFrameResize({ log:true, checkOrigin:false});
-        $('iframe').iFrameResize({minHeight: 1000});
+        $('iframe').iFrameResize({minHeight: 1000, sizeHeight: true});
 
 
       }

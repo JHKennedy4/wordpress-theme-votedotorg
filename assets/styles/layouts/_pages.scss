@@ -6,6 +6,7 @@
   .container {
     width: 100%;
     padding: 0;
+    max-width: 640px;
   }
 }
 .page-header {
@@ -295,12 +296,12 @@ section.sharing {
       width: 749px;
     }
   }
-  .register-tool {
+  section.register-tool {
     background: url('../images/bkg-blue-large.png') no-repeat 50% 49%;
     background-size: cover;
     padding: 10px 0 20px;
     .container {
-      width: 700px; 
+      width: 640px; 
     }
   }
   //*Homepage and State Hero Tablet*//
@@ -395,11 +396,16 @@ section.sharing {
     width: 900px;
   }
 
-  section, .register-tool {
+  section {
   .container {
       width: 768px;
     }
-  } 
+  }
+  .register-tool {
+    .container {
+      width: 706px;
+    }
+  }
 
   section.hero {
     .container {
