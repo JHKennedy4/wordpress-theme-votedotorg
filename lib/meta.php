@@ -56,14 +56,14 @@ function hook_meta() {
   else if ($page_type == "state" && $state == "" ) {
     $title = "Election Center | VOTE.org";
     $description = "Everything you need to vote: register to vote, check your registration status, get your absentee ballot.";
-    $image = $theme_uri."/dist/images/og-default.jpg";
+    $image = $theme_uri."/dist/images/og-default-square.png";
   }
   //define $title for Election Center Pages with State Names
   else if ($page_type == "state" && $state !== "" ) {
     $state_name = $post->post_title;
     $title = "$state_name Election Center | VOTE.org";
     $description = "Everything you need to vote in $state_name: register to vote, check your registration status, get your absentee ballot.";
-    $image = $theme_uri."/dist/images/og-default.jpg";
+    $image = $theme_uri."/dist/images/og-default-square.png";
   }
   //homepage  meta tags
   else if ( is_home() || is_front_page() ) {
@@ -75,19 +75,19 @@ function hook_meta() {
 
     $image = get_post_meta($post->ID, "wpcf-meta-image", true);
     if (empty($image)) {
-      $image = $theme_uri."/dist/images/og-default.jpg";
+      $image = $theme_uri."/dist/images/og-default-square.png";
     }
   } 
   else if ( is_404() ) {
     $title = "404 Error Page Not Found | VOTE.org - Everything you need to vote";
     $description = "404 Error Page Not Found | VOTE.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
-    $image = $theme_uri."/dist/images/og-default.jpg";
+    $image = $theme_uri."/dist/images/og-default-square.png";
 
   } else if ( is_search() ) {
     $query = get_search_query();
     $title = "Search Results for $query | VOTE.org - Everything you need to vote";
     $description = "VOTE.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
-    $image = $theme_uri."/dist/images/og-default.jpg";
+    $image = $theme_uri."/dist/images/og-default-square.png";
      
   }
   else {
@@ -101,7 +101,7 @@ function hook_meta() {
     //check to see if a custom field meta-image is set on the post, if so display that, if not display the default image
     $image = get_post_meta($post->ID, "wpcf-meta-image", true);
     if (empty($image)) {
-      $image = $theme_uri."/dist/images/og-default.jpg";
+      $image = $theme_uri."/dist/images/og-default-square.png";
     } 
   }
   //change this FB App_ID if you necessary, this one is connected to Justine & Debra's accounts.
