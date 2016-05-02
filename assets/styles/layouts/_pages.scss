@@ -31,6 +31,10 @@ section.hero {
       margin-bottom: 20px;
       margin-top: 0px;
       font-weight: 700;
+      background: url('../images/vote-logo.png') no-repeat center center;
+      background-size: contain;
+      display: block;
+      text-indent: -9999px;
     }
   }
   h1 {
@@ -215,7 +219,6 @@ section.sharing {
   }
   .container > a {
     display: block;
-    margin-bottom: 50px;
   }
   p {
     color: $gray-dark;
