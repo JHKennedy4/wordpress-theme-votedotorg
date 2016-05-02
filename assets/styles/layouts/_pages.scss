@@ -31,7 +31,7 @@ section.hero {
       margin-bottom: 20px;
       margin-top: 0px;
       font-weight: 700;
-      background: url('../images/vote-logo.png') no-repeat center center;
+      background: url('../images/vote-logo-reverse.svg') no-repeat center center;
       background-size: contain;
       display: block;
       text-indent: -9999px;
@@ -191,7 +191,10 @@ section.voter-registration-guide {
     margin-bottom: 30px;
   }
 }
-
+.updated-date {
+  font-style: italic;
+  margin-top: 60px;
+}
 section.faqs {
   background: #edefef;
   h1 {

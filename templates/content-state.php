@@ -151,6 +151,8 @@ if (isset($wp_query->query_vars['state_name'])) {
           <li><a href="/register-to-vote/<?php if ($state_slug !== "") { echo $state_slug; }?>">Register to vote in <?php echo $state_name;?></a></li>
           <li><a href="/absentee-ballot/<?php if ($state_slug !== "") { echo $state_slug; }?>">Get your <?php echo $state_name;?> absentee ballot</a></li>
         </ul>
+
+        <div class="updated-date">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
       </div><!--.container-->
     </section> <!--.voter-registration-guide-->
     
@@ -167,6 +169,7 @@ if (isset($wp_query->query_vars['state_name'])) {
             
           </ul><!--.usa-unstyled-list-->
         </div><!--.faq-box- .usa-accordion-->
+
 
       </div><!--.container-->
 
