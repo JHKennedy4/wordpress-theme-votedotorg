@@ -28,12 +28,12 @@ section.hero {
     margin-bottom: 40px;
     text-align: center;
     &.logo {
+      display: none;
       margin-bottom: 20px;
       margin-top: 0px;
       font-weight: 700;
       background: url('../images/vote-logo-reverse.svg') no-repeat center center;
       background-size: contain;
-      display: block;
       text-indent: -9999px;
     }
   }
@@ -328,6 +328,9 @@ section.sharing {
         font-size: 26px;
         line-height: 36px;
         height: 115px;
+        &.logo {
+          display: block;
+        }
       }
       .usa-button {
         padding: 10px;
