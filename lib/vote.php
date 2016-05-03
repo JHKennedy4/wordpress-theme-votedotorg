@@ -90,10 +90,10 @@ function get_helpScout_articles_by_category($slug, $state_name) {
  //add_rewrite_rule The first argument is our regular expression, what we want to match exactly. 
  //index.php?p=11 is our reidrect URL, it tells Wordprss to load the post with ID = 11
 function custom_rewrite_rule(){
-  add_rewrite_rule('^register-to-vote/([a-z-]+)/?$','index.php?page_id=11&state_name=$matches[1]','top');
-  add_rewrite_rule('^absentee-ballot/([a-z-]+)/?$','index.php?page_id=2&state_name=$matches[1]','top');
-  add_rewrite_rule('^state/([a-z-]+)/?$','index.php?page_id=2224&state_name=$matches[1]','top');
-  add_rewrite_rule('^state[//]?$','index.php?page_id=2224','top');
+  add_rewrite_rule('^register-to-vote/([a-z-]+)/?$','index.php?pagename=register-to-vote&state_name=$matches[1]','top');
+  add_rewrite_rule('^absentee-ballot/([a-z-]+)/?$','index.php?pagename=absentee-ballot&state_name=$matches[1]','top');
+  add_rewrite_rule('^state/([a-z-]+)/?$','index.php?pagename=states&state_name=$matches[1]','top');
+  add_rewrite_rule('^state[//]?$','index.php?pagename=states','top');
   // Call flush_rules() as a method of the $wp_rewrite object
   flush_rewrite_rules();
 }
