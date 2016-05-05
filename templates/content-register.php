@@ -1,4 +1,6 @@
 <?php
+$iframeurl= types_render_field("iframe-url", array('raw' => true));
+
 global $wp_query;
 if (isset($wp_query->query_vars['state_name'])) {
   $state = $wp_query->query_vars['state_name'];
@@ -32,9 +34,8 @@ if (isset($wp_query->query_vars['state_name'])) {
 </section><!--.breadcrumbs-->
 
 <section class="register-tool">
-
   <div class="container">
-    <iframe id="register" class="register" src="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>" width="100%" height="600" marginheight="0" frameborder="0" scrollable="no" sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation"></iframe>
+    <iframe id="register" class="register" src="<?php if ($iframeurl !== "") { echo $iframeurl; } else { echo 'https://register.vote.org'; }?>/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>" width="100%" height="600" marginheight="0" frameborder="0" scrollable="no" sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-popups"></iframe>
   </div><!--.container-->
 
 </section><!--.register-tool-->
