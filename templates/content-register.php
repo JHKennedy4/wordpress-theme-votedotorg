@@ -34,7 +34,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 <section class="register-tool">
 
   <div class="container">
-    <iframe id="register" class="register" src="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>" width="100%" height="600" marginheight="0" frameborder="0" scrollable="no" sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
+    <iframe id="register" class="register" src="https://register.vote.org/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>" width="100%" height="600" marginheight="0" frameborder="0" scrollable="no" sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation"></iframe>
   </div><!--.container-->
 
 </section><!--.register-tool-->
