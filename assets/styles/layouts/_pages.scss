@@ -302,12 +302,12 @@ section.sharing {
       width: 749px;
     }
   }
-  section.register-tool {
+  .register-tool {
     background: url('../images/bkg-blue-large.png') no-repeat 50% 49%;
     background-size: cover;
     padding: 10px 0 20px;
     .container {
-      width: 640px; 
+      width: 640px;
     }
   }
   //*Homepage and State Hero Tablet*//
@@ -412,7 +412,8 @@ section.sharing {
   }
   .register-tool {
     .container {
-      width: 706px;
+      width: 780px;
+      max-width: 780px;
     }
   }
 
