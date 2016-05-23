@@ -46,7 +46,9 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     </section><!--.register-tool-->
    
-
+    
+    <?php if($state_name !== "") { ?>
+      <!--hide voter absentee ballot section when there isn't a state selected-->
     <section class="voter-registration-guide <?php if($state_name == "") {echo 'hidden';}?>">
       <div class="container">
         <h2><?php the_title(); ?> absentee ballot guide</h2>
@@ -112,11 +114,13 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
 
     </section><!--.voter-registration-guide -->
-<?php endwhile; 
+<?php } endwhile; 
     wp_reset_postdata();
   endif; ?>
 
-    <section class="faqs <?php if($state_name == "") {echo 'hidden';}?>">
+<?php if($state_name !== "") { ?>
+  <!--hide faqs when there isn't a state selected-->
+    <section class="faqs">
       <div class="container">
         <h2>Frequently asked questions</h2>
 
@@ -131,3 +135,4 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
 
     </section><!--.faqs-->
+<?php } ?>
