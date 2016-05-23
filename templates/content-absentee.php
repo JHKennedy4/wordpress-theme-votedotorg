@@ -27,29 +27,37 @@ if (isset($wp_query->query_vars['state_name'])) {
     'posts_per_page' => 1
 
   ) ); 
-      if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
-      if ($state_name !== "") {
-        $state_name = $post->post_title; ?>
-        <h1><?php echo $state_name; ?> Absentee Ballot</h1>
-      <?php } else {  ?> 
+      if ( $state_loop->have_posts() ) : 
+        while ( $state_loop->have_posts() ) : 
+          $state_loop->the_post(); 
+          if ($state_name !== "") {
+            $state_name = $post->post_title; ?>
+            <h1><?php echo $state_name; ?> Absentee Ballot</h1>
+          <?php } else {  ?> 
+            <h1>Absentee Ballot</h1>
+        <?php } endwhile; 
+      else :  $state = ""; ?> 
         <h1>Absentee Ballot</h1>
-    <?php }
-     ?>
+      <?php endif;?>
+
       </div><!--.container-->
     </section><!--.breadcrumbs-->
 
     <section class="register-tool">
 
       <div class="container">
-        <iframe id="absentee" class="register" src="<?php if ($iframeurl !== "") { echo $iframeurl; } else { echo 'https://absentee.vote.org'; }?>/<?php if ($state_name !== "") { echo '?state='.urlencode($state_name); }?>" width="100%" height="600" marginheight="0" frameborder="0" scrollable="no"></iframe>
+        <iframe id="absentee" class="register" src="<?php if ($iframeurl !== "") { echo $iframeurl; } else { echo 'https://absentee.vote.org'; }?>/<?php if ($state !== "") { echo '?state='.urlencode($state_name); }?>" width="100%" height="600" marginheight="0" frameborder="0" scrollable="no"></iframe>
       </div><!--.container-->
 
     </section><!--.register-tool-->
    
     
-    <?php if($state_name !== "") { ?>
+    <?php if ( $state_loop->have_posts() ) : 
+            while ( $state_loop->have_posts() ) : 
+              $state_loop->the_post();
+              if($state_name !== "") { ?>
       <!--hide voter absentee ballot section when there isn't a state selected-->
-    <section class="voter-registration-guide <?php if($state_name == "") {echo 'hidden';}?>">
+    <section class="voter-registration-guide">
       <div class="container">
         <h2><?php the_title(); ?> absentee ballot guide</h2>
         
@@ -114,11 +122,23 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
 
     </section><!--.voter-registration-guide -->
-<?php } endwhile; 
-    wp_reset_postdata();
-  endif; ?>
 
-<?php if($state_name !== "") { ?>
+<?php } endwhile; wp_reset_postdata(); else :  ?> 
+    <section class="not-found">
+
+      <div class="container">
+      <h2>Sorry, there's no state named <?php echo ucfirst($state_name);?>.</h2>
+        <div class="alert alert-warning">
+          <?php _e('Check out the links to each state\'s election center site.', 'sage'); ?>
+        </div>
+      </div><!--.container-->
+    </section><!--.not-found-->
+    <?php endif;?>
+
+<?php if ( $state_loop->have_posts() ) : 
+        while ( $state_loop->have_posts() ) : 
+          $state_loop->the_post();
+          if($state_name !== "") { ?>
   <!--hide faqs when there isn't a state selected-->
     <section class="faqs">
       <div class="container">
@@ -135,4 +155,4 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
 
     </section><!--.faqs-->
-<?php } ?>
+<?php } endwhile; wp_reset_postdata(); endif;?>
