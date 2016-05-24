@@ -1,31 +1,46 @@
 <?php
 global $wp_query;
+
 if (isset($wp_query->query_vars['state_name'])) {
   $state = $wp_query->query_vars['state_name'];
 
 } else {
   $state = "";
-  $state_name = "";
 }
+//if state parameter is set loop through States post types to find one with the matching state slug
+   
+$state_loop = new WP_Query( array( 
+  'post_type' => 'state',
+  'name'      => $state,
+  'posts_per_page' => 1
+) );
+  //if that state exists then set the variables for $state_name and $state_slug to populate fields in /state page
+  if ( $state_loop->have_posts() ) : 
+    while ( $state_loop->have_posts() ) : 
+      $state_loop->the_post(); 
+      if ($state !== "") {
+        $state_name = $post->post_title;
+        $state_slug = $post->post_name;
+         } 
+    endwhile;
+    else: 
+      $state_name = ucfirst($state);
+      $state_slug = "";
+  endif;
 
-?>
-<?php //looping through States to find one with the matching state slug
-      $state_loop = new WP_Query( array( 
-        'post_type' => 'state',
-        'name'      => $state,
-        'posts_per_page' => 1
-      ) ); 
-          if ( $state_loop->have_posts() ) : while ( $state_loop->have_posts() ) : $state_loop->the_post(); 
-            if ($state_name !== "") {
-              $state_name = $post->post_title;
-              $state_slug = $post->post_name;
-               } else {  
-              $state_name = "";
-              $state_slug = ""; }
+
 ?>
 
     <?php get_template_part('templates/content-hero'); ?>
-    <section class="voter-registration-guide <?php if($state_name == "") {echo 'hidden';}?>">
+
+    <?php 
+    if ( $state_loop->have_posts() ) : 
+      while ( $state_loop->have_posts() ) : 
+        $state_loop->the_post();
+        if($state !== "") { ?>
+    <!--hide voter registration guide when there isn't a state selected-->
+
+    <section class="voter-registration-guide">
       <div class="container">
 
         <div class="state-info">
@@ -144,6 +159,7 @@ if (isset($wp_query->query_vars['state_name'])) {
             </ul>
           </div><!--.usa-accordion-->
         </div><!--.state-info-->
+
         <?php get_template_part('templates/content-links'); ?>
 
         <h2>Additional VOTE.org links</h2>
@@ -155,10 +171,29 @@ if (isset($wp_query->query_vars['state_name'])) {
         <div class="updated-date">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
       </div><!--.container-->
     </section> <!--.voter-registration-guide-->
-    
+    <?php } endwhile; wp_reset_postdata(); else :  ?> 
+
+    <section class="not-found">
+
+      <div class="container">
+      <h2>Sorry, there's no state named <?php echo ucfirst($state_name);?>.</h2>
+        <div class="alert alert-warning">
+          <?php _e('Check out the links to each state\'s election center site.', 'sage'); ?>
+        </div>
+      </div><!--.container-->
+    </section><!--.not-found-->
+
+    <?php endif;?>
+
+    <?php 
+    if ( $state_loop->have_posts() ) : 
+      while ( $state_loop->have_posts() ) : 
+        $state_loop->the_post();
+        if($state !== "") { ?>
+    <!--hide faqs when there isn't a state selected-->
 
     
-    <section class="faqs <?php if($state_name == "") {echo 'hidden';}?>">
+    <section class="faqs">
       <div class="container">
         <h2>Frequently asked questions</h2>
 
@@ -174,6 +209,8 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div><!--.container-->
 
     </section><!--.faqs-->
-    <?php endwhile; 
-    wp_reset_postdata();
-  endif; ?>
+    <?php 
+      } 
+      endwhile; 
+      wp_reset_postdata();
+    endif; ?>

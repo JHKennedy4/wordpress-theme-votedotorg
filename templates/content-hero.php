@@ -13,11 +13,13 @@ if (isset($wp_query->query_vars['state_name'])) {
       $state_loop->the_post();
       $state_name = $post->post_title;
     }    
+  } 
+  else { 
+    $state_name = "";
   }
-
  }
   else {
-    $state = ""; $state_name = "";
+    $state_name = "";
 
   } 
 
