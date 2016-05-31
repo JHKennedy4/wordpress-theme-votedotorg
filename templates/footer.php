@@ -94,12 +94,15 @@
     </div><!--.legalese-->
     <div class="links">
       <ul>
-        <li><a href="/terms">Terms of Use</a></li>
-        <li><a href="/privacy">Privacy Policy</a></li>
-        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
       
     </div><!--.links-->
+    <div class="mixpanel">
+      <a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+    </div><!--.mixpanel-->
     <div class="clear-fix"></div>
   </div><!--.container-->
 
