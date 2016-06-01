@@ -2,7 +2,8 @@
 
 function get_web_page( $url )
 {
-    $docsAPI = "158e6d7525bb10b8f4c237879325667bafe248a8";
+  //add the HelpScout API key as a text file in /lib and name it "helpscout_api.txt"
+    $docsAPI = file_get_contents(dirname(__FILE__).'/helpscout_api.txt',false);
     $options = array(
         CURLOPT_RETURNTRANSFER => true,     // return web page
         CURLOPT_HEADER         => false,    // don't return headers
