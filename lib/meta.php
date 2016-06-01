@@ -80,13 +80,13 @@ function hook_meta() {
   } 
   else if ( is_404() ) {
     $title = "404 Error Page Not Found | VOTE.org - Everything you need to vote";
-    $description = "404 Error Page Not Found | VOTE.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+    $description = "404 Error Page Not Found | VOTE.org";
     $image = $theme_uri."/dist/images/og-default-square.png";
 
   } else if ( is_search() ) {
     $query = get_search_query();
     $title = "Search Results for $query | VOTE.org - Everything you need to vote";
-    $description = "VOTE.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+    $description = "VOTE.org - everything you need to vote. Nonpartisan and nonprofit.";
     $image = $theme_uri."/dist/images/og-default-square.png";
      
   }
