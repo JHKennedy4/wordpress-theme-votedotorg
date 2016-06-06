@@ -1,6 +1,6 @@
      <section class="table">
       <div class="container">
-       <h1>Where Do I Vote?</h1>
+       <h1><?php the_title();?></h1>
        <?php the_content();?>
 
       <table class="states-chart responsive-chart two-columns persist-area">
