@@ -14,10 +14,9 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
-  function navOnScroll() {
-    // set distance user needs to scroll before we start fadeIn
-    console.log("fading in nav bar");
-    if ($(this).scrollTop() > 10) {
+  function navOnScroll(fadeInPosition) {
+    // fadeIn navigation header after fadeInPosition and fadeOut above section.hero
+    if ($(this).scrollTop() > fadeInPosition ) {
         $('nav.usa-site-navbar').fadeIn();
         $('nav.usa-site-navbar').addClass('sticky');
     } else {
@@ -52,25 +51,28 @@
         // JavaScript to be fired on the home page
         // fade in the navigation bar based on browser width, remove handler when browser width is below 768px
         var browserWidth = window.innerWidth;
-
+        var fadeInPosition = $('section.hero').next().position().top;
         if (browserWidth >= 768) {
           // fade in navigation bar
-          $(window).scroll( navOnScroll);
+          $(window).scroll( function() {
+            navOnScroll(fadeInPosition);
+          } );
+
         } else {
+          //don't execute navOnScroll for mobile browsers and show header
           $(window).off('scroll',navOnScroll);
           $('nav.usa-site-navbar').fadeIn();
-
         }
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
         // on window resize, fade in the navigation bar based on browser width, remove handler when browser width is below 768px
-
         $( window ).resize(function() { 
           var browserWidth = window.innerWidth;
+          fadeInPosition = $('section.hero').next().position().top;
           if (browserWidth >= 768) {
             // fade in navigation bar
-            $(window).scroll( navOnScroll);
+            $(window).scroll( navOnScroll(fadeInPosition) );
           } else {
             $(window).off('scroll',navOnScroll);
             $('nav.usa-site-navbar').fadeIn();
@@ -84,14 +86,16 @@
         // JavaScript to be fired on the home page
         // fade in the navigation bar based on browser width, remove handler when browser width is below 768px
         var browserWidth = window.innerWidth;
-
+        var fadeInPosition = $('section.hero').next().position().top;
         if (browserWidth >= 768) {
-          // fade in navigation bar
-          $(window).scroll( navOnScroll);
+          // fade in navigation bar for tablet and above
+          $(window).scroll( navOnScroll(fadeInPosition) );
         } else {
+          // don't use fade in and show the header for mobile
+
           $(window).off('scroll',navOnScroll);
           $('nav.usa-site-navbar').fadeIn();
-          console.log("remove fading in nav bar");
+          
         }
       },
       finalize: function() {
@@ -100,13 +104,14 @@
 
         $( window ).resize(function() { 
           var browserWidth = window.innerWidth;
+          fadeInPosition = $('section.hero').next().position().top;
           if (browserWidth >= 768) {
             // fade in navigation bar
-            $(window).scroll( navOnScroll);
+            $(window).scroll( navOnScroll(fadeInPosition) );
           } else {
+            // don't use fade in and show the header for mobile
             $(window).off('scroll',navOnScroll);
             $('nav.usa-site-navbar').fadeIn();
-            console.log("remove fading in nav bar");
           }
         });
       }
