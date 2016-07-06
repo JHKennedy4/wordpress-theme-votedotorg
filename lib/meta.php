@@ -67,10 +67,10 @@ function hook_meta() {
   }
   //homepage  meta tags
   else if ( is_home() || is_front_page() ) {
-    $title = "VOTE.org - Everything you need to vote";
+    $title = "VOTE.org - Everything you need to vote.";
     $description = get_post_meta($post->ID, "wpcf-meta-description", true);
     if (empty($description)) {
-      $description = "VOTE.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.";
+      $description = "Everything you need to vote: register to vote, check your registration status, get your absentee ballot.";
     }
 
     $image = get_post_meta($post->ID, "wpcf-meta-image", true);
