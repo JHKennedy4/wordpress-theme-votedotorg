@@ -1,6 +1,6 @@
      <section class="table">
       <div class="container">
-       <h1>Where Do I Vote?</h1>
+       <h1><?php the_title();?></h1>
        <?php the_content();?>
 
       <table class="states-chart responsive-chart two-columns persist-area">
@@ -27,7 +27,7 @@
               <p><?php echo $state_name; ?></p>
             </td>
             <td data-title="Polling place locator:">
-              <p><a href="<?php echo types_render_field('polling-place-locator', array('raw' => true)); ?>" target="_blank">Where do I vote in <?php echo $state_name; ?>?</a></p>
+              <p><a href="<?php echo types_render_field('polling-place-locator', array('raw' => true)); ?>" target="_blank"><?php echo $state_name; ?> polling place locator</a></p>
             </td>
 
           </tr>
@@ -39,6 +39,3 @@
 
       </div><!--.container-->
     </section>
-
-
-
