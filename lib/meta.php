@@ -1,5 +1,34 @@
 <?php
 
+remove_action ('wp_head', 'wp_generator');
+/*remove  default canonical URL*/
+remove_action( 'wp_head', 'rel_canonical');
+
+/* Replace WP default canonical URLS to display the state-specific URL */
+
+add_action( 'wp_head', 'my_rel_canonical');
+
+function my_rel_canonical() {
+
+  // original code
+  if ( !is_singular() )
+    return;
+  global $wp_the_query;
+  if ( !$id = $wp_the_query->get_queried_object_id() )
+    return;
+
+  // new code - if this is a state specific page then use actual URL otherwise find permalink
+
+  $state = get_query_var('state_name', null);
+  if (isset($state)) {
+    $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    echo "<link rel='canonical' href='$url' />\n";
+  } else {
+    $url = get_permalink( $id );
+    echo "<link rel='canonical' href='$url' />\n";
+  }
+}
+
 /**
  * add custom meta tags and title tags based on state names and pages 
  */
@@ -128,6 +157,5 @@ function hook_meta() {
 //add filter to wp_title to display the $title from hook_meta() function and all meta tags
 
 add_filter('pre_get_document_title', 'hook_meta');
-
 
 
