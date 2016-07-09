@@ -1,10 +1,15 @@
 <?php
 
-remove_action ('wp_head', 'wp_generator');
-/*remove  default canonical URL*/
+/*remove default link tags in wp_head including canonical link */
 remove_action( 'wp_head', 'rel_canonical');
+remove_action( 'wp_head', 'rsd_link');
+remove_action( 'wp_head', 'wlwmanifest_link');
+remove_action( 'wp_head', 'index_rel_link');
+remove_action( 'wp_head', 'wp_print_head_scripts');
+remove_action( 'wp_head', 'wp_generator');
+remove_action( 'wp_head', 'wp_shortlink_wp_head');
 
-/* Replace WP default canonical URLS to display the state-specific URL */
+/* Replace WP default canonical URLS to display the state-specific URL -- uncomment this out once I can get the above remove_action function to execute */
 
 add_action( 'wp_head', 'my_rel_canonical');
 
@@ -28,13 +33,10 @@ function my_rel_canonical() {
     echo "<link rel='canonical' href='$url' />\n";
   }
 }
-
 /**
  * add custom meta tags and title tags based on state names and pages 
  */
 //
-
-
 function hook_meta() {
   $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   $path = parse_url($url)['path'];
@@ -52,7 +54,6 @@ function hook_meta() {
   global $post;
   //if state query variable is set then set the $state variable
   $state = get_query_var('state_name', null);
-
   //define $title for Register to Vote 
   if ($page_type == "register-to-vote" && $state == null ) {
     
@@ -74,7 +75,7 @@ function hook_meta() {
     $image = $theme_uri."/dist/images/og-absentee.jpg";
   }
     
-  //define $title for states-specific absentee ballot pages
+  //define $title for state-specific absentee ballot pages
   else if ($page_type == "absentee-ballot" && $state !== "") {
     $state_name = $post->post_title;
     $title = "$state_name Absentee Ballots - VOTE.org - The Absentee Ballot Experts";
@@ -101,7 +102,6 @@ function hook_meta() {
     if (empty($description)) {
       $description = "Everything you need to vote: register to vote, check your registration status, get your absentee ballot.";
     }
-
     $image = get_post_meta($post->ID, "wpcf-meta-image", true);
     if (empty($image)) {
       $image = $theme_uri."/dist/images/og-default-square.png";
@@ -109,9 +109,8 @@ function hook_meta() {
   } 
   else if ( is_404() ) {
     $title = "404 Error Page Not Found - VOTE.org - Everything you need to vote";
-    $description = "404 Error Page Not Found | VOTE.org";
+    $description = "404 Error Page Not Found - VOTE.org";
     $image = $theme_uri."/dist/images/og-default-square.png";
-
   } else if ( is_search() ) {
     $query = get_search_query();
     $title = "Search Results for $query - VOTE.org - Everything you need to vote";
@@ -153,9 +152,5 @@ function hook_meta() {
   return $title;
   
 }
-
 //add filter to wp_title to display the $title from hook_meta() function and all meta tags
-
 add_filter('pre_get_document_title', 'hook_meta');
-
-
