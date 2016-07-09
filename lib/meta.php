@@ -56,20 +56,20 @@ function hook_meta() {
   //define $title for Register to Vote 
   if ($page_type == "register-to-vote" && $state == null ) {
     
-    $title = "Register to Vote | VOTE.org - The Voter Registration Experts";
+    $title = "Register to Vote - VOTE.org - The Voter Registration Experts";
     $description = "It takes 2 minutes to register to vote. Get started now.";
     $image = $theme_uri."/dist/images/og-register-to-vote.jpg";
   } 
   //define $title for state-specific register to vote pages
   else if ($page_type == "register-to-vote" && $state !== "") {
     $state_name = $post->post_title;
-    $title = "Register to Vote in $state_name | VOTE.org - The Voter Registration Experts";
+    $title = "Register to Vote in $state_name - VOTE.org - The Voter Registration Experts";
     $description = "It takes 2 minutes to register to vote in $state_name. Get started now.";
     $image = $theme_uri."/dist/images/og-register-to-vote.jpg";
   }
   //define $title for Get your absentee ballot page
   else if ($page_type == "absentee-ballot" && $state == "" ) {
-    $title = "Get Your Absentee Ballot | VOTE.org - The Absentee Ballot Experts";
+    $title = "Get Your Absentee Ballot - VOTE.org - The Absentee Ballot Experts";
     $description = "It takes 2 minutes to get your absentee ballot. Get started now.";
     $image = $theme_uri."/dist/images/og-absentee.jpg";
   }
@@ -77,20 +77,20 @@ function hook_meta() {
   //define $title for states-specific absentee ballot pages
   else if ($page_type == "absentee-ballot" && $state !== "") {
     $state_name = $post->post_title;
-    $title = "$state_name Absentee Ballots | VOTE.org - The Absentee Ballot Experts";
+    $title = "$state_name Absentee Ballots - VOTE.org - The Absentee Ballot Experts";
     $description = "It takes 2 minutes to get your $state_name absentee ballot. Get started now.";
     $image = $theme_uri."/dist/images/og-absentee.jpg";
   } 
   //define $title for Election Center Page
   else if ($page_type == "state" && $state == "" ) {
-    $title = "Election Center | VOTE.org";
+    $title = "Election Center - VOTE.org";
     $description = "Everything you need to vote: register to vote, check your registration status, get your absentee ballot.";
     $image = $theme_uri."/dist/images/og-default-square.png";
   }
   //define $title for state-specific election center pages
   else if ($page_type == "state" && $state !== "" ) {
     $state_name = $post->post_title;
-    $title = "$state_name Election Center | VOTE.org";
+    $title = "$state_name Election Center - VOTE.org";
     $description = "Everything you need to vote in $state_name: register to vote, check your registration status, get your absentee ballot.";
     $image = $theme_uri."/dist/images/og-default-square.png";
   }
@@ -108,20 +108,20 @@ function hook_meta() {
     }
   } 
   else if ( is_404() ) {
-    $title = "404 Error Page Not Found | VOTE.org - Everything you need to vote";
+    $title = "404 Error Page Not Found - VOTE.org - Everything you need to vote";
     $description = "404 Error Page Not Found | VOTE.org";
     $image = $theme_uri."/dist/images/og-default-square.png";
 
   } else if ( is_search() ) {
     $query = get_search_query();
-    $title = "Search Results for $query | VOTE.org - Everything you need to vote";
+    $title = "Search Results for $query - VOTE.org - Everything you need to vote";
     $description = "VOTE.org - everything you need to vote. Nonpartisan and nonprofit.";
     $image = $theme_uri."/dist/images/og-default-square.png";
      
   }
   else {
     //all other pages on site are using the defaul description and image. Adding post title to the title tag.
-    $title = $post->post_title." | VOTE.org - Everything you need to vote";
+    $title = $post->post_title." - VOTE.org - Everything you need to vote";
     //check to see if a custom meta description is set on the post, if so display that, if not display the default language
     $description = get_post_meta($post->ID, "wpcf-meta-description", true);
     if (empty($description)) {
