@@ -1,11 +1,42 @@
 <?php
 
+/*remove default link tags in wp_head including canonical link */
+remove_action( 'wp_head', 'rel_canonical');
+remove_action( 'wp_head', 'rsd_link');
+remove_action( 'wp_head', 'wlwmanifest_link');
+remove_action( 'wp_head', 'index_rel_link');
+remove_action( 'wp_head', 'wp_print_head_scripts');
+remove_action( 'wp_head', 'wp_generator');
+remove_action( 'wp_head', 'wp_shortlink_wp_head');
+
+/* Replace WP default canonical URLS to display the state-specific URL -- uncomment this out once I can get the above remove_action function to execute */
+
+add_action( 'wp_head', 'my_rel_canonical');
+
+function my_rel_canonical() {
+
+  // original code
+  if ( !is_singular() )
+    return;
+  global $wp_the_query;
+  if ( !$id = $wp_the_query->get_queried_object_id() )
+    return;
+
+  // new code - if this is a state specific page then use actual URL otherwise find permalink
+
+  $state = get_query_var('state_name', null);
+  if (isset($state)) {
+    $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    echo "<link rel='canonical' href='$url' />\n";
+  } else {
+    $url = get_permalink( $id );
+    echo "<link rel='canonical' href='$url' />\n";
+  }
+}
 /**
  * add custom meta tags and title tags based on state names and pages 
  */
 //
-
-
 function hook_meta() {
   $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   $path = parse_url($url)['path'];
@@ -23,32 +54,31 @@ function hook_meta() {
   global $post;
   //if state query variable is set then set the $state variable
   $state = get_query_var('state_name', null);
-
   //define $title for Register to Vote 
   if ($page_type == "register-to-vote" && $state == null ) {
     
-    $title = "Register to Vote | VOTE.org - The Voter Registration Experts";
+    $title = "Register to Vote - VOTE.org - The Voter Registration Experts";
     $description = "It takes 2 minutes to register to vote. Get started now.";
     $image = $theme_uri."/dist/images/og-register-to-vote.jpg";
   } 
   //define $title for state-specific register to vote pages
   else if ($page_type == "register-to-vote" && $state !== "") {
     $state_name = $post->post_title;
-    $title = "Register to Vote in $state_name | VOTE.org - The Voter Registration Experts";
+    $title = "Register to Vote in $state_name - VOTE.org - The Voter Registration Experts";
     $description = "It takes 2 minutes to register to vote in $state_name. Get started now.";
     $image = $theme_uri."/dist/images/og-register-to-vote.jpg";
   }
   //define $title for Get your absentee ballot page
   else if ($page_type == "absentee-ballot" && $state == "" ) {
-    $title = "Get Your Absentee Ballot | VOTE.org - The Absentee Ballot Experts";
+    $title = "Get Your Absentee Ballot - VOTE.org - The Absentee Ballot Experts";
     $description = "It takes 2 minutes to get your absentee ballot. Get started now.";
     $image = $theme_uri."/dist/images/og-absentee.jpg";
   }
     
-  //define $title for states-specific absentee ballot pages
+  //define $title for state-specific absentee ballot pages
   else if ($page_type == "absentee-ballot" && $state !== "") {
     $state_name = $post->post_title;
-    $title = "$state_name Absentee Ballots | VOTE.org - The Absentee Ballot Experts";
+    $title = "$state_name Absentee Ballots - VOTE.org - The Absentee Ballot Experts";
     $description = "It takes 2 minutes to get your $state_name absentee ballot. Get started now.";
     $image = $theme_uri."/dist/images/og-absentee.jpg";
   } 
@@ -72,27 +102,25 @@ function hook_meta() {
     if (empty($description)) {
       $description = "Everything you need to vote: register to vote, check your registration status, get your absentee ballot.";
     }
-
     $image = get_post_meta($post->ID, "wpcf-meta-image", true);
     if (empty($image)) {
       $image = $theme_uri."/dist/images/og-default-square.png";
     }
   } 
   else if ( is_404() ) {
-    $title = "404 Error Page Not Found | VOTE.org - Everything you need to vote";
-    $description = "404 Error Page Not Found | VOTE.org";
+    $title = "404 Error Page Not Found - VOTE.org - Everything you need to vote";
+    $description = "404 Error Page Not Found - VOTE.org";
     $image = $theme_uri."/dist/images/og-default-square.png";
-
   } else if ( is_search() ) {
     $query = get_search_query();
-    $title = "Search Results for $query | VOTE.org - Everything you need to vote";
+    $title = "Search Results for $query - VOTE.org - Everything you need to vote";
     $description = "VOTE.org - everything you need to vote. Nonpartisan and nonprofit.";
     $image = $theme_uri."/dist/images/og-default-square.png";
      
   }
   else {
     //all other pages on site are using the defaul description and image. Adding post title to the title tag.
-    $title = $post->post_title." | VOTE.org - Everything you need to vote";
+    $title = $post->post_title." - VOTE.org - Everything you need to vote";
     //check to see if a custom meta description is set on the post, if so display that, if not display the default language
     $description = get_post_meta($post->ID, "wpcf-meta-description", true);
     if (empty($description)) {
@@ -124,10 +152,5 @@ function hook_meta() {
   return $title;
   
 }
-
 //add filter to wp_title to display the $title from hook_meta() function and all meta tags
-
 add_filter('pre_get_document_title', 'hook_meta');
-
-
-
