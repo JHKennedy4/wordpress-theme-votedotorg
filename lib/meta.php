@@ -84,14 +84,14 @@ function hook_meta() {
   } 
   //define $title for Election Center Page
   else if ($page_type == "state" && $state == "" ) {
-    $title = "Everything you need to vote - Vote.org";
+    $title = "Vote.org Election Center - Everything you need to vote";
     $description = "Everything you need to vote: register to vote, check your registration status, get your absentee ballot.";
     $image = $theme_uri."/dist/images/og-default-square.png";
   }
   //define $title for state-specific election center pages
   else if ($page_type == "state" && $state !== "" ) {
     $state_name = $post->post_title;
-    $title = "Everything you need to vote in $state_name - Vote.org";
+    $title = "$state_name Election Center - Vote.org";
     $description = "Everything you need to vote in $state_name: register to vote, check your registration status, get your absentee ballot.";
     $image = $theme_uri."/dist/images/og-default-square.png";
   }
