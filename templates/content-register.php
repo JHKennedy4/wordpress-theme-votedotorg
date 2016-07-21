@@ -54,11 +54,10 @@ if (isset($wp_query->query_vars['state_name'])) {
 
 <section class="voter-registration-guide">
   <div class="container">
-    <h2><?php the_title(); ?> voter registration guide</h2>
 
     <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
 
-    <h3><?php the_title(); ?> voter registration deadlines</h3>
+    <h2><?php the_title(); ?> voter registration deadlines</h2>
     <ul>
       <li><strong>In Person:</strong> <?php echo types_render_field("voter-registration-deadline-in-person");?></li>
       <li><strong>By Mail:</strong> <?php echo types_render_field("voter-registration-deadline-by-mail");?></li>
@@ -75,10 +74,10 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <?php }  ?>
 
-    <h3><?php the_title(); ?> voter registration rules</h3>
+    <h2><?php the_title(); ?> voter registration rules</h2>
 
     <?php echo types_render_field("voter-registration-rules");?>
-    <h3><?php the_title(); ?> voter registration directions</h3>
+    <h2><?php the_title(); ?> voter registration directions</h2>
 
     <?php echo types_render_field("how-to-register-to-vote");?>
 
