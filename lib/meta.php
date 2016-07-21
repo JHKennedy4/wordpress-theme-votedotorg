@@ -1,6 +1,9 @@
 <?php
 
 /*remove default link tags in wp_head including canonical link */
+add_action('init', function () {
+    remove_action('wp_head', 'Roots\\Soil\\CleanUp\\rel_canonical');
+}, 15); // $priority = 15 ensures that it's running after Soil. This tells SOIL Plugin not to add their default canonical URL
 remove_action( 'wp_head', 'rel_canonical');
 remove_action( 'wp_head', 'rsd_link');
 remove_action( 'wp_head', 'wlwmanifest_link');
