@@ -1,8 +1,10 @@
-@import "common/variables";
+
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 // endbower
+
+@import "common/variables";
 @import "common/reset";
 @import "common/global";
 @import "components/buttons";
@@ -15,4 +17,5 @@
 @import "layouts/tinymce";
 @import "ie";
 @import "common/uswds";
+
 
