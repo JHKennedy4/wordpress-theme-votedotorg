@@ -30,7 +30,6 @@
            <th class="state">State</th>
            <th>In-Person Voter ID Laws</th>
            <th>Absentee Voter ID Laws</th>
-           <th>Get Started</th>
           </tr>
          </thead>
          <tbody>
@@ -49,10 +48,6 @@
               <td class="state-name"><p><a href="/<?php echo $state_slug; ?>"><?php echo $state_name; ?></a></p></td>
               <td data-title="Voter ID Requirements - In Person"><?php echo types_render_field('voter-id-requirements-in-person');?></td>
               <td data-title="Voter ID Requirements - Absentee"><?php echo types_render_field('voter-id-requirements-absentee');?></td>
-              <td>
-                <p><a href="//register.vote.org/<?php echo '?state='.urlencode($state_name); ?>">Register to vote </a></p>
-                <p><a href="//absentee.vote.org/<?php echo '?state='.urlencode($state_name); ?>">Get your absentee ballot</a></p>
-              </td>
             </tr>
             <?php endwhile; 
               wp_reset_postdata();

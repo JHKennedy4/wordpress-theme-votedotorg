@@ -31,8 +31,6 @@ $state_loop = new WP_Query( array(
 
 ?>
 
-    <?php get_template_part('templates/content-hero'); ?>
-
     <?php 
     if ( $state_loop->have_posts() ) : 
       while ( $state_loop->have_posts() ) : 
