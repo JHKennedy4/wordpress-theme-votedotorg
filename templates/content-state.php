@@ -51,8 +51,11 @@ $state_loop = new WP_Query( array(
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-20'><h4>Voter registration deadlines</h4></button>
                 <div id='collapsible-20' aria-hidden='true' class='answer usa-accordion-content'>
-                  If you register by mail: <?php echo types_render_field('voter-registration-deadline-by-mail');?><br />
-                  If you register in-person: <?php echo types_render_field('voter-registration-deadline-in-person');?>
+                    <ul>
+      				<li><strong>In Person:</strong> <?php echo types_render_field("voter-registration-deadline-in-person");?></li>
+      				<li><strong>By Mail:</strong> <?php echo types_render_field("voter-registration-deadline-by-mail");?></li>
+      				<li><strong>Online:</strong> <?php echo types_render_field("voter-registration-deadline-online");?></li>
+    				</ul>
                 </div>
               </li>
 
@@ -92,8 +95,10 @@ $state_loop = new WP_Query( array(
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-16'><h4>Absentee ballot deadlines</h4></button>
                 <div id='collapsible-16' aria-hidden='true' class='answer usa-accordion-content'>
-                  Absentee ballot application deadline: <?php echo types_render_field('absentee-ballot-application-deadline');?>
-                  Voted ballots are due: <?php echo types_render_field('voted-absentee-ballot-deadline');?>
+					<ul>
+                  	<li><strong>Absentee ballot application deadline:</strong> <?php echo types_render_field('absentee-ballot-application-deadline');?></li>
+                  	<li><strong>Voted ballots are due:</strong> <?php echo types_render_field('voted-absentee-ballot-deadline');?></li>
+					</ul>
                 </div><!--.answer-->
               </li>
               <li> 
@@ -129,11 +134,16 @@ $state_loop = new WP_Query( array(
 
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
-
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><h4>Early voting calendar in <?php echo $state_name; ?></h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'>
+				<h4>Early voting starts in <?php echo $state_name; ?></h4></button>
                 <div id='collapsible-11' aria-hidden='true' class='answer usa-accordion-content'>
                   Early voting starts: <?php echo types_render_field('early-voting-begins');?>
+              </li>
+			<li>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-30'>
+				<h4>Early voting ends in <?php echo $state_name; ?></h4></button>
+                <div id='collapsible-30' aria-hidden='true' class='answer usa-accordion-content'>
                   Early voting ends: <?php echo types_render_field('early-voting-ends');?></div>
               </li>
             </ul>
