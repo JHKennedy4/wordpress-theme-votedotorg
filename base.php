@@ -20,11 +20,6 @@ use Roots\Sage\Wrapper;
       </div>
     <![endif]-->
     <?php 
-   //  if( is_home() || is_front_page() || is_page( $page = "states") ) : 
-   //  do_action('get_header');
-   //   get_template_part('templates/header-home');
-   
-   // else : 
 
      do_action('get_header');
       get_template_part('templates/header');
