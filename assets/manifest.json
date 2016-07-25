@@ -33,6 +33,6 @@
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "localhost:8888"
   }
 }
