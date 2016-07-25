@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 5.12.0
+
+dependencies:
+  pre:
+    - sudo apt-get install -y expect lftp
+
+deployment:
+  staging:
+    owner: votedotorg
+    branch: test-circle
+    commands:
+      - gulp --production
