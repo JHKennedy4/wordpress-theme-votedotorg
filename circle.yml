@@ -3,8 +3,11 @@ machine:
     version: 5.12.0
 
 dependencies:
-  pre:
+  override:
     - sudo apt-get install -y expect lftp
+    - npm install -g gulp bower
+    - npm install
+    - bower install
 
 deployment:
   staging:
