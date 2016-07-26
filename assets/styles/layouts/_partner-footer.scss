@@ -1,0 +1,11 @@
+.partner-footer {
+  width: 100%;
+  height: 100%;
+  background-color: #0071bc;
+  color: white;
+  display: flex;
+  &__section {
+    min-width: 50%;
+    padding: 15px;
+  }
+}

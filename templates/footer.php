@@ -105,5 +105,31 @@
     </div><!--.mixpanel-->
     <div class="clear-fix"></div>
   </div><!--.container-->
+  <div class="partner-footer">
+    <div class="partner-footer__section">
+      <h4>Free online tools</h4>
+      <div>
+        <div class="descriptive-copy">
+          Use Vote.org's software on your website and help improve voter turnout.
+        </div>
+        <a class="usa-button-outline-inverse">
+          Learn more.
+        </a>
+      </div>
+
+    </div>
+    <div class="partner-footer__section">
+      <h4>VIP partner solutions</h4>
+      <div>
+        <div class="descriptive-copy">
+          The best campaign organizations deserve the best civic engagement software. Higher conversion rates and better data await.
+        </div>
+        <a class="usa-button-outline-inverse">
+          Learn more.
+        </a>
+      </div>
+
+    </div>
+  </div>
 
 </footer>
