@@ -14,6 +14,5 @@ deployment:
     owner: votedotorg
     branch: test-circle
     commands:
-      - mkdir bower_components
       - gulp --production
       # - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -c "mirror --verbose --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/"
