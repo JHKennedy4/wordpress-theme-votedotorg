@@ -9,10 +9,13 @@ dependencies:
     - npm install
     - bower install
 
+test:
+  override:
+    - gulp --production
+
 deployment:
   staging:
     owner: votedotorg
     branch: master
     commands:
-      - gulp --production
       - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -e "mirror --exclude node_modules -exclude bower_components --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/; quit"
