@@ -15,4 +15,4 @@ deployment:
     branch: master
     commands:
       - gulp --production
-      - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -e "mirror --verbose --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/; quit"
+      - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -e "mirror --exclude node_modules -exclude bower_components --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/; quit"
