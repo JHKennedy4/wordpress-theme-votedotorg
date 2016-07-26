@@ -87,23 +87,54 @@
 </section><!--.call-to-action-->
 
 <footer>
-  <div class="container">
-    
-    <div class="legalese">
-      <p>VOTE.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.</p>
-    </div><!--.legalese-->
-    <div class="links">
-      <ul>
-        <li><a href="/terms">Terms</a></li>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      
-    </div><!--.links-->
-    <div class="mixpanel">
+  
+  <!--div class="partner-footer-container">
+  <div class="partner-footer">
+    <div class="partner-footer__section">
+      <h4>Free online tools</h4>
+      <div class="flex-container">
+        <div class="descriptive-copy">
+          Use Vote.org's software on your website and help improve voter turnout.
+        </div>
+        <div class="partner-cta">
+          <a class="usa-button usa-button-outline-inverse">
+            Learn more.
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-footer__section">
+      <h4>VIP partner solutions</h4>
+      <div class="flex-container">
+        <div class="flex-item descriptive-copy">
+          The best campaign organizations deserve the best civic engagement software. Higher conversion rates and better data await.
+        </div>
+        <div class="partner-cta">
+          <a class="usa-button usa-button-outline-inverse">
+            Learn more.
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div-->
+
+  <div class="legal-container container flex-container">
+    <div class="flex-item">
+      <div class="legalese">
+        <p>VOTE.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.</p>
+      </div><!--.legalese-->
+      <div class="links">
+        <ul>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div><!--.links-->
+    </div>
+    <div class="flex-item">
       <a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
     </div><!--.mixpanel-->
-    <div class="clear-fix"></div>
   </div><!--.container-->
-
 </footer>

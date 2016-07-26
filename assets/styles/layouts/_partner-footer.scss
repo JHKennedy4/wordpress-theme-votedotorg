@@ -1,0 +1,16 @@
+.partner-footer {
+  @extend .container;
+  color: white;
+  display: flex;
+  &__section {
+    min-width: 50%;
+    padding: 15px 0;
+    margin-bottom: 1.5em;
+  }
+}
+
+.partner-footer-container {
+  width: 100%;
+  height: 100%;
+  background-color: #0071bc;
+}

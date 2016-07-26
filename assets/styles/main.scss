@@ -2,20 +2,24 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
+@import "../../bower_components/normalize-scss/sass/_normalize.scss";
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
 @import "common/variables";
 @import "common/reset";
 @import "common/global";
+@import "common/utility";
 @import "components/buttons";
 @import "components/forms";
+@import "components/legal-container";
 @import "layouts/sidebar";
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/partner-footer";
 @import "ie";
-@import "common/uswds";
-
-
+@import "usds-styles/all";
