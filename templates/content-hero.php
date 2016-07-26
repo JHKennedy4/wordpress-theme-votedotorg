@@ -26,7 +26,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 ?>
 <section class="hero">
   <div class="container">
-    <h2 class="logo">VOTE.org</h2>
+    <h1 class="usa-display">VOTE.org</h1>
     <?php if ($state_name !== "") { ?>
 
     <h1 class="state-election-center"><?php echo $state_name;?> Election Center</h1>
