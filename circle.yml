@@ -19,3 +19,8 @@ deployment:
     branch: master
     commands:
       - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -e "mirror --exclude node_modules -exclude bower_components --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/; quit"
+  production:
+    owner: votedotorg
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -e "mirror --exclude node_modules -exclude bower_components --only-newer --reverse ./ webapps/production/wp-content/themes/votedotorg/; quit"
