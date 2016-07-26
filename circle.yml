@@ -12,7 +12,7 @@ dependencies:
 deployment:
   staging:
     owner: votedotorg
-    branch: test-circle
+    branch: master
     commands:
       - gulp --production
-      # - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -c "mirror --verbose --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/"
+      - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -c "mirror --verbose --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/"
