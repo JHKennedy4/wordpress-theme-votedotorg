@@ -39,14 +39,15 @@ if (isset($wp_query->query_vars['state_name'])) {
     <div class="boxes">
       <div class="box">
         <div class="register-line"></div>
-        <h2>Make your voice heard in this election.</h2>
+        <h2>It takes less than 2 minutes to register.</h2>
+
         <a class="usa-button usa-button-secondary" href="/register-to-vote/<?php if ($state !== "") { echo $state; }?>">Register to vote</a>
       </div><!--.box-->
 
       <div class="box">
         <div class="check-registration-line"></div>
         <h2>Find out if you are registered to vote.</h2>
-        <a class="usa-button usa-button-secondary" href="/am-i-registered-to-vote/">Check your registration status</a>
+        <a class="usa-button usa-button-secondary" href="/am-i-registered-to-vote/">Check registration status</a>
       </div><!--.box-->
       <div class="box">
         <div class="mail-line"></div>

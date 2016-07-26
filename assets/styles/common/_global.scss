@@ -33,19 +33,6 @@ h1, h2, h3, h4, a.logo {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2 {
-  font-family: $font-serif;
-  color: $primarydarker;  
-  margin-bottom: 1em;
-}
-
-h2 {
-  font-size: 30px;
-  line-height: 39px;
-}
-h3, h4, h5 {
-  font-family: $font-sans;
-}
 h3 {
   font-size: 30px;
   line-height: 39px;
@@ -60,6 +47,7 @@ h5 {
   font-size: 17px;
   line-height: 27px;
 }
+
 ul, ol {
   margin: 20px 0 20px 20px;
   list-style: initial;
@@ -84,7 +72,6 @@ ul {
 
 p, li {
   font-size: 17px;
-  line-height: 25px;
 }
 p {
   margin-bottom: 20px;
