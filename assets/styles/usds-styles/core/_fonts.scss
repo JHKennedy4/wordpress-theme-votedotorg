@@ -1,0 +1,71 @@
+@include font-face(
+  'ClearSans',
+  '../fonts/ClearSans-Light-webfont',
+  300,
+  normal,
+  $asset-pipeline: false,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'ClearSans',
+  '../fonts/ClearSans-Regular-webfont',
+  400,
+  normal,
+  $asset-pipeline: false,
+  $file-formats: eot woff ttf
+);
+
+@include font-face(
+  'ClearSans',
+  '../fonts/ClearSans-Italic-webfont',
+  400,
+  italic,
+  $asset-pipeline: false,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'ClearSans',
+  '../fonts/ClearSans-Bold-webfont',
+  700,
+  normal,
+  $asset-pipeline: false,
+  $file-formats: eot woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  '../fonts/merriweather-light-webfont',
+  300,
+  normal,
+  $asset-pipeline: false,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  '../fonts/merriweather-regular-webfont',
+  400,
+  normal,
+  $asset-pipeline: false,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  '../fonts/merriweather-italic-webfont',
+  400,
+  italic,
+  $asset-pipeline: false,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  '../fonts/merriweather-bold-webfont',
+  700,
+  normal,
+  $asset-pipeline: false,
+  $file-formats: eot woff2 woff ttf
+);

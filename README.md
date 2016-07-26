@@ -1,3 +1,23 @@
+Installation Steps:
+Download Wordpress to wherever you'd like it to live
+Clone Theme into themes directory
+`brew install mysql`
+configure apache to serve php by uncommenting the php5_modrewrite rule
+Comment out the Listen 80 line
+Set up directory rules in your user.conf
+export production database
+import production database locally
+set up mysql user for wp database
+create wp database
+configure wordpress installation
+select vote.org theme
+profit.
+This should be a script
+
+
+Then do the stuff below
+
+
 # [Sage](https://roots.io/sage/)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)

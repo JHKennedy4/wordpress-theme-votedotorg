@@ -7,7 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    
+    "normalize-scss": "normalize.scss#^5.0.3",
+    "bourbon": "^4.2.7",
+    "neat": "^1.8.0"
   },
   "overrides": {
     "bootstrap-sass": {
