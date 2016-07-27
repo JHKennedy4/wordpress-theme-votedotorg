@@ -22,8 +22,8 @@ if (isset($wp_query->query_vars['state_name'])) {
   ) ); ?>
 <?php if ( $state_loop->have_posts() ) : while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', 'register'); ?>
-  <?php get_template_part('templates/content', 'share'); ?>
   <?php get_template_part('templates/quicklinks','register'); ?>
+    <?php get_template_part('templates/content', 'share'); ?>
 <?php endwhile; else: ?>
   <?php get_template_part('templates/content', 'register'); ?>
   <?php get_template_part('templates/quicklinks','register'); ?>
