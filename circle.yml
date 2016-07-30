@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   override:
-    - sudo apt-get install -y expect lftp
+    - sudo apt-get install -y expect
     - npm install -g gulp bower
     - npm install
     - bower install
@@ -18,9 +18,9 @@ deployment:
     owner: votedotorg
     branch: master
     commands:
-      - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -e "mirror --exclude node_modules -exclude bower_components --only-newer --reverse ./ webapps/stage/wp-content/themes/votedotorg/; quit"
+      - ./deploy.exp $FTP_HOST $FTP_USER $FTP_PASS stage
   production:
     owner: votedotorg
     tag: /v[0-9]+(\.[0-9]+)*/
     commands:
-      - lftp -u votedotorg,${FTP_PASS} $FTP_HOST -e "mirror --exclude node_modules -exclude bower_components --only-newer --reverse ./ webapps/production/wp-content/themes/votedotorg/; quit"
+      - ./deploy.exp $FTP_HOST $FTP_USER $FTP_PASS production
