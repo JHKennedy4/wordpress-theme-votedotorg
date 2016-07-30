@@ -7,7 +7,7 @@ set PASS [lindex $argv 2];
 set ENVIRON [lindex $argv 3];
 
 ## execute rsync command
-spawn rsync --progress -varplze "ssh -o StrictHostKeyChecking=no" --exclude node_modules --exclude bower_components ./* deploy@$HOST:/home/votedotorg/webapps/${ENVIRON}/wp-content/themes/votedotorg/
+spawn rsync --progress -varplze "ssh -o StrictHostKeyChecking=no" --exclude node_modules --exclude bower_components ./ deploy@$HOST:/home/votedotorg/webapps/${ENVIRON}/wp-content/themes/votedotorg/
 
 ## handle password prompt
 # expect "deploy@$HOST's password:"
