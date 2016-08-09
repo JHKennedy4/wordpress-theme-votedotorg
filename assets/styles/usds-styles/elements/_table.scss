@@ -4,6 +4,7 @@ table {
   min-width: 100%;
 
   thead {
+    vertical-align: top;
     th {
       background-color: $color-gray-lightest;
     }
