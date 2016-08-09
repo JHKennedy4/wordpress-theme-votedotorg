@@ -32,11 +32,9 @@ p {
 }
 
 ul li {
-  display: table-row;
 
   &::before {
     content: '\2022';
-    display: table-cell;
     padding-right: 0.4em;
   }
 }

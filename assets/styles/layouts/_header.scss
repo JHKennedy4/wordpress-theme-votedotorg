@@ -140,7 +140,10 @@ div.mobile-only.nav-menu {
       a.logo {
         line-height: 70px;
         height: 70px;
-        width: 107.875px;
+        width: 80px;
+        @media only screen and (min-width: 980px) {
+          width: 107.875px;
+        }
       }
     }
     ul.tablet.nav-menu {
@@ -212,11 +215,3 @@ div.mobile-only.nav-menu {
     }
   }
 }
-
-
-
-@media only screen and (min-width: 1440px) {
-
-  
-}
-
