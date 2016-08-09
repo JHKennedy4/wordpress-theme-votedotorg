@@ -40,11 +40,9 @@ ul li {
 
 ol li {
   counter-increment: table-ol;
-  display: table-row;
 
   &::before {
     content: counter(table-ol) '.';
-    display: table-cell;
     padding-right: 0.4em;
     text-align: right;
   }
