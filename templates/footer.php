@@ -98,7 +98,7 @@
         </div>
         <div class="partner-cta xflex-item">
           <a href="/technology" class="usa-button usa-button-outline-inverse">
-            Learn more.
+            Learn more
           </a>
         </div>
       </div>
@@ -108,11 +108,11 @@
       <h4>VIP partner solutions</h4>
       <div class="xflex-container">
         <div class="descriptive-copy">
-          The best campaign organizations deserve the best civic engagement software. Higher conversion rates and better data await.
+         Turbocharge your GOTV efforts with Vote.org's award winning software. Higher conversion rates and better data await.
         </div>
         <div class="partner-cta xflex-item">
           <a href="https://vip.vote.org/" class="usa-button usa-button-outline-inverse">
-            Learn more.
+            Learn more
           </a>
         </div>
       </div>
