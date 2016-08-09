@@ -33,7 +33,5 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div>
     </section>
 
-    <section>
     <?php get_template_part('templates/quicklinks', 'state'); ?>
-    </section>
 
