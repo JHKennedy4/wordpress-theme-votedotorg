@@ -1,39 +1,38 @@
 //*Mobile *//
 
 footer {
-  p, a {
-    font-size: 13px;
-    line-height: 1.25em;
+  ul {
+    margin: 20px 0;
   }
-  a {
-    text-decoration: none;
-  }
-  div.links, div.mixpanel {
-    text-align: center;
-    ul {
-      list-style: none;
-      width: 100%;
-      margin-top: 0;
-      margin-left: 0;
+  li {
+    list-style: none;
+    &::before {
+      content: "";
+      padding: 0;
     }
-    li {
-      text-align: center;
-      a {
-        font-size: 13px;
-      }
-      &::before {
-        content: "";
-        padding: 0;
-      }
-    }
-  }
-  div.legalese p {
-    text-align: center;
-    margin-top: 0;
   }
 }
 
-//*Tablet*/
+.legal-container {
+  li {
+    text-align: center;
+  }
+  &__row {
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.legalese {
+  margin-bottom: 5px;
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    width: auto;
+    margin: 0 5px 5px 0px;
+  }
+}
 
 @media only screen and (min-width: 768px) {
  footer {
@@ -72,10 +71,7 @@ footer {
      }
    }
    div.legalese {
-     margin: 0 0 5px 0px;
      text-align: left;
-     float: left;
-     width: 653px;
      p {
        text-align: left;
        margin-bottom: 0px;
@@ -90,9 +86,6 @@ footer {
  footer {
   .container {
    width: 980px;
-  }
-  div.legalese {
-    width: auto;
   }
  }
 }

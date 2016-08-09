@@ -2,10 +2,28 @@
   @extend .container;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   &__section {
-    min-width: 50%;
-    padding: 15px 0;
-    margin-bottom: 1.5em;
+    width: 100%;
+    margin: 0 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    &:last-of-type {
+      border-top: 1px solid $color-primary-darkest;
+    }
+    @include media($mid-screen) {
+      padding-bottom: 1.5em;
+      text-align: left;
+      width: calc(50% - 15px);
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        border-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
   }
 }
 
