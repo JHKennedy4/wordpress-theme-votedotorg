@@ -114,6 +114,7 @@ section.quote {
       top: 32px;
       left: -50%;
       display: inline-block;
+      content: '';
     }
     &::after {
       background: url('../images/right-quote.jpg') no-repeat 50%;
@@ -125,6 +126,7 @@ section.quote {
       right: -6%;
       display: inline-block;
       float: right;
+      content: '';
     }
   }
   .attribution {

@@ -7,8 +7,8 @@
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
+@import "usds-styles/all";
 @import "common/variables";
-@import "common/reset";
 @import "common/global";
 @import "common/utility";
 @import "components/buttons";
@@ -22,4 +22,3 @@
 @import "layouts/tinymce";
 @import "layouts/partner-footer";
 @import "ie";
-@import "usds-styles/all";

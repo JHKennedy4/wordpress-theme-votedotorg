@@ -1,40 +1,25 @@
 //*Mobile *//
 
 footer {
-  p, a {
-    font-size: 13px;
-    line-height: 1.25em;
-  }
-  a {
-    text-decoration: none;
-  }
-  div.links, div.mixpanel {
-    text-align: center;
-    ul {
-      list-style: none;
-      width: 100%;
-      margin-top: 0;
-      margin-left: 0;
+  li {
+    &::before {
+      content: "";
+      padding: 0;
     }
-    li {
-      text-align: center;
-      a {
-        font-size: 13px;
-      }
-      &::before {
-        content: "";
-        padding: 0;
-      }
-    }
-  }
-  div.legalese p {
-    text-align: center;
-    margin-top: 0;
   }
 }
 
-//*Tablet*/
+.legal-container {
+  li {
+    text-align: center;
+  }
+}
 
+.legalese {
+  @include media($medium-screen) {
+    min-width: 100%;
+  }
+}
 @media only screen and (min-width: 768px) {
  footer {
   .container {
