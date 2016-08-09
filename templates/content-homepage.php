@@ -33,13 +33,7 @@ if (isset($wp_query->query_vars['state_name'])) {
       </div>
     </section>
 
+    <section>
     <?php get_template_part('templates/quicklinks', 'state'); ?>
-
-
-    <section class="sharing">
-      <div class="container">
-        <h4>Every person who shares helps us reach three more voters.</h4>
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <div class="addthis_jumbo_share"></div>
-      </div>
     </section>
+
