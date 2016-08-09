@@ -17,13 +17,23 @@ footer {
   li {
     text-align: center;
   }
+  &__row {
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .legalese {
-  @include media($medium-screen) {
-    min-width: 100%;
+  margin-bottom: 5px;
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    width: auto;
+    margin: 0 5px 5px 0px;
   }
 }
+
 @media only screen and (min-width: 768px) {
  footer {
   .container {
@@ -61,10 +71,7 @@ footer {
      }
    }
    div.legalese {
-     margin: 0 0 5px 0px;
      text-align: left;
-     float: left;
-     width: 653px;
      p {
        text-align: left;
        margin-bottom: 0px;
@@ -79,9 +86,6 @@ footer {
  footer {
   .container {
    width: 980px;
-  }
-  div.legalese {
-    width: auto;
   }
  }
 }

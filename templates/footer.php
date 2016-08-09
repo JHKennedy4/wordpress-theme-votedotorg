@@ -121,7 +121,7 @@
 </div>
 
   <div class="legal-container container ">
-    <div class="legal-container__row flex-container flex-wrap">
+    <div class="legal-container__row flex-container">
       <div class="legalese">
         VOTE.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.
       </div><!--.legalese-->
