@@ -1,0 +1,23 @@
+#!/usr/bin/expect
+
+## set variables
+set HOST [lindex $argv 0];
+set USER [lindex $argv 1];
+set PASS [lindex $argv 2];
+set ENVIRON [lindex $argv 3];
+
+## execute rsync command
+spawn rsync --progress -varplze "ssh -o StrictHostKeyChecking=no" --exclude node_modules --exclude bower_components --exclude .git ./ deploy@$HOST:/home/votedotorg/webapps/${ENVIRON}/wp-content/themes/votedotorg/
+
+## handle password prompt
+# expect "deploy@$HOST's password:"
+sleep 5
+expect {
+    timeout { send_user "\nCould not connect to remote system\n"; exit 1 }
+    eof { send_user "\nSSH failure for $HOST\n"; exit 1 }
+    "${USER}@${HOST}'s password: " {
+        send_user "Entering password...\n"
+        send "$PASS\r"
+    }
+}
+expect eof
