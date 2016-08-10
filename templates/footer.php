@@ -90,7 +90,7 @@
   <div class="partner-footer-container">
   <div class="partner-footer">
     <div class="partner-footer__section">
-      <h4>Free online tools</h4>
+      <h3>Free online tools</h3>
       <div class="xflex-container">
         <div class="descriptive-copy">
           Use Vote.org's software on your website and help improve voter turnout.
@@ -104,7 +104,7 @@
     </div>
 
     <div class="partner-footer__section">
-      <h4>VIP partner solutions</h4>
+      <h3>VIP partner solutions</h3>
       <div class="xflex-container">
         <div class="descriptive-copy">
          Turbocharge your GOTV efforts with Vote.org's award winning software. Higher conversion rates and better data await.
