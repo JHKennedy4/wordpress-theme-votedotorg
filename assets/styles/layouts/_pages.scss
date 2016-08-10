@@ -508,8 +508,10 @@ section.quicklinks {
 
 
 // Make homepage button font smaller
-.usa-button .usa-button-secondary {
-  font-size: 18px !important;
+.section.hero .box .usa-button {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 0;
 }
 
 
