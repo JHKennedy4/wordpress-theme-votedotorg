@@ -3,7 +3,7 @@
 <section class="quick-links desktop">
 
   <div class="container">
-    <h2>Find everything you need to vote in our state election centers</h2>
+    <h3>Find everything you need to vote in our state election centers</h3>
     <div class="links-column">   
       <ul>
         <li><a href="/state/alabama">Alabama election center</a></li>
