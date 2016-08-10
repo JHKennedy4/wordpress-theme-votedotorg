@@ -1,3 +1,4 @@
+<header>
 <nav class="usa-site-navbar">
   <div class="container">
     
@@ -79,4 +80,5 @@
   </div> <!--.usa-accordion-->
 </div><!--.mobile.nav-menu-->
 <div class="clear-fix"></div>
+</header>
 
