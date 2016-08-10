@@ -28,7 +28,7 @@ if (isset($wp_query->query_vars['state_name'])) {
     <section class="sharing">
       <div class="container">
         <h2>Americans want to vote.</h2>
-        <p>Vote.org knows that Americans want to vote, and that there are millions of Americans who want to vote -- and who will vote consistently -- as voting becomes easier and more convenient.</p>
+        <p>40% of nonvoters are already registered to vote. Vote.org knows that these Americans want to vote -- and will vote consistently -- as voting becomes easier and more convenient.</p>
         <a href="/about">Learn more about Vote.org</a>
       </div>
     </section>
