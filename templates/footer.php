@@ -120,15 +120,11 @@
 </div>
 
   <div class="legal-container container ">
-    <div class="legal-container__row flex-container">
       <div class="legalese">
         VOTE.org is a 501(c)(3) registered non-profit organization and does not support or oppose any political candidate or party.
-       <br />
+        <br />
         <a href="/terms">Terms</a> | <a href="/privacy">Privacy</a> | <a href="/contact">Contact</a>
-      </div><!--.legalese-->
-      <div class="flex-item">
+      </div>
         <a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-      </div><!--.mixpanel-->
-    </div>
   </div><!--.container-->
 </footer>
