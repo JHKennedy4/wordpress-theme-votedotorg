@@ -20,12 +20,11 @@ if (isset($wp_query->query_vars['state_name'])) {
     'posts_per_page' => 1
 
   ) ); ?>
-<?php if ( $state_loop->have_posts() ) : while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', 'register'); ?>
-  <?php get_template_part('templates/quicklinks','register'); ?>
-    <?php get_template_part('templates/content', 'share'); ?>
-<?php endwhile; else: ?>
-  <?php get_template_part('templates/content', 'register'); ?>
-  <?php get_template_part('templates/quicklinks','register'); ?>
+<?php while (have_posts()) : the_post(); ?>
 
-<?php endif; ?>
+    <?php get_template_part('templates/content', 'register'); ?>
+    <?php get_template_part('templates/quicklinks','register'); ?>
+    <?php get_template_part('templates/content', 'share'); ?>
+
+<?php endwhile?>
+
