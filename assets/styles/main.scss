@@ -7,18 +7,40 @@
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
-@import "usds-styles/all";
-@import "common/variables";
-@import "common/global";
-@import "common/utility";
-@import "components/buttons";
-@import "components/forms";
-@import "components/legal-container";
-@import "layouts/sidebar";
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
-@import "layouts/partner-footer";
-@import "ie";
+@import 'usds-core/defaults';
+@import 'variables';
+
+@import 'usds-core/fonts';
+@import 'usds-core/base';
+@import 'usds-core/grid-settings';
+@import 'usds-core/grid';
+@import 'usds-core/utilities';
+@import 'usds-elements/buttons';
+@import 'usds-elements/figure';
+@import 'usds-elements/inputs';
+@import 'usds-elements/labels';
+@import 'usds-elements/list';
+@import 'usds-elements/table';
+@import 'usds-elements/typography';
+@import 'usds-components/accordions';
+@import 'usds-components/alerts';
+@import 'usds-components/disclaimer';
+@import 'usds-components/footer';
+@import 'usds-components/forms';
+// @import 'usds-components/search';
+// @import 'usds-components/sidenav';
+@import 'usds-components/skipnav';
+@import "sage-common/global";
+@import "sage-common/utility";
+@import "sage-components/buttons";
+@import "sage-components/forms";
+@import "sage-components/legal-container";
+@import "sage-layouts/header";
+@import "sage-layouts/footer";
+@import "sage-layouts/pages";
+@import "partials/content-search";
+@import "partials/tinymce";
+@import "partials/partner-footer";
+@import "partials/ie";
+
+@import 'debra';
