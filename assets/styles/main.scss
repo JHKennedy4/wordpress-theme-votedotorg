@@ -8,7 +8,8 @@
 // endbower
 
 @import 'usds-styles-core/defaults';
-@import 'usds-styles-core/variables';
+@import 'variables';
+
 @import 'usds-styles-core/fonts';
 @import 'usds-styles-core/base';
 @import 'usds-styles-core/grid-settings';
@@ -34,11 +35,10 @@
 @import "sage-components/buttons";
 @import "sage-components/forms";
 @import "sage-components/legal-container";
-@import "sage-layouts/sidebar";
 @import "sage-layouts/header";
 @import "sage-layouts/footer";
 @import "sage-layouts/pages";
-@import "sage-layouts/posts";
-@import "sage-components/tinymce";
-@import "sage-components/partner-footer";
+@import "partials/content-search";
+@import "partials/tinymce";
+@import "partials/partner-footer";
 @import "ie";
