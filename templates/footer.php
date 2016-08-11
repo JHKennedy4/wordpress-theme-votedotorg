@@ -1,48 +1,48 @@
 <section class="site-map">
   <div class="container">
     <div class="tablet nav-links">
-      <h3>Tools</h3>
+      <h3>Voter registration</h3>
       <ul>
-        <li><a href="/register-to-vote">Register to vote</a></li>
+        <li><a href="/voter-registration-rules">Voter registration rules</a></li>
+        <li><a href="/voter-registration-deadlines">Voter registration deadlines</a></li>
         <li><a href="/am-i-registered-to-vote">Check your registration status</a></li>
+        <li><a href="/register-to-vote">Register to vote</a></li>
+      </ul>
+    </div><!--.nav-links-->
+    <div class="tablet nav-links">
+      <h3>Absentee ballots</h3>
+      <ul>
+        <li><a href="/absentee-voting-rules">Absentee voting rules</a></li>
+        <li><a href="/absentee-ballot-deadlines">Absentee ballot deadlines</a></li>
         <li><a href="/absentee-ballot">Get your absentee ballot</a></li>
+      </ul>
+    </div><!--.nav-links-->
+    <div class="tablet nav-links">
+      <h3>Voting</h3>
+      <ul>
+        <li><a href="/voter-id-laws">Voter ID laws</a></li>
+        <li><a href="/early-voting-calendar">Early voting calendar</a></li>
         <li><a href="/polling-place-locator">Polling place locator</a></li>
         <li><a href="http://help.vote.org">Help desk</a></li>
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>Deadlines</h3>
-      <ul>
-        <li><a href="/early-voting-calendar">Early voting calendar</a></li>
-        <li><a href="/voter-registration-deadlines">Voter registration deadlines</a></li>
-        <li><a href="/absentee-ballot-deadlines">Absentee ballot deadlines</a></li>
-      </ul>
-    </div><!--.nav-links-->
-    <div class="tablet nav-links">
-      <h3>Rules</h3>
-      <ul>
-        <li><a href="/voter-registration-rules">Voter registration rules</a></li>
-        <li><a href="/absentee-voting-rules">Absentee voting rules</a></li>
-        <li><a href="/voter-id-laws">Voter ID laws</a></li>
-      </ul>
-    </div><!--.nav-links-->
-    <div class="tablet nav-links">
-      <h3>Company</h3>
+      <h3>About Vote.org</h3>
       <ul>
         <li><a href="/about">About</a></li>
         <li><a href="/team">Team</a></li>
+        <li><a href="/long-distance-voter">Long Distance Voter</a></li>
         <li><a href="http://www.facebook.com/VOTE.org">Facebook</a></li>
         <li><a href="http://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=votedotorg">Twitter</a></li>
         <li><a href="http://votedotorg.tumblr.com">Tumblr</a></li>
       </ul>
     </div><!--.nav-links-->
-    
     <div class="clear-fix"></div>
     <div class="about mobile">
-      <h2>About VOTE.org</h2>
-      <p>VOTE.org builds technology that increases voter turnout. </p>
+      <h2>VOTE.org mission statement</h2>
+      <p>VOTE.org builds technology that increases voter turnout. We're working toward 100% voter turnout. You can help.</p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our Work</a>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our work</a>
     </div><!--.about-->
   </div><!--.container-->
 </section>
@@ -50,11 +50,10 @@
 <section class="call-to-action">
   <div class="container">
     <div class="about donate tablet">
-      <h2>About VOTE.org</h2>
-      <p>VOTE.org builds technology that increases voter turnout. </p>
+      <h2>VOTE.org mission statement</h2>
+      <p>VOTE.org builds technology that increases voter turnout. We're working toward 100% voter turnout. You can help.</p>
       <!--ToDo: insert Mozilla donation widget-->
       <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</a>
-
     </div><!--.donate.tablet-->
     <div class="join partners">
       <h2>Join VOTE.org</h2>
@@ -125,6 +124,8 @@
         <br />
         <a href="/terms">Terms</a> | <a href="/privacy">Privacy</a> | <a href="/contact">Contact</a>
       </div>
+      <div class=mixpanel">
         <a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+      </div>
   </div><!--.container-->
 </footer>
