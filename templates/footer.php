@@ -1,7 +1,7 @@
 <section class="site-map">
   <div class="container">
     <div class="tablet nav-links">
-      <h3>Voter registration</h3>
+      <h4>Voter registration</h4>
       <ul>
         <li><a href="/voter-registration-rules">Voter registration rules</a></li>
         <li><a href="/voter-registration-deadlines">Voter registration deadlines</a></li>
@@ -10,7 +10,7 @@
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>Absentee ballots</h3>
+      <h4>Absentee ballots</h4>
       <ul>
         <li><a href="/absentee-voting-rules">Absentee voting rules</a></li>
         <li><a href="/absentee-ballot-deadlines">Absentee ballot deadlines</a></li>
@@ -18,7 +18,7 @@
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>Voting</h3>
+      <h4>Voting</h4>
       <ul>
         <li><a href="/voter-id-laws">Voter ID laws</a></li>
         <li><a href="/early-voting-calendar">Early voting calendar</a></li>
@@ -27,7 +27,7 @@
       </ul>
     </div><!--.nav-links-->
     <div class="tablet nav-links">
-      <h3>About Vote.org</h3>
+      <h4>About Vote.org</h4>
       <ul>
         <li><a href="/about">About</a></li>
         <li><a href="/team">Team</a></li>
