@@ -42,7 +42,7 @@
       <h2>VOTE.org mission statement</h2>
       <p>VOTE.org builds technology that increases voter turnout. We're working toward 100% voter turnout. You can help.</p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support Our work</a>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</a>
     </div><!--.about-->
   </div><!--.container-->
 </section>
