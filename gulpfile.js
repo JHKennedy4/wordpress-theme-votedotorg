@@ -63,7 +63,9 @@ var enabled = {
   // Fail due to JSHint warnings only when `--production`
   failJSHint: argv.production,
   // Strip debug statments from javascript when `--production`
-  stripJSDebug: argv.production
+  stripJSDebug: argv.production,
+  // Enable css compression when `--production`
+  nano: argv.production
 };
 
 // Path to the compiled assets manifest in the dist directory
@@ -106,8 +108,8 @@ var cssTasks = function(filename) {
         'opera 12'
       ]
     })
-    .pipe(cssNano, {
-      safe: true
+    .pipe(function() {
+      return gulpif(enabled.nano, cssNano({ safe: true }));
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
