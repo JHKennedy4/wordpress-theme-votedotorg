@@ -54,16 +54,18 @@ var project = manifest.getProjectGlobs();
 
 // CLI options
 var enabled = {
-  // Enable static asset revisioning when `--production`
-  rev: argv.production,
+  // Enable static asset revisioning when `--production` or `--staging`
+  rev: argv.production || argv.staging,
   // Disable source maps when `--production`
   maps: !argv.production,
-  // Fail styles task on error when `--production`
-  failStyleTask: argv.production,
-  // Fail due to JSHint warnings only when `--production`
-  failJSHint: argv.production,
+  // Fail styles task on error when `--production` or `--staging`
+  failStyleTask: argv.production || argv.staging,
+  // Fail due to JSHint warnings only when `--production` or `--staging`
+  failJSHint: argv.production || argv.staging,
   // Strip debug statments from javascript when `--production`
-  stripJSDebug: argv.production
+  stripJSDebug: argv.production,
+  // Enable css minification when `--production`
+  nano: argv.production
 };
 
 // Path to the compiled assets manifest in the dist directory
@@ -106,8 +108,8 @@ var cssTasks = function(filename) {
         'opera 12'
       ]
     })
-    .pipe(cssNano, {
-      safe: true
+    .pipe(function() {
+      return gulpif(enabled.nano, cssNano({ safe: true }));
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
