@@ -95,12 +95,10 @@ $state_loop = new WP_Query( array(
               <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'>
               <h4>Absentee ballot deadlines</h4>
               </button><!--.question-->
-              <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'>
-					      <ul>
-                <li><strong>Absentee ballot application deadline:</strong> <?php echo types_render_field('absentee-ballot-application-deadline');?></li>
-                <li><strong>Voted ballots are due:</strong> <?php echo types_render_field('voted-absentee-ballot-deadline');?></li>
-					      </ul>
-              </div><!--.answer-->
+                <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'>
+					      <p><strong>Absentee ballot application deadline:</strong> <?php echo types_render_field('absentee-ballot-application-deadline');?></p>
+                <p><strong>Voted ballots are due:</strong> <?php echo types_render_field('voted-absentee-ballot-deadline');?></p>
+                </div><!--.answer-->
               </li>
               <li> 
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-6'>
@@ -139,13 +137,13 @@ $state_loop = new WP_Query( array(
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'>
 				        <h4>Early voting starts in <?php echo $state_name; ?></h4></button>
                 <div id='collapsible-9' aria-hidden='true' class='answer usa-accordion-content'>
-                Early voting starts: <?php echo types_render_field('early-voting-begins');?>
+                <?php echo types_render_field('early-voting-begins');?>
               </li>
 			        <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'>
 				        <h4>Early voting ends in <?php echo $state_name; ?></h4></button>
                 <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'>
-                Early voting ends: <?php echo types_render_field('early-voting-ends');?></div>
+                <?php echo types_render_field('early-voting-ends');?></div>
               </li>
             </ul>
           </div><!--.usa-accordion-->
