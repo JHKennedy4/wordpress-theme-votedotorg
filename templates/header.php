@@ -12,7 +12,7 @@
       <li class="active"><a href="/am-i-registered-to-vote/">Are You Registered?</a></li>
       <li><a href="/absentee-ballot/">Absentee Ballots</a></li>
       <li>
-        <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">
+        <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav" target="_blank">
           Donate
         </a>
       </li>
@@ -33,7 +33,7 @@
     <li><a href="http://help.vote.org">Help desk</a></li>
     <li><a href="/technology">Use our technology for free!</a></li>
     <li>
-      <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg">
+      <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">
         Donate
       </a>
     </li>
