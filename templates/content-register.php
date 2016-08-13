@@ -55,7 +55,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 <section class="voter-registration-guide">
   <div class="container">
 
-    <div class="updated-date">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
+    <div class="updated">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
 
     <h2><?php the_title(); ?> voter registration deadlines</h2>
     <ul>
@@ -66,7 +66,7 @@ if (isset($wp_query->query_vars['state_name'])) {
  
     <?php $election_day_instructions = types_render_field("election-day-registration-instructions");
       if ($election_day_instructions !== "" && $election_day_instructions !== "NA" && $election_day_instructions !== "N/A" && $election_day_instructions !== "?????") { ?>
-      <h3>Election day registration instructions</h3>
+      <h2>Election day registration instructions</h2>
       <?php echo $election_day_instructions;?>
     <?php }  ?>
 
