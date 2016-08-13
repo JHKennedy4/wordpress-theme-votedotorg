@@ -61,57 +61,50 @@ if (isset($wp_query->query_vars['state_name'])) {
       <div class="container">
         <h2><?php the_title(); ?> absentee ballot guide</h2>
         
-        <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
+        <div class="updated-date">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
         
         <?php $vbm_warnings = types_render_field("absentee-ballot-warnings");
           if ($vbm_warnings !== "") { ?>
-        <div class="usa-alert usa-alert-warning">
-          <div class="usa-alert-body">
-            <h3 class="usa-alert-heading">Warnings</h3>
-            <p class="usa-alert-text">
+          <div class="usa-alert usa-alert-warning">
+            <div class="usa-alert-body">
+              <h3 class="usa-alert-heading">Warnings</h3>
+              <p class="usa-alert-text">
               <?php echo $vbm_warnings; ?>
-           </p>
-          </div>
-        </div><!--.usa-alert-warning-->
+              </p>
+            </div>
+          </div><!--.usa-alert-warning-->
+        <?php } ?>
 
-          <?php } ?>
-
-        <h3><?php the_title(); ?> absentee ballot deadlines</h3>
+        <h2><?php the_title(); ?> absentee ballot deadlines</h2>
         <ul>
           <li><strong>Absentee ballot application deadlines:</strong> <?php echo types_render_field("absentee-ballot-application-deadline", array('raw'=>true));?></li>
           <li><strong>Voted ballots are due:</strong> <?php echo types_render_field("voted-absentee-ballot-deadline",array('raw'=>true));?></li>
         </ul>
       
-
-        <h3><?php the_title(); ?> absentee ballot rules</h3>
-
+        <h2><?php the_title(); ?> absentee ballot rules</h2>
         <?php echo types_render_field("vbm-eligibilty");?>
 
 
-        <h3><?php the_title(); ?> absentee ballot directions</h3>
+        <h2><?php the_title(); ?> absentee ballot directions</h2>
 
         <?php echo types_render_field("how-to-get-your-absentee-ballot");?>
-
-
         <?php 
         $instructions = types_render_field("voted-absentee-ballot-instructions");
         if ($instructions !== "") { ?>
-        <h3>Once you receive your ballot...</h3>
+        <h2>Once you receive your ballot...</h2>
           <?php echo $instructions;?>
         <?php } ?>
         
         <?php $permanent_vbm_instructions = types_render_field("permanent-absentee-ballot-instructions"); ?>
-        
         <?php if ($permanent_vbm_instructions !== "") { ?>
-        <h3>Permanent absentee ballots</h3>
+        <h2>Permanent absentee ballots</h2>
 
         <?php echo $permanent_vbm_instructions;?>
         <?php } ?>
 
         <?php $emergency_vbm_instructions = types_render_field("emergency-vbm-eligibilty");
         if ($emergency_vbm_instructions !=="") { ?>
-        <h3>Emergency absentee ballots</h3>
-
+        <h2>Emergency absentee ballots</h2>
         <?php echo $emergency_vbm_instructions;?>
         <?php } ?>
         
