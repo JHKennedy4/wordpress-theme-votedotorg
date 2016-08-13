@@ -32,7 +32,7 @@
               <td data-title="Early Voting Ends"><?php echo types_render_field('early-voting-ends');?>
               </td>
               <td data-title="More Information">
-                <p>Contact your <a href="https://www.overseasvotefoundation.org/overseas/eod.htm">Local Election Official</a> to learn more about early voting in your area.</p>
+                <p>Contact your <a href="https://www.usvotefoundation.org/vote/eoddomestic.htm">Local Election Official</a> to learn more about early voting in your area.</p>
               </td>
             </tr>
             <?php endwhile; 
