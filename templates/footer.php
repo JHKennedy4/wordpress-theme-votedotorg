@@ -42,7 +42,7 @@
       <h2>VOTE.org mission statement</h2>
       <p>VOTE.org builds technology that increases voter turnout. We're working toward 100% voter turnout. You can help.</p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</a>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-footer" target="_blank">Support our work</a>
     </div><!--.about-->
   </div><!--.container-->
 </section>
@@ -53,15 +53,14 @@
       <h2>VOTE.org mission statement</h2>
       <p>VOTE.org builds technology that increases voter turnout. We're working toward 100% voter turnout. You can help.</p>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg" target="_blank">Support our work</a>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-footer" target="_blank">Support our work</a>
     </div><!--.donate.tablet-->
     <div class="join partners">
       <h2>Join VOTE.org</h2>
       <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">
-        <form action="//longdistancevoter.us3.list-manage.com/subscribe/post?u=9ebd52ca2728bb1bb4764496b&amp;id=0ced8a9570" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
+        <form action="//vote.us3.list-manage.com/subscribe/post?u=9ebd52ca2728bb1bb4764496b&amp;id=0ced8a9570" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
-
             <label for="mce-EMAIL" class="sr-only">Email Address * </label>
             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
             <label for="mce-ZIPCODE" class="sr-only">Zip Code </label>
