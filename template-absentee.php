@@ -25,6 +25,6 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <?php get_template_part('templates/content-absentee'); ?>
     <?php get_template_part('templates/quicklinks-absentee'); ?>
-    <?php get_template_part('templates/content-share'); ?>
+
 <?php endwhile;?>
 

@@ -55,37 +55,28 @@ if (isset($wp_query->query_vars['state_name'])) {
 <section class="voter-registration-guide">
   <div class="container">
 
-    <div class="updated">Last updated <?php the_modified_date('F j, Y');?></div>
+    <div class="updated-date">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
 
     <h2><?php the_title(); ?> voter registration deadlines</h2>
     <ul>
       <li><strong>In Person:</strong> <?php echo types_render_field("voter-registration-deadline-in-person");?></li>
       <li><strong>By Mail:</strong> <?php echo types_render_field("voter-registration-deadline-by-mail");?></li>
       <li><strong>Online:</strong> <?php echo types_render_field("voter-registration-deadline-online");?></li>
-
     </ul>
-
-
+ 
     <?php $election_day_instructions = types_render_field("election-day-registration-instructions");
-
-     if ($election_day_instructions !== "" && $election_day_instructions !== "NA" && $election_day_instructions !== "N/A" && $election_day_instructions !== "?????") { ?>
-    <h3>Election day registration instructions</h3>
+      if ($election_day_instructions !== "" && $election_day_instructions !== "NA" && $election_day_instructions !== "N/A" && $election_day_instructions !== "?????") { ?>
+      <h3>Election day registration instructions</h3>
       <?php echo $election_day_instructions;?>
-
     <?php }  ?>
 
     <h2><?php the_title(); ?> voter registration rules</h2>
-
     <?php echo types_render_field("voter-registration-rules");?>
+    
     <h2><?php the_title(); ?> voter registration directions</h2>
-
     <?php echo types_render_field("how-to-register-to-vote");?>
 
-
     <?php get_template_part('templates/content-links'); ?>
-
-
-
 
   </div><!--.container-->
 
