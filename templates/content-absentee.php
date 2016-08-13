@@ -59,9 +59,8 @@ if (isset($wp_query->query_vars['state_name'])) {
       <!--hide voter absentee ballot section when there isn't a state selected-->
     <section class="voter-registration-guide">
       <div class="container">
-        <h2><?php the_title(); ?> absentee ballot guide</h2>
         
-        <div class="updated-date">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
+        <div class="updated">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
         
         <?php $vbm_warnings = types_render_field("absentee-ballot-warnings");
           if ($vbm_warnings !== "") { ?>
