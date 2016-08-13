@@ -23,12 +23,12 @@
 
 </nav><!--Top Nav-->
 
-// mobile menu
+<!--MOBILE MENU-->
 
 <div class="mobile-only nav-menu collapsed">
   <ul class="no-dropdown">
     <li>
-      <a class="usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">
         Donate
       </a>
     </li>
