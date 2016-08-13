@@ -2,7 +2,6 @@
 /**
  * Template Name: Early Voting Calendar Template
  */
-
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
