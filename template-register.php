@@ -24,7 +24,6 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <?php get_template_part('templates/content', 'register'); ?>
     <?php get_template_part('templates/quicklinks','register'); ?>
-    <?php get_template_part('templates/content', 'share'); ?>
 
 <?php endwhile?>
 
