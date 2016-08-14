@@ -8,22 +8,22 @@ if (isset($wp_query->query_vars['state_name'])) {
   $state = "";
 }
 //if state parameter is set loop through States post types to find one with the matching state slug
-   
-$state_loop = new WP_Query( array( 
+
+$state_loop = new WP_Query( array(
   'post_type' => 'state',
   'name'      => $state,
   'posts_per_page' => 1
 ) );
   //if that state exists then set the variables for $state_name and $state_slug to populate fields in /state page
-  if ( $state_loop->have_posts() ) : 
-    while ( $state_loop->have_posts() ) : 
-      $state_loop->the_post(); 
+  if ( $state_loop->have_posts() ) :
+    while ( $state_loop->have_posts() ) :
+      $state_loop->the_post();
       if ($state !== "") {
         $state_name = $post->post_title;
         $state_slug = $post->post_name;
-         } 
+         }
     endwhile;
-    else: 
+    else:
       $state_name = ucfirst($state);
       $state_slug = "";
   endif;
@@ -31,9 +31,9 @@ $state_loop = new WP_Query( array(
 
 ?>
 
-    <?php 
-    if ( $state_loop->have_posts() ) : 
-      while ( $state_loop->have_posts() ) : 
+    <?php
+    if ( $state_loop->have_posts() ) :
+      while ( $state_loop->have_posts() ) :
         $state_loop->the_post();
         if($state !== "") { ?>
     <!--hide voter registration guide when there isn't a state selected-->
@@ -67,7 +67,7 @@ $state_loop = new WP_Query( array(
                 </div>
               </li>
               <?php }  ?>
-              
+
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-3'><h4>Voter registration rules</h4></button>
                 <div id='collapsible-3' aria-hidden='true' class='answer usa-accordion-content'>
@@ -86,7 +86,7 @@ $state_loop = new WP_Query( array(
         </div><!--.state-info-->
 
         <div class="state-info">
-      
+
           <h2><?php echo $state_name; ?> absentee ballots</h2>
 
           <div class="usa-accordion">
@@ -100,7 +100,7 @@ $state_loop = new WP_Query( array(
                 <p><strong>Voted ballots are due:</strong> <?php echo types_render_field('voted-absentee-ballot-deadline');?></p>
                 </div><!--.answer-->
               </li>
-              <li> 
+              <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-6'>
                 <h4>Absentee ballot rules</h4>
                 </button><!--.question-->
@@ -161,7 +161,7 @@ $state_loop = new WP_Query( array(
                   <?php echo types_render_field('voter-id-requirements-in-person');?>
                 </div>
               </li>
-              <li> 
+              <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-12'><h4>Absentee voter ID requirements</h4></button>
                 <div id='collapsible-12' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-absentee');?></div>
               </li>
@@ -173,14 +173,14 @@ $state_loop = new WP_Query( array(
 
         <h2>Additional VOTE.org links</h2>
         <ul>
-          <li><a href="/register-to-vote/<?php if ($state_slug !== "") { echo $state_slug; }?>">Register to vote in <?php echo $state_name;?></a></li>
-          <li><a href="/absentee-ballot/<?php if ($state_slug !== "") { echo $state_slug; }?>">Get your <?php echo $state_name;?> absentee ballot</a></li>
+          <li><a href='/register-to-vote/<?php if ($state_slug !== "") { echo $state_slug; }?>'>Register to vote in <?php echo $state_name;?></a></li>
+          <li><a href='/absentee-ballot/<?php if ($state_slug !== "") { echo $state_slug; }?>'>Get your <?php echo $state_name;?> absentee ballot</a></li>
         </ul>
 
         <div class="updated-date">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
       </div><!--.container-->
     </section> <!--.voter-registration-guide-->
-    <?php } endwhile; wp_reset_postdata(); else :  ?> 
+    <?php } endwhile; wp_reset_postdata(); else :  ?>
 
     <section class="not-found">
 
@@ -194,14 +194,14 @@ $state_loop = new WP_Query( array(
 
     <?php endif;?>
 
-    <?php 
-    if ( $state_loop->have_posts() ) : 
-      while ( $state_loop->have_posts() ) : 
+    <?php
+    if ( $state_loop->have_posts() ) :
+      while ( $state_loop->have_posts() ) :
         $state_loop->the_post();
         if($state !== "") { ?>
     <!--hide faqs when there isn't a state selected-->
 
-    
+
     <section class="faqs">
       <div class="container">
         <h2>Frequently asked questions</h2>
@@ -210,7 +210,7 @@ $state_loop = new WP_Query( array(
         <div class="usa-accordion">
           <ul class="usa-unstyled-list">
             <?php get_helpScout_articles_by_category($state, $state_name); ?>
-            
+
           </ul><!--.usa-unstyled-list-->
         </div><!--.faq-box- .usa-accordion-->
 
@@ -218,8 +218,8 @@ $state_loop = new WP_Query( array(
       </div><!--.container-->
 
     </section><!--.faqs-->
-    <?php 
-      } 
-      endwhile; 
+    <?php
+      }
+      endwhile;
       wp_reset_postdata();
     endif; ?>
