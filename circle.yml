@@ -11,16 +11,18 @@ dependencies:
 
 test:
   override:
-    - gulp --production
+    - echo "no tests for wordpress"
 
 deployment:
   staging:
     owner: votedotorg
     branch: master
     commands:
+      - gulp --staging
       - ./deploy.exp $FTP_HOST $FTP_USER $FTP_PASS stage
   production:
     owner: votedotorg
     tag: /v[0-9]+(\.[0-9]+)*/
     commands:
+      - gulp --production
       - ./deploy.exp $FTP_HOST $FTP_USER $FTP_PASS production
