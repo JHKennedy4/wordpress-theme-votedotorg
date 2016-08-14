@@ -48,13 +48,14 @@ $state_loop = new WP_Query( array(
             <ul class="usa-unstyled-list">
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-1'>
-                <h4>Voter registration deadlines</h4></button>
+                  <h4>Voter registration deadlines</h4>
+                </button>
                 <div id='collapsible-1' aria-hidden='true' class='answer usa-accordion-content'>
-                    <ul>
+                  <ul>
       				      <li><strong>In Person:</strong> <?php echo types_render_field("voter-registration-deadline-in-person");?></li>
       				      <li><strong>By Mail:</strong> <?php echo types_render_field("voter-registration-deadline-by-mail");?></li>
       				      <li><strong>Online:</strong> <?php echo types_render_field("voter-registration-deadline-online");?></li>
-    				        </ul>
+    				      </ul>
                 </div>
               </li>
 
@@ -69,15 +70,19 @@ $state_loop = new WP_Query( array(
               <?php }  ?>
 
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-3'><h4>Voter registration rules</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-3'>
+                  <h4>Voter registration rules</h4>
+                </button>
                 <div id='collapsible-3' aria-hidden='true' class='answer usa-accordion-content'>
-                <?php echo types_render_field('voter-registration-rules');?>
+                  <?php echo types_render_field('voter-registration-rules');?>
                 </div>
               </li>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-4'><h4>How to register to vote in <?php echo $state_name; ?></h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-4'>
+                  <h4>How to register to vote in <?php echo $state_name; ?></h4>
+                </button>
                 <div id='collapsible-4' aria-hidden='true' class='answer usa-accordion-content'>
-                <?php echo types_render_field('how-to-register-to-vote');?>
+                  <?php echo types_render_field('how-to-register-to-vote');?>
                 </div>
               </li>
             </ul>
@@ -86,42 +91,41 @@ $state_loop = new WP_Query( array(
         </div><!--.state-info-->
 
         <div class="state-info">
-
           <h2><?php echo $state_name; ?> absentee ballots</h2>
 
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
               <li>
-              <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'>
-              <h4>Absentee ballot deadlines</h4>
-              </button><!--.question-->
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'>
+                  <h4>Absentee ballot deadlines</h4>
+                </button><!--.question-->
                 <div id='collapsible-5' aria-hidden='true' class='answer usa-accordion-content'>
-					      <p><strong>Absentee ballot application deadline:</strong> <?php echo types_render_field('absentee-ballot-application-deadline');?></p>
-                <p><strong>Voted ballots are due:</strong> <?php echo types_render_field('voted-absentee-ballot-deadline');?></p>
+					        <p><strong>Absentee ballot application deadline:</strong> <?php echo types_render_field('absentee-ballot-application-deadline');?></p>
+                  <p><strong>Voted ballots are due:</strong> <?php echo types_render_field('voted-absentee-ballot-deadline');?></p>
                 </div><!--.answer-->
               </li>
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-6'>
-                <h4>Absentee ballot rules</h4>
+                  <h4>Absentee ballot rules</h4>
                 </button><!--.question-->
                 <div id='collapsible-6' aria-hidden='true' class='answer usa-accordion-content'>
-                <?php echo types_render_field('vbm-eligibilty');?>
+                  <?php echo types_render_field('vbm-eligibilty');?>
                 </div><!--.answer-->
               </li>
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-7'>
-                <h4>How to get an absentee ballot in <?php echo $state_name; ?></h4>
+                  <h4>How to get an absentee ballot in <?php echo $state_name; ?></h4>
                 </button><!--.question-->
                 <div id='collapsible-7' aria-hidden='true' class='answer usa-accordion-content'>
-                <?php echo types_render_field('how-to-get-your-absentee-ballot');?>
+                  <?php echo types_render_field('how-to-get-your-absentee-ballot');?>
                 </div><!--.answer-->
               </li>
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-8'>
-                <h4>Once you get your absentee ballot in <?php echo $state_name; ?></h4>
+                  <h4>Once you get your absentee ballot in <?php echo $state_name; ?></h4>
                 </button><!--.question-->
                 <div id='collapsible-8' aria-hidden='true' class='answer usa-accordion-content'>
-                <?php echo types_render_field('voted-absentee-ballot-instructions');?>
+                  <?php echo types_render_field('voted-absentee-ballot-instructions');?>
                 </div> <!--.answer-->
               </li>
             </ul>
@@ -135,35 +139,44 @@ $state_loop = new WP_Query( array(
             <ul class="usa-unstyled-list">
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'>
-				        <h4>Early voting starts in <?php echo $state_name; ?></h4></button>
+				          <h4>Early voting starts in <?php echo $state_name; ?></h4>
+                </button>
                 <div id='collapsible-9' aria-hidden='true' class='answer usa-accordion-content'>
-                <?php echo types_render_field('early-voting-begins');?>
+                  <?php echo types_render_field('early-voting-begins');?>
+                </div>
               </li>
 			        <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-10'>
-				        <h4>Early voting ends in <?php echo $state_name; ?></h4></button>
+				          <h4>Early voting ends in <?php echo $state_name; ?></h4>
+                </button>
                 <div id='collapsible-10' aria-hidden='true' class='answer usa-accordion-content'>
-                <?php echo types_render_field('early-voting-ends');?></div>
+                  <?php echo types_render_field('early-voting-ends');?>
+                </div>
               </li>
             </ul>
           </div><!--.usa-accordion-->
 
         </div><!--.state-info-->
         <div class="state-info">
-
           <h2><?php echo $state_name; ?> voter ID</h2>
 
           <div class="usa-accordion">
             <ul class="usa-unstyled-list">
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'><h4>In-person voter ID requirements</h4></button>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'>
+                  <h4>In-person voter ID requirements</h4>
+                </button>
                 <div id='collapsible-11' aria-hidden='true' class='answer usa-accordion-content'>
                   <?php echo types_render_field('voter-id-requirements-in-person');?>
                 </div>
               </li>
               <li>
-                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-12'><h4>Absentee voter ID requirements</h4></button>
-                <div id='collapsible-12' aria-hidden='true' class='answer usa-accordion-content'><?php echo types_render_field('voter-id-requirements-absentee');?></div>
+                <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-12'>
+                  <h4>Absentee voter ID requirements</h4>
+                </button>
+                <div id='collapsible-12' aria-hidden='true' class='answer usa-accordion-content'>
+                  <?php echo types_render_field('voter-id-requirements-absentee');?>
+                </div>
               </li>
             </ul>
           </div><!--.usa-accordion-->
@@ -206,17 +219,13 @@ $state_loop = new WP_Query( array(
       <div class="container">
         <h2>Frequently asked questions</h2>
 
-
         <div class="usa-accordion">
           <ul class="usa-unstyled-list">
             <?php get_helpScout_articles_by_category($state, $state_name); ?>
-
           </ul><!--.usa-unstyled-list-->
         </div><!--.faq-box- .usa-accordion-->
 
-
       </div><!--.container-->
-
     </section><!--.faqs-->
     <?php
       }
