@@ -32,7 +32,7 @@ if (isset($wp_query->query_vars['state_name'])) {
     <div class="tagline">Everything you need to vote</div>
     <?php }  else { ?> 
     <h1 class="usa-display">VOTE.org</h1>
-    <h2>Everything you need to vote</h2>
+    <div class="tagline">Everything you need to vote</div>
 
     <?php } ?>
     
