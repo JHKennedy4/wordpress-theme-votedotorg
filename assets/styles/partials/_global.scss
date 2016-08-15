@@ -70,3 +70,9 @@ body.about {
     margin: 0;
   }
 }
+body#tinymce {
+  margin: 12px !important;
+  ol li {
+    display:list-item !important;
+  }
+}

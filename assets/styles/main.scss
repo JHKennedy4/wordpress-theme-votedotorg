@@ -8,10 +8,17 @@
 // endbower
 
 
+/*
+ * These always go first
+ */
+
 @import 'usds/core/defaults';
 @import 'variables';
 
-//* USDS stuff we don't touch, just include or don't *//
+/*
+ * USDS stuff we don't touch, just include or not
+ */
+
 @import 'usds/core/fonts';
 @import 'usds/core/base';
 // @import 'usds/core/grid-settings';
@@ -33,22 +40,24 @@
 // @import 'usds/components/sidenav';
 // @import 'usds/components/skipnav';
 
-//* Sage plus stuff we wrote *//
+
+/*
+ * Vote.org theme files built on Sage starter template
+ */
 
 @import 'partials/global';
 @import 'partials/utilities';
 @import 'partials/components';
 @import 'partials/tables';
-
 @import 'partials/sections';
 @import 'partials/header';
 @import 'partials/footer';
-
 @import 'partials/pages';
 
-@import 'partials/addthis';
-@import 'partials/tinymce';
 
-//* These always go last *//
+/*
+ * These always go last
+ */
+
 @import 'partials/ie';
 @import 'debra';
