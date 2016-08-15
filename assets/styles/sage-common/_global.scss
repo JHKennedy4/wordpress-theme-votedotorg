@@ -200,51 +200,6 @@ td {
   background-color: #fff;
 }
 
-
-//*ICONS*//
-.plus-icon {
-  background: url('../images/plus.png') no-repeat center;
-}
-
-.minus-icon {
-  background: url('../images/minus.png') no-repeat center;
-}
-
-.sr-only, .hidden{
-  display: none;
-  visibility: hidden;
-}
-
-.collapsed {
-  display: none !important;
-}
-.clear-fix {
-  clear: both;
-  float: none;
-}
-.warning {
- color: $red;
- font-weight: 700;
-}
-
-.sticky-header {
-  position: fixed;
-  top: 0px;
-  visibility: visible;
-}
-
-//clearfix using .group instead of adding div.clear-fix
-.group:before,
-.group:after {
-  content:"";
-  display:table;
-}
-.group:after {
-  clear:both;
-}
-.group {
-  zoom:1; /* For IE 6/7 (trigger hasLayout) */
-}
 //Common Elements Mobile//
 
 section.not-found {
@@ -547,12 +502,5 @@ section.call-to-action {
     .join {
       padding-left: 72px;
     }
-  }
-}
-
-//adding url after link in print versions.
-@media print {
-  a[href]:after {
-    content: " (" attr(href) ") ";
   }
 }

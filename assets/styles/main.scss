@@ -12,8 +12,8 @@
 
 @import 'usds-core/fonts';
 @import 'usds-core/base';
-@import 'usds-core/grid-settings';
-@import 'usds-core/grid';
+// @import 'usds-core/grid-settings';
+// @import 'usds-core/grid';
 @import 'usds-core/utilities';
 @import 'usds-elements/buttons';
 @import 'usds-elements/figure';
@@ -22,7 +22,6 @@
 @import 'usds-elements/list';
 @import 'usds-elements/table';
 @import 'usds-elements/typography';
-
 @import 'usds-components/accordions';      // extend in _usds-extensions
 @import 'usds-components/alerts';          // extend in _usds-extensions
 
