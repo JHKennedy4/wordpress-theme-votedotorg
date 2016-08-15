@@ -227,24 +227,6 @@ td {
  font-weight: 700;
 }
 
-.addthis_jumbo_share {
- table {
-  border: none;
-  margin: 0;
-  td {
-   background: none;
-   border: none;
-  }
-  .at4-count-container {
-   .at4-title, .at4-count {
-    text-align: center;
-   }
-  }
-  .at4-share-container {
-   text-align: center;
-  }
- }
-}
 .sticky-header {
   position: fixed;
   top: 0px;
@@ -418,7 +400,7 @@ section.call-to-action {
         margin-bottom: 1em;
         padding: 4%;
         border-bottom: 1px solid #c0c1c0;
-        //zebra striping 
+        //zebra striping
         &:nth-of-type(2n){
           >td {
             background-color: #edeff0;
@@ -454,7 +436,7 @@ section.call-to-action {
           }
         }
       }
-    }  
+    }
   }
   section.site-map {
     padding: 60px 0;
