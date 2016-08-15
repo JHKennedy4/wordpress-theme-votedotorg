@@ -535,7 +535,6 @@ section.call-to-action {
   }
 }
 @media only screen and (min-width: 1280px) {
-
   section.call-to-action, section.quick-links, section.site-map {
     .container {
       width: 1100px;
@@ -550,7 +549,6 @@ section.call-to-action {
     }
   }
 }
-
 
 //adding url after link in print versions.
 @media print {
