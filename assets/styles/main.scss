@@ -7,40 +7,57 @@
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
-@import 'usds-core/defaults';
+
+/*
+ * always first
+ */
+
 @import 'variables';
 
-@import 'usds-core/fonts';
-@import 'usds-core/base';
-@import 'usds-core/grid-settings';
-@import 'usds-core/grid';
-@import 'usds-core/utilities';
-@import 'usds-elements/buttons';
-@import 'usds-elements/figure';
-@import 'usds-elements/inputs';
-@import 'usds-elements/labels';
-@import 'usds-elements/list';
-@import 'usds-elements/table';
-@import 'usds-elements/typography';
-@import 'usds-components/accordions';
-@import 'usds-components/alerts';
-@import 'usds-components/disclaimer';
-@import 'usds-components/footer';
-@import 'usds-components/forms';
-// @import 'usds-components/search';
-// @import 'usds-components/sidenav';
-@import 'usds-components/skipnav';
-@import "sage-common/global";
-@import "sage-common/utility";
-@import "sage-components/buttons";
-@import "sage-components/forms";
-@import "sage-components/legal-container";
-@import "sage-layouts/header";
-@import "sage-layouts/footer";
-@import "sage-layouts/pages";
-@import "partials/content-search";
-@import "partials/tinymce";
-@import "partials/partner-footer";
-@import "partials/ie";
+/*
+ * we don't touch these files, just include or not
+ */
 
+@import 'node_modules/uswds/src/stylesheets/core/defaults';
+@import 'usds/core/fonts';
+@import 'node_modules/uswds/src/stylesheets/core/base';
+// @import 'usds/core/grid-settings';
+// @import 'usds/core/grid';
+@import 'node_modules/uswds/src/stylesheets/core/utilities';
+@import 'node_modules/uswds/src/stylesheets/elements/buttons';
+@import 'node_modules/uswds/src/stylesheets/elements/figure';
+@import 'usds/elements/inputs';
+@import 'usds/elements/labels';
+@import 'usds/elements/list';
+@import 'usds/elements/table';
+@import 'usds/elements/typography';
+@import 'usds/components/accordions';
+@import 'usds/components/alerts';
+// @import 'usds/components/disclaimer';
+// @import 'usds/components/footer';
+@import 'usds/components/forms';
+// @import 'usds/components/search';
+// @import 'usds/components/sidenav';
+// @import 'usds/components/skipnav';
+
+
+/*
+ * Vote.org theme files built on Sage starter template
+ */
+
+@import 'partials/global';
+@import 'partials/utilities';
+@import 'partials/components';
+@import 'partials/tables';
+@import 'partials/sections';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/pages';
+
+
+/*
+ * always last
+ */
+
+@import 'partials/ie';
 @import 'debra';

@@ -1,0 +1,68 @@
+//* Online Tools Section Mobile *//
+body.about {
+  .donate {
+    margin: 0;
+  }
+}
+.register-tool {
+  padding: 0;
+  background-color: $primary-darkest;
+  .container {
+    width: 100%;
+    padding: 0;
+    max-width: 640px;
+  }
+}
+.page-header {
+  h1 {
+    margin-top: 0px;
+  }
+}
+
+//* Tablet *//
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+//* Desktop *//
+@media only screen and (min-width: 980px) {
+  .container {
+    width: 900px;
+  }
+}
+
+//* Voter Registration Rules & Absentee Ballot Rules Pages *//
+.page-template-template-voter-registration-rules,
+.page-template-template-absentee-voting-rules {
+  .intro {
+    margin-bottom: 20px;
+  }
+  .state {
+    margin-bottom: 40px;
+    .text {
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+//* Search Results*//
+body.search-results {
+	article {
+		border-bottom: 1px #ccc solid;
+		padding: 20px 0;
+		h2 {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			font-size: 21px;
+			line-height: 31px;
+		}
+		p {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+	}
+}

@@ -1,17 +1,211 @@
-
-//*Online Tools Section Mobile*//
-.register-tool {
-  padding: 0;
-  background-color: $primary-darkest;
+section {
+  padding: 40px 0 40px;
   .container {
-    width: 100%;
-    padding: 0;
-    max-width: 640px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 15px;
+    >h1 {
+      margin-top: 0;
+    }
   }
 }
-.page-header {
-  h1 {
+section.not-found {
+  padding-bottom: 0;
+}
+section.site-map {
+  background: $darkbluegrey;
+  color: #fff;
+  h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 20px;
     margin-top: 0px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li::before {
+      content: "";
+      padding-right: 0;
+    }
+  }
+  li a, p {
+    color: #aeb0b5;
+    text-decoration: none;
+    list-style: none;
+  }
+  button {
+    width: auto;
+  }
+  .about {
+    text-align: center;
+    p, h2 {
+      text-align: center;
+    }
+    h2 {
+      color: #fff;
+    }
+  }
+}
+//* Call to Action Mobile *//
+section.call-to-action {
+  background-color: #ccc;
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+  form {
+     margin: 0 auto;
+  }
+  h2 {
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  input {
+    height: 42px;
+    font-size: 17px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  button.donate {
+    background-color: #00ccff;
+    width: 138px;
+  }
+  input.email {
+    max-width: 100%;
+  }
+  input.zip {
+    width: 50%;
+    float: left;
+    margin-right: 3%;
+  }
+  input[type="submit"] {
+    width: 47%;
+    border: 0px;
+    padding: 0;
+    float: left;
+    margin: 0.2em 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.site-map {
+    padding: 60px 0;
+    h3 {
+      font-size: 20px;
+    }
+    .nav-links {
+      width: 50%;
+      float: left;
+      min-height: 248px;
+    }
+    .about, .partners {
+      width: 48%;
+      float: left;
+    }
+    .about {
+      margin-right: 2%;
+    }
+  }
+  section.call-to-action {
+    padding: 60px 0;
+    h2 {
+      text-align: left;
+    }
+    form {
+      margin: 0;
+      max-width: 100%;
+    }
+    .about, .join {
+      width: 48%;
+      float: left;
+    }
+    .about {
+      margin-right: 2%;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+    .join {
+      border-left: 1px solid #888;
+      padding-left: 42px;
+    }
+    input.zip {
+      width: 46%;
+      margin-right: 4%;
+      float: left;
+    }
+    input[type="submit"] {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  section.call-to-action, section.quick-links, section.site-map {
+    .container {
+      width: 980px;
+    }
+  }
+  section.site-map {
+    .nav-links {
+      width: 25%;
+      min-height: initial;
+      li a {
+        font-size: 15px;
+        text-decoration: none;
+      }
+    }
+    .about {
+      width: 46%;
+      margin-right: 4%;
+    }
+    .partners {
+      width: 50%;
+    }
+  }
+  section.call-to-action {
+    .join {
+      input.email, input.zip {
+        display: inline-block;
+        margin-right: 9px;
+      }
+      input.email {
+        width: 100%;
+      }
+      input.zip {
+        width: 49%;
+        margin-right: 3%;
+      }
+      input[type='submit'] {
+        width: 48%;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  section.call-to-action, section.quick-links, section.site-map {
+    .container {
+      width: 1100px;
+    }
+    .about p {
+      margin-bottom: 30px;
+    }
+  }
+  section.call-to-action {
+    .join {
+      padding-left: 72px;
+    }
   }
 }
 /*States & Homepage Mobile */
@@ -134,37 +328,13 @@ section.quote {
     font-size: 17px;
     line-height: 25px;
     color: $gray-dark;
-    
+
     h2 {
       text-align: center;
     }
   }
 }
-.usa-accordion {
 
-  > ul > li {
-    margin-bottom: 12px;
-  }
-}
-.usa-accordion-content {
-  padding: 2rem 3rem;
-  line-height: 1.5em;
-  ul, li {
-    list-style: initial;
-  }
-  ol li {
-    list-style-type: decimal;
-  }
-}
-button.question {
-  height: auto;
-  font-weight: 800;
-  h4 {
-    color: #000;
-    font-size: 17px;
-    line-height: 26px;
-  }
-}
 section.voter-registration-guide {
   h1, h3 {
     color: $mediumblue;
@@ -197,6 +367,7 @@ section.voter-registration-guide {
   font-style: italic;
   margin-top: 60px;
 }
+// FAQs
 section.faqs {
   background: #edefef;
   h1 {
@@ -205,10 +376,8 @@ section.faqs {
   h2 {
     margin-top: 0;
   }
-  button.question {
-    background-color: #fff;
-  }
 }
+// Sharing
 section.sharing {
   background-color: #dce4ef;
   color: $mediumblue;
@@ -255,7 +424,7 @@ section.sharing {
     }
   }
 }
-
+// Quicklinks, for mobile only I think
 section.quicklinks {
   h2,h4 {
     text-align: center;
@@ -266,46 +435,8 @@ section.quicklinks {
   }
 }
 
-// /*Faux Table*/
-// .table {
-//   font-size: 17px;
-//   line-height: 25px;
-//   border: 1px solid #5b616b;
-//   margin-bottom: 0;
-//   .header, .cell {
-//     padding: 16px;
-//   }
-//   .header {
-//     background-color: $darkbluegrey;
-//     color: #fff;
-//   }
-//   .cell {
-//     background-color: #fff;
-//   }
-// }
-
-//* Voter Registration Rules & Absentee Ballot Rules Pages *//
-.page-template-template-voter-registration-rules, .page-template-template-absentee-voting-rules {
-  .usa-alert, .intro {
-    margin-bottom: 20px;
-  }
-  .state {
-    margin-bottom: 40px;
-    .text {
-      margin-bottom: 20px;
-    }
-  }
-  
-}
-
-//*Tablet*/
-
+//* Tablet *//
 @media only screen and (min-width: 768px) {
-
-  .container {
-    width: 768px;
-    margin: 0 auto;
-  }
   section {
     padding: 75px 0;
     .container {
@@ -320,14 +451,14 @@ section.quicklinks {
       width: 640px;
     }
   }
-  //*Homepage and State Hero Tablet*//
+  //* Homepage and State Hero Tablet *//
   section.hero {
-    padding: 75px 0;
+    padding: 75px 0; // redundant?
     .container {
-      width: 768px;
+      width: 768px; // redundant?
     }
     h2.logo {
-      display: block;
+      display: block; // redundant?
     }
     .box {
       width: 32%;
@@ -390,33 +521,12 @@ section.quicklinks {
       flex: 1;
     }
   }
-  section.faqs {
-    .usa-accordion {
-      button.question {
-        background-position: right 3rem center;
-      }
-    }
-  }
-  
-  tr{
-    display:table-row;
-    width:100%;
-  }
-  td{
-    display:table-cell;
-    background:#efefef;
-  }
-  
 }
 //* Desktop *//
 @media only screen and (min-width: 980px) {
 
-  .container {
-    width: 900px;
-  }
-
   section {
-  .container {
+    .container {
       width: 768px;
     }
   }
@@ -437,8 +547,8 @@ section.quicklinks {
       }
     }
   }
-  section.quote {
 
+  section.quote {
     blockquote {
       &:before {
         left: -56%;
@@ -449,12 +559,13 @@ section.quicklinks {
       }
     }
   }
+
   section.table {
     .container {
       width: 900px;
     }
   }
-  //*Quick Links Desktop*//
+  //* Quick Links Desktop *//
   section.quick-links {
     h3 {
       margin-top: 0;
@@ -487,11 +598,11 @@ section.quicklinks {
       margin-right: 0;
     }
   }
-  
+
 }
 //* Larger Desktops *//
 @media only screen and (min-width: 1280px) {
-   section.hero {
+  section.hero {
     .container {
       width: 1111px;
     }
@@ -502,19 +613,10 @@ section.quicklinks {
     }
   }
 }
-@media only screen and (min-width: 1440px) {
-
-}
-
 
 // Make homepage button font smaller
 section.hero .box .usa-button {
-    font-size: 18px;
-    line-height: 30px;
-    margin-top: 0;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 0;
 }
-
-
-
-
-

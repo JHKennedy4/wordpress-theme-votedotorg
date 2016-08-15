@@ -5,7 +5,7 @@
 // scss-lint:
 
 // Typography
-$em-base:             10px; // default is already defined in bourbon
+$em-base:             10px !default; // default is already defined in bourbon
 $base-font-size:      rem(17px) !default;
 $small-font-size:     rem(14px) !default;
 $lead-font-size:      rem(20px) !default;
