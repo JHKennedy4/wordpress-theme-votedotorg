@@ -1,7 +1,11 @@
-@import '../usds-components/_accordions.scss';
+.page-template-template-voter-registration-rules,
+.page-template-template-absentee-voting-rules {
+  .usa-alert {
+    margin-bottom: 20px;
+  }
+}
 
 .usa-accordion {
-
   > ul > li {
     margin-bottom: 12px;
   }

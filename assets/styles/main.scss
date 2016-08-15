@@ -22,14 +22,17 @@
 @import 'usds-elements/list';
 @import 'usds-elements/table';
 @import 'usds-elements/typography';
-// @import 'usds-components/accordions';
-// @import 'usds-components/alerts';
+
+@import 'usds-components/accordions';      // extend in _usds-extensions
+@import 'usds-components/alerts';          // extend in _usds-extensions
+
 // @import 'usds-components/disclaimer';
 // @import 'usds-components/footer';
 @import 'usds-components/forms';
 // @import 'usds-components/search';
 // @import 'usds-components/sidenav';
 @import 'usds-components/skipnav';
+
 @import "sage-common/global";
 @import "sage-common/utility";
 @import "sage-components/buttons";
@@ -39,8 +42,8 @@
 @import "sage-layouts/footer";
 @import "sage-layouts/pages";
 
-@import 'partials/alert';
-@import 'partials/accordion';
+
+@import 'partials/usds-extensions';
 @import 'partials/addthis';
 @import "partials/content-search";
 @import "partials/tinymce";
