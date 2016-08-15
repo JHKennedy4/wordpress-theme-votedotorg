@@ -34,14 +34,19 @@
 // @import 'usds/components/skipnav';
 
 //* Sage plus stuff we wrote *//
+
 @import 'partials/global';
 @import 'partials/utilities';
 @import 'partials/components';
+@import 'partials/tables';
+
+@import 'partials/sections';
 @import 'partials/header';
 @import 'partials/footer';
+
 @import 'partials/pages';
+
 @import 'partials/addthis';
-@import 'partials/content-search';
 @import 'partials/tinymce';
 
 //* These always go last *//

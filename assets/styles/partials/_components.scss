@@ -70,12 +70,15 @@ ul.links {
     list-style-type: decimal;
   }
 }
-@media only screen and (min-width: 768px) {
-  section.faqs {
-    .usa-accordion {
-      button.question {
-        background-position: right 3rem center;
-      }
-    }
+button.question {
+  height: auto;
+  font-weight: 800;
+  h4 {
+    color: #000;
+    font-size: 17px;
+    line-height: 26px;
+  }
+  section.faqs & {
+    background-color: #fff;
   }
 }

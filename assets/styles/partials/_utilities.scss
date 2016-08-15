@@ -64,3 +64,24 @@
     content: " (" attr(href) ") ";
   }
 }
+
+//* responsive display/hide classes *//
+.desktop, .tablet, .desktop-only {
+  display: none;
+}
+.mobile-only, .mobile {
+  display: inherit;
+}
+@media only screen and (min-width: 768px) {
+  .tablet {
+    display: inherit;
+  }
+  .mobile, .mobile-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .desktop, .desktop-only {
+    display: inherit;
+  }
+}

@@ -1,0 +1,622 @@
+section {
+  padding: 40px 0 40px;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 15px;
+    >h1 {
+      margin-top: 0;
+    }
+  }
+}
+section.not-found {
+  padding-bottom: 0;
+}
+section.site-map {
+  background: $darkbluegrey;
+  color: #fff;
+  h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li::before {
+      content: "";
+      padding-right: 0;
+    }
+  }
+  li a, p {
+    color: #aeb0b5;
+    text-decoration: none;
+    list-style: none;
+  }
+  button {
+    width: auto;
+  }
+  .about {
+    text-align: center;
+    p, h2 {
+      text-align: center;
+    }
+    h2 {
+      color: #fff;
+    }
+  }
+}
+//* Call to Action Mobile *//
+section.call-to-action {
+  background-color: #ccc;
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+  form {
+     margin: 0 auto;
+  }
+  h2 {
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  input {
+    height: 42px;
+    font-size: 17px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  button.donate {
+    background-color: #00ccff;
+    width: 138px;
+  }
+  input.email {
+    max-width: 100%;
+  }
+  input.zip {
+    width: 50%;
+    float: left;
+    margin-right: 3%;
+  }
+  input[type="submit"] {
+    width: 47%;
+    border: 0px;
+    padding: 0;
+    float: left;
+    margin: 0.2em 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.site-map {
+    padding: 60px 0;
+    h3 {
+      font-size: 20px;
+    }
+    .nav-links {
+      width: 50%;
+      float: left;
+      min-height: 248px;
+    }
+    .about, .partners {
+      width: 48%;
+      float: left;
+    }
+    .about {
+      margin-right: 2%;
+    }
+  }
+  section.call-to-action {
+    padding: 60px 0;
+    h2 {
+      text-align: left;
+    }
+    form {
+      margin: 0;
+      max-width: 100%;
+    }
+    .about, .join {
+      width: 48%;
+      float: left;
+    }
+    .about {
+      margin-right: 2%;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+    .join {
+      border-left: 1px solid #888;
+      padding-left: 42px;
+    }
+    input.zip {
+      width: 46%;
+      margin-right: 4%;
+      float: left;
+    }
+    input[type="submit"] {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  section.call-to-action, section.quick-links, section.site-map {
+    .container {
+      width: 980px;
+    }
+  }
+  section.site-map {
+    .nav-links {
+      width: 25%;
+      min-height: initial;
+      li a {
+        font-size: 15px;
+        text-decoration: none;
+      }
+    }
+    .about {
+      width: 46%;
+      margin-right: 4%;
+    }
+    .partners {
+      width: 50%;
+    }
+  }
+  section.call-to-action {
+    .join {
+      input.email, input.zip {
+        display: inline-block;
+        margin-right: 9px;
+      }
+      input.email {
+        width: 100%;
+      }
+      input.zip {
+        width: 49%;
+        margin-right: 3%;
+      }
+      input[type='submit'] {
+        width: 48%;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  section.call-to-action, section.quick-links, section.site-map {
+    .container {
+      width: 1100px;
+    }
+    .about p {
+      margin-bottom: 30px;
+    }
+  }
+  section.call-to-action {
+    .join {
+      padding-left: 72px;
+    }
+  }
+}
+/*States & Homepage Mobile */
+section.hero {
+  background-color: $primarydarker;
+  color: #fff;
+  font-family: $font-serif;
+  padding: 50px 0;
+  .container {
+    width: 320px;
+  }
+  h2 {
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    &.logo {
+      display: none;
+      margin-bottom: 35px;
+      margin-top: 0px;
+      font-weight: 700;
+      background: url('../images/vote-logo-reverse.svg') no-repeat center center;
+      background-size: contain;
+      text-indent: -9999px;
+    }
+  }
+  h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    &.state-election-center {
+      margin-bottom: 20px;
+    }
+  }
+  .tagline {
+    font-size: 36px;
+    line-height: 42px;
+    font-family: $font-serif;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .box {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 60px;
+    color: #fff;
+    background-color: rgba(0,0,0,.2);
+    padding: 20px;
+    h2 {
+      margin-bottom: 40px;
+      margin-top: 0px;
+      text-align: left;
+      font-size: 26px;
+      line-height: 34px;
+    }
+    .register-line, .check-registration-line, .mail-line {
+      height: 40px;
+      margin-bottom: 20px;
+    }
+    .register-line {
+      background: url('../images/register.png') no-repeat center;
+      background-size: 100%;
+    }
+    .check-registration-line {
+      background: url('../images/check-registration.png') no-repeat center;
+      background-size: 100%;
+    }
+    .mail-line {
+      background: url('../images/mail-divider.png') no-repeat center;
+      background-size: 100%;
+    }
+    .usa-button {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 0;
+    }
+
+  }
+}
+/*Homepage Quote Mobile */
+section.quote {
+  .container {
+    width: 320px;
+  }
+  blockquote {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    h2 {
+      margin-bottom: 0;
+      margin-top: 0;
+      text-align: center;
+    }
+    &:before {
+      background: url('../images/left-quote.jpg') no-repeat 50%;
+      background-size: 100%;
+      height: 30px;
+      width: 30px;
+      position: relative;
+      top: 32px;
+      left: -50%;
+      display: inline-block;
+      content: '';
+    }
+    &::after {
+      background: url('../images/right-quote.jpg') no-repeat 50%;
+      background-size: 100%;
+      height: 30px;
+      width: 30px;
+      position: relative;
+      top: -269px;
+      right: -6%;
+      display: inline-block;
+      float: right;
+      content: '';
+    }
+  }
+  .attribution {
+    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
+    color: $gray-dark;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+section.voter-registration-guide {
+  h1, h3 {
+    color: $mediumblue;
+  }
+  h2 {
+    &:first-of-type {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+  .state-info {
+    margin-bottom: 45px;
+    h2 {
+      margin-top: 80px;
+      margin-top: 0;
+    }
+  }
+  .updated {
+    color: $gray-dark;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+}
+.updated-date {
+  font-style: italic;
+  margin-top: 60px;
+}
+// FAQs
+section.faqs {
+  background: #edefef;
+  h1 {
+    color: $mediumblue;
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+// Sharing
+section.sharing {
+  background-color: #dce4ef;
+  color: $mediumblue;
+  h2,h4,p,a {
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  h4 {
+    margin-top: 0px;
+  }
+  .container > a {
+    display: block;
+  }
+  p {
+    color: $gray-dark;
+    max-width: 600px;
+    margin: 0 auto 15px;
+  }
+  div {
+    &.facebook {
+      background-color: $blue;
+    }
+    &.twitter {
+      background-color: $twitter;
+    }
+    &.email {
+      background-color: $teal;
+    }
+    &.more {
+      background-color: $orange;
+    }
+  }
+  span {
+    font-family: $font-sans;
+    &.large-number {
+      font-size: 60px;
+    }
+    &.shares {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
+// Quicklinks, for mobile only I think
+section.quicklinks {
+  h2,h4 {
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+}
+
+//* Tablet *//
+@media only screen and (min-width: 768px) {
+  section {
+    padding: 75px 0;
+    .container {
+      width: 749px;
+    }
+  }
+  .register-tool {
+    background: url('../images/bkg-blue-large.png') no-repeat 50% 49%;
+    background-size: cover;
+    padding: 10px 0 20px;
+    .container {
+      width: 640px;
+    }
+  }
+  //* Homepage and State Hero Tablet *//
+  section.hero {
+    padding: 75px 0; // redundant?
+    .container {
+      width: 768px; // redundant?
+    }
+    h2.logo {
+      display: block; // redundant?
+    }
+    .box {
+      width: 32%;
+      float: left;
+      margin-left: 1.5%;
+      margin-bottom: 0px;
+      padding: 60px 30px;
+      flex: 1;
+      text-align: center;
+      h2 {
+        font-size: 26px;
+        line-height: 36px;
+        height: 115px;
+      }
+      .usa-button {
+        padding: 10px;
+        width: 100%;
+      }
+      .register-line, .check-registration-line, .mail-line {
+        margin-bottom: 20px;
+      }
+    }
+    .boxes {
+      display: flex;
+      div:nth-of-type(1) {
+        margin-left: 0;
+      }
+    }
+  }
+  section.quote {
+    padding: 50px 0 80px;
+    .container {
+      width: 617px;
+    }
+    blockquote {
+      width: 89%;
+      &:before {
+        left: -58%;
+        top: 35px;
+      }
+      &:after {
+        top: -112px;
+        right: -57px;
+      }
+    }
+  }
+  section.voter-registration-guide .table {
+    border: none;
+    display: flex;
+    .header {
+      width: 40%;
+      float: left;
+      border: 1px solid grey;
+      flex: 1;
+    }
+    .cell {
+      float: left;
+      width: 60%;
+      border: 1px solid grey;
+      flex: 1;
+    }
+  }
+}
+//* Desktop *//
+@media only screen and (min-width: 980px) {
+
+  section {
+    .container {
+      width: 768px;
+    }
+  }
+  .register-tool {
+    .container {
+      width: 780px;
+      max-width: 780px;
+    }
+  }
+
+  section.hero {
+    .container {
+      width: 900px;
+    }
+    .box {
+      h2 {
+        height: 100px;
+      }
+    }
+  }
+
+  section.quote {
+    blockquote {
+      &:before {
+        left: -56%;
+      }
+      &:after {
+        top: -113px;
+        right: -44px;
+      }
+    }
+  }
+
+  section.table {
+    .container {
+      width: 900px;
+    }
+  }
+  //* Quick Links Desktop *//
+  section.quick-links {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 26px;
+      color: $primarydarker;
+    }
+    .links-column {
+      width: 24.25%;
+      float: left;
+      margin-right: 1%;
+      ul {
+        margin: 0;
+        li {
+          margin: 0;
+          display: block;
+          a {
+            font-size: 15px;
+            line-height: 27px;
+          }
+        }
+      }
+      li:before {
+        content: "";
+        padding-right: 0;
+      }
+    }
+    .container div:nth-last-of-type(2) {
+      margin-right: 0;
+    }
+  }
+
+}
+//* Larger Desktops *//
+@media only screen and (min-width: 1280px) {
+  section.hero {
+    .container {
+      width: 1111px;
+    }
+    .box {
+      h2 {
+        height: auto;
+      }
+    }
+  }
+}
+
+// Make homepage button font smaller
+section.hero .box .usa-button {
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 0;
+}
