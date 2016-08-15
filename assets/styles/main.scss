@@ -26,12 +26,12 @@
 @import 'usds-components/accordions';      // extend in _usds-extensions
 @import 'usds-components/alerts';          // extend in _usds-extensions
 
-// @import 'usds-components/disclaimer';
-// @import 'usds-components/footer';
+// @import 'usds-components/disclaimer';      // unused
+// @import 'usds-components/footer';          // unused
 @import 'usds-components/forms';
-// @import 'usds-components/search';
-// @import 'usds-components/sidenav';
-@import 'usds-components/skipnav';
+// @import 'usds-components/search';          // unused
+// @import 'usds-components/sidenav';         // unused
+// @import 'usds-components/skipnav';         // unused
 
 @import "sage-common/global";
 @import "sage-common/utility";
