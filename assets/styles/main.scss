@@ -18,14 +18,14 @@
  * we don't touch these files, just include or not
  */
 
-@import 'usds/core/defaults';
+@import 'node_modules/uswds/src/stylesheets/core/defaults';
 @import 'usds/core/fonts';
-@import 'usds/core/base';
+@import 'node_modules/uswds/src/stylesheets/core/base';
 // @import 'usds/core/grid-settings';
 // @import 'usds/core/grid';
-@import 'usds/core/utilities';
-@import 'usds/elements/buttons';
-@import 'usds/elements/figure';
+@import 'node_modules/uswds/src/stylesheets/core/utilities';
+@import 'node_modules/uswds/src/stylesheets/elements/buttons';
+@import 'node_modules/uswds/src/stylesheets/elements/figure';
 @import 'usds/elements/inputs';
 @import 'usds/elements/labels';
 @import 'usds/elements/list';

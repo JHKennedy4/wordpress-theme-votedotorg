@@ -4,7 +4,9 @@ html {
   -webkit-font-smoothing: antialiased;
   color: $gray-dark;
 }
-
+body {
+  margin: 0;
+}
 h1, h2, h3, h4, a.logo {
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
@@ -64,11 +66,6 @@ strong {
 .wrapper {
   width: 320px;
   margin: 0 auto;
-}
-body.about {
-  .donate {
-    margin: 0;
-  }
 }
 body#tinymce {
   margin: 12px !important;
