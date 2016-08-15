@@ -8,30 +8,30 @@
 // endbower
 
 
-@import 'usds-core/defaults';
+@import 'usds/core/defaults';
 @import 'variables';
 
 //* USDS stuff we don't touch, just include or don't *//
-@import 'usds-core/fonts';
-@import 'usds-core/base';
-// @import 'usds-core/grid-settings';
-// @import 'usds-core/grid';
-@import 'usds-core/utilities';
-@import 'usds-elements/buttons';
-@import 'usds-elements/figure';
-@import 'usds-elements/inputs';
-@import 'usds-elements/labels';
-@import 'usds-elements/list';
-@import 'usds-elements/table';
-@import 'usds-elements/typography';
-@import 'usds-components/accordions';
-@import 'usds-components/alerts';
-// @import 'usds-components/disclaimer';
-// @import 'usds-components/footer';
-@import 'usds-components/forms';
-// @import 'usds-components/search';
-// @import 'usds-components/sidenav';
-// @import 'usds-components/skipnav';
+@import 'usds/core/fonts';
+@import 'usds/core/base';
+// @import 'usds/core/grid-settings';
+// @import 'usds/core/grid';
+@import 'usds/core/utilities';
+@import 'usds/elements/buttons';
+@import 'usds/elements/figure';
+@import 'usds/elements/inputs';
+@import 'usds/elements/labels';
+@import 'usds/elements/list';
+@import 'usds/elements/table';
+@import 'usds/elements/typography';
+@import 'usds/components/accordions';
+@import 'usds/components/alerts';
+// @import 'usds/components/disclaimer';
+// @import 'usds/components/footer';
+@import 'usds/components/forms';
+// @import 'usds/components/search';
+// @import 'usds/components/sidenav';
+// @import 'usds/components/skipnav';
 
 //* Sage plus stuff we wrote *//
 @import 'partials/global';
