@@ -140,22 +140,6 @@ section.quote {
     }
   }
 }
-.usa-accordion {
-
-  > ul > li {
-    margin-bottom: 12px;
-  }
-}
-.usa-accordion-content {
-  padding: 2rem 3rem;
-  line-height: 1.5em;
-  ul, li {
-    list-style: initial;
-  }
-  ol li {
-    list-style-type: decimal;
-  }
-}
 button.question {
   height: auto;
   font-weight: 800;
@@ -390,14 +374,6 @@ section.quicklinks {
       flex: 1;
     }
   }
-  section.faqs {
-    .usa-accordion {
-      button.question {
-        background-position: right 3rem center;
-      }
-    }
-  }
-
   tr {
     display: table-row;
     width: 100%;

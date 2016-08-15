@@ -1,0 +1,27 @@
+@import '../usds-components/_accordions.scss';
+
+.usa-accordion {
+
+  > ul > li {
+    margin-bottom: 12px;
+  }
+}
+.usa-accordion-content {
+  padding: 2rem 3rem;
+  line-height: 1.5em;
+  ul, li {
+    list-style: initial;
+  }
+  ol li {
+    list-style-type: decimal;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.faqs {
+    .usa-accordion {
+      button.question {
+        background-position: right 3rem center;
+      }
+    }
+  }
+}
