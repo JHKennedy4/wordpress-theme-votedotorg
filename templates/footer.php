@@ -48,9 +48,9 @@
     <div class="clear-fix"></div>
     <div class="about mobile">
       <h2>VOTE.org mission statement</h2>
-      <p>VOTE.org builds technology that increases voter turnout. We're working toward 100% voter turnout. You can help.</p>
+      <div class="mission-statement">VOTE.org builds technology that increases voter turnout. We're going to reach millions of voters this year. You can help.</div>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-footer" target="_blank">Support our work</a>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-footer" target="_blank">Donate to Vote.org</a>
     </div><!--.about-->
   </div><!--.container-->
 </section>
@@ -59,9 +59,9 @@
   <div class="container">
     <div class="about donate tablet">
       <h2>VOTE.org mission statement</h2>
-      <p>VOTE.org builds technology that increases voter turnout. We're working toward 100% voter turnout. You can help.</p>
+      <div class="mission-statement">VOTE.org builds technology that increases voter turnout. We're going to reach millions of voters this year. You can help.</div>
       <!--ToDo: insert Mozilla donation widget-->
-      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-footer" target="_blank">Support our work</a>
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-footer" target="_blank">Donate to Vote.org</a>
     </div><!--.donate.tablet-->
     <div class="join partners">
       <h2>Join VOTE.org</h2>
