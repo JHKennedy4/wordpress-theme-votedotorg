@@ -35,37 +35,6 @@ footer {
     .container {
       width: 768px;
     }
-    div.links {
-      text-align: left;
-      width: 369px;
-      ul {
-        margin: 0;
-      }
-      li {
-        float: left;
-        margin: 0 12px 0 0px;
-        a {
-          padding-right: 15px;
-        }
-        &:after {
-          display: inline-block;
-          content: "|";
-        }
-        &:last-of-type {
-          a {
-            padding-right: 0;
-          }
-          &:after {
-            content: "";
-            padding-right: 0;
-            margin-right: 0;
-          }
-        }
-      }
-      div.copyright {
-        text-align: center;
-      }
-    }
     div.legalese {
       text-align: center;
       font-size: 13px;
