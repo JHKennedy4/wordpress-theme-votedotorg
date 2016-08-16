@@ -63,9 +63,9 @@ var enabled = {
   // Fail due to JSHint warnings only when `--production` or `--staging`
   failJSHint: argv.production || argv.staging,
   // Strip debug statments from javascript when `--production`
-  stripJSDebug: argv.production,
+  stripJSDebug: !!argv.production,
   // Enable css minification when `--production`
-  nano: argv.production
+  nano: !!argv.production
 };
 
 // Path to the compiled assets manifest in the dist directory
