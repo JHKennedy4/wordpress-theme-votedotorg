@@ -210,6 +210,16 @@ section.call-to-action {
 }
 /*States & Homepage Mobile */
 section.hero {
+  .container-donate {
+    position: relative;
+
+    a.floaty {
+      position: absolute;
+      top: -60px;
+      right: 0;
+    }
+  }
+
   background-color: $primarydarker;
   color: #fff;
   font-family: $font-serif;
@@ -221,15 +231,6 @@ section.hero {
     color: #fff;
     margin-bottom: 40px;
     text-align: center;
-    &.logo {
-      display: none;
-      margin-bottom: 35px;
-      margin-top: 0px;
-      font-weight: 700;
-      background: url('../images/vote-logo-reverse.svg') no-repeat center center;
-      background-size: contain;
-      text-indent: -9999px;
-    }
   }
   h1 {
     color: #fff;
