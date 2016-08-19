@@ -6,7 +6,7 @@
         <div class="usa-alert usa-alert-warning">
           <div class="usa-alert-body">
             <p class="usa-alert-text">
-              Military and Overseas voters should visit the <a href="https://www.overseasvotefoundation.org/">Overseas Vote Foundation.</a> Long Distance Voter's information should only be used by voters with US mailing addresses.
+              Military and Overseas voters should visit the <a href="https://www.overseasvotefoundation.org/">Overseas Vote Foundation.</a> Vote.org's information should only be used by voters with US mailing addresses.
            </p>
           </div>
         </div><!--.usa-alert-warning-->
