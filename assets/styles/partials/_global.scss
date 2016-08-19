@@ -13,6 +13,12 @@ h1, h2, h3, h4, a.logo {
   -webkit-font-smoothing: antialiased;
 }
 
+h2 {
+  font-size: 30px;
+  line-height: 39px;
+  margin-bottom: 20px;
+}
+
 h3 {
   font-size: 20px;
   line-height: 26px;
@@ -34,7 +40,7 @@ ul, ol {
 
   li {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   li:before, li:after {
