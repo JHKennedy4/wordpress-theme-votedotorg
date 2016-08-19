@@ -99,7 +99,7 @@
       <h3>Free online tools</h3>
       <div class="xflex-container">
         <div class="descriptive-copy">
-          Add Vote.org's award-winning technology to your website -- for free -- and join in a nationwide movement to increase voter turnout in November.
+          Add Vote.org's award-winning technology to your website and join a nationwide movement to increase voter turnout.
         </div>
         <div class="partner-cta xflex-item">
           <a href="/technology" class="usa-button usa-button-outline-inverse">
