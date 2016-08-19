@@ -13,19 +13,19 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <section class="quote">
       <div class="container">
-        <blockquote>
-        <h2>Nobody will ever deprive the American people of the right to vote except the American people themselves and the only way they could do this is by not voting.</h2></blockquote>
-        <div class="clear-fix"></div>
+        <div class="quote-text">"Nobody will ever deprive the American people of the right to vote except the American people themselves and the only way they could do this is by not voting."</div>
         
         <div class='attribution'>
-          <strong>Franklin Delano Roosevelt</strong>, 32nd President of the United States
+          <strong>Franklin Delano Roosevelt</strong>
+          <br />
+          32nd President of the United States
         </div>
         
         
       </div><!--.container-->
 
     </section><!--.quote -->
-    <section class="sharing">
+    <section class="zebra">
       <div class="container">
         <h2>Americans want to vote.</h2>
         <p>40% of nonvoters are already registered to vote. Vote.org knows that these Americans want to vote -- and will vote consistently -- as voting becomes easier and more convenient.</p>
