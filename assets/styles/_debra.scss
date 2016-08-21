@@ -1,8 +1,4 @@
-// make sure VOTE.org doesn't have excessive margin on /state/ pages
-h2.usa-display {
-  margin-top: 0px;
-}
-  
+
 // adding padding to partner container -- make sure font is right size
 .partner-footer-container {
   padding: 40px 0;
@@ -44,4 +40,5 @@ section.quote {
 //styling VOTE.org on state pages
 h2.site-name {
   font-size: 52px;
+  margin-top: 0px;
 }
