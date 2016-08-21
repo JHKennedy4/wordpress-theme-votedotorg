@@ -30,11 +30,11 @@ if (isset($wp_query->query_vars['state_name'])) {
   </div>
   <div class="container">
     <?php if ($state_name !== "") { ?>
-    <h2 class="usa-display">VOTE.org</h2>
+    <h2 class="site-name tablet desktop">VOTE.org</h2>
     <h1 class="state-election-center"><?php echo $state_name;?> Election Center</h1>
     <div class="tagline">Everything you need to vote</div>
     <?php }  else { ?> 
-    <h1 class="usa-display">VOTE.org</h1>
+    <h1 class="site-name tablet desktop">VOTE.org</h1>
     <div class="tagline">Everything you need to vote</div>
 
     <?php } ?>
