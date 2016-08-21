@@ -28,9 +28,7 @@
             $state_slug = $post->post_name;?>
         <div class="state">
           <h2><?php echo $state_name; ?> absentee ballot rules</h2>
-            <div class="text"><?php echo types_render_field('vbm-eligibilty');?>
-            </div>
-            <?php $warning = types_render_field('absentee-ballot-warnings', array('raw'=> true)); ?>
+          <?php $warning = types_render_field('absentee-ballot-warnings', array('raw'=> true)); ?>
             <div class="usa-alert usa-alert-warning <?php if ($warning ==''){ echo 'hidden';} ?>">
               <div class="usa-alert-body">
                 <p class="usa-alert-text">
@@ -38,8 +36,8 @@
                </p>
               </div>
             </div><!--.usa-alert-warning-->
-            
-
+            <div class="text"><?php echo types_render_field('vbm-eligibilty');?></div>
+    
             <a class="usa-button usa-button-outline" href="//absentee.vote.org/<?php echo '?state='.urlencode($state_name); ?>">Get your absentee ballot</a>
         </div><!--.state-->
         
