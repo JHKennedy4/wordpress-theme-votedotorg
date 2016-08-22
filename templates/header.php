@@ -11,7 +11,7 @@
       <li><a href="/am-i-registered-to-vote/">Am I Registered?</a></li>
       <li><a href="/absentee-ballot/">Absentee Ballots</a></li>
       <li>
-        <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">Donate</a>
+        <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">Donate</a>
       </li>
     </ul><!--.nav-menu.desktop-->
     <div class="clear-fix tablet"></div>
@@ -26,7 +26,7 @@
 <div class="mobile-only nav-menu collapsed">
   <ul class="no-dropdown">
     <li>
-      <a class="usa-button usa-button-outline" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">
+      <a class="usa-button usa-button-secondary" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">
         Donate
       </a>
     </li>
