@@ -10,73 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-;(function ($) {
-
-  function initNav () {
-    // fade in the navigation bar based on browser width, remove handler when browser width is below 768px
-    var browserWidth = window.innerWidth
-    var fadeInPosition = $('section.hero').next().position().top
-    navOnScroll(fadeInPosition)
-
-    $(window).resize(function () {
-      browserWidth = window.innerWidth
-      fadeInPosition = $('section.hero').next().position().top
-      if (browserWidth < 768) {
-        // add css to display mobile nav and remove scroll event handler
-        $(window).off('scroll')
-        $('nav.usa-site-navbar').fadeIn().css({position: 'relative', display: 'block', 'visibility': 'visible'})
-      } else {
-        navOnScroll(fadeInPosition)
-        $(window).scroll(debounce(function () {
-          fadeInPosition = $('section.hero').next().position().top
-          navOnScroll(fadeInPosition)
-        }, 20, true))
-      }
-    })
-
-    if (browserWidth >= 768) {
-      // fade in and fade out navigation bar based on fadeInPosition
-      $(window).scroll(debounce(function () {
-        fadeInPosition = $('section.hero').next().position().top
-        navOnScroll(fadeInPosition)
-      }, 20, true))
-    } else {
-      // don't execute navOnScroll for mobile browsers and show header
-      $(window).off('scroll', navOnScroll)
-      $('nav.usa-site-navbar').fadeIn().css({position: 'relative', display: 'block', 'visibility': 'visible'})
-    }
-  }
-
-  function navOnScroll (fadeInPosition) {
-    // fadeIn navigation header after fadeInPosition and fadeOut above section.hero
-    var scrollPosition = $(this).scrollTop()
-    if (scrollPosition < fadeInPosition) {
-      $('nav.usa-site-navbar').fadeOut().css({position: 'fixed', width: '100%', 'background-color': 'none', 'visibility': 'hidden'})
-    } else if (scrollPosition > fadeInPosition) {
-      $('nav.usa-site-navbar').fadeIn().css({position: 'fixed', width: '100%', 'background-color': 'white', 'z-index': 100, 'visibility': 'visible'})
-    }
-  }
-
-  function debounce (fn, wait, immediate) {
-    var timeout
-    return function () {
-      var context = this
-      var args = arguments
-      var later = function () {
-        timeout = null
-        if (!immediate) {
-          fn.apply(context, args)
-        }
-      }
-
-      var callNow = immediate && !timeout
-      clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-      if (callNow) {
-        fn.apply(context, args)
-      }
-    }
-  }
+(function ($) {
 
   var Sage = {
     // All pages
@@ -102,7 +36,6 @@
     'home': {
       init: function () {
         // JavaScript to be fired on the home page
-        initNav()
       },
       finalize: function () {
         // JavaScript to be fired on the home page, after the init JS
@@ -112,7 +45,6 @@
     'state': {
       init: function () {
         // JavaScript to be fired on the state pages
-        initNav()
       },
       finalize: function () {
         // JavaScript to be fired on the state pages, after the init JS
