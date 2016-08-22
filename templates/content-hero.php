@@ -26,7 +26,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 ?>
 <section class="hero">
   <div class="container container-donate">
-    <a class="usa-button usa-button-secondary floaty tablet desktop" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">Donate</a>
+    <a class="usa-button usa-button-outline-inverse floaty tablet desktop" href="https://secure.actblue.com/contribute/page/votedotorg?refcode=website-top-nav">Donate</a>
   </div>
   <div class="container">
     <?php if ($state_name !== "") { ?>
