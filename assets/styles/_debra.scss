@@ -43,7 +43,7 @@ h2.site-name {
   margin-top: 0px;
 }
 
-//fixing whatever i did to break the accordions
+//everything below is my attempt to use the updated button classes
 .usa-accordion, .usa-accordion-bordered {
     margin-top: 0;
     margin-bottom: 0;
@@ -70,7 +70,8 @@ usa-accordion-button {
     width: 100%;
 }
 
-usa-accordion-button h4{
+.usa-accordion h4, 
+.usa-accordion-bordered h4 {
   font-size: 17px;
   line-height: 17px;
 }
