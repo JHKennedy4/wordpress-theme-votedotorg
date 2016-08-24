@@ -44,8 +44,7 @@ $state_loop = new WP_Query( array(
         <div class="state-info">
           <h2><?php echo $state_name; ?> voter registration</h2>
 
-          <div class="usa-accordion">
-            <ul class="usa-unstyled-list">
+              <ul class="usa-accordion-bordered">
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-1'>
                   <h4>Voter registration deadlines</h4>
@@ -85,15 +84,14 @@ $state_loop = new WP_Query( array(
                   <?php echo types_render_field('how-to-register-to-vote');?>
                 </div>
               </li>
-            </ul>
-          </div><!--.usa-accordion-->
+            </ul><!--.usa-accordion-->
 
         </div><!--.state-info-->
 
         <div class="state-info">
           <h2><?php echo $state_name; ?> absentee ballots</h2>
 
-          <div class="usa-accordion">
+            <ul class="usa-accordion-bordered">
             <ul class="usa-unstyled-list">
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-5'>
@@ -129,14 +127,12 @@ $state_loop = new WP_Query( array(
                 </div> <!--.answer-->
               </li>
             </ul>
-          </div><!--.usa-accordion-->
         </div><!--.state-info-->
 
         <div class="state-info">
           <h2><?php echo $state_name; ?> early voting</h2>
 
-          <div class="usa-accordion">
-            <ul class="usa-unstyled-list">
+              <ul class="usa-accordion-bordered">
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-9'>
 				          <h4>Early voting starts in <?php echo $state_name; ?></h4>
@@ -153,15 +149,14 @@ $state_loop = new WP_Query( array(
                   <?php echo types_render_field('early-voting-ends');?>
                 </div>
               </li>
-            </ul>
-          </div><!--.usa-accordion-->
-
+            </ul><!--.usa-accordion-->
         </div><!--.state-info-->
+      
         <div class="state-info">
           <h2><?php echo $state_name; ?> voter ID</h2>
 
-          <div class="usa-accordion">
-            <ul class="usa-unstyled-list">
+        
+              <ul class="usa-accordion-bordered">
               <li>
                 <button class='question usa-button-unstyled' aria-expanded='false' aria-controls='collapsible-11'>
                   <h4>In-person voter ID requirements</h4>
@@ -180,7 +175,6 @@ $state_loop = new WP_Query( array(
               </li>
             </ul>
           </div><!--.usa-accordion-->
-        </div><!--.state-info-->
 
         <?php get_template_part('templates/content-links'); ?>
 
