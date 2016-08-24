@@ -70,6 +70,16 @@ usa-accordion-button {
     width: 100%;
 }
 
+usa-accordion-button h4{
+  font-size: 17px;
+  line-height: 17px;
+}
+
+.usa-accordion li, 
+.usa-accordion-bordered li {
+  margin-bottom: 12px;
+}
+
 //button height seems to fix this
 button {
   height: auto;
