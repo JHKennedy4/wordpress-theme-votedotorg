@@ -1,3 +1,6 @@
+<a href="https://zenhub.com"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
+
+
 Installation Steps:
 Download Wordpress to wherever you'd like it to live
 Clone Theme into themes directory
