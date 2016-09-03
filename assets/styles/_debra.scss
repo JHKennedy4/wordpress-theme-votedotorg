@@ -53,6 +53,11 @@ h2.site-name {
   font-size: 20px;
 }
 
+// make edit screen a bit more readable
+h2.hndle {
+  font-size: 20px;
+}
+
 //everything below is my attempt to use the updated button classes
 .usa-accordion, .usa-accordion-bordered {
     margin-top: 0;
@@ -65,7 +70,7 @@ h2.site-name {
     width: 100%;
 }
 
-usa-accordion-button {
+.usa-accordion-button {
     background: none;
     border: 0;
     border-radius: 0;
