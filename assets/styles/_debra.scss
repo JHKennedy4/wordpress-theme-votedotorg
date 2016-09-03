@@ -48,6 +48,11 @@ h2.site-name {
   margin-bottom: 40px;
 }
 
+// make edit screen a bit more readable
+#poststuff h2 {
+  font-size: 20px;
+}
+
 //everything below is my attempt to use the updated button classes
 .usa-accordion, .usa-accordion-bordered {
     margin-top: 0;
