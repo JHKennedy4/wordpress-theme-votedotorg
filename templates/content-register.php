@@ -57,17 +57,15 @@ if (isset($wp_query->query_vars['state_name'])) {
 
     <div class="updated">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
     
-            <?php $voterreg_warning = types_render_field("voterreg-warning");
-          if ($vbm_warnings !== "") { ?>
           <div class="usa-alert usa-alert-warning">
             <div class="usa-alert-body">
               <h3 class="usa-alert-heading">Warnings</h3>
               <p class="usa-alert-text">
-              <?php echo $voterreg_warning; ?>
+              <?php echo types_render_field("voterreg-warning");?>
               </p>
             </div>
           </div><!--.usa-alert-warning-->
-        <?php } ?>
+
 
     <h2><?php the_title(); ?> voter registration deadlines</h2>
     <ul>
