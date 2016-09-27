@@ -51,9 +51,4 @@ if (isset($wp_query->query_vars['state_name'])) {
 
   </script>
   
-  <script>
-  $(function() { var search = window.location.search; 
-  $("#register").attr("src", $("#register").attr("src")+search); });
-   </script>
-  
 </head>
