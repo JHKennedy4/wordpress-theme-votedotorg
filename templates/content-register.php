@@ -60,9 +60,9 @@ if (isset($wp_query->query_vars['state_name'])) {
           <div class="usa-alert usa-alert-warning">
             <div class="usa-alert-body">
               <h3 class="usa-alert-heading">Warnings</h3>
-              <p class="usa-alert-text">
+              <div="usa-alert-text">
               <?php echo types_render_field("voterreg-warning");?>
-              </p>
+              </div>
             </div>
           </div><!--.usa-alert-warning-->
 
