@@ -72,8 +72,9 @@ if (isset($wp_query->query_vars['state_name'])) {
       <li><strong>In Person:</strong> <?php echo types_render_field("voter-registration-deadline-in-person");?></li>
       <li><strong>By Mail:</strong> <?php echo types_render_field("voter-registration-deadline-by-mail");?></li>
       <li><strong>Online:</strong> <?php echo types_render_field("voter-registration-deadline-online");?></li>
-      <li><strong>Election Day Registration:</strong> <?php echo types_render_field("election-day-registration-instructions");?></li>
     </ul>
+    
+    <p><strong>Election Day Registration:</strong> <?php echo types_render_field("election-day-registration-instructions");?></p>
  
     <h2><?php the_title(); ?> voter registration rules</h2>
     <?php echo types_render_field("voter-registration-rules");?>
