@@ -7,7 +7,7 @@
     <section class="register-tool">
 
       <div class="container">
-        <iframe src="<?php if ($iframeurl !== "") { echo $iframeurl; } else { echo 'https://verify.vote.org'; }?>" width="100%" height="1000" marginheight="0" frameborder="0" id="frame1" scrollable="no"></iframe>
+        <iframe src="https://verify.vote.org" width="100%" height="1000" marginheight="0" frameborder="0" id="verify" class="verify" scrollable="no"></iframe>
       </div><!--.container-->
 
     </section><!--.register-tool-->
