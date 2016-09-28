@@ -25,7 +25,7 @@ if (isset($wp_query->query_vars['state_name'])) {
 		<div class="quote-text">"For this Nation to remain true to its principles, we cannot allow any American's vote to be denied, diluted, or defiled. The right to vote is the crown jewel of American liberties, and we will not see its luster diminished."</div>
 		<div class='attribution'>
 			<strong>Ronald Reagan</strong>
-			<br />40thnd President of the United States 
+			<br />40th President of the United States 
 		</div>
 	</div>
 </section>
