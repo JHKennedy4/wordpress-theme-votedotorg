@@ -14,19 +14,22 @@ if (isset($wp_query->query_vars['state_name'])) {
 		<div class="quote-text">"Nobody will ever deprive the American people of the right to vote except the American people themselves and the only way they could do this is by not voting."</div>
 		<div class='attribution'>
 			<strong>Franklin Delano Roosevelt</strong>
-			<br />
-          32nd President of the United States
-        
+			<br />32nd President of the United States 
 		</div>
 	</div>
-	<!--.container-->
 </section>
 <!--.quote -->
+
 <section class="zebra">
 	<div class="container">
-		<h2>Americans want to vote.</h2>
-		<p>40% of nonvoters are already registered to vote. Vote.org knows that these Americans want to vote -- and will vote consistently -- as voting becomes easier and more convenient.</p>
-		<a href="/about">Learn more about Vote.org</a>
+		<div class="quote-text">"For this Nation to remain true to its principles, we cannot allow any American's vote to be denied, diluted, or defiled. The right to vote is the crown jewel of American liberties, and we will not see its luster diminished."</div>
+		<div class='attribution'>
+			<strong>Ronald Reagan</strong>
+			<br />40thnd President of the United States 
+		</div>
 	</div>
 </section>
+<!--.quote -->
+
+
 <?php get_template_part('templates/quicklinks-state'); ?>
