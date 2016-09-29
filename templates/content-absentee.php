@@ -85,14 +85,10 @@ if (isset($wp_query->query_vars['state_name'])) {
 
 
         <h2><?php the_title(); ?> absentee ballot directions</h2>
-
         <?php echo types_render_field("how-to-get-your-absentee-ballot");?>
-        <?php 
-        $instructions = types_render_field("voted-absentee-ballot-instructions");
-        if ($instructions !== "") { ?>
+       
         <h2>Once you receive your ballot...</h2>
-          <?php echo $instructions;?>
-        <?php } ?>
+        <?php echo types_render_field("voted-absentee-ballot-instructions"); ?> 
         
         <?php $permanent_vbm_instructions = types_render_field("permanent-absentee-ballot-instructions"); ?>
         <?php if ($permanent_vbm_instructions !== "") { ?>
