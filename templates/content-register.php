@@ -42,7 +42,6 @@ if (isset($wp_query->query_vars['state_name'])) {
   <div class="container">
     <iframe id="register" class="register" src="<?php if ($iframeurl !== "") { echo $iframeurl; } else { echo 'https://register.vote.org'; }?>/<?php if ($state !== "") { echo '?state='.urlencode($state_name); }?>" width="100%" height="600" marginheight="0" frameborder="0" scrollable="no" sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-popups"></iframe>
   </div><!--.container-->
-
 </section><!--.register-tool-->
 
 
@@ -55,12 +54,11 @@ if (isset($wp_query->query_vars['state_name'])) {
 <section class="voter-registration-guide">
   <div class="container">
 
-    <div class="updated">Last updated on <?php the_date('F j, Y'); ?></div><!--updated-date-->
+    <div class="updated">Last updated on <?php the_date('F j, Y'); ?></div><!--.updated-date-->
     
           <div class="usa-alert usa-alert-warning">
             <div class="usa-alert-body">
-              <h3 class="usa-alert-heading">Warnings</h3>
-              <div="usa-alert-text">
+              <div class="usa-alert-text">
               <?php echo types_render_field("voterreg-warning");?>
               </div>
             </div>
@@ -107,7 +105,7 @@ if (isset($wp_query->query_vars['state_name'])) {
     <!--hide faqs when there isn't a state selected-->
 
 
-    <section class="faqs">
+  <section class="faqs">
       <div class="container">
         <h2>Frequently asked questions</h2>
 
@@ -118,6 +116,5 @@ if (isset($wp_query->query_vars['state_name'])) {
           </ul><!--.usa-unstyled-list-->
         </div><!--.faq-box- .usa-accordion-->
       </div><!--.container-->
-
-    </section><!--.faqs-->
+  </section><!--.faqs-->
   <?php } endwhile; wp_reset_postdata(); endif;?>
