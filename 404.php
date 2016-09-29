@@ -1,7 +1,7 @@
 
 <section class="not-found">
  <div class="container">
-  <?php get_template_part('templates/page', 'header'); ?>
+  <?php get_template_part('templates/page-header'); ?>
 
   <div class="alert alert-warning">
     <?php _e('Try searching for it below or check out the links to each state\'s election center site.', 'sage'); ?>
