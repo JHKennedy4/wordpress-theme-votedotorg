@@ -224,8 +224,7 @@ section.hero {
   font-family: $font-serif;
   padding: 50px 0;
   .container {
-    width: 90%;
-    max-width: 320px;
+    width: 320px;
   }
   h2 {
     color: #fff;
@@ -247,7 +246,7 @@ section.hero {
   .box {
     width: 100%;
     border-radius: 4px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     color: #fff;
     background-color: rgba(0,0,0,.2);
     padding: 20px;
@@ -285,7 +284,7 @@ section.hero {
 /*Homepage Quote Mobile */
 section.quote {
   .container {
-   max-width: 320px;
+    width: 320px;
   }
   blockquote {
     display: block;
@@ -454,7 +453,6 @@ section.quicklinks {
     padding: 75px 0; // redundant?
     .container {
       width: 768px; // redundant?
-      max-width: none;
     }
     h2.logo {
       display: block; // redundant?
@@ -464,15 +462,9 @@ section.quicklinks {
       float: left;
       margin-left: 1.5%;
       margin-bottom: 0px;
-      padding: 30px;
+      padding: 60px 30px;
       flex: 1;
       text-align: center;
-      &--light {
-        margin-top: 30px;
-        .usa-button.usa-button-outline-inverse {
-          font-size: 13px;
-        }
-      }
       h2 {
         font-size: 26px;
         line-height: 36px;
@@ -481,9 +473,6 @@ section.quicklinks {
       .usa-button {
         padding: 10px;
         width: 100%;
-        &:visited {
-          width: 100%;
-        }
       }
       .register-line, .check-registration-line, .mail-line {
         margin-bottom: 20px;
@@ -553,12 +542,6 @@ section.quicklinks {
       h2 {
         height: 100px;
       }
-      .usa-button {
-        width: 100%;
-        &:visited {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -623,19 +606,6 @@ section.quicklinks {
     .box {
       h2 {
         height: auto;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 418px) {
-  section.hero {
-    .box {
-      .usa-button {
-        width: 100%;
-        &:visited {
-          width: 100%;
-        }
       }
     }
   }
